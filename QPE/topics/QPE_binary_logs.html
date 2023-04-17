@@ -1,0 +1,332 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="../../favicon.ico"/><link rel="icon" href="../../favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="In cases where more advanced troubleshooting is needed, Quuppa may ask you to provide the binary logs for your deployment. These binary logs are encrypted data logs that can be used to remotely ..."/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="DC.relation" content="../../QPE/topics/QPE_troubleshooting.html"/><meta name="DC.relation" content="../../QPE/topics/QPE_troubleshooting.html"/><meta name="DC.relation" content="../../QDP/topics/QDP_introduction.html"/><meta name="DC.creator" content="Julia"/><meta name="rights" content="© 2020 Quuppa Oy"/><meta name="DC.date.created" content="01.06.2020"/><meta name="DC.date.modified" content="12.07.2021"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="QPE_binary_logs"/><title>Record Binary Data for Quuppa Support</title><!--  Generated with Oxygen version 24.1, build number 2022030800.  --><meta name="wh-path2root" content="../../"/><meta name="wh-toc-id" content="QPE_binary_logs-d3586e4558"/><meta name="wh-source-relpath" content="QPE/topics/QPE_binary_logs.dita"/><meta name="wh-out-relpath" content="QPE/topics/QPE_binary_logs.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="../../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/app/topic-page.css?buildId=2022030800"/>
+    
+    
+    <script src="../../oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="../../oxygen-webhelp/app/topic-page.js" src="../../oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/template/Quuppa_skin.css?buildId=2022030800"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-48150744-3"></script>
+    <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'UA-48150744-3'); 
+    </script>
+
+<script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:2215474,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script></head>
+
+    <body id="QPE_binary_logs" class="wh_topic_page frmBody">
+        <div id="page-container">
+            <div id="content-wrap">
+                <a href="#wh_topic_body" class="sr-only sr-only-focusable">Jump to main content</a>
+                <!-- EXM-36950 - Expand the args.hdr parameter here -->
+                
+                
+                
+                <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <a href="https://quuppa.com/" class=" wh_logo d-none d-sm-block "><img src="../../oxygen-webhelp\template\page-templates/images/QUUPPA_1row_black_LOW_small.png" alt="Product Documentation"/></a>
+                    <div class=" wh_publication_title "><a href="../../index.html"><span class="title">Product Documentation</span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+
+
+                
+                <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+
+
+<form id="searchForm" method="get" role="search" action="../../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+
+</div>
+<!-- Navigation at the top of the topic -->                
+                <div class="container-fluid" id="wh_topic_container">
+                    <div class="row">
+
+                        <nav class="wh_tools d-print-none navbar-expand-md">
+                            
+<div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="../../index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="quuppa_development_kit_quick_start_guide"><div class="title"><a href="../../megamap/topics/Software.html">Software</a></div></div></li><li><div class="topicref" data-id="QPE_introduction"><div class="title"><a href="../../QPE/topics/QPE_introduction.html">Quuppa Positioning Engine User Manual</a></div></div></li><li><div class="topicref" data-id="QPE_troubleshooting"><div class="title"><a href="../../QPE/topics/QPE_troubleshooting.html">Troubleshooting</a></div></div></li><li class="active"><div class="topicref" data-id="QPE_binary_logs"><div class="title"><a href="../../QPE/topics/QPE_binary_logs.html">Record Binary Data for Quuppa Support</a></div></div></li></ol></div>
+
+
+
+                            
+<div class="wh_right_tools">
+                                <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                                <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                                <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  
+<span class="navprev"><a class="- topic/link link" href="../../QPE/topics/QPE_troubleshooting.html" title="Troubleshooting" aria-label="Previous topic: Troubleshooting" rel="prev"></a></span>  
+<span class="navnext"><a class="- topic/link link" href="../../QDP/topics/QDP_introduction.html" title="Quuppa Data Player User Manual" aria-label="Next topic: Quuppa Data Player User Manual" rel="next"></a></span>  </span></div>
+<!--External resource link-->
+
+                                <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                                
+                                <!-- Expand/Collapse publishing TOC 
+                                     The menu button for mobile devices is copied in the output only when the publication TOC is available
+                                -->
+                                <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+
+                        </nav>
+                    </div>
+                    
+
+<div class="wh_content_area">
+                        <div class="row">
+                            
+
+
+                                <nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none">
+<div id="wh_publication_toc_content">
+
+
+                                    <div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="megamap_introduction-d3586e34" class="topicref" data-id="megamap_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action megamap_introduction-d3586e34-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/documentation_introduction.html" id="megamap_introduction-d3586e34-link">Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="quuppa_development_kit_quick_start_guide-d3586e104" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action quuppa_development_kit_quick_start_guide-d3586e104-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Devkit.html" id="quuppa_development_kit_quick_start_guide-d3586e104-link">Getting Started</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="quuppa_development_kit_quick_start_guide-d3586e404" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action quuppa_development_kit_quick_start_guide-d3586e404-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Software.html" id="quuppa_development_kit_quick_start_guide-d3586e404-link">Software</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="QSP_introduction-d3586e427" class="topicref" data-id="QSP_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QSP_introduction-d3586e427-link" class="wh-expand-btn"></span><div class="title"><a href="../../QSP/topics/QSP_introduction.html" id="QSP_introduction-d3586e427-link">Quuppa Site Planner User Manual</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="QSS_introduction-d3586e3725" class="topicref" data-id="QSS_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QSS_introduction-d3586e3725-link" class="wh-expand-btn"></span><div class="title"><a href="../../QSS/topics/QSS_introduction.html" id="QSS_introduction-d3586e3725-link">Quuppa System Simulator User Manual</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="QPE_introduction-d3586e3817" class="topicref" data-id="QPE_introduction" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action QPE_introduction-d3586e3817-link" class="wh-expand-btn"></span><div class="title"><a href="../../QPE/topics/QPE_introduction.html" id="QPE_introduction-d3586e3817-link">Quuppa Positioning Engine User Manual</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="QPE_getting_started-d3586e3840" class="topicref" data-id="QPE_getting_started" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QPE_getting_started-d3586e3840-link" class="wh-expand-btn"></span><div class="title"><a href="../../QPE/topics/QPE_getting_started.html" id="QPE_getting_started-d3586e3840-link">Getting Started</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="QPE_webconsole-d3586e3955" class="topicref" data-id="QPE_webconsole" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QPE_webconsole-d3586e3955-link" class="wh-expand-btn"></span><div class="title"><a href="../../QPE/topics/QPE_webconsole.html" id="QPE_webconsole-d3586e3955-link">Positioning Engine Web Console</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="QPE_features-d3586e4278" class="topicref" data-id="QPE_features" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QPE_features-d3586e4278-link" class="wh-expand-btn"></span><div class="title"><a href="../../QPE/topics/QPE_API.html" id="QPE_features-d3586e4278-link">Quuppa APIs</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="QPE_advanced_features-d3586e4419" class="topicref" data-id="QPE_advanced_features" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QPE_advanced_features-d3586e4419-link" class="wh-expand-btn"></span><div class="title"><a href="../../QPE/topics/QPE_advanced_features.html" id="QPE_advanced_features-d3586e4419-link">Advanced Features</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="QPE_troubleshooting-d3586e4535" class="topicref" data-id="QPE_troubleshooting" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action QPE_troubleshooting-d3586e4535-link" class="wh-expand-btn"></span><div class="title"><a href="../../QPE/topics/QPE_troubleshooting.html" id="QPE_troubleshooting-d3586e4535-link">Troubleshooting</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" class="active"><div data-tocid="QPE_binary_logs-d3586e4558" class="topicref" data-id="QPE_binary_logs" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../QPE/topics/QPE_binary_logs.html" id="QPE_binary_logs-d3586e4558-link">Record Binary Data for Quuppa Support</a></div></div></li></ul></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="QDP_introduction-d3586e4581" class="topicref" data-id="QDP_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QDP_introduction-d3586e4581-link" class="wh-expand-btn"></span><div class="title"><a href="../../QDP/topics/QDP_introduction.html" id="QDP_introduction-d3586e4581-link">Quuppa Data Player User Manual</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="quuppa_development_kit_quick_start_guide-d3586e4767" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action quuppa_development_kit_quick_start_guide-d3586e4767-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Hardware.html" id="quuppa_development_kit_quick_start_guide-d3586e4767-link">Hardware</a></div></div></li><li role="treeitem"><div data-tocid="videos-d3586e7077" class="topicref" data-id="videos" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../resources/topics/videos.html" id="videos-d3586e7077-link">Video Gallery</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="whitepapers-d3586e7100" class="topicref" data-id="whitepapers" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action whitepapers-d3586e7100-link" class="wh-expand-btn"></span><div class="title"><a href="../../resources/topics/resources.html" id="whitepapers-d3586e7100-link">Other Resources</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="Translations-d3586e7539" class="topicref" data-id="Translations" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action Translations-d3586e7539-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Translations.html" id="Translations-d3586e7539-link">Translations</a></div></div></li><li role="treeitem"><div data-tocid="megamap_revision_history-d3586e10573" class="topicref" data-id="megamap_revision_history" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/revision_history.html" id="megamap_revision_history-d3586e10573-link">Revision History</a></div></div></li></ul></div>
+                                
+
+</div>
+</nav>
+                            
+
+
+                            <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+<button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true"><span class="close-toc-icon-container"><span class="close-toc-icon"></span></span></button>
+
+                                
+<div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Record Binary Data for Quuppa Support</h1>
+    <div class="- topic/body body">
+        <p class="- topic/p p">In cases where more advanced troubleshooting is needed, Quuppa may ask you to provide the
+            binary logs for your deployment. These binary logs are encrypted data logs that can be
+            used to remotely analyse and troubleshoot the system. This document will walk you
+            through the steps to record the files using the Positioning Engine Web Console and send
+            them to Quuppa. If you prefer to use the Quuppa APIs, please see the <a class="- topic/xref xref" href="https://quuppa.com/product-documentation/manuals/q/QPE/topics/QPE_API_logs.html" target="_blank" rel="external noopener">Log QPE Data</a> section of this manual before
+            proceeding to the <a class="- topic/xref xref" href="#QPE_binary_logs__section_glw_pw1_psb">Submit
+                Recording</a> section below.</p>
+        <section class="- topic/section section" id="QPE_binary_logs__section_s1h_pw1_psb" data-ofbid="QPE_binary_logs__section_s1h_pw1_psb"><h2 class="- topic/title title sectiontitle">Record Data</h2>
+            
+            <p class="- topic/p p">To record the binary data for your system, follow these steps:</p>
+            <div class="- topic/p p">
+                <ol class="- topic/ol ol" id="QPE_binary_logs__ol_fsq_5w1_psb" data-ofbid="QPE_binary_logs__ol_fsq_5w1_psb">
+                    <li class="- topic/li li">Open the Positioning Engine Web Console for your system, e.g. <a class="- topic/xref xref" href="http://localhost:8080/qpe/" target="_blank" rel="external noopener">http://localhost:8080/qpe/</a> if
+                        the QPE is running locally.</li>
+                    <li class="- topic/li li">Under the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Outputs</span> heading, find the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Binary
+                            Logging</span> row and click on the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Start</span>
+                                button.<p class="- topic/p p"><img class="- topic/image image" id="QPE_binary_logs__image_lxv_qfv_r4b" src="../images/QPE_console_binary_log.png" width="567"/></p><p class="- topic/p p">Once binary logging has
+                            started, this row will show the path to where the binary logs are being
+                            recorded, highlighted in red.</p><ul class="- topic/ul ul" id="QPE_binary_logs__ul_dpl_gy1_psb" data-ofbid="QPE_binary_logs__ul_dpl_gy1_psb">
+                            <li class="- topic/li li">For <strong class="+ topic/ph hi-d/b ph b">Windows</strong>, the path will look something like this:
+                                    <code class="+ topic/ph pr-d/codeph ph codeph">C:\opt\quuppa\binaryLogs\20220103_1\</code></li>
+                            <li class="- topic/li li">For <strong class="+ topic/ph hi-d/b ph b">Linux</strong>, the path will look something like this:
+                                    <code class="+ topic/ph pr-d/codeph ph codeph">/opt/quuppa/binaryLogs/20220103_1/</code></li>
+                        </ul></li>
+                    <li class="- topic/li li">Complete any testing requested by Quuppa Support while the system is
+                        recording the binary data. This may involve running specific tests or just
+                        letting the system run for some time. During the test, you should replicate
+                        the environment and issue that you are troubleshooting to make sure that it
+                        shows up in the recording. <div class="- topic/p p">
+                            <div class="- topic/note note note note_note" id="QPE_binary_logs__note_yz3_wy1_psb" data-ofbid="QPE_binary_logs__note_yz3_wy1_psb"><span class="note__title">Note:</span> If Quuppa hasn't specified a time span for
+                                the testing, recording data for about <strong class="+ topic/ph hi-d/b ph b">10 minutes</strong> is a good
+                                place to start. Quuppa will inform you if a longer period is
+                                required. Additionally, if you are using tags other than the Quuppa
+                                tags in your deployment, we recommend also running the test using
+                                our <strong class="+ topic/ph hi-d/b ph b">QT1-1 tags</strong> with the ASSET_TAG configuration as a
+                                benchmark. This will help to rule out any issues caused by the tags
+                                themselves. </div>
+                        </div></li>
+                    <li class="- topic/li li">Once you are done, click on the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Stop</span> button to end the
+                        recording. When the recording is ready, the row will show <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Finished
+                            logging to:</span> and the path to the file, highlighted in
+                                yellow.<p class="- topic/p p"><img class="- topic/image image" id="QPE_binary_logs__image_kvp_yfv_r4b" src="../images/QPE_console_binary_log_path.png" width="567"/></p></li>
+                </ol>
+            </div>
+        </section>
+        <section class="- topic/section section" id="QPE_binary_logs__section_glw_pw1_psb" data-ofbid="QPE_binary_logs__section_glw_pw1_psb"><h2 class="- topic/title title sectiontitle">Submit Recording</h2>
+            
+            <p class="- topic/p p">To submit the recorded binary log files to Quuppa, follow these steps:</p>
+            <div class="- topic/p p">
+                <ol class="- topic/ol ol" id="QPE_binary_logs__ol_f4d_mbb_psb" data-ofbid="QPE_binary_logs__ol_f4d_mbb_psb">
+                    <li class="- topic/li li">Create a .zip file of the entire directory, making sure to include all of
+                        the files found in the specified folder, e.g.
+                            <code class="+ topic/ph pr-d/codeph ph codeph">C:\opt\quuppa\binaryLogs\20220103_1\</code>.<div class="- topic/p p">
+                            <div class="- topic/note note note note_note" id="QPE_binary_logs__note_nz3_ccb_psb" data-ofbid="QPE_binary_logs__note_nz3_ccb_psb"><span class="note__title">Note:</span> If you have multiple recordings, you can
+                                include all relevant directories in the same .zip file. </div>
+                        </div></li>
+                    <li class="- topic/li li">Send the .zip file to Quuppa. If it's size exceeds 25 MB, you may need to
+                        use a file hosting location such as Dropbox or Google Drive to share the
+                        file. </li>
+                    <li class="- topic/li li">Provide Quuppa with any relevant information for troubleshooting your
+                        system, e.g. a description of the issue that you have encountered, a
+                        timestamp for when the issue becomes visible in the logs and any details
+                        such as tag IDs or areas of concern that could help Quuppa identify the
+                        cause of the issue. </li>
+                </ol>
+            </div>
+        </section>
+        <div class="- topic/note note tip note_tip" id="QPE_binary_logs__note_j2h_qdb_psb" data-ofbid="QPE_binary_logs__note_j2h_qdb_psb"><span class="note__title">Tip:</span> If you need to adjust the access rights or path to
+            the logged files, the following commands may come in handy: <ul class="- topic/ul ul" id="QPE_binary_logs__ul_amz_rdb_psb" data-ofbid="QPE_binary_logs__ul_amz_rdb_psb">
+                <li class="- topic/li li">To change the ownership of the binary log folder: <code class="+ topic/ph pr-d/codeph ph codeph">sudo chown -R
+                            <strong class="+ topic/ph hi-d/b ph b">&lt;user&gt;</strong>:<strong class="+ topic/ph hi-d/b ph b">&lt;user_group&gt;</strong>
+                            /opt/quuppa/binaryLogs/<strong class="+ topic/ph hi-d/b ph b">&lt;binary_log_directory&gt;</strong></code></li>
+                <li class="- topic/li li">To move the binary log folder to your desktop: <code class="+ topic/ph pr-d/codeph ph codeph">sudo cp
+                            /opt/quuppa/binaryLogs/<strong class="+ topic/ph hi-d/b ph b">&lt;zipped_bin_log_dir&gt;</strong>
+                        /home/username/Desktop</code></li>
+            </ul></div>
+    </div>
+</article></main></div>
+
+                                
+                                
+                                
+
+                                
+
+                            </div>
+                            <!-- Topic TOC on right of page to cover sections in the topic. Removed in Jan 2022, but could be
+                            added for usability later.
+                            <whc:webhelp_topic_toc>
+                                <nav role="navigation"  id="wh_topic_toc" 
+                                    class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                                    <whc:component_content/>
+                                </nav>
+                            </whc:webhelp_topic_toc>
+                            -->
+                        </div>
+                    </div>
+
+
+                </div>       
+<!-- Navigation at the end of the topic -->          
+                <div class="container-fluid" id="wh_topic_container">
+                    <div class="row" style="color:white;margin-top:40px;">
+                        <nav class="wh_tools d-print-none navbar-expand-md">
+                            <div></div>
+                            
+<div class="wh_right_tools">
+                                <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  
+<span class="navprev"><a class="- topic/link link" href="../../QPE/topics/QPE_troubleshooting.html" title="Troubleshooting" aria-label="Previous topic: Troubleshooting" rel="prev"></a></span>  
+<span class="navnext"><a class="- topic/link link" href="../../QDP/topics/QDP_introduction.html" title="Quuppa Data Player User Manual" aria-label="Next topic: Quuppa Data Player User Manual" rel="next"></a></span>  </span></div>
+<!--External resource link-->
+
+                            </div>
+
+                        </nav>
+                    </div>
+                    
+                </div>
+<!-- next section-->                       
+            </div>            
+            <footer id="footer">
+                <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container float-left ">
+    <image href="page-templates/images/QUUPPA_1row_white_LOW_pienennetty.png"></image>
+    
+    <bookrights>
+        <copyrfirst>
+        </copyrfirst>
+        <copyrlast>
+            <year>© 2020-2022 </year>
+        </copyrlast>
+        <bookowner>
+            <organization> Quuppa Oy. All Rights Reserved. </organization>
+        </bookowner>
+    </bookrights>
+    
+    
+
+   
+<!--     <whc:include_html href="${webhelp.fragment.footer}"/>
+-->  
+  
+  </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
+                Generation date: 17.04.2023</div>
+  
+  
+  <script type="text/javascript">
+    (function (d, t) {
+       var pp = d.createElement(t), s = d.getElementsByTagName(t)[0];
+       pp.src = '//app.pageproofer.com/embed/2202ff57-a1dd-522f-befe-078025b63fcb';
+       pp.type = 'text/javascript';
+       pp.async = true;
+       s.parentNode.insertBefore(pp, s);
+    })(document, 'script');
+    </script>
+                        
+    <script type="text/javascript">
+    (function (d, t) {
+       var pp = d.createElement(t), s = d.getElementsByTagName(t)[0];
+       pp.src = '//app.pageproofer.com/embed/50973457-0fde-5f26-a6d6-81e23e68a434';
+       pp.type = 'text/javascript';
+       pp.async = true;
+       s.parentNode.insertBefore(pp, s);
+    })(document, 'script');
+    </script>
+												
+  
+
+  
+</footer>
+                
+                <div id="go2top">
+                    <span class="oxy-icon oxy-icon-up"></span>
+                </div>
+                
+                <!-- The modal container for images -->
+                <div id="modal_img_large" class="modal">
+                    <span class="close oxy-icon oxy-icon-remove"></span>
+                    <!-- Modal Content (The Image) -->
+                    <div id="modal_img_container"></div>
+                    <!-- Modal Caption (Image Text) -->
+                    <div id="caption"></div>
+                </div>
+                
+                
+
+            </footer>
+        </div>
+    </body>
+</html>

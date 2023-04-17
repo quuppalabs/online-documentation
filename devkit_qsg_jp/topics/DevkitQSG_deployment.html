@@ -1,0 +1,371 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="../../favicon.ico"/><link rel="icon" href="../../favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="システムのハードウェア設置が完了したので、QSP を使ってプロジェクトを展開することができます。このステップでは、ロケーターの位置と向きを測定して、システムが、設置されたロケーターに対する追跡対象アイテムの位置データを計算できるようにします。この段階で、しっかりとロケーターを配置、特定し、照準を合わせることにより、その後の追跡結果の精度が向上します。また、タグを構成して、追跡を可能にします。 ..."/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="task"/><meta name="DC.relation" content="../../devkit_qsg_jp/topics/DevkitQSG_setup.html"/><meta name="DC.relation" content="../../devkit_qsg_jp/topics/DevkitQSG_installation.html"/><meta name="DC.relation" content="../../devkit_qsg_jp/topics/DevkitQSG_submission.html"/><meta name="DC.creator" content="Julia"/><meta name="rights" content="© 2020 Quuppa Oy"/><meta name="DC.date.created" content="01.06.2020"/><meta name="DC.date.modified" content="12.07.2021"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="devkit_project_deployment_0"/><title>プロジェクトの展開</title><!--  Generated with Oxygen version 24.1, build number 2022030800.  --><meta name="wh-path2root" content="../../"/><meta name="wh-toc-id" content="devkit_project_deployment_0-d3586e8579"/><meta name="wh-source-relpath" content="devkit_qsg_jp/topics/DevkitQSG_deployment.dita"/><meta name="wh-out-relpath" content="devkit_qsg_jp/topics/DevkitQSG_deployment.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="../../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/app/topic-page.css?buildId=2022030800"/>
+    
+    
+    <script src="../../oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="../../oxygen-webhelp/app/topic-page.js" src="../../oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/template/Quuppa_skin.css?buildId=2022030800"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-48150744-3"></script>
+    <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'UA-48150744-3'); 
+    </script>
+
+<script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:2215474,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script></head>
+
+    <body id="devkit_project_deployment_0" class="wh_topic_page frmBody">
+        <div id="page-container">
+            <div id="content-wrap">
+                <a href="#wh_topic_body" class="sr-only sr-only-focusable">Jump to main content</a>
+                <!-- EXM-36950 - Expand the args.hdr parameter here -->
+                
+                
+                
+                <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <a href="https://quuppa.com/" class=" wh_logo d-none d-sm-block "><img src="../../oxygen-webhelp\template\page-templates/images/QUUPPA_1row_black_LOW_small.png" alt="Product Documentation"/></a>
+                    <div class=" wh_publication_title "><a href="../../index.html"><span class="title">Product Documentation</span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+
+
+                
+                <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+
+
+<form id="searchForm" method="get" role="search" action="../../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+
+</div>
+<!-- Navigation at the top of the topic -->                
+                <div class="container-fluid" id="wh_topic_container">
+                    <div class="row">
+
+                        <nav class="wh_tools d-print-none navbar-expand-md">
+                            
+<div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="../../index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="Translations"><div class="title"><a href="../../megamap/topics/Translations.html">Translations</a></div></div></li><li><div class="topicref" data-id="Translations_jp"><div class="title"><a href="../../megamap/topics/Translations_jp.html">Japanese - 日本語 </a></div></div></li><li><div class="topicref" data-id="devkit_qsg_introduction"><div class="title"><a href="../../devkit_qsg_jp/topics/DevkitQSG_introduction.html">Quuppa Development Kit (Quuppa 開発キット) クイックスタートガイド</a></div></div></li><li><div class="topicref" data-id="setting_up_the_development_kit"><div class="title"><a href="../../devkit_qsg_jp/topics/DevkitQSG_setup.html">Development Kit のセットアップ</a></div></div></li><li class="active"><div class="topicref" data-id="devkit_project_deployment_0"><div class="title"><a href="../../devkit_qsg_jp/topics/DevkitQSG_deployment.html">プロジェクトの展開</a></div></div></li></ol></div>
+
+
+
+                            
+<div class="wh_right_tools">
+                                <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                                <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                                <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  
+<span class="navprev"><a class="- topic/link link" href="../../devkit_qsg_jp/topics/DevkitQSG_installation.html" title="ハードウェアの設置" aria-label="Previous topic: ハードウェアの設置" rel="prev"></a></span>  
+<span class="navnext"><a class="- topic/link link" href="../../devkit_qsg_jp/topics/DevkitQSG_submission.html" title="プロジェクトの提出" aria-label="Next topic: プロジェクトの提出" rel="next"></a></span>  </span></div>
+<!--External resource link-->
+
+                                <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                                
+                                <!-- Expand/Collapse publishing TOC 
+                                     The menu button for mobile devices is copied in the output only when the publication TOC is available
+                                -->
+                                <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+
+                        </nav>
+                    </div>
+                    
+
+<div class="wh_content_area">
+                        <div class="row">
+                            
+
+
+                                <nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none">
+<div id="wh_publication_toc_content">
+
+
+                                    <div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="megamap_introduction-d3586e34" class="topicref" data-id="megamap_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action megamap_introduction-d3586e34-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/documentation_introduction.html" id="megamap_introduction-d3586e34-link">Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="quuppa_development_kit_quick_start_guide-d3586e104" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action quuppa_development_kit_quick_start_guide-d3586e104-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Devkit.html" id="quuppa_development_kit_quick_start_guide-d3586e104-link">Getting Started</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="quuppa_development_kit_quick_start_guide-d3586e404" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action quuppa_development_kit_quick_start_guide-d3586e404-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Software.html" id="quuppa_development_kit_quick_start_guide-d3586e404-link">Software</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="quuppa_development_kit_quick_start_guide-d3586e4767" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action quuppa_development_kit_quick_start_guide-d3586e4767-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Hardware.html" id="quuppa_development_kit_quick_start_guide-d3586e4767-link">Hardware</a></div></div></li><li role="treeitem"><div data-tocid="videos-d3586e7077" class="topicref" data-id="videos" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../resources/topics/videos.html" id="videos-d3586e7077-link">Video Gallery</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="whitepapers-d3586e7100" class="topicref" data-id="whitepapers" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action whitepapers-d3586e7100-link" class="wh-expand-btn"></span><div class="title"><a href="../../resources/topics/resources.html" id="whitepapers-d3586e7100-link">Other Resources</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="Translations-d3586e7539" class="topicref" data-id="Translations" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action Translations-d3586e7539-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Translations.html" id="Translations-d3586e7539-link">Translations</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="Translations_zh-d3586e7562" class="topicref" data-id="Translations_zh" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action Translations_zh-d3586e7562-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Translations_zh.html" id="Translations_zh-d3586e7562-link">Chinese - 中文 </a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="Translations_jp-d3586e8418" class="topicref" data-id="Translations_jp" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action Translations_jp-d3586e8418-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Translations_jp.html" id="Translations_jp-d3586e8418-link">Japanese - 日本語 </a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="true"><div data-tocid="devkit_qsg_introduction-d3586e8441" class="topicref" data-id="devkit_qsg_introduction" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action devkit_qsg_introduction-d3586e8441-link" class="wh-expand-btn"></span><div class="title"><a href="../../devkit_qsg_jp/topics/DevkitQSG_introduction.html" id="devkit_qsg_introduction-d3586e8441-link">Quuppa Development Kit (Quuppa 開発キット) クイックスタートガイド</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="devkitqsg_content-d3586e8464" class="topicref" data-id="devkitqsg_content" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action devkitqsg_content-d3586e8464-link" class="wh-expand-btn"></span><div class="title"><a href="../../devkit_qsg_jp/topics/DevkitQSG_included.html" id="devkitqsg_content-d3586e8464-link">Development Kit の内容</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="setting_up_the_development_kit-d3586e8510" class="topicref" data-id="setting_up_the_development_kit" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action setting_up_the_development_kit-d3586e8510-link" class="wh-expand-btn"></span><div class="title"><a href="../../devkit_qsg_jp/topics/DevkitQSG_setup.html" id="setting_up_the_development_kit-d3586e8510-link">Development Kit のセットアップ</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="devkitqsg_project_planning-d3586e8533" class="topicref" data-id="devkitqsg_project_planning" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../devkit_qsg_jp/topics/DevkitQSG_planning.html" id="devkitqsg_project_planning-d3586e8533-link">プロジェクトのプランニング</a></div></div></li><li role="treeitem"><div data-tocid="devkitqsg_physical_installtion-d3586e8556" class="topicref" data-id="devkitqsg_physical_installtion" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../devkit_qsg_jp/topics/DevkitQSG_installation.html" id="devkitqsg_physical_installtion-d3586e8556-link">ハードウェアの設置</a></div></div></li><li role="treeitem" class="active"><div data-tocid="devkit_project_deployment_0-d3586e8579" class="topicref" data-id="devkit_project_deployment_0" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../devkit_qsg_jp/topics/DevkitQSG_deployment.html" id="devkit_project_deployment_0-d3586e8579-link">プロジェクトの展開</a></div></div></li><li role="treeitem"><div data-tocid="untitled6-d3586e8602" class="topicref" data-id="untitled6" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../devkit_qsg_jp/topics/DevkitQSG_submission.html" id="untitled6-d3586e8602-link">プロジェクトの提出</a></div></div></li></ul></li><li role="treeitem"><div data-tocid="DevkitQSG_next_steps-d3586e8625" class="topicref" data-id="DevkitQSG_next_steps" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../devkit_qsg_jp/topics/DevkitQSG_next_steps.html" id="DevkitQSG_next_steps-d3586e8625-link">次のステップ</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="q17_ig_introduction-d3586e8648" class="topicref" data-id="q17_ig_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action q17_ig_introduction-d3586e8648-link" class="wh-expand-btn"></span><div class="title"><a href="../../Q17_jp/topics/Q17_installation_guide.html" id="q17_ig_introduction-d3586e8648-link">Q17ロケーター設置ガイドおよび安全情報</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="Q35_installation_guide-d3586e8996" class="topicref" data-id="Q35_installation_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action Q35_installation_guide-d3586e8996-link" class="wh-expand-btn"></span><div class="title"><a href="../../Q35_jp/topics/Q35_installation_guide.html" id="Q35_installation_guide-d3586e8996-link">Q35ロケーター設置ガイドおよび安全情報</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="Translations_ko-d3586e9274" class="topicref" data-id="Translations_ko" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action Translations_ko-d3586e9274-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Translations_ko.html" id="Translations_ko-d3586e9274-link">Korean - 한국어</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="Translations_ru-d3586e9923" class="topicref" data-id="Translations_ru" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action Translations_ru-d3586e9923-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Translations_ru.html" id="Translations_ru-d3586e9923-link">Russian - русский</a></div></div></li></ul></li><li role="treeitem"><div data-tocid="megamap_revision_history-d3586e10573" class="topicref" data-id="megamap_revision_history" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/revision_history.html" id="megamap_revision_history-d3586e10573-link">Revision History</a></div></div></li></ul></div>
+                                
+
+</div>
+</nav>
+                            
+
+
+                            <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+<button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true"><span class="close-toc-icon-container"><span class="close-toc-icon"></span></span></button>
+
+                                
+<div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">プロジェクトの展開</h1>
+    <div class="- topic/body task/taskbody body taskbody">
+        <section class="- topic/section task/context section context">
+            <p class="- topic/p p">システムのハードウェア設置が完了したので、QSP を使ってプロジェクトを展開することができます。このステップでは、ロケーターの位置と向きを測定して、システムが、設置されたロケーターに対する追跡対象アイテムの位置データを計算できるようにします。この段階で、しっかりとロケーターを配置、特定し、照準を合わせることにより、その後の追跡結果の精度が向上します。また、タグを構成して、追跡を可能にします。 </p>
+        </section>
+        <section class="- topic/ol task/steps ol steps"><ol class="- topic/ol task/steps ol steps"><li class="- topic/li task/step li step">
+                <span class="- topic/ph task/cmd ph cmd">QSP で<strong class="+ topic/ph hi-d/b ph b">ロケーターを配置</strong>します。</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <ol class="- topic/ol ol" type="a" id="devkit_project_deployment_0__ol_lmh_k55_gjb" data-ofbid="devkit_project_deployment_0__ol_lmh_k55_gjb">
+                        <li class="- topic/li li">ロケーターをクリックして選択します。</li>
+                        <li class="- topic/li li">床からロケーターの中心までの高さを測定し、その値を Z
+                                座標として右側のパネルに入力します。<div class="- topic/note note note note_note"><span class="note__title">Note:</span> 測定にはレーザー距離計の使用をお勧めします。これにより、精度の高い結果を簡単に得ることができます。</div><p class="- topic/p p"><img class="- topic/image image" id="devkit_project_deployment_0__image_dbt_lry_kjb" src="../../devkit_qsg/images/DevKitQSG_positioning_height_of_Locator.png" width="378"/></p></li>
+                        <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">参照ポイントを 2
+                                つ選択します</strong>。これらのポイントは、ロケーターに対し、正確に<strong class="+ topic/ph hi-d/b ph b">左</strong>、<strong class="+ topic/ph hi-d/b ph b">右</strong>、<strong class="+ topic/ph hi-d/b ph b">上</strong>、または<strong class="+ topic/ph hi-d/b ph b">下</strong>でなければなりません
+                            (この 2 つのポイントが作る角度は 90 度でなければなりません)。<p class="- topic/p p">たとえば、下の図では、参照ポイント 1 は<strong class="+ topic/ph hi-d/b ph b">上</strong>、2
+                                    は<strong class="+ topic/ph hi-d/b ph b">左</strong>を向いています。</p><p class="- topic/p p"><img class="- topic/image image" id="devkit_project_deployment_0__image_cb2_slg_sjb" src="../../devkit_qsg/images/DevKit_reference_point_directions.png" width="378"/></p></li>
+                        <li class="- topic/li li">ロケーターの真下から 1 つめの参照ポイントまでの距離を測定します。次に、<span class="+ topic/keyword ui-d/wintitle keyword wintitle">Planning</span> &gt;
+                                <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Add Guideline</span> を選択し、この測定値を使用して、1
+                                    つ目のガイドラインを、上部のメニューバーを使用して、参照ポイントの方向を追加します。ウィンドウが表示されたら、測定値を入力します。マップビューに、追加されたガイドラインを表す赤色の点線が表示されます。<p class="- topic/p p"><img class="- topic/image image" id="devkit_project_deployment_0__image_mby_mmc_mjb" src="../../devkit_qsg/images/devkitQSG_adding_guidelines.jpg" width="378"/></p></li>
+                        <li class="- topic/li li">2 つ目の参照ポイントについて、ステップ <span class="+ topic/keyword ui-d/wintitle keyword wintitle">d</span> を繰り返します。 </li>
+                        <li class="- topic/li li">マウスを使ってロケーターをドラッグすることで、ロケーターをガイドラインを目安とした正しい位置に移動します。参照ポイントの両端は、背景イメージで選択した参照ポイントと一致する必要があります。<p class="- topic/p p"><img class="- topic/image image" id="devkit_project_deployment_0__image_scz_kwz_kjb" src="../../devkit_qsg/images/devkitQSG_using_guidelines.jpg" width="378"/></p></li>
+                        <li class="- topic/li li">ロケーターの正確な位置が分かったら、右側のオブジェクト情報パネルにある <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Planning</span> タブの
+                                <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Coordinates</span>
+                                    ヘッダーの隣にあるロックアイコンをクリックして、位置を固定します。<p class="- topic/p p"><img class="- topic/image image" id="devkit_project_deployment_0__image_hzb_bgt_kjb" src="../../devkit_qsg/images/devkitQSG_locking_locator_coordinates.jpg" width="227"/></p></li>
+                        <li class="- topic/li li">すべてのロケーターについて、ステップ <span class="+ topic/keyword ui-d/wintitle keyword wintitle">a ～ g</span> を繰り返します。</li>
+                    </ol>
+                </div>
+            </li><li class="- topic/li task/step li step">
+                <span class="- topic/ph task/cmd ph cmd"><strong class="+ topic/ph hi-d/b ph b">ロケーターを特定します</strong>。</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <ol class="- topic/ol ol" type="a" id="devkit_project_deployment_0__ol_rpm_rv5_gjb" data-ofbid="devkit_project_deployment_0__ol_rpm_rv5_gjb">
+                        <li class="- topic/li li">エリア内を移動するのに十分な長さのイーサネットケーブルを使って Focusing Locator が PoE スイッチに接続されていることを確認します。PoE スイッチに接続すると、インジケータランプが緑色に点滅します。</li>
+                        <li class="- topic/li li">QSP で、ロケーターをクリックして選択します。</li>
+                        <li class="- topic/li li">右側のパネルで、<span class="+ topic/keyword ui-d/wintitle keyword wintitle">Deployment</span> タブを開き、<span class="+ topic/keyword ui-d/wintitle keyword wintitle">Start
+                                Identification Wizard</span> ボタンをクリックします。 Identification Wizard
+                            ウィンドウが開きます。 </li>
+                        <li class="- topic/li li">Q17 Focusing Locator に有効なライセンスをまだ取得していない場合には、 Quuppa Customer Portal
+                            のユーザー名とパスワード (設定されている場合は二要素認証) の入力を求められます。 </li>
+                        <li class="- topic/li li">ロケーターのインジケーターランプが青色で点滅し、 Focusing Locator
+                            のインジケーターランプが緑色で点灯していることを確認します。それ以外の場合には、接続をチェックし、QPE が展開モードであることを確認してからウィザードを再起動します。<div class="- topic/p p">
+                                <div class="- topic/note note note note_note"><span class="note__title">Note:</span> QPE のモードをチェックするには、 Quuppa Controller のデスクトップにある <span class="+ topic/keyword ui-d/wintitle keyword wintitle">QPE
+                                        Web Console</span> アイコンをクリックします。</div>
+                            </div></li>
+                        <li class="- topic/li li">選択したロケーターに、 Focusing Locator の照準を合わせます。選択したロケーターを表すドット (点)
+                            がダイアグラムの中心に来るように近づけます
+                                        (ドットの色が緑色に変わります)。信号の品質が向上し、ウィザードがロケーターを特定できるようになるまで照準をそのまま維持します。<div class="- topic/note note note note_note"><span class="note__title">Note:</span> 高品質の信号を得るには、十分に近づく必要があります。<p class="- topic/p p"><img class="- topic/image image" id="devkit_project_deployment_0__image_bmv_yfq_mjb" src="../../devkit_qsg/images/devkitQSG_Identification_wizard_window.png" width="378"/></p></div></li>
+                        <li class="- topic/li li">すべてのロケーターについて、ステップ <span class="+ topic/keyword ui-d/wintitle keyword wintitle">b ～ f</span> を繰り返します。 </li>
+                    </ol>
+                </div>
+            </li><li class="- topic/li task/step li step">
+                <span class="- topic/ph task/cmd ph cmd"><strong class="+ topic/ph hi-d/b ph b">ロケーターの照準を合わせます</strong>。</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <ol class="- topic/ol ol" type="a" id="devkit_project_deployment_0__ol_qdn_xpw_hjb" data-ofbid="devkit_project_deployment_0__ol_qdn_xpw_hjb">
+                        <li class="- topic/li li">QSP で、ロケーターをクリックして選択します。 </li>
+                        <li class="- topic/li li">右側のパネルで <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Deployment</span> タブを開き、<span class="+ topic/keyword ui-d/wintitle keyword wintitle">Start Focusing
+                                Wizard</span> ボタンをクリックします。 Focusing Wizard ウィンドウが開きます。 </li>
+                        <li class="- topic/li li">ロケーターのインジケーターランプが青色で点滅し、 Focusing Locator
+                            のインジケーターランプが緑色で点灯していることを確認します。それ以外の場合には、接続をチェックし、QPE が展開モードであることを確認してからウィザードを再起動します。<div class="- topic/p p">
+                                <div class="- topic/note note note note_note"><span class="note__title">Note:</span> QPE のモードをチェックするには、 Quuppa Controller のデスクトップにある <span class="+ topic/keyword ui-d/wintitle keyword wintitle">QPE
+                                        Web Console</span> アイコンをクリックします。</div>
+                            </div></li>
+                        <li class="- topic/li li">照準測定は 2 回行います。まず、<strong class="+ topic/ph hi-d/b ph b">1 回目の照準測定を行います</strong>。<ul class="- topic/ul ul" id="devkit_project_deployment_0__ul_cnj_zxp_mjb" data-ofbid="devkit_project_deployment_0__ul_cnj_zxp_mjb">
+                                <li class="- topic/li li">Focusing Locator を、選択したロケーターの (プロジェクトの背景イメージに対して) まっすぐ<strong class="+ topic/ph hi-d/b ph b">左</strong>、<strong class="+ topic/ph hi-d/b ph b">右</strong>、<strong class="+ topic/ph hi-d/b ph b">上</strong>、または<strong class="+ topic/ph hi-d/b ph b">下</strong>に移動します。</li>
+                                <li class="- topic/li li">照準を当てているロケーターに Focusing Locator を向けて、 Focusing Wizard
+                                        の指示に従って操作します。<div class="- topic/note note note note_note"><span class="note__title">Note:</span> 高品質の信号を得るには、十分に近づく必要があります。測定データの量を表すアプリケーションの緑色のバーがいっぱいになるまで、
+                                        Focusing Locator
+                                            をロケーターに向け続けます。測定の精度をさらに上げるには、その位置にしばらくいてから、<span class="+ topic/keyword ui-d/wintitle keyword wintitle">Continue</span>
+                                        ボタンをクリックします。</div>
+                                    <img class="- topic/image image" id="devkit_project_deployment_0__image_btv_zfq_mjb" src="../../devkit_qsg/images/devkitQSG_focusing_wizard.png" width="378"/></li>
+                                <li class="- topic/li li"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Main directions</span>
+                                        ボックスの矢印を使用して、どの方向からロケーターに照準を当てていたかを示します。指定した方向は、マップ上に赤の実線で表示されます。方向を正確に指定できたら、<span class="+ topic/keyword ui-d/wintitle keyword wintitle">Continue</span>
+                                            をクリックします。<p class="- topic/p p"><img class="- topic/image image" id="devkit_project_deployment_0__image_pby_bws_3jb" src="../../devkit_qsg/images/devkit_focusing_of_locators3.jpg" width="378"/></p></li>
+                                <li class="- topic/li li">Focusing Locator をいろいろな場所に移動して、方向が正しいことを確認します。地図上の黒い実線が、
+                                    Focusing Locator の方向を指していなければなりません。 <ul class="- topic/ul ul" id="devkit_project_deployment_0__ul_ud1_yzp_mjb" data-ofbid="devkit_project_deployment_0__ul_ud1_yzp_mjb">
+                                        <li class="- topic/li li">方向が正しい場合は、<span class="+ topic/keyword ui-d/wintitle keyword wintitle">Accept results and measure this
+                                                Locator again at different position</span>
+                                            をクリックします。 </li>
+                                        <li class="- topic/li li">方向が正しくない場合は、<span class="+ topic/keyword ui-d/wintitle keyword wintitle">Ignore this measurement and keep
+                                                old data</span> をクリックします。</li>
+                                    </ul></li>
+                            </ul></li>
+                        <li class="- topic/li li">同じロケーターで、<strong class="+ topic/ph hi-d/b ph b">2 回目の照準測定を行います</strong>。<ul class="- topic/ul ul" id="devkit_project_deployment_0__ul_z3w_b1q_mjb" data-ofbid="devkit_project_deployment_0__ul_z3w_b1q_mjb">
+                                <li class="- topic/li li">Focusing Locator を、選択したロケーターの 2 つ目の位置 (プロジェクトの背景イメージに対してまっすぐ<strong class="+ topic/ph hi-d/b ph b">左</strong>、<strong class="+ topic/ph hi-d/b ph b">右</strong>、<strong class="+ topic/ph hi-d/b ph b">上</strong>、または<strong class="+ topic/ph hi-d/b ph b">下</strong>にある) に移動します。</li>
+                                <li class="- topic/li li">Focusing Locator を前と同じロケーターに向けて、新たな位置から照準合わせの手順を繰り返します。 <div class="- topic/note note attention note_attention"><span class="note__title">Attention:</span> ウィザードにより、2 回の測定の誤差が計算されます。誤差のレベルが <strong class="+ topic/ph hi-d/b ph b">4.0</strong> 未満になるようにしてください。誤差のレベルが 4.0 を超える場合には、次のステップに従って、照準測定をやり直します。<span class="+ topic/keyword ui-d/wintitle keyword wintitle">Accept results and exit</span> をクリックし、次にオブジェクト情報パネルの <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Deployment</span> タブを選択し、<span class="+ topic/keyword ui-d/wintitle keyword wintitle">Clear measurement data</span> ボタンをクリックします。これで、ロケーターに再び照準を合わせられるようになります。 </div></li>
+                                <li class="- topic/li li">2 つの異なる方向からロケーターの照準合わせが完了し、満足できる結果を得られたら、<span class="+ topic/keyword ui-d/wintitle keyword wintitle">Accept results and exit</span> をクリックします。 </li>
+                            </ul></li>
+                        <li class="- topic/li li">ロケーターそれぞれについて、照準合わせのプロセスを繰り返します。 <div class="- topic/note note note note_note"><span class="note__title">Note:</span> 位置追跡が機能するかどうかを確認するには、メニューバーから
+                                    <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Deployment</span> &gt; <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Show Focusing
+                                    Locator</span> を選択します。追跡エリア内で Focusing Locator をあちこち移動させ、
+                                QSP で Focusing Locator
+                                    の位置を監視します。監視を停止するには、<span class="+ topic/keyword ui-d/wintitle keyword wintitle">Deployment</span> &gt;
+                                    <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Hide Focusing Locator</span> を選択します。</div></li>
+                    </ol>
+                </div>
+            </li><li class="- topic/li task/step li step">
+                <span class="- topic/ph task/cmd ph cmd"><strong class="+ topic/ph hi-d/b ph b">タグを構成します</strong>。</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <ol class="- topic/ol ol" type="a" id="devkit_project_deployment_0__ol_bpl_qyw_hjb" data-ofbid="devkit_project_deployment_0__ol_bpl_qyw_hjb">
+                        <li class="- topic/li li">PoE スイッチに接続したまま Focusing Locator を上向きにして、テーブルに乗せます。</li>
+                        <li class="- topic/li li">QSP メニューバーで、<span class="+ topic/keyword ui-d/wintitle keyword wintitle">Deployment</span> &gt; <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Tag configurator tool</span> を選択します。新しいウィンドウが開きます。</li>
+                        <li class="- topic/li li"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Autoconfigure Tags</span> ボタンをクリックします。さらに新しいウィンドウが開きます。</li>
+                        <li class="- topic/li li"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Configure</span> チェックボックスをオンにして、構成が
+                                <span class="+ topic/keyword ui-d/wintitle keyword wintitle">ID_BADGE</span> に設定されていること、 Tag target channel が
+                                <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Proprietary</span> に設定されていることを確認します。<p class="- topic/p p"><img class="- topic/image image" id="devkit_project_deployment_0__image_pgb_xbq_mjb" src="../../devkit_qsg/images/devkitQSG_tag_configuration.png" width="567"/></p></li>
+                        <li class="- topic/li li"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Start</span> をクリックします。</li>
+                        <li class="- topic/li li">タグのボタンを押して、スリープ状態を解除し、 Focusing Locator の上に置きます。これらのタグが <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Tag
+                                configurator tool</span>
+                                ウィンドウに表示されます。<div class="- topic/note note note note_note"><span class="note__title">Note:</span> どのタグがどれであるかを確認したい場合は、タグの背面にある ID 番号をチェックしてください。
+                            </div></li>
+                        <li class="- topic/li li">個々のタグの構成ステータスが <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Done</span> になったら、<span class="+ topic/keyword ui-d/wintitle keyword wintitle">Stop</span>
+                            をクリックします。 <p class="- topic/p p"><img class="- topic/image image" id="devkit_project_deployment_0__image_ltt_t3x_hjb" src="../../devkit_qsg/images/devkitQSG_tag_configurator_tool.png"/></p></li>
+                        <li class="- topic/li li"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Tag configurator tool</span> ウィンドウを閉じます。</li>
+                    </ol>
+                </div>
+            </li><li class="- topic/li task/step li step">
+                <span class="- topic/ph task/cmd ph cmd"><strong class="+ topic/ph hi-d/b ph b">プロジェクトを保存します</strong>。 </span>
+            </li></ol></section>
+    </div>
+</article></main></div>
+
+                                
+                                
+                                
+
+                                
+
+                            </div>
+                            <!-- Topic TOC on right of page to cover sections in the topic. Removed in Jan 2022, but could be
+                            added for usability later.
+                            <whc:webhelp_topic_toc>
+                                <nav role="navigation"  id="wh_topic_toc" 
+                                    class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                                    <whc:component_content/>
+                                </nav>
+                            </whc:webhelp_topic_toc>
+                            -->
+                        </div>
+                    </div>
+
+
+                </div>       
+<!-- Navigation at the end of the topic -->          
+                <div class="container-fluid" id="wh_topic_container">
+                    <div class="row" style="color:white;margin-top:40px;">
+                        <nav class="wh_tools d-print-none navbar-expand-md">
+                            <div></div>
+                            
+<div class="wh_right_tools">
+                                <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  
+<span class="navprev"><a class="- topic/link link" href="../../devkit_qsg_jp/topics/DevkitQSG_installation.html" title="ハードウェアの設置" aria-label="Previous topic: ハードウェアの設置" rel="prev"></a></span>  
+<span class="navnext"><a class="- topic/link link" href="../../devkit_qsg_jp/topics/DevkitQSG_submission.html" title="プロジェクトの提出" aria-label="Next topic: プロジェクトの提出" rel="next"></a></span>  </span></div>
+<!--External resource link-->
+
+                            </div>
+
+                        </nav>
+                    </div>
+                    
+                </div>
+<!-- next section-->                       
+            </div>            
+            <footer id="footer">
+                <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container float-left ">
+    <image href="page-templates/images/QUUPPA_1row_white_LOW_pienennetty.png"></image>
+    
+    <bookrights>
+        <copyrfirst>
+        </copyrfirst>
+        <copyrlast>
+            <year>© 2020-2022 </year>
+        </copyrlast>
+        <bookowner>
+            <organization> Quuppa Oy. All Rights Reserved. </organization>
+        </bookowner>
+    </bookrights>
+    
+    
+
+   
+<!--     <whc:include_html href="${webhelp.fragment.footer}"/>
+-->  
+  
+  </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
+                Generation date: 17.04.2023</div>
+  
+  
+  <script type="text/javascript">
+    (function (d, t) {
+       var pp = d.createElement(t), s = d.getElementsByTagName(t)[0];
+       pp.src = '//app.pageproofer.com/embed/2202ff57-a1dd-522f-befe-078025b63fcb';
+       pp.type = 'text/javascript';
+       pp.async = true;
+       s.parentNode.insertBefore(pp, s);
+    })(document, 'script');
+    </script>
+                        
+    <script type="text/javascript">
+    (function (d, t) {
+       var pp = d.createElement(t), s = d.getElementsByTagName(t)[0];
+       pp.src = '//app.pageproofer.com/embed/50973457-0fde-5f26-a6d6-81e23e68a434';
+       pp.type = 'text/javascript';
+       pp.async = true;
+       s.parentNode.insertBefore(pp, s);
+    })(document, 'script');
+    </script>
+												
+  
+
+  
+</footer>
+                
+                <div id="go2top">
+                    <span class="oxy-icon oxy-icon-up"></span>
+                </div>
+                
+                <!-- The modal container for images -->
+                <div id="modal_img_large" class="modal">
+                    <span class="close oxy-icon oxy-icon-remove"></span>
+                    <!-- Modal Content (The Image) -->
+                    <div id="modal_img_container"></div>
+                    <!-- Modal Caption (Image Text) -->
+                    <div id="caption"></div>
+                </div>
+                
+                
+
+            </footer>
+        </div>
+    </body>
+</html>

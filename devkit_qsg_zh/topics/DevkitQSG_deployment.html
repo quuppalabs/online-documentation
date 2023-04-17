@@ -1,0 +1,322 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="../../favicon.ico"/><link rel="icon" href="../../favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="现在，系统已物理安装好，可以开始使用 QSP 来部署项目了。在此步骤中，您将测量定位器的位置和方向，使得系统可以计算与已安装的定位器相关的被跟踪项目的定位数据。请在此阶段精心准确地定位、识别定位器和调整定位器焦点，以在以后提高跟踪结果的准确性。您还将配置标记，使得您可以开始跟踪它们。 在 QSP 中 定位器定位 ： 单击定位器将其选中。 测量从地板到定位器中心的高度，并在右侧面板中输入测量值作为 ..."/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="task"/><meta name="DC.relation" content="../../devkit_qsg_zh/topics/DevkitQSG_setup.html"/><meta name="DC.relation" content="../../devkit_qsg_zh/topics/DevkitQSG_installation.html"/><meta name="DC.relation" content="../../devkit_qsg_zh/topics/DevkitQSG_submission.html"/><meta name="DC.creator" content="Julia"/><meta name="rights" content="© 2020 Quuppa Oy"/><meta name="DC.date.created" content="01.06.2020"/><meta name="DC.date.modified" content="12.07.2021"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="devkit_project_deployment_0"/><title>项目部署</title><!--  Generated with Oxygen version 24.1, build number 2022030800.  --><meta name="wh-path2root" content="../../"/><meta name="wh-toc-id" content="devkit_project_deployment_0-d3586e7723"/><meta name="wh-source-relpath" content="devkit_qsg_zh/topics/DevkitQSG_deployment.dita"/><meta name="wh-out-relpath" content="devkit_qsg_zh/topics/DevkitQSG_deployment.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="../../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/app/topic-page.css?buildId=2022030800"/>
+    
+    
+    <script src="../../oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="../../oxygen-webhelp/app/topic-page.js" src="../../oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/template/Quuppa_skin.css?buildId=2022030800"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-48150744-3"></script>
+    <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'UA-48150744-3'); 
+    </script>
+
+<script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:2215474,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script></head>
+
+    <body id="devkit_project_deployment_0" class="wh_topic_page frmBody">
+        <div id="page-container">
+            <div id="content-wrap">
+                <a href="#wh_topic_body" class="sr-only sr-only-focusable">Jump to main content</a>
+                <!-- EXM-36950 - Expand the args.hdr parameter here -->
+                
+                
+                
+                <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <a href="https://quuppa.com/" class=" wh_logo d-none d-sm-block "><img src="../../oxygen-webhelp\template\page-templates/images/QUUPPA_1row_black_LOW_small.png" alt="Product Documentation"/></a>
+                    <div class=" wh_publication_title "><a href="../../index.html"><span class="title">Product Documentation</span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+
+
+                
+                <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+
+
+<form id="searchForm" method="get" role="search" action="../../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+
+</div>
+<!-- Navigation at the top of the topic -->                
+                <div class="container-fluid" id="wh_topic_container">
+                    <div class="row">
+
+                        <nav class="wh_tools d-print-none navbar-expand-md">
+                            
+<div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="../../index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="Translations"><div class="title"><a href="../../megamap/topics/Translations.html">Translations</a></div></div></li><li><div class="topicref" data-id="Translations_zh"><div class="title"><a href="../../megamap/topics/Translations_zh.html">Chinese - 中文 </a></div></div></li><li><div class="topicref" data-id="devkit_qsg_introduction"><div class="title"><a href="../../devkit_qsg_zh/topics/DevkitQSG_introduction.html">Quuppa 开发工具包快速入门指南</a></div></div></li><li><div class="topicref" data-id="setting_up_the_development_kit"><div class="title"><a href="../../devkit_qsg_zh/topics/DevkitQSG_setup.html">设置开发工具包</a></div></div></li><li class="active"><div class="topicref" data-id="devkit_project_deployment_0"><div class="title"><a href="../../devkit_qsg_zh/topics/DevkitQSG_deployment.html">项目部署</a></div></div></li></ol></div>
+
+
+
+                            
+<div class="wh_right_tools">
+                                <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                                <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                                <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  
+<span class="navprev"><a class="- topic/link link" href="../../devkit_qsg_zh/topics/DevkitQSG_installation.html" title="物理安装" aria-label="Previous topic: 物理安装" rel="prev"></a></span>  
+<span class="navnext"><a class="- topic/link link" href="../../devkit_qsg_zh/topics/DevkitQSG_submission.html" title="项目提交" aria-label="Next topic: 项目提交" rel="next"></a></span>  </span></div>
+<!--External resource link-->
+
+                                <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                                
+                                <!-- Expand/Collapse publishing TOC 
+                                     The menu button for mobile devices is copied in the output only when the publication TOC is available
+                                -->
+                                <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+
+                        </nav>
+                    </div>
+                    
+
+<div class="wh_content_area">
+                        <div class="row">
+                            
+
+
+                                <nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none">
+<div id="wh_publication_toc_content">
+
+
+                                    <div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="megamap_introduction-d3586e34" class="topicref" data-id="megamap_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action megamap_introduction-d3586e34-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/documentation_introduction.html" id="megamap_introduction-d3586e34-link">Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="quuppa_development_kit_quick_start_guide-d3586e104" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action quuppa_development_kit_quick_start_guide-d3586e104-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Devkit.html" id="quuppa_development_kit_quick_start_guide-d3586e104-link">Getting Started</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="quuppa_development_kit_quick_start_guide-d3586e404" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action quuppa_development_kit_quick_start_guide-d3586e404-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Software.html" id="quuppa_development_kit_quick_start_guide-d3586e404-link">Software</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="quuppa_development_kit_quick_start_guide-d3586e4767" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action quuppa_development_kit_quick_start_guide-d3586e4767-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Hardware.html" id="quuppa_development_kit_quick_start_guide-d3586e4767-link">Hardware</a></div></div></li><li role="treeitem"><div data-tocid="videos-d3586e7077" class="topicref" data-id="videos" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../resources/topics/videos.html" id="videos-d3586e7077-link">Video Gallery</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="whitepapers-d3586e7100" class="topicref" data-id="whitepapers" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action whitepapers-d3586e7100-link" class="wh-expand-btn"></span><div class="title"><a href="../../resources/topics/resources.html" id="whitepapers-d3586e7100-link">Other Resources</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="Translations-d3586e7539" class="topicref" data-id="Translations" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action Translations-d3586e7539-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Translations.html" id="Translations-d3586e7539-link">Translations</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="true"><div data-tocid="Translations_zh-d3586e7562" class="topicref" data-id="Translations_zh" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action Translations_zh-d3586e7562-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Translations_zh.html" id="Translations_zh-d3586e7562-link">Chinese - 中文 </a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="true"><div data-tocid="devkit_qsg_introduction-d3586e7585" class="topicref" data-id="devkit_qsg_introduction" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action devkit_qsg_introduction-d3586e7585-link" class="wh-expand-btn"></span><div class="title"><a href="../../devkit_qsg_zh/topics/DevkitQSG_introduction.html" id="devkit_qsg_introduction-d3586e7585-link">Quuppa 开发工具包快速入门指南</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="devkitqsg_content-d3586e7608" class="topicref" data-id="devkitqsg_content" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action devkitqsg_content-d3586e7608-link" class="wh-expand-btn"></span><div class="title"><a href="../../devkit_qsg_zh/topics/DevkitQSG_included.html" id="devkitqsg_content-d3586e7608-link">开发工具包内容</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="setting_up_the_development_kit-d3586e7654" class="topicref" data-id="setting_up_the_development_kit" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action setting_up_the_development_kit-d3586e7654-link" class="wh-expand-btn"></span><div class="title"><a href="../../devkit_qsg_zh/topics/DevkitQSG_setup.html" id="setting_up_the_development_kit-d3586e7654-link">设置开发工具包</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="devkitqsg_project_planning-d3586e7677" class="topicref" data-id="devkitqsg_project_planning" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../devkit_qsg_zh/topics/DevkitQSG_planning.html" id="devkitqsg_project_planning-d3586e7677-link">项目规划</a></div></div></li><li role="treeitem"><div data-tocid="devkitqsg_physical_installtion-d3586e7700" class="topicref" data-id="devkitqsg_physical_installtion" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../devkit_qsg_zh/topics/DevkitQSG_installation.html" id="devkitqsg_physical_installtion-d3586e7700-link">物理安装</a></div></div></li><li role="treeitem" class="active"><div data-tocid="devkit_project_deployment_0-d3586e7723" class="topicref" data-id="devkit_project_deployment_0" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../devkit_qsg_zh/topics/DevkitQSG_deployment.html" id="devkit_project_deployment_0-d3586e7723-link">项目部署</a></div></div></li><li role="treeitem"><div data-tocid="untitled6-d3586e7746" class="topicref" data-id="untitled6" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../devkit_qsg_zh/topics/DevkitQSG_submission.html" id="untitled6-d3586e7746-link">项目提交</a></div></div></li></ul></li><li role="treeitem"><div data-tocid="DevkitQSG_next_steps-d3586e7769" class="topicref" data-id="DevkitQSG_next_steps" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../devkit_qsg_zh/topics/DevkitQSG_next_steps.html" id="DevkitQSG_next_steps-d3586e7769-link">后续步骤</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="q17_ig_introduction-d3586e7792" class="topicref" data-id="q17_ig_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action q17_ig_introduction-d3586e7792-link" class="wh-expand-btn"></span><div class="title"><a href="../../Q17_zh/topics/Q17_installation_guide.html" id="q17_ig_introduction-d3586e7792-link">Q17定位器安装指南和安全信息</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="Q35_installation_guide-d3586e8140" class="topicref" data-id="Q35_installation_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action Q35_installation_guide-d3586e8140-link" class="wh-expand-btn"></span><div class="title"><a href="../../Q35_zh/topics/Q35_installation_guide.html" id="Q35_installation_guide-d3586e8140-link">Q35定位器安装指南和安全信息</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="Translations_jp-d3586e8418" class="topicref" data-id="Translations_jp" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action Translations_jp-d3586e8418-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Translations_jp.html" id="Translations_jp-d3586e8418-link">Japanese - 日本語 </a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="Translations_ko-d3586e9274" class="topicref" data-id="Translations_ko" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action Translations_ko-d3586e9274-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Translations_ko.html" id="Translations_ko-d3586e9274-link">Korean - 한국어</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="Translations_ru-d3586e9923" class="topicref" data-id="Translations_ru" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action Translations_ru-d3586e9923-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Translations_ru.html" id="Translations_ru-d3586e9923-link">Russian - русский</a></div></div></li></ul></li><li role="treeitem"><div data-tocid="megamap_revision_history-d3586e10573" class="topicref" data-id="megamap_revision_history" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/revision_history.html" id="megamap_revision_history-d3586e10573-link">Revision History</a></div></div></li></ul></div>
+                                
+
+</div>
+</nav>
+                            
+
+
+                            <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+<button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true"><span class="close-toc-icon-container"><span class="close-toc-icon"></span></span></button>
+
+                                
+<div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">项目部署</h1>
+    <div class="- topic/body task/taskbody body taskbody">
+        <section class="- topic/section task/context section context">
+            <p class="- topic/p p">现在，系统已物理安装好，可以开始使用 QSP 来部署项目了。在此步骤中，您将测量定位器的位置和方向，使得系统可以计算与已安装的定位器相关的被跟踪项目的定位数据。请在此阶段精心准确地定位、识别定位器和调整定位器焦点，以在以后提高跟踪结果的准确性。您还将配置标记，使得您可以开始跟踪它们。</p>
+        </section>
+        <section class="- topic/ol task/steps ol steps"><ol class="- topic/ol task/steps ol steps"><li class="- topic/li task/step li step"><span class="- topic/ph task/cmd ph cmd">在 QSP 中<strong class="+ topic/ph hi-d/b ph b">定位器定位</strong>：</span><div class="- topic/itemgroup task/info itemgroup info">
+                    <ol class="- topic/ol ol" type="a" id="devkit_project_deployment_0__ol_lmh_k55_gjb" data-ofbid="devkit_project_deployment_0__ol_lmh_k55_gjb">
+                        <li class="- topic/li li">单击定位器将其选中。</li>
+                        <li class="- topic/li li">测量从地板到定位器中心的高度，并在右侧面板中输入测量值作为 Z 坐标。<div class="- topic/note note note note_note"><span class="note__title">Note:</span> 我们建议您使用激光测量工具进行测量。这样一来，测量将更加容易，并可提供更准确的结果。</div><p class="- topic/p p"><img class="- topic/image image" id="devkit_project_deployment_0__image_dbt_lry_kjb" src="../images/DevKitQSG_positioning_height_of_Locator.png" width="378"/></p></li>
+                        <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">选择两个参考点</strong>，它们正好相对于定位器的<strong class="+ topic/ph hi-d/b ph b">左</strong>/<strong class="+ topic/ph hi-d/b ph b">右</strong>/<strong class="+ topic/ph hi-d/b ph b">上</strong>/ <strong class="+ topic/ph hi-d/b ph b">下</strong>（它们应互相呈 90 度角）。<p class="- topic/p p">例如，在下图中，参考点 1 的方向是<strong class="+ topic/ph hi-d/b ph b">上</strong>，参考点 2 的方向是 <strong class="+ topic/ph hi-d/b ph b">左</strong>。</p><p class="- topic/p p"><img class="- topic/image image" id="devkit_project_deployment_0__image_cb2_slg_sjb" src="../images/DevKit_reference_point_directions.png" width="378"/></p></li>
+                        <li class="- topic/li li">测量从定位器到正下方第一个参考点的距离，然后通过选择<span class="+ topic/keyword ui-d/wintitle keyword wintitle">规划</span> &gt; <span class="+ topic/keyword ui-d/wintitle keyword wintitle">添加引导线</span>来使用此测量值添加第一条引导线，并使用顶部的菜单栏添加参考点的方向。在随后打开的窗口中，插入测量值。地图视图中将显示一条红色虚线，以显示添加的引导线。<p class="- topic/p p"><img class="- topic/image image" id="devkit_project_deployment_0__image_mby_mmc_mjb" src="../images/devkitQSG_adding_guidelines.jpg" width="378"/></p></li>
+                        <li class="- topic/li li">对第二个参考点重复步骤 <span class="+ topic/keyword ui-d/wintitle keyword wintitle">d.</span> 。</li>
+                        <li class="- topic/li li">通过使用鼠标拖动定位器，使用引导线将定位器移动到正确的位置。参考点的末端应与您在背景图像中选择的参考点匹配。<p class="- topic/p p"><img class="- topic/image image" id="devkit_project_deployment_0__image_scz_kwz_kjb" src="../images/devkitQSG_using_guidelines.jpg" width="378"/></p></li>
+                        <li class="- topic/li li">知道了定位器的确切位置后，单击右侧对象信息面板的<span class="+ topic/keyword ui-d/wintitle keyword wintitle">规划</span>选项卡中坐标标题旁边的小锁图标，锁定定位器的位置。<p class="- topic/p p"><img class="- topic/image image" id="devkit_project_deployment_0__image_hzb_bgt_kjb" src="../images/devkitQSG_locking_locator_coordinates.jpg" width="227"/></p></li>
+                        <li class="- topic/li li">对所有定位器重复步骤 <span class="+ topic/keyword ui-d/wintitle keyword wintitle">a. - g.</span> 。</li>
+                    </ol>
+                </div>
+            </li><li class="- topic/li task/step li step"><span class="- topic/ph task/cmd ph cmd"><strong class="+ topic/ph hi-d/b ph b">识别定位器</strong>：</span><div class="- topic/itemgroup task/info itemgroup info">
+                    <ol class="- topic/ol ol" type="a" id="devkit_project_deployment_0__ol_rpm_rv5_gjb" data-ofbid="devkit_project_deployment_0__ol_rpm_rv5_gjb">
+                        <li class="- topic/li li">确保已使用足够长的以太网电缆将对焦定位器连接到 PoE 交换机，可让您轻松地在空间内移动。连接到 PoE 交换机时，指示灯将呈绿色闪烁。</li>
+                        <li class="- topic/li li">在 QSP 中单击定位器将其选中。</li>
+                        <li class="- topic/li li">在右侧的面板中，打开<span class="+ topic/keyword ui-d/wintitle keyword wintitle">部署</span>选项卡，然后单击<span class="+ topic/keyword ui-d/wintitle keyword wintitle">启动识别向导</span>按钮。这将打开"识别向导"窗口。</li>
+                        <li class="- topic/li li">如果您的 Q17 对焦定位器尚无有效的许可证，系统将提示您输入 Quuppa 客户门户用户名、密码（若已启用双因素身份验证，则还需要输入双因素身份验证密码）。</li>
+                        <li class="- topic/li li">检查定位器的指示灯呈蓝色闪烁、对焦定位器指示灯呈绿色长亮。如果不是这样，请检查连接，确保 QPE 处于部署模式，然后重新启动该向导。<div class="- topic/p p">
+                                <div class="- topic/note note note note_note"><span class="note__title">Note:</span> 您可以通过单击 Quuppa 控制器桌面上的 <span class="+ topic/keyword ui-d/wintitle keyword wintitle">QPE Web 控制台</span>图标来检查 QPE 所处于的模式。</div>
+                            </div></li>
+                        <li class="- topic/li li">让对焦定位器对准所选定位器。调整对准情况，使得点靠近图的中心（点变为绿色），并保持对准，直到信号质量足够好，向导能够识别定位器。<div class="- topic/note note note note_note"><span class="note__title">Note:</span> 确保您足够接近，以获得质量良好的信号。<p class="- topic/p p"><img class="- topic/image image" id="devkit_project_deployment_0__image_bmv_yfq_mjb" src="../images/devkitQSG_Identification_wizard_window.png" width="378"/></p></div></li>
+                        <li class="- topic/li li">对所有定位器重复步骤 <span class="+ topic/keyword ui-d/wintitle keyword wintitle">b. - f.</span> 。</li>
+                    </ol>
+                </div>
+            </li><li class="- topic/li task/step li step"><span class="- topic/ph task/cmd ph cmd"><strong class="+ topic/ph hi-d/b ph b">调整定位器焦点</strong>：</span><div class="- topic/itemgroup task/info itemgroup info">
+                    <ol class="- topic/ol ol" type="a" id="devkit_project_deployment_0__ol_qdn_xpw_hjb" data-ofbid="devkit_project_deployment_0__ol_qdn_xpw_hjb">
+                        <li class="- topic/li li">在 QSP 中单击定位器将其选中。</li>
+                        <li class="- topic/li li">在右侧的面板中，打开<span class="+ topic/keyword ui-d/wintitle keyword wintitle">部署</span>选项卡，然后单击<span class="+ topic/keyword ui-d/wintitle keyword wintitle">启动对焦向导</span>按钮。这将打开"对焦向导"窗口。</li>
+                        <li class="- topic/li li">检查定位器的指示灯呈蓝色闪烁、对焦定位器指示灯呈绿色长亮。如果不是这样，请检查连接，确保 QPE 处于部署模式，然后重新启动该向导。<div class="- topic/p p">
+                                <div class="- topic/note note note note_note"><span class="note__title">Note:</span> 您可以通过单击 Quuppa 控制器桌面上的 <span class="+ topic/keyword ui-d/wintitle keyword wintitle">QPE Web 控制台</span>图标来检查 QPE 所处于的模式。</div>
+                            </div></li>
+                        <li class="- topic/li li">执行<strong class="+ topic/ph hi-d/b ph b">两次对焦测量的第一次测量</strong>：<ul class="- topic/ul ul" id="devkit_project_deployment_0__ul_cnj_zxp_mjb" data-ofbid="devkit_project_deployment_0__ul_cnj_zxp_mjb">
+                                <li class="- topic/li li">将对焦定位器移动到所选定位器的正<strong class="+ topic/ph hi-d/b ph b">左</strong>/<strong class="+ topic/ph hi-d/b ph b">右</strong> /<strong class="+ topic/ph hi-d/b ph b">上</strong> /<strong class="+ topic/ph hi-d/b ph b">下</strong>方向 （相对于项目的背景图像）。 </li>
+                                <li class="- topic/li li">让对焦定位器指向您要对焦的定位器，然后按照“对焦向导”提供的说明执行操作。<div class="- topic/note note note note_note"><span class="note__title">Note:</span> 确保您足够接近，以获得质量良好的信号。让对焦定位器保持指向定位器，直到应用程序中的绿色条变满，表示测量数据可接受。保持该位置一小会再单击<span class="+ topic/keyword ui-d/wintitle keyword wintitle">继续</span>按钮，以提高测量精度。</div>
+                                    <img class="- topic/image image" id="devkit_project_deployment_0__image_btv_zfq_mjb" src="../images/devkitQSG_focusing_wizard.png" width="378"/></li>
+                                <li class="- topic/li li">使用<span class="+ topic/keyword ui-d/wintitle keyword wintitle">主要方向</span>框中的箭头，提供调整定位器焦点的来源方向。地图上的红线指示给定的方向。对方向感到满意后，单击<span class="+ topic/keyword ui-d/wintitle keyword wintitle">继续</span>。<p class="- topic/p p"><img class="- topic/image image" id="devkit_project_deployment_0__image_pby_bws_3jb" src="../images/devkit_focusing_of_locators3.jpg" width="378"/></p></li>
+                                <li class="- topic/li li">四处移动对焦定位器以验证方向是否正确。地图上的黑线应指向对焦定位器的方向。<ul class="- topic/ul ul" id="devkit_project_deployment_0__ul_ud1_yzp_mjb" data-ofbid="devkit_project_deployment_0__ul_ud1_yzp_mjb">
+                                        <li class="- topic/li li">如果方向正确，请单击<span class="+ topic/keyword ui-d/wintitle keyword wintitle">接受结果并在不同的位置再次测量此定位器</span>。</li>
+                                        <li class="- topic/li li">如果方向不正确，请单击<span class="+ topic/keyword ui-d/wintitle keyword wintitle">忽略此测量并保留旧数据</span></li>
+                                    </ul></li>
+                            </ul></li>
+                        <li class="- topic/li li">对同一定位器执行<strong class="+ topic/ph hi-d/b ph b">两次对焦测量的第二次测量</strong>：<ul class="- topic/ul ul" id="devkit_project_deployment_0__ul_z3w_b1q_mjb" data-ofbid="devkit_project_deployment_0__ul_z3w_b1q_mjb">
+                                <li class="- topic/li li">将对焦定位器移动到第二个位置（同样，恰好移动到所选定位器的正<strong class="+ topic/ph hi-d/b ph b">左</strong>/<strong class="+ topic/ph hi-d/b ph b">右</strong>/<strong class="+ topic/ph hi-d/b ph b">上</strong>/<strong class="+ topic/ph hi-d/b ph b">下</strong> 方向）。</li>
+                                <li class="- topic/li li">像刚才一样，让对焦定位器指向相同的定位器，然后从新位置重复对焦步骤。<div class="- topic/note note attention note_attention"><span class="note__title">Attention:</span> 向导将计算两个测量值之间的误差。尽量让误差级别低于 <strong class="+ topic/ph hi-d/b ph b">4.0</strong>。如果误差级别高于 4.0，可通过以下步骤重做对焦测量：单击<span class="+ topic/keyword ui-d/wintitle keyword wintitle">接受结果</span>并退出，接着在对象信息面板中选择<span class="+ topic/keyword ui-d/wintitle keyword wintitle">部署</span>选项卡，然后单击<span class="+ topic/keyword ui-d/wintitle keyword wintitle">清除测量数据</span>按钮。现在，您可以再次开始调整定位器焦点了。</div></li>
+                                <li class="- topic/li li">从两个不同的位置调整好定位器的焦点并在对结果感到满意后，单击<span class="+ topic/keyword ui-d/wintitle keyword wintitle">接受结果并退出</span>。</li>
+                            </ul></li>
+                        <li class="- topic/li li">针对每个定位器重复对焦过程。<div class="- topic/note note note note_note"><span class="note__title">Note:</span> 要检查位置跟踪是否正常工作，可以转到菜单栏以选择<span class="+ topic/keyword ui-d/wintitle keyword wintitle">部署</span>  &gt; <span class="+ topic/keyword ui-d/wintitle keyword wintitle">显示对焦定位器</span>。在跟踪区域中四处移动对焦定位器，并监控对焦定位器在 QSP 中的位置。要停止监控，请选择<span class="+ topic/keyword ui-d/wintitle keyword wintitle">部署</span> &gt; <span class="+ topic/keyword ui-d/wintitle keyword wintitle">隐藏对焦定位器</span></div></li>
+                    </ol>
+                </div>
+            </li><li class="- topic/li task/step li step"><span class="- topic/ph task/cmd ph cmd"><strong class="+ topic/ph hi-d/b ph b">配置标记： </strong></span><div class="- topic/itemgroup task/info itemgroup info">
+                    <ol class="- topic/ol ol" type="a" id="devkit_project_deployment_0__ol_bpl_qyw_hjb" data-ofbid="devkit_project_deployment_0__ol_bpl_qyw_hjb">
+                        <li class="- topic/li li">将对焦定位器（仍然连接到 PoE 交换机）面朝上放置在桌子上。</li>
+                        <li class="- topic/li li">在 QSP 菜单栏中，选择<span class="+ topic/keyword ui-d/wintitle keyword wintitle">部署</span> &gt; <span class="+ topic/keyword ui-d/wintitle keyword wintitle">标记配置器工具</span>。这将打开一个新的窗口。</li>
+                        <li class="- topic/li li">单击<span class="+ topic/keyword ui-d/wintitle keyword wintitle">自动配置标记</span>按钮，这将打开一个新的窗口。</li>
+                        <li class="- topic/li li">选中<span class="+ topic/keyword ui-d/wintitle keyword wintitle">配置</span>复选框，确保配置设置为 <span class="+ topic/keyword ui-d/wintitle keyword wintitle">ID_BADGE</span>，并且标记目标通道设置为<span class="+ topic/keyword ui-d/wintitle keyword wintitle">专有</span>。<p class="- topic/p p"><img class="- topic/image image" id="devkit_project_deployment_0__image_pgb_xbq_mjb" src="../images/devkitQSG_tag_configuration.png" width="567"/></p></li>
+                        <li class="- topic/li li">单击<span class="+ topic/keyword ui-d/wintitle keyword wintitle">开始</span>。</li>
+                        <li class="- topic/li li">按下标记上的按钮以"唤醒标记"，然后将它们放置在对焦定位器的顶部。标记将出现在<span class="+ topic/keyword ui-d/wintitle keyword wintitle">标记配置器工具</span>窗口中 。<div class="- topic/note note note note_note"><span class="note__title">Note:</span> 如果您想了解标记是哪一个，可以检查标记背面的标记 ID 号。</div></li>
+                        <li class="- topic/li li">每个标记的配置状态都显示为<span class="+ topic/keyword ui-d/wintitle keyword wintitle">完成</span>后，单击<span class="+ topic/keyword ui-d/wintitle keyword wintitle">停止</span>。<p class="- topic/p p"><img class="- topic/image image" id="devkit_project_deployment_0__image_ltt_t3x_hjb" src="../images/devkitQSG_tag_configurator_tool.png"/></p></li>
+                        <li class="- topic/li li">关闭<span class="+ topic/keyword ui-d/wintitle keyword wintitle">标记配置器工具</span>窗口。</li>
+                    </ol>
+                </div>
+            </li><li class="- topic/li task/step li step"><span class="- topic/ph task/cmd ph cmd"><strong class="+ topic/ph hi-d/b ph b">保存项目</strong>。</span></li></ol></section>
+    </div>
+</article></main></div>
+
+                                
+                                
+                                
+
+                                
+
+                            </div>
+                            <!-- Topic TOC on right of page to cover sections in the topic. Removed in Jan 2022, but could be
+                            added for usability later.
+                            <whc:webhelp_topic_toc>
+                                <nav role="navigation"  id="wh_topic_toc" 
+                                    class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                                    <whc:component_content/>
+                                </nav>
+                            </whc:webhelp_topic_toc>
+                            -->
+                        </div>
+                    </div>
+
+
+                </div>       
+<!-- Navigation at the end of the topic -->          
+                <div class="container-fluid" id="wh_topic_container">
+                    <div class="row" style="color:white;margin-top:40px;">
+                        <nav class="wh_tools d-print-none navbar-expand-md">
+                            <div></div>
+                            
+<div class="wh_right_tools">
+                                <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  
+<span class="navprev"><a class="- topic/link link" href="../../devkit_qsg_zh/topics/DevkitQSG_installation.html" title="物理安装" aria-label="Previous topic: 物理安装" rel="prev"></a></span>  
+<span class="navnext"><a class="- topic/link link" href="../../devkit_qsg_zh/topics/DevkitQSG_submission.html" title="项目提交" aria-label="Next topic: 项目提交" rel="next"></a></span>  </span></div>
+<!--External resource link-->
+
+                            </div>
+
+                        </nav>
+                    </div>
+                    
+                </div>
+<!-- next section-->                       
+            </div>            
+            <footer id="footer">
+                <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container float-left ">
+    <image href="page-templates/images/QUUPPA_1row_white_LOW_pienennetty.png"></image>
+    
+    <bookrights>
+        <copyrfirst>
+        </copyrfirst>
+        <copyrlast>
+            <year>© 2020-2022 </year>
+        </copyrlast>
+        <bookowner>
+            <organization> Quuppa Oy. All Rights Reserved. </organization>
+        </bookowner>
+    </bookrights>
+    
+    
+
+   
+<!--     <whc:include_html href="${webhelp.fragment.footer}"/>
+-->  
+  
+  </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
+                Generation date: 17.04.2023</div>
+  
+  
+  <script type="text/javascript">
+    (function (d, t) {
+       var pp = d.createElement(t), s = d.getElementsByTagName(t)[0];
+       pp.src = '//app.pageproofer.com/embed/2202ff57-a1dd-522f-befe-078025b63fcb';
+       pp.type = 'text/javascript';
+       pp.async = true;
+       s.parentNode.insertBefore(pp, s);
+    })(document, 'script');
+    </script>
+                        
+    <script type="text/javascript">
+    (function (d, t) {
+       var pp = d.createElement(t), s = d.getElementsByTagName(t)[0];
+       pp.src = '//app.pageproofer.com/embed/50973457-0fde-5f26-a6d6-81e23e68a434';
+       pp.type = 'text/javascript';
+       pp.async = true;
+       s.parentNode.insertBefore(pp, s);
+    })(document, 'script');
+    </script>
+												
+  
+
+  
+</footer>
+                
+                <div id="go2top">
+                    <span class="oxy-icon oxy-icon-up"></span>
+                </div>
+                
+                <!-- The modal container for images -->
+                <div id="modal_img_large" class="modal">
+                    <span class="close oxy-icon oxy-icon-remove"></span>
+                    <!-- Modal Content (The Image) -->
+                    <div id="modal_img_container"></div>
+                    <!-- Modal Caption (Image Text) -->
+                    <div id="caption"></div>
+                </div>
+                
+                
+
+            </footer>
+        </div>
+    </body>
+</html>

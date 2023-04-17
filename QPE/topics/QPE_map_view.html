@@ -1,0 +1,327 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="../../favicon.ico"/><link rel="icon" href="../../favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The Positioning Engine Web Console map view is a visual representation of your Quuppa system in action, built using the Quuppa APIs. You can see the tags moving around on the map in real time, view ..."/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="DC.relation" content="../../QPE/topics/QPE_webconsole.html"/><meta name="DC.relation" content="../../QPE/topics/QPE_links.html"/><meta name="DC.relation" content="../../QPE/topics/QPE_tag_tree.html"/><meta name="DC.relation" content="../../QPE/topics/QPE_tag_tree.html"/><meta name="DC.relation" content="../../QPE/topics/QPE_map_view_controls.html"/><meta name="DC.creator" content="Julia"/><meta name="rights" content="© 2020 Quuppa Oy"/><meta name="DC.date.created" content="01.06.2020"/><meta name="DC.date.modified" content="12.07.2021"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="QPE_map_view"/><title>Map View</title><!--  Generated with Oxygen version 24.1, build number 2022030800.  --><meta name="wh-path2root" content="../../"/><meta name="wh-toc-id" content="QPE_map_view-d3586e4208"/><meta name="wh-source-relpath" content="QPE/topics/QPE_map_view.dita"/><meta name="wh-out-relpath" content="QPE/topics/QPE_map_view.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="../../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/app/topic-page.css?buildId=2022030800"/>
+    
+    
+    <script src="../../oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="../../oxygen-webhelp/app/topic-page.js" src="../../oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/template/Quuppa_skin.css?buildId=2022030800"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-48150744-3"></script>
+    <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'UA-48150744-3'); 
+    </script>
+
+<script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:2215474,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script></head>
+
+    <body id="QPE_map_view" class="wh_topic_page frmBody">
+        <div id="page-container">
+            <div id="content-wrap">
+                <a href="#wh_topic_body" class="sr-only sr-only-focusable">Jump to main content</a>
+                <!-- EXM-36950 - Expand the args.hdr parameter here -->
+                
+                
+                
+                <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <a href="https://quuppa.com/" class=" wh_logo d-none d-sm-block "><img src="../../oxygen-webhelp\template\page-templates/images/QUUPPA_1row_black_LOW_small.png" alt="Product Documentation"/></a>
+                    <div class=" wh_publication_title "><a href="../../index.html"><span class="title">Product Documentation</span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+
+
+                
+                <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+
+
+<form id="searchForm" method="get" role="search" action="../../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+
+</div>
+<!-- Navigation at the top of the topic -->                
+                <div class="container-fluid" id="wh_topic_container">
+                    <div class="row">
+
+                        <nav class="wh_tools d-print-none navbar-expand-md">
+                            
+<div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="../../index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="quuppa_development_kit_quick_start_guide"><div class="title"><a href="../../megamap/topics/Software.html">Software</a></div></div></li><li><div class="topicref" data-id="QPE_introduction"><div class="title"><a href="../../QPE/topics/QPE_introduction.html">Quuppa Positioning Engine User Manual</a></div></div></li><li><div class="topicref" data-id="QPE_webconsole"><div class="title"><a href="../../QPE/topics/QPE_webconsole.html">Positioning Engine Web Console</a></div></div></li><li class="active"><div class="topicref" data-id="QPE_map_view"><div class="title"><a href="../../QPE/topics/QPE_map_view.html">Map View</a></div></div></li></ol></div>
+
+
+
+                            
+<div class="wh_right_tools">
+                                <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                                <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                                <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  
+<span class="navprev"><a class="- topic/link link" href="../../QPE/topics/QPE_links.html" title="API Documentation and Links" aria-label="Previous topic: API Documentation and Links" rel="prev"></a></span>  
+<span class="navnext"><a class="- topic/link link" href="../../QPE/topics/QPE_tag_tree.html" title="Tag Tree Definitions" aria-label="Next topic: Tag Tree Definitions" rel="next"></a></span>  </span></div>
+<!--External resource link-->
+
+                                <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                                
+                                <!-- Expand/Collapse publishing TOC 
+                                     The menu button for mobile devices is copied in the output only when the publication TOC is available
+                                -->
+                                <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+
+                        </nav>
+                    </div>
+                    
+
+<div class="wh_content_area">
+                        <div class="row">
+                            
+
+
+                                <nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none">
+<div id="wh_publication_toc_content">
+
+
+                                    <div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="megamap_introduction-d3586e34" class="topicref" data-id="megamap_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action megamap_introduction-d3586e34-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/documentation_introduction.html" id="megamap_introduction-d3586e34-link">Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="quuppa_development_kit_quick_start_guide-d3586e104" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action quuppa_development_kit_quick_start_guide-d3586e104-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Devkit.html" id="quuppa_development_kit_quick_start_guide-d3586e104-link">Getting Started</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="quuppa_development_kit_quick_start_guide-d3586e404" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action quuppa_development_kit_quick_start_guide-d3586e404-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Software.html" id="quuppa_development_kit_quick_start_guide-d3586e404-link">Software</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="QSP_introduction-d3586e427" class="topicref" data-id="QSP_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QSP_introduction-d3586e427-link" class="wh-expand-btn"></span><div class="title"><a href="../../QSP/topics/QSP_introduction.html" id="QSP_introduction-d3586e427-link">Quuppa Site Planner User Manual</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="QSS_introduction-d3586e3725" class="topicref" data-id="QSS_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QSS_introduction-d3586e3725-link" class="wh-expand-btn"></span><div class="title"><a href="../../QSS/topics/QSS_introduction.html" id="QSS_introduction-d3586e3725-link">Quuppa System Simulator User Manual</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="QPE_introduction-d3586e3817" class="topicref" data-id="QPE_introduction" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action QPE_introduction-d3586e3817-link" class="wh-expand-btn"></span><div class="title"><a href="../../QPE/topics/QPE_introduction.html" id="QPE_introduction-d3586e3817-link">Quuppa Positioning Engine User Manual</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="QPE_getting_started-d3586e3840" class="topicref" data-id="QPE_getting_started" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QPE_getting_started-d3586e3840-link" class="wh-expand-btn"></span><div class="title"><a href="../../QPE/topics/QPE_getting_started.html" id="QPE_getting_started-d3586e3840-link">Getting Started</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="QPE_webconsole-d3586e3955" class="topicref" data-id="QPE_webconsole" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action QPE_webconsole-d3586e3955-link" class="wh-expand-btn"></span><div class="title"><a href="../../QPE/topics/QPE_webconsole.html" id="QPE_webconsole-d3586e3955-link">Positioning Engine Web Console</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="QPE_useful_tips-d3586e3978" class="topicref" data-id="QPE_useful_tips" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../QPE/topics/QPE_useful_tips.html" id="QPE_useful_tips-d3586e3978-link">Useful Tips</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="QPE_main_view-d3586e4001" class="topicref" data-id="QPE_main_view" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QPE_main_view-d3586e4001-link" class="wh-expand-btn"></span><div class="title"><a href="../../QPE/topics/QPE_main_view.html" id="QPE_main_view-d3586e4001-link">Main View</a></div></div></li><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="QPE_map_view-d3586e4208" class="topicref" data-id="QPE_map_view" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action QPE_map_view-d3586e4208-link" class="wh-expand-btn"></span><div class="title"><a href="../../QPE/topics/QPE_map_view.html" id="QPE_map_view-d3586e4208-link">Map View</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="QPE_tag_tree-d3586e4231" class="topicref" data-id="QPE_tag_tree" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../QPE/topics/QPE_tag_tree.html" id="QPE_tag_tree-d3586e4231-link">Tag Tree Definitions</a></div></div></li><li role="treeitem"><div data-tocid="map_view_controls-d3586e4255" class="topicref" data-id="map_view_controls" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../QPE/topics/QPE_map_view_controls.html" id="map_view_controls-d3586e4255-link">Map View Controls</a></div></div></li></ul></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="QPE_features-d3586e4278" class="topicref" data-id="QPE_features" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QPE_features-d3586e4278-link" class="wh-expand-btn"></span><div class="title"><a href="../../QPE/topics/QPE_API.html" id="QPE_features-d3586e4278-link">Quuppa APIs</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="QPE_advanced_features-d3586e4419" class="topicref" data-id="QPE_advanced_features" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QPE_advanced_features-d3586e4419-link" class="wh-expand-btn"></span><div class="title"><a href="../../QPE/topics/QPE_advanced_features.html" id="QPE_advanced_features-d3586e4419-link">Advanced Features</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="QPE_troubleshooting-d3586e4535" class="topicref" data-id="QPE_troubleshooting" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QPE_troubleshooting-d3586e4535-link" class="wh-expand-btn"></span><div class="title"><a href="../../QPE/topics/QPE_troubleshooting.html" id="QPE_troubleshooting-d3586e4535-link">Troubleshooting</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="QDP_introduction-d3586e4581" class="topicref" data-id="QDP_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QDP_introduction-d3586e4581-link" class="wh-expand-btn"></span><div class="title"><a href="../../QDP/topics/QDP_introduction.html" id="QDP_introduction-d3586e4581-link">Quuppa Data Player User Manual</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="quuppa_development_kit_quick_start_guide-d3586e4767" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action quuppa_development_kit_quick_start_guide-d3586e4767-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Hardware.html" id="quuppa_development_kit_quick_start_guide-d3586e4767-link">Hardware</a></div></div></li><li role="treeitem"><div data-tocid="videos-d3586e7077" class="topicref" data-id="videos" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../resources/topics/videos.html" id="videos-d3586e7077-link">Video Gallery</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="whitepapers-d3586e7100" class="topicref" data-id="whitepapers" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action whitepapers-d3586e7100-link" class="wh-expand-btn"></span><div class="title"><a href="../../resources/topics/resources.html" id="whitepapers-d3586e7100-link">Other Resources</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="Translations-d3586e7539" class="topicref" data-id="Translations" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action Translations-d3586e7539-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Translations.html" id="Translations-d3586e7539-link">Translations</a></div></div></li><li role="treeitem"><div data-tocid="megamap_revision_history-d3586e10573" class="topicref" data-id="megamap_revision_history" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/revision_history.html" id="megamap_revision_history-d3586e10573-link">Revision History</a></div></div></li></ul></div>
+                                
+
+</div>
+</nav>
+                            
+
+
+                            <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+<button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true"><span class="close-toc-icon-container"><span class="close-toc-icon"></span></span></button>
+
+                                
+<div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Map View</h1>
+    <div class="- topic/body body">
+        <p class="- topic/p p">The Positioning Engine Web Console map view is a visual representation of your Quuppa
+            system in action, built using the Quuppa APIs. You can see the tags moving around on the
+            map in real time, view the available data for specific tags and edit the map controls to
+            adapt the map view more to your liking. The map view is intended as an example of the
+            type of map that you can create for your own end customer application. </p>
+        <p class="- topic/p p">To access the map view, click on the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Map View</span> link at the top of the
+            Positioning Engine Web Console's main page. </p>
+        <p class="- topic/p p"><img class="- topic/image image" id="QPE_map_view__image_kkk_tyr_hnb" src="../images/QPE_map_view_button.png" width="151"/></p>
+        <p class="- topic/p p">The map view page can be divided into the following sections: </p>
+        <p class="- topic/p p"><img class="- topic/image image" id="QPE_map_view__image_ntk_p1s_hnb" src="../images/QPE_map_view_segments.png" width="756"/></p>
+        <ol class="- topic/ol ol" id="QPE_map_view__ol_bhq_ynj_z4b" data-ofbid="QPE_map_view__ol_bhq_ynj_z4b">
+            <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Tag
+                    Tree</strong> - A list of tag IDs for all of the tags that can currently be seen by
+                the QPE. By clicking on the tag ID, you can access additional information about any
+                of the tags (e.g. the tag name or state of the battery) . <ul class="- topic/ul ul" id="QPE_map_view__ol_ihg_sn4_z4b" data-ofbid="QPE_map_view__ol_ihg_sn4_z4b">
+                    <li class="- topic/li li">To <strong class="+ topic/ph hi-d/b ph b">see more information</strong> about a specific tag, click on the tag ID
+                        number for that tag in this panel. If you have defined a name for the tag in
+                        the project file using the Quuppa Site Planner, then the name will be
+                        displayed next to the dot on the map when the tag is selected. If you have
+                        not specified a name, the tag ID will be displayed in the map view instead.
+                        You can use this to identify which tag is the one that you selected. For
+                        more details, please see the <a class="- topic/xref xref" href="QPE_tag_tree.html">Tag Tree
+                            Definitions</a> section. </li>
+                    <li class="- topic/li li">To <strong class="+ topic/ph hi-d/b ph b">follow a specific tag around the map</strong>, always keeping it in view,
+                        you can click on the red dot to the left of the tag ID number. A red banner
+                        will appear at the bottom of the map view to indicate that the autofollow
+                        feature is now on.<p class="- topic/p p"><img class="- topic/image image" id="QPE_map_view__image_x13_qs4_z4b" src="../images/QPE_map_view_autofollow_tag.png" width="378"/></p></li>
+                    <li class="- topic/li li">To <strong class="+ topic/ph hi-d/b ph b">hide a specific tag from the map</strong>, click on the red dot to the left
+                        of the tag ID number twice (the first click will activate the autofollow
+                        feature described above). A red banner will appear at the bottom of the map
+                        view to indicate that the tag has been successfully hidden from the
+                                map.<p class="- topic/p p"><img class="- topic/image image" id="QPE_map_view__image_fm5_ft4_z4b" src="../images/QPE_map_view_hide_tag.png" width="378"/></p></li>
+                </ul></li>
+            <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Map View Controls</strong> - By clicking on the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Open Controls</span> bar
+                in the upper right corner, a toolbar of map controls will open. You can use these
+                controls to customise how the map view looks to better suit your needs. For more
+                information, please see the <a class="- topic/xref xref" href="QPE_map_view_controls.html">Map View
+                    Controls</a> section of this guide. </li>
+            <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Map</strong> - The map is the visual representation of your deployment on a digital
+                map. Here you can see the tags moving around the space in real time. If you
+                submitted the background image to Quuppa Customer Portal together with the project
+                file, it will also be visible. <ul class="- topic/ul ul" id="QPE_map_view__ol_un4_k44_z4b" data-ofbid="QPE_map_view__ol_un4_k44_z4b">
+                    <li class="- topic/li li">To <strong class="+ topic/ph hi-d/b ph b">see the name of a specific tag on the map</strong>, you can either hover
+                        your mouse over it to show the tag name momentarily or you can click on the
+                        tag (or its ID in the tag list) to keep the name visible. If you have not
+                        defined a name for the tag in the project file, the tag ID will be shown
+                        instead of the tag name. </li>
+                    <li class="- topic/li li">To <strong class="+ topic/ph hi-d/b ph b">see the names of other elements on the map</strong> (e.g. zones), hover
+                        your mouse over the area.</li>
+                    <li class="- topic/li li">To <strong class="+ topic/ph hi-d/b ph b">zoom in and out and rotate the map</strong>, use the buttons (plus, minus,
+                        rotate clockwise and rotate anticlockwise) in the top left corner of the map
+                        area. Alternatively, you can also use the scroll wheel on your mouse or your
+                        touchpad to zoom in and out of the map. A handy tip is to place the cursor
+                        where you want to zoom in to target the zoom.</li>
+                    <li class="- topic/li li">To <strong class="+ topic/ph hi-d/b ph b">move the map in the map view</strong>, you can left-click on the map and
+                        drag it to the desired direction. </li>
+                    <li class="- topic/li li">To <strong class="+ topic/ph hi-d/b ph b">change between a 2D and a 3D visualisation</strong> of the map, use the
+                            <span class="+ topic/keyword ui-d/wintitle keyword wintitle">2D</span> and <span class="+ topic/keyword ui-d/wintitle keyword wintitle">3D</span> buttons at the
+                        bottom left of the map. <p class="- topic/p p"><img class="- topic/image image" id="QPE_map_view__image_off_ffs_hnb" src="../images/QPE_map_view_2D_vs_3D.png" width="567"/></p><div class="- topic/p p">
+                            <div class="- topic/note note note note_note"><span class="note__title">Note:</span> This is just a visualisation, and is not related to the tracking
+                                area dimensions that you have set for your project. Clicking 3D will
+                                not turn your 2D tracking project into the 3D tracking project.
+                            </div>
+                        </div></li>
+                </ul></li>
+            <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Map View Filters</strong> - The filters at the bottom left of the page allow you to
+                select which data is shown on the map view page (including both in the tag list and
+                on the map), so that it's easier for you to find the information that is of value
+                for you. You can select which coordinate system is shown, filter tags by their name
+                or ID number and which tag fields are shown. <p class="- topic/p p"><img class="- topic/image image" id="QPE_map_view__image_akn_gds_hnb" src="../images/QPE_map_view_select_coordinate_system.png" width="567"/></p></li>
+        </ol>
+    </div>
+</article></main></div>
+
+                                
+                                
+                                
+
+                                
+
+                            </div>
+                            <!-- Topic TOC on right of page to cover sections in the topic. Removed in Jan 2022, but could be
+                            added for usability later.
+                            <whc:webhelp_topic_toc>
+                                <nav role="navigation"  id="wh_topic_toc" 
+                                    class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                                    <whc:component_content/>
+                                </nav>
+                            </whc:webhelp_topic_toc>
+                            -->
+                        </div>
+                    </div>
+
+
+                </div>       
+<!-- Navigation at the end of the topic -->          
+                <div class="container-fluid" id="wh_topic_container">
+                    <div class="row" style="color:white;margin-top:40px;">
+                        <nav class="wh_tools d-print-none navbar-expand-md">
+                            <div></div>
+                            
+<div class="wh_right_tools">
+                                <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  
+<span class="navprev"><a class="- topic/link link" href="../../QPE/topics/QPE_links.html" title="API Documentation and Links" aria-label="Previous topic: API Documentation and Links" rel="prev"></a></span>  
+<span class="navnext"><a class="- topic/link link" href="../../QPE/topics/QPE_tag_tree.html" title="Tag Tree Definitions" aria-label="Next topic: Tag Tree Definitions" rel="next"></a></span>  </span></div>
+<!--External resource link-->
+
+                            </div>
+
+                        </nav>
+                    </div>
+                    
+                </div>
+<!-- next section-->                       
+            </div>            
+            <footer id="footer">
+                <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container float-left ">
+    <image href="page-templates/images/QUUPPA_1row_white_LOW_pienennetty.png"></image>
+    
+    <bookrights>
+        <copyrfirst>
+        </copyrfirst>
+        <copyrlast>
+            <year>© 2020-2022 </year>
+        </copyrlast>
+        <bookowner>
+            <organization> Quuppa Oy. All Rights Reserved. </organization>
+        </bookowner>
+    </bookrights>
+    
+    
+
+   
+<!--     <whc:include_html href="${webhelp.fragment.footer}"/>
+-->  
+  
+  </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
+                Generation date: 17.04.2023</div>
+  
+  
+  <script type="text/javascript">
+    (function (d, t) {
+       var pp = d.createElement(t), s = d.getElementsByTagName(t)[0];
+       pp.src = '//app.pageproofer.com/embed/2202ff57-a1dd-522f-befe-078025b63fcb';
+       pp.type = 'text/javascript';
+       pp.async = true;
+       s.parentNode.insertBefore(pp, s);
+    })(document, 'script');
+    </script>
+                        
+    <script type="text/javascript">
+    (function (d, t) {
+       var pp = d.createElement(t), s = d.getElementsByTagName(t)[0];
+       pp.src = '//app.pageproofer.com/embed/50973457-0fde-5f26-a6d6-81e23e68a434';
+       pp.type = 'text/javascript';
+       pp.async = true;
+       s.parentNode.insertBefore(pp, s);
+    })(document, 'script');
+    </script>
+												
+  
+
+  
+</footer>
+                
+                <div id="go2top">
+                    <span class="oxy-icon oxy-icon-up"></span>
+                </div>
+                
+                <!-- The modal container for images -->
+                <div id="modal_img_large" class="modal">
+                    <span class="close oxy-icon oxy-icon-remove"></span>
+                    <!-- Modal Content (The Image) -->
+                    <div id="modal_img_container"></div>
+                    <!-- Modal Caption (Image Text) -->
+                    <div id="caption"></div>
+                </div>
+                
+                
+
+            </footer>
+        </div>
+    </body>
+</html>

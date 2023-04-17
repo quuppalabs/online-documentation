@@ -1,0 +1,433 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="../../favicon.ico"/><link rel="icon" href="../../favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Quuppa Technical White Paper September 2020 Table of Contents 1. Introduction 2. General Principles 3. Tags 4. Locators 5. Quuppa Positioning Engine (QPE) 6. Quuppa Monitoring 7. IT Infrastructure 8. ..."/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="DC.relation" content="../../resources/topics/resources.html"/><meta name="DC.relation" content="../../QSP/topics/QSP_locators_gateway_best_practices.html"/><meta name="DC.relation" content="../../whitepapers/topics/connectivity.html"/><meta name="DC.creator" content="Julia"/><meta name="rights" content="© 2020 Quuppa Oy"/><meta name="DC.date.created" content="01.06.2020"/><meta name="DC.date.modified" content="12.07.2021"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="high_availability"/><title>High Availability and Redundancy</title><!--  Generated with Oxygen version 24.1, build number 2022030800.  --><meta name="wh-path2root" content="../../"/><meta name="wh-toc-id" content="high_availability-d3586e7400"/><meta name="wh-source-relpath" content="resources/topics/high_availability.dita"/><meta name="wh-out-relpath" content="resources/topics/high_availability.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="../../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/app/topic-page.css?buildId=2022030800"/>
+    
+    
+    <script src="../../oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="../../oxygen-webhelp/app/topic-page.js" src="../../oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/template/Quuppa_skin.css?buildId=2022030800"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-48150744-3"></script>
+    <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'UA-48150744-3'); 
+    </script>
+
+<script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:2215474,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script></head>
+
+    <body id="high_availability" class="wh_topic_page frmBody">
+        <div id="page-container">
+            <div id="content-wrap">
+                <a href="#wh_topic_body" class="sr-only sr-only-focusable">Jump to main content</a>
+                <!-- EXM-36950 - Expand the args.hdr parameter here -->
+                
+                
+                
+                <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <a href="https://quuppa.com/" class=" wh_logo d-none d-sm-block "><img src="../../oxygen-webhelp\template\page-templates/images/QUUPPA_1row_black_LOW_small.png" alt="Product Documentation"/></a>
+                    <div class=" wh_publication_title "><a href="../../index.html"><span class="title">Product Documentation</span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+
+
+                
+                <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+
+
+<form id="searchForm" method="get" role="search" action="../../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+
+</div>
+<!-- Navigation at the top of the topic -->                
+                <div class="container-fluid" id="wh_topic_container">
+                    <div class="row">
+
+                        <nav class="wh_tools d-print-none navbar-expand-md">
+                            
+<div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="../../index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="whitepapers"><div class="title"><a href="../../resources/topics/resources.html">Other Resources</a></div></div></li><li class="active"><div class="topicref" data-id="high_availability"><div class="title"><a href="../../resources/topics/high_availability.html">High Availability and Redundancy</a></div></div></li></ol></div>
+
+
+
+                            
+<div class="wh_right_tools">
+                                <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                                <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                                <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  
+<span class="navprev"><a class="- topic/link link" href="../../QSP/topics/QSP_locators_gateway_best_practices.html" title="Best Practices for Using Locators as Data Gateways" aria-label="Previous topic: Best Practices for Using Locators as Data Gateways" rel="prev"></a></span>  
+<span class="navnext"><a class="- topic/link link" href="../../whitepapers/topics/connectivity.html" title="Connectivity Options for Quuppa Systems" aria-label="Next topic: Connectivity Options for Quuppa Systems" rel="next"></a></span>  </span></div>
+<!--External resource link-->
+
+                                <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                                
+                                <!-- Expand/Collapse publishing TOC 
+                                     The menu button for mobile devices is copied in the output only when the publication TOC is available
+                                -->
+                                <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+
+                        </nav>
+                    </div>
+                    
+
+<div class="wh_content_area">
+                        <div class="row">
+                            
+
+
+                                <nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none">
+<div id="wh_publication_toc_content">
+
+
+                                    <div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="megamap_introduction-d3586e34" class="topicref" data-id="megamap_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action megamap_introduction-d3586e34-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/documentation_introduction.html" id="megamap_introduction-d3586e34-link">Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="quuppa_development_kit_quick_start_guide-d3586e104" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action quuppa_development_kit_quick_start_guide-d3586e104-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Devkit.html" id="quuppa_development_kit_quick_start_guide-d3586e104-link">Getting Started</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="quuppa_development_kit_quick_start_guide-d3586e404" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action quuppa_development_kit_quick_start_guide-d3586e404-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Software.html" id="quuppa_development_kit_quick_start_guide-d3586e404-link">Software</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="quuppa_development_kit_quick_start_guide-d3586e4767" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action quuppa_development_kit_quick_start_guide-d3586e4767-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Hardware.html" id="quuppa_development_kit_quick_start_guide-d3586e4767-link">Hardware</a></div></div></li><li role="treeitem"><div data-tocid="videos-d3586e7077" class="topicref" data-id="videos" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../resources/topics/videos.html" id="videos-d3586e7077-link">Video Gallery</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="whitepapers-d3586e7100" class="topicref" data-id="whitepapers" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action whitepapers-d3586e7100-link" class="wh-expand-btn"></span><div class="title"><a href="../../resources/topics/resources.html" id="whitepapers-d3586e7100-link">Other Resources</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="introduction-d3586e7123" class="topicref" data-id="introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action introduction-d3586e7123-link" class="wh-expand-btn"></span><div class="title"><a href="../../network/topics/network_introduction.html" id="introduction-d3586e7123-link">Network Configuration Guidelines for Quuppa Systems</a></div></div></li><li role="treeitem"><div data-tocid="network_config_terminology-d3586e7307" class="topicref" data-id="network_config_terminology" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../network/topics/startup_parameters_2.html" id="network_config_terminology-d3586e7307-link">Java Virtual Machine Startup Parameters</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="QSP_air_interface_load_features_introduction-d3586e7330" class="topicref" data-id="QSP_air_interface_load_features_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QSP_air_interface_load_features_introduction-d3586e7330-link" class="wh-expand-btn"></span><div class="title"><a href="../../QSP/topics/QSP_manage_air_interface_load.html" id="QSP_air_interface_load_features_introduction-d3586e7330-link">Manage Air Interface Load</a></div></div></li><li role="treeitem"><div data-tocid="QSP_locators_gateway_best_practices-d3586e7377" class="topicref" data-id="QSP_locators_gateway_best_practices" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../QSP/topics/QSP_locators_gateway_best_practices.html" id="QSP_locators_gateway_best_practices-d3586e7377-link">Best Practices for Using Locators as Data Gateways</a></div></div></li><li role="treeitem" class="active"><div data-tocid="high_availability-d3586e7400" class="topicref" data-id="high_availability" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../resources/topics/high_availability.html" id="high_availability-d3586e7400-link">High Availability and Redundancy</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="connectivity_web-d3586e7423" class="topicref" data-id="connectivity_web" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action connectivity_web-d3586e7423-link" class="wh-expand-btn"></span><div class="title"><a href="../../whitepapers/topics/connectivity.html" id="connectivity_web-d3586e7423-link">Connectivity Options for Quuppa Systems</a></div></div></li><li role="treeitem"><div data-tocid="enterprise-d3586e7515" class="topicref" data-id="enterprise" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../QPE.next/topics/enterprise.html" id="enterprise-d3586e7515-link">Quuppa for Enterprise</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="Translations-d3586e7539" class="topicref" data-id="Translations" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action Translations-d3586e7539-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Translations.html" id="Translations-d3586e7539-link">Translations</a></div></div></li><li role="treeitem"><div data-tocid="megamap_revision_history-d3586e10573" class="topicref" data-id="megamap_revision_history" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/revision_history.html" id="megamap_revision_history-d3586e10573-link">Revision History</a></div></div></li></ul></div>
+                                
+
+</div>
+</nav>
+                            
+
+
+                            <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+<button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true"><span class="close-toc-icon-container"><span class="close-toc-icon"></span></span></button>
+
+                                
+<div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">High Availability and Redundancy</h1>
+    <div class="- topic/body body">
+        <p class="- topic/p p"><em class="+ topic/ph hi-d/i ph i">Quuppa Technical White Paper</em></p>
+        <p class="- topic/p p"><em class="+ topic/ph hi-d/i ph i">September 2020</em></p>
+        <section class="- topic/section section" id="high_availability__section_n5f_vwt_5mb" data-ofbid="high_availability__section_n5f_vwt_5mb"><h2 class="- topic/title title sectiontitle">Table of Contents</h2>
+            
+            <p class="- topic/p p"><a class="- topic/xref xref" href="#high_availability__section_n1x_sgw_smb">1.
+                    Introduction</a></p>
+            <p class="- topic/p p"><a class="- topic/xref xref" href="#high_availability__section_t5y_shw_smb">2. General
+                    Principles</a></p>
+            <p class="- topic/p p"><a class="- topic/xref xref" href="#high_availability__section_opl_bhw_smb">3. Tags</a></p>
+            <p class="- topic/p p"><a class="- topic/xref xref" href="#high_availability__section_nqx_bhw_smb">4.
+                Locators</a></p>
+            <p class="- topic/p p"><a class="- topic/xref xref" href="#high_availability__section_c55_chw_smb">5. Quuppa
+                    Positioning Engine (QPE)</a></p>
+            <p class="- topic/p p"><a class="- topic/xref xref" href="#high_availability__section_fgp_dhw_smb">6. Quuppa
+                    Monitoring</a></p>
+            <p class="- topic/p p"><a class="- topic/xref xref" href="#high_availability__section_unm_2hw_smb">7. IT
+                    Infrastructure</a></p>
+            <p class="- topic/p p"><a class="- topic/xref xref" href="#high_availability__section_qjq_b3w_smb">8.
+                    Conclusion</a></p>
+        </section>
+        <section class="- topic/section section" id="high_availability__section_n1x_sgw_smb" data-ofbid="high_availability__section_n1x_sgw_smb"><h2 class="- topic/title title sectiontitle">1. Introduction</h2>
+            
+            <p class="- topic/p p">High availability is when a system can run continuously without interruptions or
+                so-called downtime, i.e. the system is always available. For business-critical
+                systems requiring high availability and uptime, it is very important to plan the
+                system environment so that service interruptions are not caused by any single points
+                of failure (SPOF). </p>
+            <p dir="ltr" class="- topic/p p">Building redundancy to achieve higher availability can typically also mean
+                higher costs for the system. This cost should be compared with the risk of the costs
+                caused if the system is not working. Therefore, the basis for the design and
+                planning of the system should be based on business requirements: </p>
+            <ul class="- topic/ul ul" id="high_availability__ul_uxk_tgw_smb" data-ofbid="high_availability__ul_uxk_tgw_smb">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">How much unplanned downtime can the business tolerate? </p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">What is the cost that the business is willing to pay for higher
+                        availability?</p>
+                </li>
+            </ul>
+            <p dir="ltr" class="- topic/p p">It is important to clarify the business requirements ahead of time, so that
+                the right decisions can be made during the design phase about how much redundancy is
+                required and what is the bearable cost for achieving that required redundancy and
+                availability. </p>
+            <p dir="ltr" class="- topic/p p">In practice, there are many different options for how to build redundancy
+                for systems using Quuppa technology. It is the responsibility of the Quuppa Partner
+                or Quuppa Customer to design the system redundancy according to the requirements
+                specific to the end Customer case. </p>
+            <p dir="ltr" class="- topic/p p">The purpose of this white paper is to describe the basic principles for
+                building redundancy to achieve high availability for Quuppa Partner system
+                environments and to support the selection of the right way to implement redundancy
+                for the specific customer project. </p>
+        </section>
+        <section class="- topic/section section" id="high_availability__section_t5y_shw_smb" data-ofbid="high_availability__section_t5y_shw_smb"><h2 class="- topic/title title sectiontitle">2. General Principles</h2><p class="- topic/p p">There are different
+                ways to improve the availability of a system environment. This section will walk
+                through some of the general principles of adding availability. </p><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Redundancy
+                    and Failover</strong></p><p class="- topic/p p">SPOF cause a risk for system availability, and this kind
+                of risk can be eliminated by adding sufficient redundancy. The added redundancy
+                makes sure that a single component no longer causes the failure of the whole system
+                environment. </p><p class="- topic/p p">Built in system redundancy can use either automatic or manual
+                failover between the components, as long as the failover is reliable and suitable
+                for the use case. In order to detect possible component downtime, the implementation
+                of monitoring or regular checks for the system are highly recommended.
+                    </p><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Reactive and Proactive Monitoring</strong></p><p dir="ltr" class="- topic/p p">Reactive
+                monitoring triggers alerts if something has already happened, e.g. a system
+                component is down. In some cases, it may also be possible to set up proactive
+                detection and alert systems to indicate that a failure might occur soon unless
+                action is taken to prevent it. This kind of monitoring will help prevent unplanned
+                downtime, because it allows problems to be fixed proactively before downtime occurs.
+                For example, disk utilisation monitoring and alerts when disk capacity is e.g. 90%
+                full can help prevent disks filling up and stopping the system from running.  </p><p dir="ltr" class="- topic/p p">For more information, see the <a class="- topic/xref xref" href="#high_availability__section_fgp_dhw_smb">Quuppa
+                    Monitoring</a> section below.</p><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Regular Updates</strong></p><p dir="ltr" class="- topic/p p">In
+                general, it is good practice to plan systematic updates for all of the components in
+                the environment to the latest available software and firmware releases. This is
+                important for getting support from the vendors, in case of incident or error
+                situation. This goes for all of the components, including applications, middleware,
+                IT infrastructure (servers, switches and other infrastructure) and Locators. The
+                possibility of creating a test environment (quality assurance environment) could
+                also be considered, where different updates and patches can always be tested before
+                installing them to a customer production environment. </p>Quuppa provides regular
+            software and firmware updates for its products, which introduce new features as well as
+            the latest bug fixes. It is important to keep the Quuppa products up-to-date in order to
+            have the latest fixes to all known bugs. Customers and Quuppa Partners are recommended
+            to purchase software maintenance (or a license that includes software maintenance) and
+            make a plan for regular maintenance for system updates.</section>
+        <section class="- topic/section section" id="high_availability__section_opl_bhw_smb" data-ofbid="high_availability__section_opl_bhw_smb"><h2 class="- topic/title title sectiontitle">3. Tags</h2>
+            
+            <p dir="ltr" class="- topic/p p">When Quuppa Tag downtime occurs, it is typically caused by the end of
+                battery lifetime. In cases of critical systems, the partner may consider whether
+                there should be two (or more) tags connected to the same tracked item in order to
+                avoid downtime if one tag fails. A pair of two tags is typically used e.g. in live
+                sports TV broadcast cases to provide redundancy and higher system availability. </p>
+            <p dir="ltr" class="- topic/p p">Tag voltage levels are provided through QPE for Quuppa tags.</p>
+        </section>
+        <section class="- topic/section section" id="high_availability__section_nqx_bhw_smb" data-ofbid="high_availability__section_nqx_bhw_smb"><h2 class="- topic/title title sectiontitle">4. Locators</h2>
+            
+            <p dir="ltr" class="- topic/p p">In order to avoid downtime or reduced system performance caused by a failed
+                Locator, project planning should be done so that any Locator can fail without
+                causing tracking blind spots or a significant reduction in the system performance.
+                The density for Locator installation is dependent on many things and it is the
+                Quuppa Partner's responsibility to consider what level of redundancy and performance
+                is sufficient for their use case. </p>
+            <p dir="ltr" class="- topic/p p">In addition to the sufficient Locator redundancy in the project plan
+                (regarding Locators), the Quuppa Partner could consider if a small spare part stock
+                of Locators near the customer system location is needed and how to arrange the
+                physical Locator change if a hardware change is needed.</p>
+        </section>
+        <section class="- topic/section section" id="high_availability__section_c55_chw_smb" data-ofbid="high_availability__section_c55_chw_smb"><h2 class="- topic/title title sectiontitle">5. Quuppa Positioning Engine (QPE)</h2>
+            
+            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Redundancy for Large Enterprise Systems</strong></p>
+            <p dir="ltr" class="- topic/p p">For large enterprise systems, redundancy should be built by utilising DHCP
+                options. In this case, the partner should have a monitor for the QPE and change the
+                QPE IP address in the DHCP server to a secondary QPE if the primary QPE is
+                experiencing issues.  With this option, there will be a delay of approximately one
+                minute by default before the Locators will reconnect to the secondary QPE.</p>
+            <p dir="ltr" class="- topic/p p">Existing documentation about failover with DHCP servers is available on the
+                Internet, see for example <a class="- topic/xref xref" href="https://www.google.fi/search?ei=fLNmXOKgOc376QSs3pTwCg&amp;q=dhcp+server+failover&amp;oq=dhcp+server+failover&amp;gs_l=psy-ab.3..0i71l8.0.0..8655...0.0..0.0.0.......0......gws-wiz.kFzEXv3R54k" target="_blank" rel="external noopener">here</a>.</p>
+            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Redundancy for Smaller Local Deployments </strong></p>
+            <p dir="ltr" class="- topic/p p">In smaller local deployments there may be two QPE instances running on the
+                same subnet with Quuppa's -Dfailover parameter enabled. This option will allow the
+                QPEs to monitor each other and the secondary can start automatically if the main
+                goes down. This allows for very fast startup times for the secondary (around 1
+                second or so) and in fact, it was designed for a live international TV broadcast
+                where there were very strict requirements on the availability of the data.</p>
+        </section>
+        <section class="- topic/section section" id="high_availability__section_fgp_dhw_smb" data-ofbid="high_availability__section_fgp_dhw_smb"><h2 class="- topic/title title sectiontitle">6. Quuppa Monitoring</h2>
+            
+            <p dir="ltr" class="- topic/p p">Quuppa Locators can be monitored via the QPE Web Console interface.
+                Additionally, in some cases the Quuppa Partner may have integrated the monitoring
+                information into the software they provide via the API. </p>
+        </section>
+        <section class="- topic/section section" id="high_availability__section_unm_2hw_smb" data-ofbid="high_availability__section_unm_2hw_smb"><h2 class="- topic/title title sectiontitle">7. IT Infrastructure</h2>
+            
+            <p class="- topic/p p">The IT infrastructure for the system should also be designed using the redundancy
+                principles (e.g. for servers, storages, network components, cabling). </p>
+            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">DHCP</strong></p>
+            <p class="- topic/p p">In both large deployments and smaller local deployments, the DHCP server is something
+                that requires attention. As the Locators get their IP from the DCHP server, the DHCP
+                server should also have redundancy and failover possibility for the system to have
+                full redundancy. </p>
+            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Network</strong></p>
+            <p dir="ltr" class="- topic/p p">Typically, a system using Quuppa products will communicate with other
+                systems using the network components in the customer company network infrastructure.
+                Network connection availability is essential for service availability. </p>
+            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Monitoring</strong></p>
+            <p class="- topic/p p">Depending on the customer's IT infrastructure environment, there may be possibilities
+                to monitor the applications and IT components of the IT environment. These could
+                include, for example, disk usage monitoring (to prevent disks becoming full and
+                stopping the environment from running), network switch monitoring etc. </p>
+            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Cabling</strong></p>
+            <p dir="ltr" class="- topic/p p">There are several network constellations that can be used when cabling an
+                IT network and connecting all of the IP devices. Some are good for minimising cable
+                runs (extended star or daisy chain), but they are vulnerable to SPOF. For example,
+                in the case of cable connectivity loss (e.g. defective cable or termination,
+                physical cut or fire) all the equipment connected before such a point will lose
+                connection. There are several ways for carrying redundancy in cabled networks, for
+                example using twin-cable runs or creating "circular" network topologies, which allow
+                the data traffic to be easily re-routed based on need.</p>
+            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Physical Separation</strong></p>
+            <p class="- topic/p p">It is important to set up backup and failover IT network devices, from server
+                machines to network components. However, it is also important that such devices are
+                not physically located in the same place or right next to each other. For example,
+                in the event of a fire, if the whole server room goes down it is important to have
+                the failover replica physically separated from the main components so that it is not
+                impacted by the destruction. </p>
+        </section>
+        <section class="- topic/section section" id="high_availability__section_qjq_b3w_smb" data-ofbid="high_availability__section_qjq_b3w_smb"><h2 class="- topic/title title sectiontitle">8. Conclusion</h2>
+            
+            <p dir="ltr" class="- topic/p p">Higher availability for the end customer system can be achieved by adding
+                redundancy, better architecture planning and additional preventive measures such as
+                running regular maintenance for updates and fixes as well as setting up different
+                types of monitoring. All of these measures may add costs, which the end customer
+                needs to cover. Therefore, it is essential that the business requirements and
+                tolerance for planned and unplanned downtime are clarified at the beginning of
+                project planning and taken into account when planning the system architecture for
+                the system.</p>
+        </section>
+    </div>
+</article></main></div>
+
+                                
+                                
+                                
+
+                                
+
+                            </div>
+                            <!-- Topic TOC on right of page to cover sections in the topic. Removed in Jan 2022, but could be
+                            added for usability later.
+                            <whc:webhelp_topic_toc>
+                                <nav role="navigation"  id="wh_topic_toc" 
+                                    class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                                    <whc:component_content/>
+                                </nav>
+                            </whc:webhelp_topic_toc>
+                            -->
+                        </div>
+                    </div>
+
+
+                </div>       
+<!-- Navigation at the end of the topic -->          
+                <div class="container-fluid" id="wh_topic_container">
+                    <div class="row" style="color:white;margin-top:40px;">
+                        <nav class="wh_tools d-print-none navbar-expand-md">
+                            <div></div>
+                            
+<div class="wh_right_tools">
+                                <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  
+<span class="navprev"><a class="- topic/link link" href="../../QSP/topics/QSP_locators_gateway_best_practices.html" title="Best Practices for Using Locators as Data Gateways" aria-label="Previous topic: Best Practices for Using Locators as Data Gateways" rel="prev"></a></span>  
+<span class="navnext"><a class="- topic/link link" href="../../whitepapers/topics/connectivity.html" title="Connectivity Options for Quuppa Systems" aria-label="Next topic: Connectivity Options for Quuppa Systems" rel="next"></a></span>  </span></div>
+<!--External resource link-->
+
+                            </div>
+
+                        </nav>
+                    </div>
+                    
+                </div>
+<!-- next section-->                       
+            </div>            
+            <footer id="footer">
+                <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container float-left ">
+    <image href="page-templates/images/QUUPPA_1row_white_LOW_pienennetty.png"></image>
+    
+    <bookrights>
+        <copyrfirst>
+        </copyrfirst>
+        <copyrlast>
+            <year>© 2020-2022 </year>
+        </copyrlast>
+        <bookowner>
+            <organization> Quuppa Oy. All Rights Reserved. </organization>
+        </bookowner>
+    </bookrights>
+    
+    
+
+   
+<!--     <whc:include_html href="${webhelp.fragment.footer}"/>
+-->  
+  
+  </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
+                Generation date: 17.04.2023</div>
+  
+  
+  <script type="text/javascript">
+    (function (d, t) {
+       var pp = d.createElement(t), s = d.getElementsByTagName(t)[0];
+       pp.src = '//app.pageproofer.com/embed/2202ff57-a1dd-522f-befe-078025b63fcb';
+       pp.type = 'text/javascript';
+       pp.async = true;
+       s.parentNode.insertBefore(pp, s);
+    })(document, 'script');
+    </script>
+                        
+    <script type="text/javascript">
+    (function (d, t) {
+       var pp = d.createElement(t), s = d.getElementsByTagName(t)[0];
+       pp.src = '//app.pageproofer.com/embed/50973457-0fde-5f26-a6d6-81e23e68a434';
+       pp.type = 'text/javascript';
+       pp.async = true;
+       s.parentNode.insertBefore(pp, s);
+    })(document, 'script');
+    </script>
+												
+  
+
+  
+</footer>
+                
+                <div id="go2top">
+                    <span class="oxy-icon oxy-icon-up"></span>
+                </div>
+                
+                <!-- The modal container for images -->
+                <div id="modal_img_large" class="modal">
+                    <span class="close oxy-icon oxy-icon-remove"></span>
+                    <!-- Modal Content (The Image) -->
+                    <div id="modal_img_container"></div>
+                    <!-- Modal Caption (Image Text) -->
+                    <div id="caption"></div>
+                </div>
+                
+                
+
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="../../favicon.ico"/><link rel="icon" href="../../favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Selecting the right enterprise-level hardware for running your Quuppa system is an important step in ensuring that the Quuppa Positioning Engine (QPE) can provide the best positioning performance. As ..."/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="DC.relation" content="../../network/topics/network_introduction.html"/><meta name="DC.relation" content="../../network/topics/quuppa_components.html"/><meta name="DC.relation" content="../../network/topics/other_components.html"/><meta name="DC.creator" content="Julia"/><meta name="rights" content="© 2020 Quuppa Oy"/><meta name="DC.date.created" content="01.06.2020"/><meta name="DC.date.modified" content="12.07.2021"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="QPE_server_specification"/><title>QPE Hardware Recommendations</title><!--  Generated with Oxygen version 24.1, build number 2022030800.  --><meta name="wh-path2root" content="../../"/><meta name="wh-toc-id" content="QPE_server_specification-d3586e7169"/><meta name="wh-source-relpath" content="megamap/topics/QPE_hardware.dita"/><meta name="wh-out-relpath" content="megamap/topics/QPE_hardware.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="../../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/app/topic-page.css?buildId=2022030800"/>
+    
+    
+    <script src="../../oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="../../oxygen-webhelp/app/topic-page.js" src="../../oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/template/Quuppa_skin.css?buildId=2022030800"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-48150744-3"></script>
+    <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'UA-48150744-3'); 
+    </script>
+
+<script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:2215474,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script></head>
+
+    <body id="QPE_server_specification" class="wh_topic_page frmBody">
+        <div id="page-container">
+            <div id="content-wrap">
+                <a href="#wh_topic_body" class="sr-only sr-only-focusable">Jump to main content</a>
+                <!-- EXM-36950 - Expand the args.hdr parameter here -->
+                
+                
+                
+                <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <a href="https://quuppa.com/" class=" wh_logo d-none d-sm-block "><img src="../../oxygen-webhelp\template\page-templates/images/QUUPPA_1row_black_LOW_small.png" alt="Product Documentation"/></a>
+                    <div class=" wh_publication_title "><a href="../../index.html"><span class="title">Product Documentation</span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+
+
+                
+                <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+
+
+<form id="searchForm" method="get" role="search" action="../../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+
+</div>
+<!-- Navigation at the top of the topic -->                
+                <div class="container-fluid" id="wh_topic_container">
+                    <div class="row">
+
+                        <nav class="wh_tools d-print-none navbar-expand-md">
+                            
+<div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="../../index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="whitepapers"><div class="title"><a href="../../resources/topics/resources.html">Other Resources</a></div></div></li><li><div class="topicref" data-id="introduction"><div class="title"><a href="../../network/topics/network_introduction.html">Network Configuration Guidelines for Quuppa Systems</a></div></div></li><li class="active"><div class="topicref" data-id="QPE_server_specification"><div class="title"><a href="../../megamap/topics/QPE_hardware.html">QPE Hardware Recommendations</a></div></div></li></ol></div>
+
+
+
+                            
+<div class="wh_right_tools">
+                                <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                                <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                                <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  
+<span class="navprev"><a class="- topic/link link" href="../../network/topics/quuppa_components.html" title="Quuppa Network Components" aria-label="Previous topic: Quuppa Network Components" rel="prev"></a></span>  
+<span class="navnext"><a class="- topic/link link" href="../../network/topics/other_components.html" title="Other Network Components" aria-label="Next topic: Other Network Components" rel="next"></a></span>  </span></div>
+<!--External resource link-->
+
+                                <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                                
+                                <!-- Expand/Collapse publishing TOC 
+                                     The menu button for mobile devices is copied in the output only when the publication TOC is available
+                                -->
+                                <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+
+                        </nav>
+                    </div>
+                    
+
+<div class="wh_content_area">
+                        <div class="row">
+                            
+
+
+                                <nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none">
+<div id="wh_publication_toc_content">
+
+
+                                    <div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="megamap_introduction-d3586e34" class="topicref" data-id="megamap_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action megamap_introduction-d3586e34-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/documentation_introduction.html" id="megamap_introduction-d3586e34-link">Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="quuppa_development_kit_quick_start_guide-d3586e104" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action quuppa_development_kit_quick_start_guide-d3586e104-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Devkit.html" id="quuppa_development_kit_quick_start_guide-d3586e104-link">Getting Started</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="quuppa_development_kit_quick_start_guide-d3586e404" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action quuppa_development_kit_quick_start_guide-d3586e404-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Software.html" id="quuppa_development_kit_quick_start_guide-d3586e404-link">Software</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="quuppa_development_kit_quick_start_guide-d3586e4767" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action quuppa_development_kit_quick_start_guide-d3586e4767-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Hardware.html" id="quuppa_development_kit_quick_start_guide-d3586e4767-link">Hardware</a></div></div></li><li role="treeitem"><div data-tocid="videos-d3586e7077" class="topicref" data-id="videos" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../resources/topics/videos.html" id="videos-d3586e7077-link">Video Gallery</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="whitepapers-d3586e7100" class="topicref" data-id="whitepapers" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action whitepapers-d3586e7100-link" class="wh-expand-btn"></span><div class="title"><a href="../../resources/topics/resources.html" id="whitepapers-d3586e7100-link">Other Resources</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="true"><div data-tocid="introduction-d3586e7123" class="topicref" data-id="introduction" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action introduction-d3586e7123-link" class="wh-expand-btn"></span><div class="title"><a href="../../network/topics/network_introduction.html" id="introduction-d3586e7123-link">Network Configuration Guidelines for Quuppa Systems</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="network_config_Quuppa_components-d3586e7146" class="topicref" data-id="network_config_Quuppa_components" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../network/topics/quuppa_components.html" id="network_config_Quuppa_components-d3586e7146-link">Quuppa Network Components</a></div></div></li><li role="treeitem" class="active"><div data-tocid="QPE_server_specification-d3586e7169" class="topicref" data-id="QPE_server_specification" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/QPE_hardware.html" id="QPE_server_specification-d3586e7169-link">QPE Hardware Recommendations</a></div></div></li><li role="treeitem"><div data-tocid="network_config_other_components-d3586e7192" class="topicref" data-id="network_config_other_components" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../network/topics/other_components.html" id="network_config_other_components-d3586e7192-link">Other Network Components</a></div></div></li><li role="treeitem"><div data-tocid="network_config_terminology-d3586e7215" class="topicref" data-id="network_config_terminology" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../network/topics/ports.html" id="network_config_terminology-d3586e7215-link">Communication Ports</a></div></div></li><li role="treeitem"><div data-tocid="network_config_basics-d3586e7238" class="topicref" data-id="network_config_basics" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../network/topics/networking_concepts.html" id="network_config_basics-d3586e7238-link">Networking Basics</a></div></div></li><li role="treeitem"><div data-tocid="network_config_terminology-d3586e7261" class="topicref" data-id="network_config_terminology" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../network/topics/network_configurations.html" id="network_config_terminology-d3586e7261-link">Typical System Architectures</a></div></div></li><li role="treeitem"><div data-tocid="network_config_terminology-d3586e7284" class="topicref" data-id="network_config_terminology" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../network/topics/troubleshooting.html" id="network_config_terminology-d3586e7284-link">Network Troubleshooting</a></div></div></li></ul></li><li role="treeitem"><div data-tocid="network_config_terminology-d3586e7307" class="topicref" data-id="network_config_terminology" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../network/topics/startup_parameters_2.html" id="network_config_terminology-d3586e7307-link">Java Virtual Machine Startup Parameters</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="QSP_air_interface_load_features_introduction-d3586e7330" class="topicref" data-id="QSP_air_interface_load_features_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QSP_air_interface_load_features_introduction-d3586e7330-link" class="wh-expand-btn"></span><div class="title"><a href="../../QSP/topics/QSP_manage_air_interface_load.html" id="QSP_air_interface_load_features_introduction-d3586e7330-link">Manage Air Interface Load</a></div></div></li><li role="treeitem"><div data-tocid="QSP_locators_gateway_best_practices-d3586e7377" class="topicref" data-id="QSP_locators_gateway_best_practices" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../QSP/topics/QSP_locators_gateway_best_practices.html" id="QSP_locators_gateway_best_practices-d3586e7377-link">Best Practices for Using Locators as Data Gateways</a></div></div></li><li role="treeitem"><div data-tocid="high_availability-d3586e7400" class="topicref" data-id="high_availability" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../resources/topics/high_availability.html" id="high_availability-d3586e7400-link">High Availability and Redundancy</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="connectivity_web-d3586e7423" class="topicref" data-id="connectivity_web" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action connectivity_web-d3586e7423-link" class="wh-expand-btn"></span><div class="title"><a href="../../whitepapers/topics/connectivity.html" id="connectivity_web-d3586e7423-link">Connectivity Options for Quuppa Systems</a></div></div></li><li role="treeitem"><div data-tocid="enterprise-d3586e7515" class="topicref" data-id="enterprise" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../QPE.next/topics/enterprise.html" id="enterprise-d3586e7515-link">Quuppa for Enterprise</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="Translations-d3586e7539" class="topicref" data-id="Translations" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action Translations-d3586e7539-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Translations.html" id="Translations-d3586e7539-link">Translations</a></div></div></li><li role="treeitem"><div data-tocid="megamap_revision_history-d3586e10573" class="topicref" data-id="megamap_revision_history" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/revision_history.html" id="megamap_revision_history-d3586e10573-link">Revision History</a></div></div></li></ul></div>
+                                
+
+</div>
+</nav>
+                            
+
+
+                            <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+<button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true"><span class="close-toc-icon-container"><span class="close-toc-icon"></span></span></button>
+
+                                
+<div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">QPE Hardware Recommendations</h1>
+    <div class="- topic/body body">
+        <p class="- topic/p p">Selecting the right enterprise-level hardware for running your Quuppa system is an
+            important step in ensuring that the Quuppa Positioning Engine (QPE) can provide the best
+            positioning performance. As Quuppa software is tested most extensively on Linux, we
+            recommend the use of Linux for Quuppa systems wherever possible. To help with the
+            selection of suitable hardware, we have categorised Quuppa systems into three tiers
+            based on typical real world deployment scenarios:</p>
+        <div class="- topic/p p">
+            <ul class="- topic/ul ul">
+                <li class="- topic/li li">Low end</li>
+                <li class="- topic/li li">Mid range</li>
+                <li class="- topic/li li">High end </li>
+            </ul>
+        </div>
+        <p class="- topic/p p">These tiers take into account different factors affecting the network infrastructure and
+            capacity requirements for the system, e.g. the number of UDP packets sent to ensure
+            real-time tracking, the amount of tags being tracked by the system, the selected Locator
+            settings and tag configurations. To ensure best performance, we recommend that you <strong class="+ topic/ph hi-d/b ph b">do
+                not run anything else on the same machine</strong>. </p>
+        <p class="- topic/p p">The table below shows typical hardware requirements for deployments according to the
+            defined tiers. </p>
+        <div class="- topic/p p">
+            <div class="- topic/note note note note_note"><span class="note__title">Note:</span> These are rough guidelines for scoping deployments and do not replace the need for
+                system simulations (e.g. using the <a class="- topic/xref xref" href="../../QSS/topics/QSS_introduction.html">Quuppa System
+                    Simulator</a>) and real world performance testing.</div>
+        </div>
+        <section class="- topic/section section" id="QPE_server_specification__section_fxt_lct_dnb" data-ofbid="QPE_server_specification__section_fxt_lct_dnb"><h2 class="- topic/title title sectiontitle">Tiers and Hardware Specifications</h2>
+            
+            <div class="- topic/p p">
+                <table class="- topic/table table frame-all" data-cols="4"><caption></caption><colgroup><col style="width:20%"/><col style="width:20%"/><col style="width:20%"/><col style="width:40%"/></colgroup><thead class="- topic/thead thead">
+                            <tr class="- topic/row">
+                                <th dir="ltr" class="- topic/entry entry align-center colsep-1 rowsep-1 valign-top" id="QPE_server_specification__section_fxt_lct_dnb__entry__1"><strong class="+ topic/ph hi-d/b ph b">Tier</strong></th>
+                                <th dir="ltr" class="- topic/entry entry align-center colsep-1 rowsep-1 valign-top" id="QPE_server_specification__section_fxt_lct_dnb__entry__2"><strong class="+ topic/ph hi-d/b ph b">Max Incoming
+                                        Packets/Second</strong></th>
+                                <th class="- topic/entry entry colsep-1 rowsep-1" id="QPE_server_specification__section_fxt_lct_dnb__entry__3"><strong class="+ topic/ph hi-d/b ph b">Example Nr. of Tags</strong></th>
+                                <th dir="ltr" class="- topic/entry entry align-center colsep-0 rowsep-1 valign-top" id="QPE_server_specification__section_fxt_lct_dnb__entry__4"><strong class="+ topic/ph hi-d/b ph b">Generic Hardware
+                                        Specification</strong></th>
+                            </tr>
+                        </thead><tbody class="- topic/tbody tbody">
+                            <tr class="- topic/row">
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1 valign-top" headers="QPE_server_specification__section_fxt_lct_dnb__entry__1"><strong class="+ topic/ph hi-d/b ph b">Low end</strong></td>
+                                <td dir="ltr" class="- topic/entry entry align-center colsep-1 rowsep-1 valign-top" headers="QPE_server_specification__section_fxt_lct_dnb__entry__2">2 000</td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="QPE_server_specification__section_fxt_lct_dnb__entry__3">
+                                    <p class="- topic/p p">Maximum of 90 moving tags @ 3Hz = 3packets/s </p>
+                                    <p class="- topic/p p">or</p>
+                                    <p class="- topic/p p">2800 static tags @ 0.1Hz = 0.1 packet/s</p>
+                                </td>
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-1 valign-top" headers="QPE_server_specification__section_fxt_lct_dnb__entry__4">
+                                    <ul class="- topic/ul ul" id="QPE_server_specification__ul_hgj_nhn_gnb" data-ofbid="QPE_server_specification__ul_hgj_nhn_gnb">
+                                        <li class="- topic/li li">1-2 core processor, at least Intel i3 or comparable</li>
+                                        <li class="- topic/li li">8-32 GB RAM</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1 valign-top" headers="QPE_server_specification__section_fxt_lct_dnb__entry__1"><strong class="+ topic/ph hi-d/b ph b">Mid range</strong></td>
+                                <td dir="ltr" class="- topic/entry entry align-center colsep-1 rowsep-1 valign-top" headers="QPE_server_specification__section_fxt_lct_dnb__entry__2">8000</td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="QPE_server_specification__section_fxt_lct_dnb__entry__3">
+                                    <p class="- topic/p p">Maximum of 350 moving tags @ 3Hz = 3packets/s </p>
+                                    <p class="- topic/p p">or</p>
+                                    <p class="- topic/p p">11000 static tags @ 0.1Hz = 0.1 packet/s</p>
+                                </td>
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-1 valign-top" headers="QPE_server_specification__section_fxt_lct_dnb__entry__4">
+                                    <ul class="- topic/ul ul" id="QPE_server_specification__ul_tb1_thn_gnb" data-ofbid="QPE_server_specification__ul_tb1_thn_gnb">
+                                        <li class="- topic/li li">Industrial Computer </li>
+                                        <li class="- topic/li li">4-8 core/8-16 thread Intel Xeon/i5/i7 or AMD Ryzen</li>
+                                        <li class="- topic/li li">32-64 GB RAM</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-0 valign-top" headers="QPE_server_specification__section_fxt_lct_dnb__entry__1"><strong class="+ topic/ph hi-d/b ph b">High end</strong></td>
+                                <td dir="ltr" class="- topic/entry entry align-center colsep-1 rowsep-0 valign-top" headers="QPE_server_specification__section_fxt_lct_dnb__entry__2">1 000 / thread</td>
+                                <td class="- topic/entry entry colsep-1 rowsep-0" headers="QPE_server_specification__section_fxt_lct_dnb__entry__3">
+                                    <p class="- topic/p p">350+ moving tags </p>
+                                    <p class="- topic/p p">11000+ static tags </p>
+                                </td>
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-0 valign-top" headers="QPE_server_specification__section_fxt_lct_dnb__entry__4">
+                                    <ul class="- topic/ul ul" id="QPE_server_specification__ul_og3_j3n_gnb" data-ofbid="QPE_server_specification__ul_og3_j3n_gnb">
+                                        <li class="- topic/li li">Rack mountable tower or 1-2U </li>
+                                        <li class="- topic/li li">8-48 core/thread</li>
+                                        <li class="- topic/li li">64-512 GB RAM</li>
+                                        <li class="- topic/li li">multiple NICs</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody></table>
+            </div>
+            <div class="- topic/p p">
+                <div class="- topic/note note important note_important"><span class="note__title">Important:</span> As server hardware is provided by a third party, Quuppa does
+                    not assume any liability and Quuppa cannot guarantee functionality or
+                    interoperability of such third party products and components. The
+                    recommendations described here are solely general experiences of Quuppa from
+                    prior projects. For any particular new project, Quuppa always recommends the
+                    partner and/or end customer to test all applicable products, components and
+                    integrations thereof to ensure sufficient interoperability and functioning of
+                    the solution.</div>
+            </div>
+            <p class="- topic/p p">In addition to data capacity, the physical installation environment (i.e. is it at
+                open environment, are there existing telecommunication racks or local server rooms
+                that can be used) will also affect your choice of hardware for running the QPE. For
+                example: </p>
+            <ul class="- topic/ul ul" id="QPE_server_specification__ul_hyn_psj_x4b" data-ofbid="QPE_server_specification__ul_hyn_psj_x4b">
+                <li class="- topic/li li">In environments that have <strong class="+ topic/ph hi-d/b ph b">dusty working conditions</strong> and modest capacity
+                    requirements, you might consider using a rugged industrial PC.</li>
+                <li class="- topic/li li">In <strong class="+ topic/ph hi-d/b ph b">mid tier deployments</strong> using NUCs and mini PCs, installed in
+                    telecommunications racks, is usually the most cost effective solutions, but
+                    comes with some capacity limits for the system. </li>
+                <li class="- topic/li li">For <strong class="+ topic/ph hi-d/b ph b">high end deployment with high capacity requirements</strong>, you should look
+                    into high end and rack mountable hardware that could be installed either locally
+                    or with a fast and reliable connection to your data warehouse.   </li>
+            </ul>
+        </section>
+        <section class="- topic/section section" id="QPE_server_specification__section_lfp_k4j_x4b" data-ofbid="QPE_server_specification__section_lfp_k4j_x4b"><h2 class="- topic/title title sectiontitle">Quuppa Controller Interfaces and Connectivity</h2>
+            
+            <p class="- topic/p p">We recommend that you run the QPE on site and physically close to the Locators. The
+                physical proximity improves system performance because:</p>
+            <ul class="- topic/ul ul" id="QPE_server_specification__ul_odh_5pj_x4b" data-ofbid="QPE_server_specification__ul_odh_5pj_x4b">
+                <li class="- topic/li li">In large deployments, the system can use lots of network bandwidth and so it is
+                    best to run the Locators close to the QPE. </li>
+                <li class="- topic/li li">To run the system, the UDP port 22100 needs to be open both ways between the
+                    Locator and the QPE. As UDP does not handle network interruptions, it is best to
+                    reduce the risk of interruptions by running both at the same site.</li>
+                <li class="- topic/li li">The latency of the positioning estimates provided by the QPE increase with
+                    distance from the Locators, and so keeping the QPE close to the Locators is
+                    important in order to reduce system latency. </li>
+            </ul>
+            <p class="- topic/p p">The diagram below shows an example configuration for Quuppa Controller interfaces and
+                connectivity.</p>
+            <p class="- topic/p p"><img class="- topic/image image" id="QPE_server_specification__image_urn_ztv_jlb" src="../../network/images/network_controller_config_example.png" width="567"/></p>
+        </section>
+        <section class="- topic/section section" id="QPE_server_specification__section_bzh_t4j_x4b" data-ofbid="QPE_server_specification__section_bzh_t4j_x4b"><h2 class="- topic/title title sectiontitle">Typical Configurations for IP Networking</h2>
+            
+            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Locator Interface</strong></p>
+            <p class="- topic/p p">Firewalls or others may impair the communication between QPE and Locators. Quuppa
+                Locators communicate to the QPE via UDP data traffic. More information about the
+                Quuppa communication ports can be found in the <a class="- topic/xref xref" href="../../network/topics/ports.html">Communication Ports</a> section of
+                this guide.</p>
+            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">QCP Interface</strong></p>
+            <p class="- topic/p p">We recommend that the Quuppa Controller connects to the internet using a different
+                NIC to that which is used for communication with the Locators. This connection makes
+                it possible to verify the Quuppa software license from the Quuppa Customer Portal
+                (QCP). It also grants access to the Quuppa Active Remote Monitoring service,
+                configurable by the system admin via the QCP.</p>
+            <p class="- topic/p p">Requirements: HTTPS connectivity with port 443 SSL open. The Quuppa SW entities (e.g.
+                the QPE) is a Java application connecting to <a class="- topic/xref xref" href="https://secure.quuppa.com" target="_blank" rel="external noopener">https://secure.quuppa.com</a></p>
+            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Internal Connectivity</strong></p>
+            <p class="- topic/p p">The
+                Quuppa main console and Quuppa Web APIs can be accessed with the Quuppa Controller
+                locally at <a class="- topic/xref xref" href="http://localhost:8080/qpe" target="_blank" rel="external noopener"><u class="+ topic/ph hi-d/u ph u">http://localhost:8080/qpe</u></a>. In case the Quuppa Controller is
+                connected to other networks the Quuppa main console and Quuppa Web APIs can be
+                accessed at <a class="- topic/xref xref" href="http://x.x.x.x:8080/qpe" target="_blank" rel="external noopener"><u class="+ topic/ph hi-d/u ph u">http://x.x.x.x:8080/qpe</u></a> where x.x.x.x is the IP address of
+                the particular network interface of the Quuppa Controller. </p>
+        </section>
+    </div>
+</article></main></div>
+
+                                
+                                
+                                
+
+                                
+
+                            </div>
+                            <!-- Topic TOC on right of page to cover sections in the topic. Removed in Jan 2022, but could be
+                            added for usability later.
+                            <whc:webhelp_topic_toc>
+                                <nav role="navigation"  id="wh_topic_toc" 
+                                    class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                                    <whc:component_content/>
+                                </nav>
+                            </whc:webhelp_topic_toc>
+                            -->
+                        </div>
+                    </div>
+
+
+                </div>       
+<!-- Navigation at the end of the topic -->          
+                <div class="container-fluid" id="wh_topic_container">
+                    <div class="row" style="color:white;margin-top:40px;">
+                        <nav class="wh_tools d-print-none navbar-expand-md">
+                            <div></div>
+                            
+<div class="wh_right_tools">
+                                <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  
+<span class="navprev"><a class="- topic/link link" href="../../network/topics/quuppa_components.html" title="Quuppa Network Components" aria-label="Previous topic: Quuppa Network Components" rel="prev"></a></span>  
+<span class="navnext"><a class="- topic/link link" href="../../network/topics/other_components.html" title="Other Network Components" aria-label="Next topic: Other Network Components" rel="next"></a></span>  </span></div>
+<!--External resource link-->
+
+                            </div>
+
+                        </nav>
+                    </div>
+                    
+                </div>
+<!-- next section-->                       
+            </div>            
+            <footer id="footer">
+                <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container float-left ">
+    <image href="page-templates/images/QUUPPA_1row_white_LOW_pienennetty.png"></image>
+    
+    <bookrights>
+        <copyrfirst>
+        </copyrfirst>
+        <copyrlast>
+            <year>© 2020-2022 </year>
+        </copyrlast>
+        <bookowner>
+            <organization> Quuppa Oy. All Rights Reserved. </organization>
+        </bookowner>
+    </bookrights>
+    
+    
+
+   
+<!--     <whc:include_html href="${webhelp.fragment.footer}"/>
+-->  
+  
+  </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
+                Generation date: 17.04.2023</div>
+  
+  
+  <script type="text/javascript">
+    (function (d, t) {
+       var pp = d.createElement(t), s = d.getElementsByTagName(t)[0];
+       pp.src = '//app.pageproofer.com/embed/2202ff57-a1dd-522f-befe-078025b63fcb';
+       pp.type = 'text/javascript';
+       pp.async = true;
+       s.parentNode.insertBefore(pp, s);
+    })(document, 'script');
+    </script>
+                        
+    <script type="text/javascript">
+    (function (d, t) {
+       var pp = d.createElement(t), s = d.getElementsByTagName(t)[0];
+       pp.src = '//app.pageproofer.com/embed/50973457-0fde-5f26-a6d6-81e23e68a434';
+       pp.type = 'text/javascript';
+       pp.async = true;
+       s.parentNode.insertBefore(pp, s);
+    })(document, 'script');
+    </script>
+												
+  
+
+  
+</footer>
+                
+                <div id="go2top">
+                    <span class="oxy-icon oxy-icon-up"></span>
+                </div>
+                
+                <!-- The modal container for images -->
+                <div id="modal_img_large" class="modal">
+                    <span class="close oxy-icon oxy-icon-remove"></span>
+                    <!-- Modal Content (The Image) -->
+                    <div id="modal_img_container"></div>
+                    <!-- Modal Caption (Image Text) -->
+                    <div id="caption"></div>
+                </div>
+                
+                
+
+            </footer>
+        </div>
+    </body>
+</html>

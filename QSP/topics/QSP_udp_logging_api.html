@@ -1,0 +1,472 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="../../favicon.ico"/><link rel="icon" href="../../favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The API Data Formats &amp; Output Targets editor allows you to edit the data that is exposed for your project via the Quuppa API. The sections below will introduce the different default API data formats ..."/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="DC.relation" content="../../QSP/topics/QSP_introduction.html"/><meta name="DC.relation" content="../../QSP/topics/QSP_tags_manage_tag_IDs.html"/><meta name="DC.relation" content="../../QSP/topics/QSP_udp_logging_api_filtering.html"/><meta name="DC.relation" content="../../QSP/topics/QSP_udp_logging_api_filtering.html"/><meta name="DC.creator" content="Julia"/><meta name="rights" content="© 2020 Quuppa Oy"/><meta name="DC.date.created" content="01.06.2020"/><meta name="DC.date.modified" content="12.07.2021"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="QSP_udploggingapi_introduction"/><title>API Data Formats &amp; Output Targets</title><!--  Generated with Oxygen version 24.1, build number 2022030800.  --><meta name="wh-path2root" content="../../"/><meta name="wh-toc-id" content="QSP_udploggingapi_introduction-d3586e2755"/><meta name="wh-source-relpath" content="QSP/topics/QSP_udp_logging_api.dita"/><meta name="wh-out-relpath" content="QSP/topics/QSP_udp_logging_api.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="../../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/app/topic-page.css?buildId=2022030800"/>
+    
+    
+    <script src="../../oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="../../oxygen-webhelp/app/topic-page.js" src="../../oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/template/Quuppa_skin.css?buildId=2022030800"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-48150744-3"></script>
+    <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'UA-48150744-3'); 
+    </script>
+
+<script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:2215474,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script></head>
+
+    <body id="QSP_udploggingapi_introduction" class="wh_topic_page frmBody">
+        <div id="page-container">
+            <div id="content-wrap">
+                <a href="#wh_topic_body" class="sr-only sr-only-focusable">Jump to main content</a>
+                <!-- EXM-36950 - Expand the args.hdr parameter here -->
+                
+                
+                
+                <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <a href="https://quuppa.com/" class=" wh_logo d-none d-sm-block "><img src="../../oxygen-webhelp\template\page-templates/images/QUUPPA_1row_black_LOW_small.png" alt="Product Documentation"/></a>
+                    <div class=" wh_publication_title "><a href="../../index.html"><span class="title">Product Documentation</span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+
+
+                
+                <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+
+
+<form id="searchForm" method="get" role="search" action="../../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+
+</div>
+<!-- Navigation at the top of the topic -->                
+                <div class="container-fluid" id="wh_topic_container">
+                    <div class="row">
+
+                        <nav class="wh_tools d-print-none navbar-expand-md">
+                            
+<div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="../../index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="quuppa_development_kit_quick_start_guide"><div class="title"><a href="../../megamap/topics/Software.html">Software</a></div></div></li><li><div class="topicref" data-id="QSP_introduction"><div class="title"><a href="../../QSP/topics/QSP_introduction.html">Quuppa Site Planner User Manual</a></div></div></li><li class="active"><div class="topicref" data-id="QSP_udploggingapi_introduction"><div class="title"><a href="../../QSP/topics/QSP_udp_logging_api.html">API Data Formats &amp; Output Targets</a></div></div></li></ol></div>
+
+
+
+                            
+<div class="wh_right_tools">
+                                <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                                <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                                <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  
+<span class="navprev"><a class="- topic/link link" href="../../QSP/topics/QSP_tags_manage_tag_IDs.html" title="Create, Copy, Import and Export Tag IDs" aria-label="Previous topic: Create, Copy, Import and Export Tag IDs" rel="prev"></a></span>  
+<span class="navnext"><a class="- topic/link link" href="../../QSP/topics/QSP_udp_logging_api_filtering.html" title="Location Data Filtering" aria-label="Next topic: Location Data Filtering" rel="next"></a></span>  </span></div>
+<!--External resource link-->
+
+                                <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                                
+                                <!-- Expand/Collapse publishing TOC 
+                                     The menu button for mobile devices is copied in the output only when the publication TOC is available
+                                -->
+                                <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+
+                        </nav>
+                    </div>
+                    
+
+<div class="wh_content_area">
+                        <div class="row">
+                            
+
+
+                                <nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none">
+<div id="wh_publication_toc_content">
+
+
+                                    <div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="megamap_introduction-d3586e34" class="topicref" data-id="megamap_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action megamap_introduction-d3586e34-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/documentation_introduction.html" id="megamap_introduction-d3586e34-link">Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="quuppa_development_kit_quick_start_guide-d3586e104" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action quuppa_development_kit_quick_start_guide-d3586e104-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Devkit.html" id="quuppa_development_kit_quick_start_guide-d3586e104-link">Getting Started</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="quuppa_development_kit_quick_start_guide-d3586e404" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action quuppa_development_kit_quick_start_guide-d3586e404-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Software.html" id="quuppa_development_kit_quick_start_guide-d3586e404-link">Software</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="true"><div data-tocid="QSP_introduction-d3586e427" class="topicref" data-id="QSP_introduction" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action QSP_introduction-d3586e427-link" class="wh-expand-btn"></span><div class="title"><a href="../../QSP/topics/QSP_introduction.html" id="QSP_introduction-d3586e427-link">Quuppa Site Planner User Manual</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="QSP_overview_introduction-d3586e450" class="topicref" data-id="QSP_overview_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QSP_overview_introduction-d3586e450-link" class="wh-expand-btn"></span><div class="title"><a href="../../QSP/topics/QSP_getting_started.html" id="QSP_overview_introduction-d3586e450-link">Getting Started</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="QSP_project_file_introduction-d3586e519" class="topicref" data-id="QSP_project_file_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QSP_project_file_introduction-d3586e519-link" class="wh-expand-btn"></span><div class="title"><a href="../../QSP/topics/QSP_project_file.html" id="QSP_project_file_introduction-d3586e519-link">Project File</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="QSP_coordinate_systems_introduction-d3586e749" class="topicref" data-id="QSP_coordinate_systems_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QSP_coordinate_systems_introduction-d3586e749-link" class="wh-expand-btn"></span><div class="title"><a href="../../QSP/topics/QSP_coordinate_systems.html" id="QSP_coordinate_systems_introduction-d3586e749-link">Coordinate Systems</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="QSP_background_images_introduction-d3586e887" class="topicref" data-id="QSP_background_images_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QSP_background_images_introduction-d3586e887-link" class="wh-expand-btn"></span><div class="title"><a href="../../QSP/topics/QSP_background_images.html" id="QSP_background_images_introduction-d3586e887-link">Background Images </a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="QSP_tracking_areas_introduction-d3586e1073" class="topicref" data-id="QSP_tracking_areas_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QSP_tracking_areas_introduction-d3586e1073-link" class="wh-expand-btn"></span><div class="title"><a href="../../QSP/topics/QSP_tracking_areas.html" id="QSP_tracking_areas_introduction-d3586e1073-link">Tracking Areas</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="QSP_zones_introduction-d3586e1211" class="topicref" data-id="QSP_zones_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QSP_zones_introduction-d3586e1211-link" class="wh-expand-btn"></span><div class="title"><a href="../../QSP/topics/QSP_zones.html" id="QSP_zones_introduction-d3586e1211-link">Zones</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="QSP_openings-d3586e1535" class="topicref" data-id="QSP_openings" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QSP_openings-d3586e1535-link" class="wh-expand-btn"></span><div class="title"><a href="../../QSP/topics/QSP_openings.html" id="QSP_openings-d3586e1535-link">Openings</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="qsp_locators_introduction-d3586e1627" class="topicref" data-id="qsp_locators_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action qsp_locators_introduction-d3586e1627-link" class="wh-expand-btn"></span><div class="title"><a href="../../QSP/topics/QSP_locators.html" id="qsp_locators_introduction-d3586e1627-link">Locators</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="QSP_tags_introduction-d3586e2134" class="topicref" data-id="QSP_tags_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QSP_tags_introduction-d3586e2134-link" class="wh-expand-btn"></span><div class="title"><a href="../../QSP/topics/QSP_tags.html" id="QSP_tags_introduction-d3586e2134-link">Tag Configurations</a></div></div></li><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="QSP_udploggingapi_introduction-d3586e2755" class="topicref" data-id="QSP_udploggingapi_introduction" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action QSP_udploggingapi_introduction-d3586e2755-link" class="wh-expand-btn"></span><div class="title"><a href="../../QSP/topics/QSP_udp_logging_api.html" id="QSP_udploggingapi_introduction-d3586e2755-link">API Data Formats &amp; Output Targets</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="QSP_udp_logging_api_filtering-d3586e2778" class="topicref" data-id="QSP_udp_logging_api_filtering" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../QSP/topics/QSP_udp_logging_api_filtering.html" id="QSP_udp_logging_api_filtering-d3586e2778-link">Location Data Filtering</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="QSP_issues-d3586e2802" class="topicref" data-id="QSP_issues" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QSP_issues-d3586e2802-link" class="wh-expand-btn"></span><div class="title"><a href="../../QSP/topics/QSP_issues.html" id="QSP_issues-d3586e2802-link">Issues</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="untitled3-d3586e2848" class="topicref" data-id="untitled3" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action untitled3-d3586e2848-link" class="wh-expand-btn"></span><div class="title"><a href="../../QSP/topics/QSP_advanced_features.html" id="untitled3-d3586e2848-link">Advanced Features</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="untitled3-d3586e3239" class="topicref" data-id="untitled3" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action untitled3-d3586e3239-link" class="wh-expand-btn"></span><div class="title"><a href="../../QSP/topics/QSP_application_settings.html" id="untitled3-d3586e3239-link">Application Settings</a></div></div></li><li role="treeitem"><div data-tocid="qsp_troubleshooting-d3586e3702" class="topicref" data-id="qsp_troubleshooting" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../QSP/topics/QSP_troubleshooting_section.html" id="qsp_troubleshooting-d3586e3702-link">Troubleshooting</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="QSS_introduction-d3586e3725" class="topicref" data-id="QSS_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QSS_introduction-d3586e3725-link" class="wh-expand-btn"></span><div class="title"><a href="../../QSS/topics/QSS_introduction.html" id="QSS_introduction-d3586e3725-link">Quuppa System Simulator User Manual</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="QPE_introduction-d3586e3817" class="topicref" data-id="QPE_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QPE_introduction-d3586e3817-link" class="wh-expand-btn"></span><div class="title"><a href="../../QPE/topics/QPE_introduction.html" id="QPE_introduction-d3586e3817-link">Quuppa Positioning Engine User Manual</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="QDP_introduction-d3586e4581" class="topicref" data-id="QDP_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QDP_introduction-d3586e4581-link" class="wh-expand-btn"></span><div class="title"><a href="../../QDP/topics/QDP_introduction.html" id="QDP_introduction-d3586e4581-link">Quuppa Data Player User Manual</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="quuppa_development_kit_quick_start_guide-d3586e4767" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action quuppa_development_kit_quick_start_guide-d3586e4767-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Hardware.html" id="quuppa_development_kit_quick_start_guide-d3586e4767-link">Hardware</a></div></div></li><li role="treeitem"><div data-tocid="videos-d3586e7077" class="topicref" data-id="videos" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../resources/topics/videos.html" id="videos-d3586e7077-link">Video Gallery</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="whitepapers-d3586e7100" class="topicref" data-id="whitepapers" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action whitepapers-d3586e7100-link" class="wh-expand-btn"></span><div class="title"><a href="../../resources/topics/resources.html" id="whitepapers-d3586e7100-link">Other Resources</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="Translations-d3586e7539" class="topicref" data-id="Translations" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action Translations-d3586e7539-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Translations.html" id="Translations-d3586e7539-link">Translations</a></div></div></li><li role="treeitem"><div data-tocid="megamap_revision_history-d3586e10573" class="topicref" data-id="megamap_revision_history" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/revision_history.html" id="megamap_revision_history-d3586e10573-link">Revision History</a></div></div></li></ul></div>
+                                
+
+</div>
+</nav>
+                            
+
+
+                            <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+<button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true"><span class="close-toc-icon-container"><span class="close-toc-icon"></span></span></button>
+
+                                
+<div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">API Data Formats &amp; Output Targets</h1>
+    <div class="- topic/body body">
+        <p class="- topic/p p">The <span class="+ topic/keyword ui-d/wintitle keyword wintitle">API Data Formats &amp; Output Targets</span> editor allows you to edit
+            the data that is exposed for your project via the Quuppa API. The sections below will
+            introduce the different <a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__section_ppb_c24_rrb">default API data formats</a> that are already available to use, how
+            to <a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__section_h2m_qd4_rrb">edit
+                the formats</a> for the needs of your project as well as how to <a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__section_adq_rd4_rrb">create
+                output targets</a>. </p>
+        <p class="- topic/p p">For more detailed information about using the Quuppa API, please refer to our <a class="- topic/xref xref" href="https://quuppa.com/product-documentation/manuals/q/QPE/topics/QPE_introduction.html" target="_blank" rel="external noopener">Quuppa Positioning Engine User Manual</a> or the
+            Quuppa API documentation, available via links in the Quuppa Positioning Engine (QPE) Web
+            Console.</p>
+        <section class="- topic/section section" id="QSP_udploggingapi_introduction__section_ppb_c24_rrb" data-ofbid="QSP_udploggingapi_introduction__section_ppb_c24_rrb"><h2 class="- topic/title title sectiontitle">Available API Data Formats</h2>
+            
+            <p class="- topic/p p">The basic formats available for customisations include:</p>
+            <div class="- topic/p p">
+                <ul class="- topic/ul ul">
+                    <li class="- topic/li li"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">DefaultInfo</span> - This format provides all of the API
+                        commands for data related to tag information such as tag state, tag group,
+                        battery level, button state, acceleration data, TX power, developer specific
+                        data. Both JSON and CSV outputs are available. The format is for cases where
+                        you only require information about the tags in the project, e.g. an
+                        application for monitoring the battery levels and current states of the tags
+                        in a project. </li>
+                    <li class="- topic/li li"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">DefaultLocation</span> - This format provides all of the API
+                        commands for data related to the positioning information, such as location
+                        estimates, the coordinate systems, the tracking areas and zones. Both JSON
+                        and CSV outputs are available. The format is for cases where you want to
+                        show the positioning information related to the project, e.g. applications
+                        that visualise how tags move around a space on a map. </li>
+                    <li class="- topic/li li"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">DefaultLocationAndInfo</span> - This format provides a
+                        combination of tag information (e.g. tag states, tag groups, battery level,
+                        button state, acceleration data, TX power and developer specific data) and
+                        positioning information (e.g. location estimates, coordinate systems,
+                        tracking areas and zones). Both JSON and CSV outputs are available. This
+                        format is for cases that require both types of data, e.g. applications where
+                        tag movements are shown on a map and actions triggered by pressing the tag
+                        button are also visualised in the map view. </li>
+                    <li class="- topic/li li"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">ALL_ITEMS</span> - This format provides all of the available
+                        Quuppa API commands in the same format. Both JSON and CSV outputs are
+                        available. This format is not intended for use as is, but provides all of
+                        the possible options to enable format customisations according to the needs
+                        of your project. </li>
+                </ul>
+            </div>
+            <div class="- topic/p p">
+                <div class="- topic/note note note note_note"><span class="note__title">Note:</span> If you have <a class="- topic/xref xref" href="QSP_application_settings_legacy_output_formats.html">enabled Legacy Output Formats</a> from the QSP application settings, you
+                    will also be able to see the following legacy formats: <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Location
+                        JSON</span>, <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Location CVS</span>, <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Tag info
+                        JSON</span>, <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Tag info CSV</span>, <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Processed
+                        location CSV</span>. These legacy formats are deprecated, please use the
+                    default formats listed above instead. </div>
+            </div>
+        </section>
+        <section class="- topic/section section" id="QSP_udploggingapi_introduction__section_h2m_qd4_rrb" data-ofbid="QSP_udploggingapi_introduction__section_h2m_qd4_rrb"><h2 class="- topic/title title sectiontitle">Edit API Data Formats</h2>The types of data that
+            you want to expose via the Quuppa APIs will depend on the specific requirements of the
+            project that you are working on. The API Data Formats &amp; Output Targets editor
+            enables the use of our default API format definitions (<span class="+ topic/keyword ui-d/wintitle keyword wintitle">DefaultInfo</span>,
+                <span class="+ topic/keyword ui-d/wintitle keyword wintitle">DefaultLocation</span>, <span class="+ topic/keyword ui-d/wintitle keyword wintitle">DefaultLocationAndInfo</span>
+            and <span class="+ topic/keyword ui-d/wintitle keyword wintitle">ALL_ITEMS</span>) as templates to customise to the needs of your
+            project. JSON and CSV outputs are available for all of the output formats. <p class="- topic/p p">To edit
+                the format definitions, please follow the steps below:</p><ol class="- topic/ol ol" id="QSP_udploggingapi_introduction__ol_oll_kg4_rrb" data-ofbid="QSP_udploggingapi_introduction__ol_oll_kg4_rrb">
+                <li class="- topic/li li">Open the project in the QSP.</li>
+                <li class="- topic/li li">In the menu bar at the top, open the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Project</span> menu and
+                    select <span class="+ topic/keyword ui-d/wintitle keyword wintitle">API Data Formats</span> (alternatively the editor can be
+                    accessed via the object tree on the left by clicking on <span class="+ topic/keyword ui-d/wintitle keyword wintitle">API Data
+                        Formats</span>). This will open the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">API Data Formats &amp;
+                        Output Targets</span> editor to the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">API Data
+                        Formats</span> tab. </li>
+                <li class="- topic/li li">In the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">UDP/logging/API format definitions</span> table, select the
+                    default definition that you would like to edit. For more information about the
+                    available options, please see the <a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__section_ppb_c24_rrb">Available Formats</a> section above.<p class="- topic/p p"><img class="- topic/image image" id="QSP_udploggingapi_introduction__image_g3l_kwy_vnb" src="../images/QSP_UDPloggingAPI_editor_definitions.png" width="378"/></p></li>
+                <li class="- topic/li li">Copy the default format by clicking on the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Clone Format</span>
+                    button under the definitions table. This will open a new format editor window.
+                            <p class="- topic/p p"><img class="- topic/image image" id="QSP_udploggingapi_introduction__image_chh_qwy_vnb" src="../images/QSP_UDPloggingAPI_editor_clone_button.png" width="378"/></p><div class="- topic/p p">
+                        <div class="- topic/note note tip note_tip"><span class="note__title">Tip:</span> We always recommend cloning the format that you intend to
+                            use, even if you don't want to edit the format string, as we are
+                            constantly working on improving our API and as such the default formats
+                            may change with future software releases. </div>
+                    </div></li>
+                <li class="- topic/li li">Give the new format a name and edit the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">format string</span> as
+                    needed. The window also shows the sample output strings in both JSON and CSV
+                    formats so you can check the output.<p class="- topic/p p"><img class="- topic/image image" id="QSP_udploggingapi_introduction__image_jqr_2xy_vnb" src="../images/QSP_UDPloggingAPI_editor_edit_format.png" width="378"/></p></li>
+                <li class="- topic/li li">When you are ready, click the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">OK</span> button at the bottom of
+                    the window to save the edits. The customised format and its ID will be made
+                    visible in the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">UDP/logging/API format definitions</span>
+                    table.</li>
+                <li class="- topic/li li">Close the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">UDP/logging/API editor</span>.</li>
+            </ol><p class="- topic/p p">Next, you will need to <a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__section_adq_rd4_rrb">Create
+                    Output Targets</a> for where the data from the above defined format
+                definitions is sent. </p></section>
+        <section class="- topic/section section" id="QSP_udploggingapi_introduction__section_adq_rd4_rrb" data-ofbid="QSP_udploggingapi_introduction__section_adq_rd4_rrb"><h2 class="- topic/title title sectiontitle">Create Output Targets</h2>
+            
+            <p class="- topic/p p">Targets define the destination for where the project data is sent or written. To
+                define targets for your project, follow the steps below:</p>
+            <ol class="- topic/ol ol" id="QSP_udploggingapi_introduction__ol_qfs_gh4_rrb" data-ofbid="QSP_udploggingapi_introduction__ol_qfs_gh4_rrb">
+                <li class="- topic/li li">Open the project in the QSP.</li>
+                <li class="- topic/li li">In the menu bar at the top, open the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Project</span> menu and
+                    select <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Output Targets</span> (alternatively the editor can be
+                    accessed via the object tree on the left by clicking on <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Output
+                        Targets</span>). This will open the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">API Data Formats &amp;
+                        Output Targets</span> editor to the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Output Targets</span>
+                    tab. </li>
+                <li class="- topic/li li">In the editor, click on the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Add output target</span>
+                            button.<p class="- topic/p p"><img class="- topic/image image" id="QSP_udploggingapi_introduction__image_y1j_bpz_vnb" src="../images/QSP_UDPloggingAPI_add_target_button.png" width="378"/></p></li>
+                <li class="- topic/li li">In the window that opens, give the target a name and select the settings that
+                    best match your requirements. For more information about the available options,
+                    please see the <a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__section_zrn_3xj_xnb">Target Settings</a> section below. <p class="- topic/p p"><img class="- topic/image image" id="QSP_udploggingapi_introduction__image_qht_wpz_vnb" src="../images/QSP_UDPloggingAPI_editor_add_target_window.png" width="302"/></p></li>
+                <li class="- topic/li li">Click the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">OK</span> button once done. The new target will be added
+                    to the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">UDP/logging targets</span> list. You can edit or delete
+                    targets as needed by using the buttons under the list. </li>
+            </ol>
+        </section>
+        <section class="- topic/section section" id="QSP_udploggingapi_introduction__section_zrn_3xj_xnb" data-ofbid="QSP_udploggingapi_introduction__section_zrn_3xj_xnb"><h2 class="- topic/title title sectiontitle">Target Settings </h2>
+            
+            <div class="- topic/p p">
+                <table class="- topic/table table frame-all" data-cols="3"><caption></caption><colgroup><col style="width:33.33333333333333%"/><col style="width:33.33333333333333%"/><col style="width:33.33333333333333%"/></colgroup><thead class="- topic/thead thead">
+                            <tr class="- topic/row rowsep-1">
+                                <th class="- topic/entry entry colsep-1 rowsep-1" id="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__1">Setting</th>
+                                <th class="- topic/entry entry colsep-1 rowsep-1" id="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__2">Description</th>
+                                <th class="- topic/entry entry colsep-0 rowsep-1" id="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3">Options</th>
+                            </tr>
+                        </thead><tbody class="- topic/tbody tbody">
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__1" rowspan="4"><strong class="+ topic/ph hi-d/b ph b">Format</strong></td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__2" rowspan="4">Select the <a class="- topic/xref xref" href="QSP_udp_logging_api.html">output format</a> for the
+                                    target.</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">DefaultInfo</span></td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">DefaultLocation</span></td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">DefaultLocationAndInfo</span>
+                                </td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__section_h2m_qd4_rrb">custom output format </a></td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__1" rowspan="2"><strong class="+ topic/ph hi-d/b ph b">Type</strong></td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__2" rowspan="2">Select whether you would
+                                    like the output in JavaScript object notation (JSON) or
+                                    Comma-separated values (CSV) form.</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">JSON</span></td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">CVS</span></td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__1" rowspan="3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Trigger
+                                    mode</span></td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__2" rowspan="3">Define when updates are
+                                    triggered.</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Interval</span> (i.e. at
+                                    predefined intervals, in seconds)</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Any data update</span>
+                                    (i.e. whenever new data is available)</td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Location update</span>
+                                    (i.e. when new location data is available)</td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__1" rowspan="2"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Target</span></td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__2" rowspan="2"> Select whether data will
+                                    be sent over UDP or written in a file.</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">UDP</span>:<div class="- topic/p p">
+                                    <ul class="- topic/ul ul" id="QSP_udploggingapi_introduction__ul_i2w_rwj_xnb" data-ofbid="QSP_udploggingapi_introduction__ul_i2w_rwj_xnb">
+                                        <li class="- topic/li li">Set the target <strong class="+ topic/ph hi-d/b ph b">IP address</strong>for where the data
+                                            will be sent.</li>
+                                        <li class="- topic/li li">Set the target <strong class="+ topic/ph hi-d/b ph b">Port</strong> number for where the data
+                                            will be sent.</li>
+                                    </ul>
+                                </div></td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">File</span>:<div class="- topic/p p">
+                                    <ul class="- topic/ul ul" id="QSP_udploggingapi_introduction__ul_j2w_rwj_xnb" data-ofbid="QSP_udploggingapi_introduction__ul_j2w_rwj_xnb">
+                                        <li class="- topic/li li">Set the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Folder</span> where the data
+                                            file will be written.</li>
+                                        <li class="- topic/li li">Define the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Filename prefix</span> for
+                                            the file that will be written.</li>
+                                        <li class="- topic/li li">Define the number of <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Entries per
+                                            file</span> that can be logged in the file. </li>
+                                        <li class="- topic/li li">Select whether to <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Include header as first
+                                            line of the file</span>.</li>
+                                    </ul>
+                                </div></td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__1" rowspan="2"><strong class="+ topic/ph hi-d/b ph b">Start at system
+                                    start</strong></td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__2" rowspan="2">The checkbox allows you to
+                                    select whether data can be sent automatically from the moment
+                                    that the system is started, e.g. after a system restarts caused
+                                    by problems like power failures. </td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Selected</span>
+                                </td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Not
+                                    selected</span></td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry colsep-1 rowsep-0" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__1" rowspan="2"><strong class="+ topic/ph hi-d/b ph b">Tag groups</strong></td>
+                                <td class="- topic/entry entry colsep-1 rowsep-0" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__2" rowspan="2">Select whether the target
+                                    will be defined for all tags, or just for specific tag
+                                    groups.</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">All tags</span></td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry colsep-0 rowsep-0" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Custom</span></td>
+                            </tr>
+                        </tbody></table>
+            </div>
+        </section>
+    </div>
+</article></main></div>
+
+                                
+                                
+                                
+
+                                
+
+                            </div>
+                            <!-- Topic TOC on right of page to cover sections in the topic. Removed in Jan 2022, but could be
+                            added for usability later.
+                            <whc:webhelp_topic_toc>
+                                <nav role="navigation"  id="wh_topic_toc" 
+                                    class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                                    <whc:component_content/>
+                                </nav>
+                            </whc:webhelp_topic_toc>
+                            -->
+                        </div>
+                    </div>
+
+
+                </div>       
+<!-- Navigation at the end of the topic -->          
+                <div class="container-fluid" id="wh_topic_container">
+                    <div class="row" style="color:white;margin-top:40px;">
+                        <nav class="wh_tools d-print-none navbar-expand-md">
+                            <div></div>
+                            
+<div class="wh_right_tools">
+                                <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  
+<span class="navprev"><a class="- topic/link link" href="../../QSP/topics/QSP_tags_manage_tag_IDs.html" title="Create, Copy, Import and Export Tag IDs" aria-label="Previous topic: Create, Copy, Import and Export Tag IDs" rel="prev"></a></span>  
+<span class="navnext"><a class="- topic/link link" href="../../QSP/topics/QSP_udp_logging_api_filtering.html" title="Location Data Filtering" aria-label="Next topic: Location Data Filtering" rel="next"></a></span>  </span></div>
+<!--External resource link-->
+
+                            </div>
+
+                        </nav>
+                    </div>
+                    
+                </div>
+<!-- next section-->                       
+            </div>            
+            <footer id="footer">
+                <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container float-left ">
+    <image href="page-templates/images/QUUPPA_1row_white_LOW_pienennetty.png"></image>
+    
+    <bookrights>
+        <copyrfirst>
+        </copyrfirst>
+        <copyrlast>
+            <year>© 2020-2022 </year>
+        </copyrlast>
+        <bookowner>
+            <organization> Quuppa Oy. All Rights Reserved. </organization>
+        </bookowner>
+    </bookrights>
+    
+    
+
+   
+<!--     <whc:include_html href="${webhelp.fragment.footer}"/>
+-->  
+  
+  </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
+                Generation date: 17.04.2023</div>
+  
+  
+  <script type="text/javascript">
+    (function (d, t) {
+       var pp = d.createElement(t), s = d.getElementsByTagName(t)[0];
+       pp.src = '//app.pageproofer.com/embed/2202ff57-a1dd-522f-befe-078025b63fcb';
+       pp.type = 'text/javascript';
+       pp.async = true;
+       s.parentNode.insertBefore(pp, s);
+    })(document, 'script');
+    </script>
+                        
+    <script type="text/javascript">
+    (function (d, t) {
+       var pp = d.createElement(t), s = d.getElementsByTagName(t)[0];
+       pp.src = '//app.pageproofer.com/embed/50973457-0fde-5f26-a6d6-81e23e68a434';
+       pp.type = 'text/javascript';
+       pp.async = true;
+       s.parentNode.insertBefore(pp, s);
+    })(document, 'script');
+    </script>
+												
+  
+
+  
+</footer>
+                
+                <div id="go2top">
+                    <span class="oxy-icon oxy-icon-up"></span>
+                </div>
+                
+                <!-- The modal container for images -->
+                <div id="modal_img_large" class="modal">
+                    <span class="close oxy-icon oxy-icon-remove"></span>
+                    <!-- Modal Content (The Image) -->
+                    <div id="modal_img_container"></div>
+                    <!-- Modal Caption (Image Text) -->
+                    <div id="caption"></div>
+                </div>
+                
+                
+
+            </footer>
+        </div>
+    </body>
+</html>
