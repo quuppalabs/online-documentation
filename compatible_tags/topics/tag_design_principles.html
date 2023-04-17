@@ -1,0 +1,463 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="../../favicon.ico"/><link rel="icon" href="../../favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The Quuppa Intelligent Locating System™ is able to track any Bluetooth® device from Bluetooth 4.0 onwards, including but not limited to Quuppa's own reference tags and Quuppa Approved Partner Tags. ..."/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="DC.relation" content="../../megamap/topics/Hardware.html"/><meta name="DC.relation" content="../../QT3-1/topics/QT3-1_quick_start_guide.html"/><meta name="DC.relation" content="../../megamap/topics/hardware_declaration_of_conformity.html"/><meta name="DC.creator" content="Julia"/><meta name="rights" content="© 2020 Quuppa Oy"/><meta name="DC.date.created" content="01.06.2020"/><meta name="DC.date.modified" content="12.07.2021"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="tag_design_principles"/><title>Quuppa Tag Design Principles</title><!--  Generated with Oxygen version 24.1, build number 2022030800.  --><meta name="wh-path2root" content="../../"/><meta name="wh-toc-id" content="tag_design_principles-d3586e6958"/><meta name="wh-source-relpath" content="compatible_tags/topics/tag_design_principles.dita"/><meta name="wh-out-relpath" content="compatible_tags/topics/tag_design_principles.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="../../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/app/topic-page.css?buildId=2022030800"/>
+    
+    
+    <script src="../../oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="../../oxygen-webhelp/app/topic-page.js" src="../../oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/template/Quuppa_skin.css?buildId=2022030800"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-48150744-3"></script>
+    <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'UA-48150744-3'); 
+    </script>
+
+<script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:2215474,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script></head>
+
+    <body id="tag_design_principles" class="wh_topic_page frmBody">
+        <div id="page-container">
+            <div id="content-wrap">
+                <a href="#wh_topic_body" class="sr-only sr-only-focusable">Jump to main content</a>
+                <!-- EXM-36950 - Expand the args.hdr parameter here -->
+                
+                
+                
+                <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <a href="https://quuppa.com/" class=" wh_logo d-none d-sm-block "><img src="../../oxygen-webhelp\template\page-templates/images/QUUPPA_1row_black_LOW_small.png" alt="Product Documentation"/></a>
+                    <div class=" wh_publication_title "><a href="../../index.html"><span class="title">Product Documentation</span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+
+
+                
+                <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+
+
+<form id="searchForm" method="get" role="search" action="../../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+
+</div>
+<!-- Navigation at the top of the topic -->                
+                <div class="container-fluid" id="wh_topic_container">
+                    <div class="row">
+
+                        <nav class="wh_tools d-print-none navbar-expand-md">
+                            
+<div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="../../index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="quuppa_development_kit_quick_start_guide"><div class="title"><a href="../../megamap/topics/Hardware.html">Hardware</a></div></div></li><li class="active"><div class="topicref" data-id="tag_design_principles"><div class="title"><a href="../../compatible_tags/topics/tag_design_principles.html">Quuppa Tag Design Principles</a></div></div></li></ol></div>
+
+
+
+                            
+<div class="wh_right_tools">
+                                <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                                <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                                <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  
+<span class="navprev"><a class="- topic/link link" href="../../QT3-1/topics/QT3-1_quick_start_guide.html" title="QT3-1 Tag Quick Start Guide" aria-label="Previous topic: QT3-1 Tag Quick Start Guide" rel="prev"></a></span>  
+<span class="navnext"><a class="- topic/link link" href="../../megamap/topics/hardware_declaration_of_conformity.html" title="Declaration of Conformity" aria-label="Next topic: Declaration of Conformity" rel="next"></a></span>  </span></div>
+<!--External resource link-->
+
+                                <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                                
+                                <!-- Expand/Collapse publishing TOC 
+                                     The menu button for mobile devices is copied in the output only when the publication TOC is available
+                                -->
+                                <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+
+                        </nav>
+                    </div>
+                    
+
+<div class="wh_content_area">
+                        <div class="row">
+                            
+
+
+                                <nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none">
+<div id="wh_publication_toc_content">
+
+
+                                    <div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="megamap_introduction-d3586e34" class="topicref" data-id="megamap_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action megamap_introduction-d3586e34-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/documentation_introduction.html" id="megamap_introduction-d3586e34-link">Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="quuppa_development_kit_quick_start_guide-d3586e104" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action quuppa_development_kit_quick_start_guide-d3586e104-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Devkit.html" id="quuppa_development_kit_quick_start_guide-d3586e104-link">Getting Started</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="quuppa_development_kit_quick_start_guide-d3586e404" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action quuppa_development_kit_quick_start_guide-d3586e404-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Software.html" id="quuppa_development_kit_quick_start_guide-d3586e404-link">Software</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="quuppa_development_kit_quick_start_guide-d3586e4767" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action quuppa_development_kit_quick_start_guide-d3586e4767-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Hardware.html" id="quuppa_development_kit_quick_start_guide-d3586e4767-link">Hardware</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="q17_installation_guide_front_page-d3586e4790" class="topicref" data-id="q17_installation_guide_front_page" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action q17_installation_guide_front_page-d3586e4790-link" class="wh-expand-btn"></span><div class="title"><a href="../../Q17/topics/Q17_user_manual.html" id="q17_installation_guide_front_page-d3586e4790-link">Q17 Locator User Manual</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="Q35_user_manual-d3586e5368" class="topicref" data-id="Q35_user_manual" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action Q35_user_manual-d3586e5368-link" class="wh-expand-btn"></span><div class="title"><a href="../../Q35/topics/Q35_user_manual.html" id="Q35_user_manual-d3586e5368-link">Q35 Locator User Manual</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="generaionQ-d3586e5943" class="topicref" data-id="generaionQ" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action generaionQ-d3586e5943-link" class="wh-expand-btn"></span><div class="title"><a href="../../Q17/topics/generationQ.html" id="generaionQ-d3586e5943-link">Generation Q Features</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="megamap_qt1_1_user_manual_front_page-d3586e6084" class="topicref" data-id="megamap_qt1_1_user_manual_front_page" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action megamap_qt1_1_user_manual_front_page-d3586e6084-link" class="wh-expand-btn"></span><div class="title"><a href="../../QT1-1/topics/QT1-1_user_manual.html" id="megamap_qt1_1_user_manual_front_page-d3586e6084-link">QT1-1 Tag User Manual</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="megamap_qt1_user_manual_front_page-d3586e6406" class="topicref" data-id="megamap_qt1_user_manual_front_page" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action megamap_qt1_user_manual_front_page-d3586e6406-link" class="wh-expand-btn"></span><div class="title"><a href="../../QT1/topics/QT1_user_manual.html" id="megamap_qt1_user_manual_front_page-d3586e6406-link">QT1 Tag Module User Manual</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="megamap_qt1_1_user_manual_front_page-d3586e6728" class="topicref" data-id="megamap_qt1_1_user_manual_front_page" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action megamap_qt1_1_user_manual_front_page-d3586e6728-link" class="wh-expand-btn"></span><div class="title"><a href="../../QT3-1/topics/QT3-1_user_manual.html" id="megamap_qt1_1_user_manual_front_page-d3586e6728-link">QT3-1 Tag User Manual</a></div></div></li><li role="treeitem" class="active"><div data-tocid="tag_design_principles-d3586e6958" class="topicref" data-id="tag_design_principles" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../compatible_tags/topics/tag_design_principles.html" id="tag_design_principles-d3586e6958-link">Quuppa Tag Design Principles</a></div></div></li><li role="treeitem"><div data-tocid="Hardware_declaration_of_conformity-d3586e6981" class="topicref" data-id="Hardware_declaration_of_conformity" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/hardware_declaration_of_conformity.html" id="Hardware_declaration_of_conformity-d3586e6981-link">Declaration of Conformity</a></div></div></li><li role="treeitem"><div data-tocid="qc2_quuppa_controller_product_specification-d3586e7006" class="topicref" data-id="qc2_quuppa_controller_product_specification" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../QPE.next/topics/qc2_quuppa_controller_product_specification.html" id="qc2_quuppa_controller_product_specification-d3586e7006-link">QC2 Quuppa Controller Product Specification</a></div></div></li><li role="treeitem"><div data-tocid="QC6_product_information-d3586e7029" class="topicref" data-id="QC6_product_information" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../QPE.next/topics/QC6_product_information.html" id="QC6_product_information-d3586e7029-link">QC6 Quuppa Controller Product Specification</a></div></div></li><li role="treeitem"><div data-tocid="Q-Port_product_information-d3586e7053" class="topicref" data-id="Q-Port_product_information" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../QPE.next/topics/Q-Port_product_information.html" id="Q-Port_product_information-d3586e7053-link">Q-Port 8 Product Specification</a></div></div></li></ul></li><li role="treeitem"><div data-tocid="videos-d3586e7077" class="topicref" data-id="videos" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../resources/topics/videos.html" id="videos-d3586e7077-link">Video Gallery</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="whitepapers-d3586e7100" class="topicref" data-id="whitepapers" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action whitepapers-d3586e7100-link" class="wh-expand-btn"></span><div class="title"><a href="../../resources/topics/resources.html" id="whitepapers-d3586e7100-link">Other Resources</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="Translations-d3586e7539" class="topicref" data-id="Translations" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action Translations-d3586e7539-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Translations.html" id="Translations-d3586e7539-link">Translations</a></div></div></li><li role="treeitem"><div data-tocid="megamap_revision_history-d3586e10573" class="topicref" data-id="megamap_revision_history" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/revision_history.html" id="megamap_revision_history-d3586e10573-link">Revision History</a></div></div></li></ul></div>
+                                
+
+</div>
+</nav>
+                            
+
+
+                            <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+<button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true"><span class="close-toc-icon-container"><span class="close-toc-icon"></span></span></button>
+
+                                
+<div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Quuppa Tag Design Principles</h1>
+    <div class="- topic/body body">
+        <p class="- topic/p p"><em class="+ topic/ph hi-d/i ph i">The Quuppa Intelligent Locating System™ is able to track any Bluetooth® device from
+                Bluetooth 4.0 onwards, including but not limited to Quuppa's own reference tags and
+                Quuppa Approved Partner Tags. When developing Quuppa trackable tags, it is important
+                to apply certain design principles to the tag design, to ensure that they can
+                provide good performance when used together with the Quuppa system. The aim of this
+                document is to take a deep-dive into the details of these design principles.
+            </em></p>
+        <p class="- topic/p p"><img class="- topic/image image" id="tag_design_principles__image_og5_mlp_jnb" src="../../QT1-1/images/QT1-1.png" width="189"/></p>
+        <section class="- topic/section section" id="tag_design_principles__section_ndt_nlp_jnb" data-ofbid="tag_design_principles__section_ndt_nlp_jnb"><h2 class="- topic/title title sectiontitle">Table of Contents</h2>
+            
+            <p class="- topic/p p"><a class="- topic/xref xref" href="#tag_design_principles__section_hvc_1lp_jnb">1. How to Make
+                    Bluetooth Devices Quuppa Trackable?</a></p>
+            <p class="- topic/p p"><a class="- topic/xref xref" href="#tag_design_principles__section_mwl_1lp_jnb">2. Quuppa
+                    Native Tags vs Quuppa Emulation Tags</a></p>
+            <p class="- topic/p p"><a class="- topic/xref xref" href="#tag_design_principles__section_iwr_blp_jnb">3. Firmware
+                    &amp; State Machine Logic</a></p>
+            <p class="- topic/p p"><a class="- topic/xref xref" href="#tag_design_principles__section_djc_dlp_jnb">4.
+                    Antenna</a></p>
+            <p class="- topic/p p"><a class="- topic/xref xref" href="#tag_design_principles__section_k1x_dlp_jnb">5.
+                    Accelerometer &amp; Other Components</a></p>
+            <p class="- topic/p p"><a class="- topic/xref xref" href="#tag_design_principles__section_tqy_2lp_jnb">6. Proprietary
+                    (Edge) Bluetooth Channels</a></p>
+            <p class="- topic/p p"><a class="- topic/xref xref" href="#tag_design_principles__section_rgr_flp_jnb">7. Mechanical
+                    Design</a></p>
+        </section>
+        <section class="- topic/section section" id="tag_design_principles__section_hvc_1lp_jnb" data-ofbid="tag_design_principles__section_hvc_1lp_jnb"><h2 class="- topic/title title sectiontitle">1. How to Make Bluetooth Devices Quuppa
+                Trackable?</h2><p class="- topic/p p">Any Bluetooth device from Bluetooth 4.0 onwards can be made
+                Quuppa trackable by enabling the device to advertise Quuppa Profiles. There are
+                effectively specific advertisement payloads, or Direction Finding packets, that make
+                the device "visible" to the Quuppa Locators. </p><div class="- topic/p p">
+                <div class="- topic/note note note note_note"><span class="note__title">Note:</span> The Quuppa Profiles are just enablers for tracking, and do not affect the
+                    tracking accuracy or general performance of the device itself.</div>
+            </div><img class="- topic/image image" id="tag_design_principles__image_j15_bpp_jnb" src="../images/angular_measurements.jpg" width="378"/>
+        </section>
+        <section class="- topic/section section" id="tag_design_principles__section_mwl_1lp_jnb" data-ofbid="tag_design_principles__section_mwl_1lp_jnb"><h2 class="- topic/title title sectiontitle">2. Quuppa Native Tags vs Quuppa Emulation Tags</h2>
+            
+            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Quuppa Native Firmware</strong></p>
+            <p class="- topic/p p">Quuppa licenses natively compatible Quuppa Firmware Libraries (currently available
+                for Nordic nRF52832/833/840) to its Tag Partners. These firmware libraries natively
+                support all of the features that work seamlessly together with Quuppa Locators,
+                Quuppa Site Planner (QSP), Quuppa Positioning Engine (QPE) and other proprietary
+                software tools. This firmware carries a perpetual license and is currently available
+                for Nordic Semiconductor's nRF52832, nRF52833, and nRF52840 models. </p>
+            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Emulation Specifications</strong></p>
+            <p dir="ltr" class="- topic/p p">To track devices equipped with radios other than those mentioned above,
+                Quuppa has created a Tag Emulation Specification. This specification enables device
+                manufacturers to program their devices to advertise Direction Finding packets
+                (uplink), send data packets (uplink), and use backchannel functionalities (downlink)
+                to command tag. In addition, Quuppa offers sample source code for a reference mobile
+                app, both for Android and iOS, to make them trackable.</p>
+            <p dir="ltr" class="- topic/p p">Typically, emulation is the only feasible option if the device has
+                additional radios (e.g. Wi-Fi, LoRa, etc) or if the Bluetooth radio is also used for
+                other purposes in addition to Quuppa tracking. While the Quuppa Firmware is
+                optimised for the Quuppa system, it is good to remember that well-designed emulation
+                tags can also provide good positioning performance. There are many factors that
+                affect the tracking performance of a tag (e.g. the antenna, state machine and
+                accelerometer), which will be explored in the next sections. </p>
+        </section>
+        <section class="- topic/section section" id="tag_design_principles__section_iwr_blp_jnb" data-ofbid="tag_design_principles__section_iwr_blp_jnb"><h2 class="- topic/title title sectiontitle">3. Firmware &amp; State Machine Logic</h2>
+            
+            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">State Machine Makes Systems Scalable</strong></p>
+            <p dir="ltr" class="- topic/p p">Quuppa's Tag Firmware (Library) implements State Machine Logic, i.e. the
+                tag's brain that controls how it operates. The state machine has several important
+                functions, but first and foremost it listens to the accelerometer data to control
+                tag's advertisement on one hand to save battery for that given tag, and on the other
+                hand to decrease unnecessary Bluetooth congestion in environments with tens of
+                thousands of tags (e.g. warehouse). </p>
+            <p dir="ltr" class="- topic/p p">Tags with Quuppa Firmware have a state machine built-in, but for the
+                emulation tags, the manufacturer has to develop their own firmware and state machine
+                logic. This state machine logic may well be either simpler or more complicated than
+                what has been implemented in the Quuppa Firmware. In asset tracking use cases with
+                high volumes of tags residing in the same environment, it's important that state
+                machines command static tags to lower their transmit intervals to minimize
+                unnecessary radio noise.</p>
+            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Emulation Pro Support from Silicon Vendors</strong></p>
+            <p dir="ltr" class="- topic/p p">In addition to the options presented above, there is a third option. Quuppa
+                is working with several Silicon Vendors who have implemented the Quuppa Emulation
+                Specification (including Direction Finding and data packets as well as backchannel
+                functionality) and support for proprietary channels (2403 MHz, 2481 MHz).
+                Furthermore, these selected vendors have also implemented the state machine, and
+                pre-defined tag profiles (asset tag, people tag, etc) to be leveraged by the
+                manufactures. The implementation is shared via the respective vendors' developer
+                portal (as is), and they typically come with some source code samples. To shorten
+                developers go-to-market times, some of the vendors share their tag reference designs
+                with the BOMs and related design files.</p>
+            <p class="- topic/p p"><img class="- topic/image image" id="tag_design_principles__image_dkq_hvp_jnb" src="../images/state_machine.png" width="378"/></p>
+        </section>
+        <section class="- topic/section section" id="tag_design_principles__section_djc_dlp_jnb" data-ofbid="tag_design_principles__section_djc_dlp_jnb"><h2 class="- topic/title title sectiontitle">4. Antenna</h2><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Positioning Accuracy and
+                    Confidence Start With Good Antenna Design</strong></p><p dir="ltr" class="- topic/p p">The tag's antenna
+                is one of the most important hardware components for achieving optimal performance
+                together with the Quuppa system.</p><p dir="ltr" class="- topic/p p">Quuppa's positioning methodology is
+                based on Angle-of-Arrival (AoA), meaning that the Quuppa Locators measure the
+                    <span class="+ topic/keyword ui-d/wintitle keyword wintitle">direction</span> of the radio signal received from a tag. This is
+                why it is crucial that the radiation pattern of the antenna is as
+                    <span class="+ topic/keyword ui-d/wintitle keyword wintitle">omnidirectional</span> as possible and that there are no
+                significant (i.e. no deep nor wide) nulls.</p><p class="- topic/p p"><img class="- topic/image image" id="tag_design_principles__image_kjn_hkq_jnb" src="../images/QT1-1_antenna_radiation.png" width="378"/></p><em class="+ topic/ph hi-d/i ph i"><u class="+ topic/ph hi-d/u ph u">Printed IFA for Omnidirectional Radiation</u></em>
+            <p class="- topic/p p">Quuppa recommends using a PCB antenna, e.g. a printed IFA antenna. Changing the
+                thickness of or the material used for the PCB will require a redesign of the antenna
+                dimensions or matching circuit. Some high relative permittivity enclosure materials
+                also require a redesign. </p><div class="- topic/p p">
+                <div class="- topic/note note note note_note"><span class="note__title">Note:</span> Tag Partners are granted access to Quuppa's QT1-1 design files which they can
+                    use as a reference for designing their own tags.</div>
+            </div><p class="- topic/p p"><img class="- topic/image image" id="tag_design_principles__image_zr4_zkq_jnb" src="../images/PIFA.png" width="265"/></p><p class="- topic/p p">The
+                use of a <span class="+ topic/keyword ui-d/wintitle keyword wintitle">ceramic chip antenna is not recommended</span> as they
+                produce radiation patterns with significant nulls. However, if a ceramic chip
+                antenna is the only option, antennas with the shortest electrical length should be
+                avoided.</p><div class="- topic/p p">
+                <div class="- topic/note note note note_note"><span class="note__title">Note:</span> It's unlikely that a tag with ceramic chip antenna will fulfil Quuppa's
+                    certification requirements.</div>
+            </div><p class="- topic/p p"><img class="- topic/image image" id="tag_design_principles__image_fcl_2lq_jnb" src="../images/chip_antenna.png" width="189"/></p><p dir="ltr" class="- topic/p p"><em class="+ topic/ph hi-d/i ph i"><u class="+ topic/ph hi-d/u ph u">Good Total Efficiency Helps </u></em></p><p dir="ltr" class="- topic/p p">Quuppa
+                tags can operate within the whole 2.4 GHz ISM band: from 2401 MHz up to 2481 MHz,
+                with 1 MHz spacing. The antenna and matching circuitry should be designed so that
+                the antenna performance is good throughout the band. We recommend using a 50 ohm
+                matching plane for easier measurement of the antenna matching. </p><p class="- topic/p p">While a Quuppa
+                tag benefits from good total efficiency of the antenna, it is secondary to antenna
+                radiation. The target for total efficiency (includes both the matching loss and the
+                radiation efficiency) for the whole frequency range is better than -5dB.</p><p dir="ltr" class="- topic/p p">As always, you also need to take the antenna placement into consideration
+                and make sure you design it properly, also taking into account keep-out areas on the
+                PCB, ground plate, enclosure etc.</p><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Simulate Before Production</strong></p><p dir="ltr" class="- topic/p p">It's highly recommended to model and simulate the antenna performance
+                before production. It is important for catching any design challenges early. It is
+                also equally important to simulate and measure the efficiency and radiation pattern
+                of the final antenna design inside the intended enclosure, instead of only in free
+                space, as the enclosure can also affect antenna performance.  The matching
+                (reflection coefficient) should be measured first, before any efficiency and
+                radiation pattern measurements are taken. </p><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Challenges With Non-Optimal
+                    Antenna Design</strong></p><p class="- topic/p p"><em class="+ topic/ph hi-d/i ph i"><u class="+ topic/ph hi-d/u ph u">Omni-directionality for Positioning Accuracy and
+                        Confidence</u></em></p><p dir="ltr" class="- topic/p p">The tag is a small and simple radio
+                transmitting device. It's fairly easy to manufacture, and there are plenty of
+                reference designs available online. However, when creating a tag for an AoA
+                positioning system, antenna design is critical for the overall system performance.
+                </p><p dir="ltr" class="- topic/p p">In Quuppa's case, Locators are like cameras, in that they take
+                small radio images of radio signals that they see. From these images, the Locator
+                measures the azimuth and elevation angles and the QPE converts those into x-, y-,
+                and z-coordinates. If the strongest radio signals that Locators receive are not
+                coming directly from the tag (but from a reflection), it can cause a significant
+                reduction in the positioning performance of the system. This typically happens when
+                the antenna does not radiate to all directions with the same power, but the radiated
+                power is weaker to specific direction. The picture below shows the difference
+                between omnidirectional antenna-radiation patterns of the correctly positioned black
+                tag, and the green tag with a deep and wide null in radiation pattern towards the
+                Locator, resulting in its wrongly computed position visualised as a red dot in the
+                picture.</p><p class="- topic/p p"><img class="- topic/image image" id="tag_design_principles__image_pdr_wxq_jnb" src="../images/reflections.png" width="378"/></p></section>
+        <section class="- topic/section section" id="tag_design_principles__section_k1x_dlp_jnb" data-ofbid="tag_design_principles__section_k1x_dlp_jnb"><h2 class="- topic/title title sectiontitle">5. Accelerometer &amp; Other Components</h2>
+            
+            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">An Accelerometer is a Must</strong></p>
+            <p dir="ltr" class="- topic/p p">As mentioned above, the accelerometer has a crucial role not just from an
+                individual tags perspective but also from overall system performance perspective.
+                For Quuppa, having an accelerometer is a mandatory requirement.</p>
+            <p dir="ltr" class="- topic/p p">Beyond the system logic, an accelerometer also has a key role in several
+                use cases (e.g. man-down, impact detection, movement analysis). Tag manufacturers
+                have the freedom to choose the accelerometer that they want to use, they just have
+                to write the drivers for themselves. The Quuppa Firmware has readily written drivers
+                for ST LIS2DH.</p>
+            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Sensors as Use Case Enablers</strong></p>
+            <p dir="ltr" class="- topic/p p">Quuppa tags also typically have other sensors and actuators, such as a push
+                button and an LED indicator, to address and complement a variety of use cases.
+                Another interesting and new sensor to be highlighted here is a barometer / pressure
+                sensor. It captures the atmospheric pressure from a tag, allowing Quuppa to define
+                its relative height (z-axis). </p>
+            <p dir="ltr" class="- topic/p p">Different sensors and actuators consume different amounts of energy. Having
+                a vibrator motor or buzzer that can be commanded with the backchannel (downlink) via
+                the Locators enables fantastic use cases, but they also tend to be very power hungry
+                and hence require some smart design choices from the manufacturer's side.</p>
+        </section>
+        <section class="- topic/section section" id="tag_design_principles__section_tqy_2lp_jnb" data-ofbid="tag_design_principles__section_tqy_2lp_jnb"><h2 class="- topic/title title sectiontitle">6. Quuppa Proprietary Channels</h2>
+            
+            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Interference Tolerance on Non-Standard Channels</strong></p>
+            <p dir="ltr" class="- topic/p p">The Quuppa System is able to track a tag on the standard Bluetooth
+                advertising channels, as well as at the edges of the 2.4GHz ISM band. Tags with
+                Quuppa Tag Firmware (and upcoming Emulation Pro) allow a proprietary operation mode
+                for tracking Quuppa Compatible Tags using the Quuppa proprietary channels (2401 MHz,
+                2403 MHz, 2481 MHz). The benefit of this is that these proprietary channels are free
+                from other standard wireless systems, including WiFi, and Bluetooth. </p>
+            <p dir="ltr" class="- topic/p p">Using the proprietary channels becomes especially important in environments
+                where fast location update rates are required and/or Bluetooth channels are crowded,
+                such as sport stadiums and exhibitions (i.e. areas where large numbers of people
+                carry smartphones and headsets).</p>
+            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Radio Certifications Compliance is the Vendors' Responsibility</strong></p>
+            <p dir="ltr" class="- topic/p p">From a tag manufacturer's point of view, it is important to acknowledge
+                that when a tag operates on the proprietary channels, the tag's radio certifications
+                must also cover the use of said channels. It's worth noting that there are some
+                country-to-country differences and limitations to operations on different radio
+                frequencies. It is the manufacturer's responsibility to ensure that tag complies
+                with the rules and regulations of the geographical markets where the tags are used
+                in and sold to.</p>
+            <p class="- topic/p p"><img class="- topic/image image" id="tag_design_principles__image_cmn_tyq_jnb" src="../images/propritary_channels.png" width="378"/></p>
+        </section>
+        <section class="- topic/section section" id="tag_design_principles__section_rgr_flp_jnb" data-ofbid="tag_design_principles__section_rgr_flp_jnb"><h2 class="- topic/title title sectiontitle">7. Mechanical Design</h2>
+            
+            <p dir="ltr" class="- topic/p p">The saying "form follows function" also holds true in asset tracking tags.
+                The sensors and actuators are defined by use cases that the tag is used for. In the
+                same manner, the type of the tracked entity (i.e. a person, pallet, vehicle, or
+                small asset) sets requirements for the tags size, shape, robustness and its suitable
+                mounting mechanisms. Most enclosure and mechanics design choices are fairly logical
+                and follow common sense. </p>
+            <p dir="ltr" class="- topic/p p">In the Quuppa Certification process, we test the mechanical functionalities
+                (e.g. buttons, plugs, locking systems, hinges etc) so that they work as specified by
+                the manufacturer. We also evaluate the materials and surface quality (i.e. visual
+                quality), shape of the product (e.g. no sharp edges, pinch points etc), wearing
+                endurance of the product and check that it should not make any unusual noises when
+                pressing or twisting. </p>
+            <p dir="ltr" class="- topic/p p">By no means the list is exhaustive, but the use case, usage environment,
+                the customer, or even related regulations and other requirements may impose
+                material, functional, size, or other qualities that a tag has to fulfill. These
+                requirements are at manufacturer's and/or user's responsibility.</p>
+            <p class="- topic/p p"><img class="- topic/image image" id="tag_design_principles__image_hgm_yyq_jnb" src="../images/tag_dimensions.png" width="378"/></p>
+        </section>
+    </div>
+</article></main></div>
+
+                                
+                                
+                                
+
+                                
+
+                            </div>
+                            <!-- Topic TOC on right of page to cover sections in the topic. Removed in Jan 2022, but could be
+                            added for usability later.
+                            <whc:webhelp_topic_toc>
+                                <nav role="navigation"  id="wh_topic_toc" 
+                                    class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                                    <whc:component_content/>
+                                </nav>
+                            </whc:webhelp_topic_toc>
+                            -->
+                        </div>
+                    </div>
+
+
+                </div>       
+<!-- Navigation at the end of the topic -->          
+                <div class="container-fluid" id="wh_topic_container">
+                    <div class="row" style="color:white;margin-top:40px;">
+                        <nav class="wh_tools d-print-none navbar-expand-md">
+                            <div></div>
+                            
+<div class="wh_right_tools">
+                                <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  
+<span class="navprev"><a class="- topic/link link" href="../../QT3-1/topics/QT3-1_quick_start_guide.html" title="QT3-1 Tag Quick Start Guide" aria-label="Previous topic: QT3-1 Tag Quick Start Guide" rel="prev"></a></span>  
+<span class="navnext"><a class="- topic/link link" href="../../megamap/topics/hardware_declaration_of_conformity.html" title="Declaration of Conformity" aria-label="Next topic: Declaration of Conformity" rel="next"></a></span>  </span></div>
+<!--External resource link-->
+
+                            </div>
+
+                        </nav>
+                    </div>
+                    
+                </div>
+<!-- next section-->                       
+            </div>            
+            <footer id="footer">
+                <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container float-left ">
+    <image href="page-templates/images/QUUPPA_1row_white_LOW_pienennetty.png"></image>
+    
+    <bookrights>
+        <copyrfirst>
+        </copyrfirst>
+        <copyrlast>
+            <year>© 2020-2022 </year>
+        </copyrlast>
+        <bookowner>
+            <organization> Quuppa Oy. All Rights Reserved. </organization>
+        </bookowner>
+    </bookrights>
+    
+    
+
+   
+<!--     <whc:include_html href="${webhelp.fragment.footer}"/>
+-->  
+  
+  </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
+                Generation date: 17.04.2023</div>
+  
+  
+  <script type="text/javascript">
+    (function (d, t) {
+       var pp = d.createElement(t), s = d.getElementsByTagName(t)[0];
+       pp.src = '//app.pageproofer.com/embed/2202ff57-a1dd-522f-befe-078025b63fcb';
+       pp.type = 'text/javascript';
+       pp.async = true;
+       s.parentNode.insertBefore(pp, s);
+    })(document, 'script');
+    </script>
+                        
+    <script type="text/javascript">
+    (function (d, t) {
+       var pp = d.createElement(t), s = d.getElementsByTagName(t)[0];
+       pp.src = '//app.pageproofer.com/embed/50973457-0fde-5f26-a6d6-81e23e68a434';
+       pp.type = 'text/javascript';
+       pp.async = true;
+       s.parentNode.insertBefore(pp, s);
+    })(document, 'script');
+    </script>
+												
+  
+
+  
+</footer>
+                
+                <div id="go2top">
+                    <span class="oxy-icon oxy-icon-up"></span>
+                </div>
+                
+                <!-- The modal container for images -->
+                <div id="modal_img_large" class="modal">
+                    <span class="close oxy-icon oxy-icon-remove"></span>
+                    <!-- Modal Content (The Image) -->
+                    <div id="modal_img_container"></div>
+                    <!-- Modal Caption (Image Text) -->
+                    <div id="caption"></div>
+                </div>
+                
+                
+
+            </footer>
+        </div>
+    </body>
+</html>
