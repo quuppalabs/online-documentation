@@ -533,6 +533,11 @@
                path="QPE.next/topics/QC6_product_information.html"/>
    <appContext helpID="Q-Port_product_information"
                path="QPE.next/topics/Q-Port_product_information.html"/>
+   <appContext helpID="installation_resources"
+               path="megamap/topics/installation_resources.html"/>
+   <appContext helpID="deploying_a_project"
+               path="megamap/topics/deploying_a_project.html"/>
+   <appContext helpID="post_deployment" path="megamap/topics/post_deployment.html"/>
    <appContext helpID="videos" path="resources/topics/videos.html"/>
    <appContext helpID="whitepapers" path="resources/topics/resources.html"/>
    <appContext helpID="introduction" path="network/topics/network_introduction.html"/>
