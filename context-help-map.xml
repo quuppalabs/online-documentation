@@ -537,6 +537,8 @@
                path="megamap/topics/installation_resources.html"/>
    <appContext helpID="deploying_a_project"
                path="megamap/topics/deploying_a_project.html"/>
+   <appContext helpID="locator_provisioning"
+               path="megamap/topics/locator_provisioning.html"/>
    <appContext helpID="post_deployment" path="megamap/topics/post_deployment.html"/>
    <appContext helpID="videos" path="resources/topics/videos.html"/>
    <appContext helpID="whitepapers" path="resources/topics/resources.html"/>
