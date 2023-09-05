@@ -541,8 +541,9 @@
                path="megamap/topics/locator_mounting_options_q35.html"/>
    <appContext helpID="locator_mount_to_ceiling_truss_q35"
                path="megamap/topics/locator_mount_to_ceiling_truss_q35.html"/>
-   <appContext helpID="" path="megamap/topics/vesa_mount.html"/>
-   <appContext helpID="" path="megamap/topics/other_mounting_requirements.html"/>
+   <appContext helpID="vesa_mount" path="megamap/topics/vesa_mount.html"/>
+   <appContext helpID="other_mounting_requirements"
+               path="megamap/topics/other_mounting_requirements.html"/>
    <appContext helpID="locator_provisioning"
                path="megamap/topics/locator_provisioning.html"/>
    <appContext helpID="post_deployment" path="megamap/topics/post_deployment.html"/>
