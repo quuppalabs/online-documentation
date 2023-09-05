@@ -537,6 +537,8 @@
                path="megamap/topics/installation_resources.html"/>
    <appContext helpID="deploying_a_project"
                path="megamap/topics/deploying_a_project.html"/>
+   <appContext helpID="locator_mount_to_ceiling_truss_q35"
+               path="megamap/topics/locator_mount_to_ceiling_truss_q35.html"/>
    <appContext helpID="locator_provisioning"
                path="megamap/topics/locator_provisioning.html"/>
    <appContext helpID="post_deployment" path="megamap/topics/post_deployment.html"/>
