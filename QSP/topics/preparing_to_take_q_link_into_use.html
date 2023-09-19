@@ -148,55 +148,27 @@
                         <li class="- topic/li li">Q17 or Q35 Locators with a PRO subscription and the Q-Link module
                         enabled</li>
                         <li class="- topic/li li">Ethernet cables and other network components to connect the hub Locators
-                        to the Quuppa Controller (also potetially satellite Locators to perform
+                        to the Quuppa Controller (also potentially satellite Locators to perform
                         firmware upgrade before installation)</li>
                         <li class="- topic/li li">USB cables and chargers (5 V, min. 500 mA) to power the satellite
                         Locators</li>
                     </ul></li>
-                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Update to the latest Quuppa software version</strong> (software release 8.0 or
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Update to the latest Quuppa software version</strong> (software release 8.5 or
                 later) on both the Quuppa Controller and the QSP computer. You can download the
                     <a class="- topic/xref xref" href="https://secure.quuppa.com/customerportal/rfile/1" target="_blank" rel="external noopener">latest software package</a> from the Quuppa Customer
                 Portal's downloads section.</li>
                 <li class="- topic/li li">
-                    <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Set the QPE to use</strong> the <code class="+ topic/ph pr-d/codeph ph codeph">-Dwireless</code> startup
-                        parameter:</p>
-                    <ol class="- topic/ol ol" type="a" id="preparing_to_take_q_link_into_use__ol_x4f_ksh_fwb" data-ofbid="preparing_to_take_q_link_into_use__ol_x4f_ksh_fwb">
-                        <li class="- topic/li li">
-                            <p class="- topic/p p">Open the terminal window.</p>
-                        </li>
-                        <li class="- topic/li li">
-                            <p class="- topic/p p"> Open the file that defines the Java startup parameters, for
-                                example:</p>
-                            <div class="- topic/p p">
-                            <pre class="+ topic/pre pr-d/codeblock pre codeblock" id="preparing_to_take_q_link_into_use__codeblock_l1t_s3t_gwb" data-ofbid="preparing_to_take_q_link_into_use__codeblock_l1t_s3t_gwb"><code><code class="+ topic/ph pr-d/codeph ph codeph">sudo nano /usr/share/tomcat9/bin/<strong class="+ topic/ph hi-d/b ph b">setenv.sh</strong></code></code></pre>
-                        </div>
-                        </li>
-                        <li class="- topic/li li">
-                        <p class="- topic/p p">Add the <code class="+ topic/ph pr-d/codeph ph codeph">-Dwireless</code> parameter to the Java Options line,
-                            for example:</p>
-                        <pre class="+ topic/pre pr-d/codeblock pre codeblock" id="preparing_to_take_q_link_into_use__codeblock_v4s_3zt_gwb" data-ofbid="preparing_to_take_q_link_into_use__codeblock_v4s_3zt_gwb"><code><code class="+ topic/ph pr-d/codeph ph codeph">export JAVA_OPTS="<strong class="+ topic/ph hi-d/b ph b">-Dwireless</strong> -XX:+UseZGC -XX:MaxRAMPercentage=70 -XX:-ZUncommit -Djava.awt.headless=true -Dproject.folder=/opt/quuppa/PE"</code></code></pre>
-                    </li>
-                        <li class="- topic/li li">
-                            <p class="- topic/p p">Exit and save the file before closing the terminal window.</p>
-                            <p class="- topic/p p">When you start the QPE and open the QPE Web Console, you will see a
-                                message at the top indicating that wireless connectivity, i.e. the
-                                Q-Link feature, has been enabled.</p>
-                            <p class="- topic/p p"><img class="- topic/image image" id="preparing_to_take_q_link_into_use__image_t3w_z3t_gwb" src="../images/Wireless_QPE_strated_with_wireless_parameter.png" width="567"/></p>
-                        </li>
-                    </ol>
-                </li>
-                <li class="- topic/li li">
-                    <p class="- topic/p p">If your Locators have been produced before February 2023, upgrade the
-                    firmware of your Locators to a version that is compatible with Q-Link (main
-                    firmware version <strong class="+ topic/ph hi-d/b ph b">1.98.753</strong> or above). Complete this step before you
-                    install the Locators so that for the duration of this first upgrade, you can
-                    connect all of the Locators (including the Locators that will later be used as
-                    satellite Locators) to the QPE using Ethernet cables. Once all of the Locators
-                    are connected to the QPE, run the firmware update as you would for a normal
-                    cabled Quuppa system, following these steps:</p>
+                <p class="- topic/p p">Please make sure to update firmware of the Locators to Q-Link compatible version
+                    (main firmware version <strong class="+ topic/ph hi-d/b ph b">1.98.753</strong> or above) if you have: </p>
+                <p class="- topic/p p">- Q17 products delivered before July 2023 (except for product code 5902110)</p>
+                <p class="- topic/p p">- Q35 products produced before 28 February 2023.</p>
+                    <p class="- topic/p p">Complete this step before you install the Locators so that for the duration
+                    of this first upgrade, you can connect all of the Locators (including the
+                    Locators that will later be used as satellite Locators) to the QPE using
+                    Ethernet cables. Once all of the Locators are connected to the QPE, run the
+                    firmware update as you would for a normal cabled Quuppa system, following these
+                    steps:</p>
                     <ol class="- topic/ol ol" type="a" id="preparing_to_take_q_link_into_use__ol_cbq_qth_fwb" data-ofbid="preparing_to_take_q_link_into_use__ol_cbq_qth_fwb">
-                    <li class="- topic/li li">Make sure QPE is started with the <code class="+ topic/ph pr-d/codeph ph codeph">-Dwireless</code>
-                        parameter.</li>
                         <li class="- topic/li li">Open the QPE Web Console in your browser.</li>
                         <li class="- topic/li li">Use the <code class="+ topic/ph pr-d/codeph ph codeph">qpe/upgradeALLFW</code> request to start the upgrade
                         process. For further details, please refer to our <a class="- topic/xref xref" href="../../Qxx_FW/topics/fw_upgrade.html">Firmware upgrade for
@@ -228,34 +200,38 @@
                     requirements. In some cases, 4 satellite Locators per hub Locator may be
                     applicable, while in other cases you may want to use onle 1 satellite Locator
                     per hub Locator. </p>
-                <p class="- topic/p p">Use the table below to benchmark a satellite Locator to hub Locator ratio to
-                    start testing in your environment.</p>
+                <p class="- topic/p p">Please follow these recommendations respective to your locator type.  Use the
+                    table below to benchmark a satellite Locator to hub Locator ratio to start
+                    testing in your environment.</p>
                 <div class="- topic/p p">
-                    <div class="simpletable-container"><table class="- topic/simpletable simpletable" id="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb" data-ofbid="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb"><colgroup><col style="width:47.84688995215311%"/><col style="width:52.153110047846894%"/></colgroup><thead><tr class="- topic/sthead sthead">
-                            <th class="- topic/stentry stentry" scope="col" id="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb__stentry__1">DF Packet Rate / Satellite Locator</th>
-                            <th class="- topic/stentry stentry" scope="col" id="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb__stentry__2">Hub:Satellite Ratio</th>
+                    <div class="simpletable-container"><table class="- topic/simpletable simpletable" id="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb" data-ofbid="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb"><colgroup><col style="width:32.36245954692557%"/><col style="width:32.36245954692557%"/><col style="width:35.27508090614887%"/></colgroup><thead><tr class="- topic/sthead sthead">
+                            <th class="- topic/stentry stentry" scope="col" id="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb__stentry__1">DF Packet Rate / Q17 Satellite Locator</th>
+                            <th class="- topic/stentry stentry" scope="col" id="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb__stentry__2">DF Packet Rate / Q35 Satellite Locator</th>
+                            <th class="- topic/stentry stentry" scope="col" id="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb__stentry__3">Hub:Satellite Ratio</th>
                         </tr></thead><tbody><tr class="- topic/strow strow">
-                            <td class="- topic/stentry stentry" headers="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb__stentry__1">&lt; 30</td>
-                            <td class="- topic/stentry stentry" headers="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb__stentry__2">1:4</td>
+                            <td class="- topic/stentry stentry" headers="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb__stentry__1">&lt; 60</td>
+                            <td class="- topic/stentry stentry" headers="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb__stentry__2">Not recommended</td>
+                            <td class="- topic/stentry stentry" headers="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb__stentry__3">1:4</td>
                         </tr><tr class="- topic/strow strow">
-                            <td class="- topic/stentry stentry" headers="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb__stentry__1">&lt; 40</td>
-                            <td class="- topic/stentry stentry" headers="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb__stentry__2">1:3</td>
+                            <td class="- topic/stentry stentry" headers="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb__stentry__1">&lt; 80</td>
+                            <td class="- topic/stentry stentry" headers="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb__stentry__2">&lt; 60</td>
+                            <td class="- topic/stentry stentry" headers="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb__stentry__3">1:3</td>
                         </tr><tr class="- topic/strow strow">
-                            <td class="- topic/stentry stentry" headers="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb__stentry__1">&lt; 50</td>
-                            <td class="- topic/stentry stentry" headers="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb__stentry__2">1:2</td>
+                            <td class="- topic/stentry stentry" headers="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb__stentry__1">&lt; 100</td>
+                            <td class="- topic/stentry stentry" headers="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb__stentry__2">&lt; 90</td>
+                            <td class="- topic/stentry stentry" headers="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb__stentry__3">1:2</td>
+                        </tr><tr class="- topic/strow strow">
+                            <td class="- topic/stentry stentry" headers="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb__stentry__1">&lt; 200</td>
+                            <td class="- topic/stentry stentry" headers="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb__stentry__2">&lt; 150</td>
+                            <td class="- topic/stentry stentry" headers="preparing_to_take_q_link_into_use__simpletable_qmf_nz5_wsb__stentry__3">1:1</td>
                         </tr></tbody></table></div>
                 </div>
                 <div class="- topic/p p">
-                    <div class="- topic/note note important note_important" id="preparing_to_take_q_link_into_use__note_rmf_nz5_wsb" data-ofbid="preparing_to_take_q_link_into_use__note_rmf_nz5_wsb"><span class="note__title">Important:</span> Keep the following in mind when
-                        deciding how many satellite Locators per hub Locator to include in your project:<div class="- topic/p p">
-                            <ul class="- topic/ul ul" id="preparing_to_take_q_link_into_use__ul_whk_wgv_wsb" data-ofbid="preparing_to_take_q_link_into_use__ul_whk_wgv_wsb">
-                                <li class="- topic/li li">Up to 4 satellites per hub</li>
-                                <li class="- topic/li li">Up to 15 meters distance between a satellite and a hub in an
-                                    indoor environment and up to 40 meters in an outdoor environment
-                                    with a direct line of sight between the satellite and the
-                                    hub.</li>
-                            </ul>
-                        </div></div>
+                    <div class="- topic/note note important note_important" id="preparing_to_take_q_link_into_use__note_rmf_nz5_wsb" data-ofbid="preparing_to_take_q_link_into_use__note_rmf_nz5_wsb"><span class="note__title">Important:</span> When deciding how many satellite
+                        Locators per hub Locator to include in your project, remember to ensure that
+                        there is a maximum of 15 meters distance between a satellite and a hub in an
+                        indoor environment and up to 40 meters in an outdoor environment with a
+                        direct line of sight between the satellite and the hub.</div>
                 </div>
                 </li>
                 <li class="- topic/li li">
@@ -351,7 +327,7 @@
 -->  
   
   </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
-                Generation date: 05.09.2023</div>
+                Generation date: 19.09.2023</div>
   
   
   <script type="text/javascript">
