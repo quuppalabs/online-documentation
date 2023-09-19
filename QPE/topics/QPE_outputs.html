@@ -220,6 +220,23 @@
             <p class="- topic/p p">This section uses the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Create output target</span> and <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Control
                     output target (start/stop)</span> API methods.</p>
         </section>
+        <section class="- topic/section section" id="QPE_outputs__section_kvy_1nl_vyb" data-ofbid="QPE_outputs__section_kvy_1nl_vyb"><h2 class="- topic/title title sectiontitle">MQTT Publisher</h2>
+            
+            <p class="- topic/p p">The MQTT Publisher row shows current MQTT publisher configurations.</p>
+            <p class="- topic/p p">An alternative to plain UDP, you can also publish position data via MQTT. MQTT allows
+                to create a reliable TCP-based connection to MQTT broker. You can also create MQTT
+                over a websocket, for example if your QPE system is inside a firewall and only HTTP
+                traffic outside is allowed.</p>
+            <p class="- topic/p p"><img class="- topic/image image" id="QPE_outputs__image_ebc_tnl_vyb" src="../images/outputs-mqtt-2.png" width="600"/></p>
+            <p class="- topic/p p">Similar to UDP Push configuration, you can either create persistent MQTT output in
+                the Site Planner or create them through the QPE user interface. The green plus icon
+                next to the row heading opens a new window where you can edit the publisher
+                configurations as needed.</p>
+            <p class="- topic/p p"><img class="- topic/image image" id="QPE_outputs__image_dxn_wnl_vyb" height="400" src="../images/outputs-mqtt-editor.png"/></p>
+            <p class="- topic/p p">This section uses the Create output target and Control output target (start/stop) API
+                methods. For more details on creating and controlling targets over the API, see
+                Quuppa API documentation.</p>
+        </section>
         <section class="- topic/section section" id="QPE_outputs__section_mlk_q3x_q4b" data-ofbid="QPE_outputs__section_mlk_q3x_q4b"><h2 class="- topic/title title sectiontitle">Binary Logging</h2><p class="- topic/p p">The binary logging tool is
                 used to log all system data for debugging purposes.</p><img class="- topic/image image" id="QPE_outputs__image_lxv_qfv_r4b" src="../images/QPE_console_binary_log.png" width="567"/><p class="- topic/p p">To start recording binary logs, press the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Start</span> button.
                 The QPE will continue to record binary logs until you click the
@@ -310,7 +327,7 @@
 -->  
   
   </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
-                Generation date: 05.09.2023</div>
+                Generation date: 19.09.2023</div>
   
   
   <script type="text/javascript">
