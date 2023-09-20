@@ -183,8 +183,8 @@
                         <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sudo apt-get update</code></pre>
                     </div></li>
                 <li class="- topic/li li">Install the latest available OpenJDK JRE version for your chosen version of
-                    Ubuntu (e.g. OpenJDK Java 16):<div class="- topic/p p">
-                        <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sudo apt install openjdk-16-jre</code></pre>
+                    Ubuntu (e.g. OpenJDK Java 18):<div class="- topic/p p">
+                        <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sudo apt install openjdk-18-jre</code></pre>
                     </div></li>
                 <li class="- topic/li li">Check that system time is managed and if not, then install the Network Time
                     Protocol (NTP) service:<div class="- topic/p p">
@@ -258,7 +258,7 @@
                                 Tomcat is having trouble finding your Java installation path for
                                 some other reason. To fix this, open the Tomcat file using the
                                 command <code class="+ topic/ph pr-d/codeph ph codeph">sudo nano /etc/default/tomcat9</code> and add the
-                                line <code class="+ topic/ph pr-d/codeph ph codeph">JAVA_HOME=/usr/lib/jvm/java-16-openjdk_amd64</code>.
+                                line <code class="+ topic/ph pr-d/codeph ph codeph">JAVA_HOME=/usr/lib/jvm/java-18-openjdk-amd64</code>.
                                 Then, if prompted by the system, run the <code class="+ topic/ph pr-d/codeph ph codeph">systemctl
                                     daemon-reload</code> command. Now you can start Tomcat again
                                 using the command <code class="+ topic/ph pr-d/codeph ph codeph">sudo service tomcat9 start</code> and
