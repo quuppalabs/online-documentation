@@ -154,9 +154,12 @@
                 parameters are typically set in file /usr/share/tomcat9/bin/setenv.sh. Create one if
                 this configuration file doesn't exist yet. For more information, see the <a class="- topic/xref xref" href="../../QPE/topics/QPE_installing_application.html">QPE Installation
                     instructions.</a>
-            </p><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Java 15</strong></p>When you have Java 15 available, add/modify the line
-                <code class="+ topic/ph pr-d/codeph ph codeph">export CATALINA_OPTS=".."</code> in the file to specify the required
-            parameters, for example:<div class="- topic/p p">
+            </p><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Java 19</strong></p>The QPE uses virtual threads when available. They were
+            introduced in Java 19 as the Preview feature. Therefore, if you choose to use Java 19,
+            you will need to add the <code class="+ topic/ph pr-d/codeph ph codeph">--enable-preview</code> option to your JVM parameters
+            in /usr/share/tomcat9/bin/setenv.sh.<p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Java 15</strong></p>When you have Java 15
+            available, add/modify the line <code class="+ topic/ph pr-d/codeph ph codeph">export CATALINA_OPTS=".."</code> in the file to
+            specify the required parameters, for example:<div class="- topic/p p">
                 <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>export CATALINA_OPTS="-XX:+UseZGC -XX:MaxRAMPercentage=70 -XX:-ZUncommit -Djava.awt.headless=true -Dproject.folder=/opt/quuppa/PE"</code></pre>
             </div><p class="- topic/p p">Different options are supported in different versions of JVM. Refer to the table
                 below for recommended options with ZGC and to <a class="- topic/xref xref" href="https://wiki.openjdk.java.net/display/zgc/Main" target="_blank" rel="external noopener">ZGC documentation</a> for other supported
