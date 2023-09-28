@@ -168,9 +168,8 @@
                 the next best option for the garbage collector. </p><p class="- topic/p p">With Java 8, you might
                 specify:</p><div class="- topic/p p">
                 <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>export CATALINA_OPTS="-Xmx4g -XX:+UseG1GC -Djava.awt.headless=true -Dproject.folder=/opt/quuppa/PE"</code></pre>
-            </div><p class="- topic/p p">Some parameters work also fine if added as <code class="+ topic/ph pr-d/codeph ph codeph">export
-                    CATALINA_OPTS=".."</code> -line. In Windows you may need to use the graphical
-                user interface of Tomcat server to define these parameters.</p></section>
+            </div><p class="- topic/p p">In Windows you may need to use the graphical user interface of Tomcat server to
+                define these parameters.</p></section>
         <div class="- topic/p p">
             <table class="- topic/table table frame-all" id="network_config_terminology__table_hgt_xzv_jlb" data-ofbid="network_config_terminology__table_hgt_xzv_jlb" data-cols="3"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label">Table<span class="table--title-label-number"> 1</span><span class="table--title-label-punctuation">. </span></span><span class="table--title">Available JVM Startup Parameters</span></caption><colgroup><col style="width:33.33333333333333%"/><col style="width:33.33333333333333%"/><col style="width:33.33333333333333%"/></colgroup><thead class="- topic/thead thead">
                         <tr class="- topic/row">
@@ -272,11 +271,19 @@
                                 for bigger setups with 10 cores or more.</td>
                         </tr>
                         <tr class="- topic/row">
-                            <td class="- topic/entry entry colsep-1 rowsep-0" headers="network_config_terminology__table_hgt_xzv_jlb__entry__1">-DsimulatorMode</td>
-                            <td class="- topic/entry entry colsep-1 rowsep-0" headers="network_config_terminology__table_hgt_xzv_jlb__entry__2">-DsimulatorMode</td>
-                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="network_config_terminology__table_hgt_xzv_jlb__entry__3"><strong class="+ topic/ph hi-d/b ph b">Optional</strong>. Starts QPE in simulator mode, ready to receive
+                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="network_config_terminology__table_hgt_xzv_jlb__entry__1">-DsimulatorMode</td>
+                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="network_config_terminology__table_hgt_xzv_jlb__entry__2">-DsimulatorMode</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="network_config_terminology__table_hgt_xzv_jlb__entry__3"><strong class="+ topic/ph hi-d/b ph b">Optional</strong>. Starts QPE in simulator mode, ready to receive
                                 simulated data from QSP. Project file is transmitted from
                                 QSP.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-0" headers="network_config_terminology__table_hgt_xzv_jlb__entry__1">-DdoNotConnectToQCP</td>
+                            <td class="- topic/entry entry colsep-1 rowsep-0" headers="network_config_terminology__table_hgt_xzv_jlb__entry__2">-DdoNotConnectToQCP</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="network_config_terminology__table_hgt_xzv_jlb__entry__3"><strong class="+ topic/ph hi-d/b ph b">Optional</strong>. When set, QPE does not try to connect
+                                automatically to QCP for sending status updates and performing
+                                project file and subscription sync. Use only with offline project
+                                with a subscription that has offline module enabled.</td>
                         </tr>
                     </tbody></table>
         </div>
@@ -348,7 +355,7 @@
 -->  
   
   </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
-                Generation date: 21.09.2023</div>
+                Generation date: 28.09.2023</div>
   
   
   <script type="text/javascript">
