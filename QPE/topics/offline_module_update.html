@@ -145,12 +145,10 @@
             Generation Q Locator subscriptions, which allows the <strong class="+ topic/ph hi-d/b ph b">Quuppa Positioning Engine
                 (QPE)</strong> to run a project completely offline. </p>
         <div class="- topic/p p">
-            <div class="- topic/note note note note_note"><span class="note__title">Note:</span> The Offline Module needs to be purchased separately and paid in advance.
-                If
-                the module has not been enabled in advance, the QPE will stop running after 48 hours
-                offline without a connection to the Quuppa Customer Portal as it
-                is unable to verify license details or perform a file
-                sync.</div>
+            <div class="- topic/note note note note_note"><span class="note__title">Note:</span> The Offline Module needs to be purchased separately and paid in advance. If the
+                module has not been enabled in advance, the QPE will stop running after 48 hours
+                offline without a connection to the Quuppa Customer Portal as it is unable to verify
+                license details or perform a file sync.</div>
         </div>
         <p class="- topic/p p">Using the Offline Module means that the QPE will not connect and sync with the <strong class="+ topic/ph hi-d/b ph b">Quuppa
                 Customer Portal (QCP)</strong> and so any updates to the project file or license files
@@ -161,10 +159,11 @@
             offline QPE.</p>
         <section class="- topic/section section" id="offline_module_update__section_i1b_3pb_npb" data-ofbid="offline_module_update__section_i1b_3pb_npb"><h2 class="- topic/title title sectiontitle">Update License Files Offline</h2>
             
-            <p class="- topic/p p">When the QPE is run in the offline mode, the QPE will not sync with the QCP and so
-                will run for as long as the current license is valid. If the license is updated,
-                e.g. you renew your Quuppa subscription, the new license files will need to be
-                transferred manually to the offline QPE. To do so, follow the steps below.</p>
+            <p class="- topic/p p">When the QPE is run in the offline mode, the QPE will not sync with the QCP and the
+                Locators will run for as long as the their subscriptions are valid. If a
+                subscription is updated, e.g. you renew your Quuppa subscription, the new
+                subscription files will need to be transferred manually to the offline QPE. To do
+                so, follow the steps below.</p>
             <div class="- topic/p p">
                 <ol class="- topic/ol ol" id="offline_module_update__ol_dkd_frb_npb" data-ofbid="offline_module_update__ol_dkd_frb_npb">
                     <li class="- topic/li li">Log into the QCP with a device other than the offline QPE.</li>
@@ -172,24 +171,24 @@
                             Keys</span> list.</li>
                     <li class="- topic/li li">Select the relevant <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Project Key ID</span> to open the
                             <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Project Key Details</span> page.</li>
-                    <li class="- topic/li li">Download the license file, license signature and the sync file from QCP by
-                        clicking the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Download project files</span> button on the
-                            <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Project Key Details</span> page. <div class="- topic/p p">
+                    <li class="- topic/li li">Download the license, signature and the sync files from QCP by clicking the
+                            <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Download files</span> button on the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Project Key
+                            Details</span> page. <div class="- topic/p p">
                             <div class="- topic/note note note note_note"><span class="note__title">Note:</span> If you have submitted the latest project file to the QCP (optional
                                 with the Offline Module), these downloaded files will also include
                                 the project file and the project signature. </div>
                         </div></li>
-                    <li class="- topic/li li">Unzip the downloaded files and transfer them to the offline QPE's project
-                        folder (defined in the QPE configuration as -Dproject.folder) e.g. using a
-                        memory stick. <div class="- topic/p p">
+                    <li class="- topic/li li">Stop Tomcat.</li>
+                    <li class="- topic/li li">Unzip all the downloaded files and transfer them to the offline QPE's
+                        project folder (defined in the QPE configuration as -Dproject.folder) e.g.
+                        using a memory stick. <div class="- topic/p p">
                             <div class="- topic/note note note note_note"><span class="note__title">Note:</span> You can check the QPE’s project folder from the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Working
-                                    Directory</span> row in the QPE Web Console. Please note
-                                that only one <span class="+ topic/keyword ui-d/wintitle keyword wintitle">.quuppaproject</span> file can be stored
-                                in this folder at a time.  Please also make sure that the latest
-                                version of the project file is in the same folder.</div>
+                                    Directory</span> row in the QPE Web Console.</div>
                         </div></li>
-                    <li class="- topic/li li">In the QPE Web Console, click the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Start in tracking mode
-                            button</span> to start running the project offline.</li>
+                    <li class="- topic/li li">Start Tomcat.</li>
+                    <li class="- topic/li li">Check in the QPE Web Console that QPE is running in tracking mode and
+                        Project Sync Status is <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Disabled</span>. You are now running
+                        the project offline.</li>
                 </ol>
             </div>
         </section>
@@ -204,52 +203,31 @@
                         (QSP). </li>
                     <li class="- topic/li li">Use a thumb drive or similar device to transfer the file over to the offline
                         QPE.</li>
-                    <li class="- topic/li li">Save the file in the QPE's project folder (defined in the QPE configuration
-                        as <span class="+ topic/keyword ui-d/wintitle keyword wintitle">-Dproject.folder</span>) so that it replaces the existing
-                        file in that folder.<div class="- topic/p p">
-                            <div class="- topic/note note note note_note"><span class="note__title">Note:</span> You can check the QPE’s project folder from the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Working
-                                    Directory</span> row in the QPE Web Console. Please note
-                                that only one <span class="+ topic/keyword ui-d/wintitle keyword wintitle">.quuppaproject</span> file can be stored
-                                in this folder at a time. </div>
+                    <li class="- topic/li li">Stop Tomcat.</li>
+                    <li class="- topic/li li">Save the project file in the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">quuppaprojectoverride</span>
+                        folder in QPE's project folder so that it replaces the existing file in that folder.<div class="- topic/p p">
+                            <div class="- topic/note note note note_note"><span class="note__title">Note:</span> Please note that only one <span class="+ topic/keyword ui-d/wintitle keyword wintitle">.quuppaproject</span> file
+                                can be stored in this folder at a time. </div>
                         </div></li>
-                    <li class="- topic/li li">In the QPE Web Console, click the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Start in tracking mode
-                            button</span> to start running the project offline.</li>
+                    <li class="- topic/li li">Start Tomcat.</li>
+                    <li class="- topic/li li">Check in the QPE Web Console that QPE is running in tracking mode and
+                        Project Sync Status is <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Disabled</span>. You are now running
+                        the project offline.</li>
                 </ol>
             </div>
         </section>
         <section class="- topic/section section" id="offline_module_update__section_i24_ppb_npb" data-ofbid="offline_module_update__section_i24_ppb_npb"><h2 class="- topic/title title sectiontitle">Update Files Using an Internet Connection</h2>
             
-            <p class="- topic/p p">Another way to update the license files for your offline QPE is to temporarily form
-                an internet connection so that you can access the QCP for long enough to download
-                the latest project file. </p>
+            <p class="- topic/p p">Another way to update the license files for your offline QPE is to temporarily
+                connect the QPE to the internet so that you can access the QCP for long enough to
+                download the latest file. </p>
             <div class="- topic/p p">
                 <ol class="- topic/ol ol" id="offline_module_update__ol_i4d_zsb_npb" data-ofbid="offline_module_update__ol_i4d_zsb_npb">
                     <li class="- topic/li li">Connect your offline QPE to the internet.</li>
-                    <li class="- topic/li li">Log into the QCP.</li>
-                    <li class="- topic/li li">From the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Dashboard</span>, navigate to the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Project
-                            Keys</span> list.</li>
-                    <li class="- topic/li li">Select the relevant <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Project Key ID</span> to open the
-                            <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Project Key Details</span> page.</li>
-                    <li class="- topic/li li">Download the license file, license signature and the sync file from QCP by
-                        clicking the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Download project files</span> button on the
-                            <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Project Key Details</span> page. <div class="- topic/p p">
-                            <div class="- topic/note note note note_note"><span class="note__title">Note:</span> If you have submitted the latest project file to the QCP (optional
-                                with the Offline Module), these downloaded files will also include
-                                the project file and the project signature. </div>
-                        </div></li>
-                    <li class="- topic/li li">Unzip the downloaded files and transfer them to the offline QPE's project
-                        folder (defined in the QPE configuration as -Dproject.folder) e.g. using a
-                        memory stick. <div class="- topic/p p">
-                            <div class="- topic/note note note note_note"><span class="note__title">Note:</span> You can check the QPE’s project folder from the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Working
-                                    Directory</span> row in the QPE Web Console. Please note
-                                that only one <span class="+ topic/keyword ui-d/wintitle keyword wintitle">.quuppaproject</span> file can be stored
-                                in this folder at a time.  Please also make sure that the latest
-                                version of the project file is in the same folder.</div>
-                        </div></li>
-                    <li class="- topic/li li">
-                        <p class="- topic/p p">In the QPE Web Console, click the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Start in tracking mode
-                                button</span> to start running the project offline.</p>
-                    </li>
+                    <li class="- topic/li li">In the QPE web console, click <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Do File Sync</span>.</li>
+                    <li class="- topic/li li">Check that QPE is running in tracking mode and in <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Locator
+                            Details</span> page Locator subscription details have been updated
+                        correctly.</li>
                     <li class="- topic/li li">
                         <p class="- topic/p p">Disconnect the QPE from the internet.</p>
                     </li>
@@ -324,7 +302,7 @@
 -->  
   
   </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
-                Generation date: 28.09.2023</div>
+                Generation date: 29.09.2023</div>
   
   
   <script type="text/javascript">
