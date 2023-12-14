@@ -28,6 +28,8 @@
    <appContext helpID="office_buildings"
                path="reference_projects/topics/office_buildings.html"/>
    <appContext helpID="retail" path="reference_projects/topics/retail.html"/>
+   <appContext helpID="industrial_reference_project"
+               path="reference_projects/topics/industrial_reference_project.html"/>
    <appContext helpID="quuppa_development_kit_quick_start_guide"
                path="megamap/topics/Software.html"/>
    <appContext helpID="QSP_introduction" path="QSP/topics/QSP_introduction.html"/>

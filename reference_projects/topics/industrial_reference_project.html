@@ -1,0 +1,522 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="../../favicon.ico"/><link rel="icon" href="../../favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="This section will walk through the objects included in our reference project for a typical industrial use case and provide you with some benchmarks for which settings and parameters work well in these ..."/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="DC.relation" content="../../reference_projects/topics/example_projects_introduction.html"/><meta name="DC.relation" content="../../reference_projects/topics/retail.html"/><meta name="DC.relation" content="../../megamap/topics/Software.html"/><meta name="DC.creator" content="Julia"/><meta name="rights" content="© 2020 Quuppa Oy"/><meta name="DC.date.created" content="01.06.2020"/><meta name="DC.date.modified" content="12.07.2021"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="industrial_reference_project"/><title>Industrial Reference Project</title><!--  Generated with Oxygen version 24.1, build number 2022030800.  --><meta name="wh-path2root" content="../../"/><meta name="wh-toc-id" content="industrial_reference_project-d3653e403"/><meta name="wh-source-relpath" content="reference_projects/topics/industrial_reference_project.dita"/><meta name="wh-out-relpath" content="reference_projects/topics/industrial_reference_project.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="../../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/app/topic-page.css?buildId=2022030800"/>
+    
+    
+    <script src="../../oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="../../oxygen-webhelp/app/topic-page.js" src="../../oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/template/Quuppa_skin.css?buildId=2022030800"/>
+
+    <!-- Google tag (gtag.js) -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L77KR66W6P"></script>
+    <script><!--
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-L77KR66W6P');
+    
+--></script>    
+
+<script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:2215474,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script></head>
+
+    <body id="industrial_reference_project" class="wh_topic_page frmBody">
+        <div id="page-container">
+            <div id="content-wrap">
+                <a href="#wh_topic_body" class="sr-only sr-only-focusable">Jump to main content</a>
+                <!-- EXM-36950 - Expand the args.hdr parameter here -->
+                
+                
+                
+                <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <a href="https://quuppa.com/" class=" wh_logo d-none d-sm-block "><img src="https://www.quuppa.com/documentation/oxygen-webhelp/template/page-templates/images/QUUPPA_1row_black_LOW_small.png" alt="Product Documentation"/></a>
+                    <div class=" wh_publication_title "><a href="../../index.html"><span class="title">Product Documentation</span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+
+
+                
+                <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+
+
+<form id="searchForm" method="get" role="search" action="../../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+
+</div>
+<!-- Navigation at the top of the topic -->                
+                <div class="container-fluid" id="wh_topic_container">
+                    <div class="row">
+
+                        <nav class="wh_tools d-print-none navbar-expand-md">
+                            
+<div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="../../index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="quuppa_development_kit_quick_start_guide"><div class="title"><a href="../../megamap/topics/Devkit.html">Getting Started</a></div></div></li><li><div class="topicref" data-id="using_quuppa_example_projects"><div class="title"><a href="../../reference_projects/topics/example_projects_introduction.html">Quuppa Reference Projects</a></div></div></li><li class="active"><div class="topicref" data-id="industrial_reference_project"><div class="title"><a href="../../reference_projects/topics/industrial_reference_project.html">Industrial Reference Project</a></div></div></li></ol></div>
+
+
+
+                            
+<div class="wh_right_tools">
+                                <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                                <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                                <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  
+<span class="navprev"><a class="- topic/link link" href="../../reference_projects/topics/retail.html" title="Retail Reference Project" aria-label="Previous topic: Retail Reference Project" rel="prev"></a></span>  
+<span class="navnext"><a class="- topic/link link" href="../../megamap/topics/Software.html" title="Software" aria-label="Next topic: Software" rel="next"></a></span>  </span></div>
+<!--External resource link-->
+
+                                <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                                
+                                <!-- Expand/Collapse publishing TOC 
+                                     The menu button for mobile devices is copied in the output only when the publication TOC is available
+                                -->
+                                <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+
+                        </nav>
+                    </div>
+                    
+
+<div class="wh_content_area">
+                        <div class="row">
+                            
+
+
+                                <nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none">
+<div id="wh_publication_toc_content">
+
+
+                                    <div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="megamap_introduction-d3653e34" class="topicref" data-id="megamap_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action megamap_introduction-d3653e34-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/documentation_introduction.html" id="megamap_introduction-d3653e34-link">Introduction</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="quuppa_development_kit_quick_start_guide-d3653e104" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action quuppa_development_kit_quick_start_guide-d3653e104-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Devkit.html" id="quuppa_development_kit_quick_start_guide-d3653e104-link">Getting Started</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="devkit_qsg_introduction-d3653e127" class="topicref" data-id="devkit_qsg_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action devkit_qsg_introduction-d3653e127-link" class="wh-expand-btn"></span><div class="title"><a href="../../devkit_qsg/topics/DevkitQSG_introduction.html" id="devkit_qsg_introduction-d3653e127-link">Quuppa Development Kit Quick Start Guide</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="using_quuppa_example_projects-d3653e334" class="topicref" data-id="using_quuppa_example_projects" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action using_quuppa_example_projects-d3653e334-link" class="wh-expand-btn"></span><div class="title"><a href="../../reference_projects/topics/example_projects_introduction.html" id="using_quuppa_example_projects-d3653e334-link">Quuppa Reference Projects</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="office_buildings-d3653e357" class="topicref" data-id="office_buildings" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../reference_projects/topics/office_buildings.html" id="office_buildings-d3653e357-link">Smart Building Reference Project</a></div></div></li><li role="treeitem"><div data-tocid="retail-d3653e380" class="topicref" data-id="retail" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../reference_projects/topics/retail.html" id="retail-d3653e380-link">Retail Reference Project</a></div></div></li><li role="treeitem" class="active"><div data-tocid="industrial_reference_project-d3653e403" class="topicref" data-id="industrial_reference_project" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../reference_projects/topics/industrial_reference_project.html" id="industrial_reference_project-d3653e403-link">Industrial Reference Project</a></div></div></li></ul></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="quuppa_development_kit_quick_start_guide-d3653e427" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action quuppa_development_kit_quick_start_guide-d3653e427-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Software.html" id="quuppa_development_kit_quick_start_guide-d3653e427-link">Software</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="quuppa_development_kit_quick_start_guide-d3653e4790" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action quuppa_development_kit_quick_start_guide-d3653e4790-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Hardware.html" id="quuppa_development_kit_quick_start_guide-d3653e4790-link">Hardware</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="installation_resources-d3653e7100" class="topicref" data-id="installation_resources" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action installation_resources-d3653e7100-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/installation_resources.html" id="installation_resources-d3653e7100-link">Installation Resources</a></div></div></li><li role="treeitem"><div data-tocid="videos-d3653e7308" class="topicref" data-id="videos" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../resources/topics/videos.html" id="videos-d3653e7308-link">Video Gallery</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="whitepapers-d3653e7331" class="topicref" data-id="whitepapers" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action whitepapers-d3653e7331-link" class="wh-expand-btn"></span><div class="title"><a href="../../resources/topics/resources.html" id="whitepapers-d3653e7331-link">Other Resources</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="Translations-d3653e7770" class="topicref" data-id="Translations" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action Translations-d3653e7770-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Translations.html" id="Translations-d3653e7770-link">Translations</a></div></div></li><li role="treeitem"><div data-tocid="megamap_revision_history-d3653e10804" class="topicref" data-id="megamap_revision_history" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/revision_history.html" id="megamap_revision_history-d3653e10804-link">Revision History</a></div></div></li></ul></div>
+                                
+
+</div>
+</nav>
+                            
+
+
+                            <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+<button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true"><span class="close-toc-icon-container"><span class="close-toc-icon"></span></span></button>
+
+                                
+<div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Industrial Reference Project</h1>
+    <div class="- topic/body body">
+        <p class="- topic/p p"></p>
+        <p class="- topic/p p">This section will walk through the objects included in our reference project for a typical
+                <strong class="+ topic/ph hi-d/b ph b">industrial use case</strong> and provide you with some benchmarks for which settings and
+            parameters work well in these types of environments. You can use the reference project
+            to learn more about Quuppa projects or as a template for your own custom project files. </p>
+        <p class="- topic/p p">Download our <strong class="+ topic/ph hi-d/b ph b">industrial reference project</strong> file from <a class="- topic/xref xref" href="https://secure.quuppa.com/customerportal/rfile/1285" target="_blank" rel="external noopener">here</a>. </p>
+        <p class="- topic/p p">The reference project provides good rules of thumb for similar deployments but please
+            remember that variations in your environment may affect the optimal settings for your
+            deployment. To find the best settings, we recommend that you always <a class="- topic/xref xref" href="https://quuppa.com/product-documentation/manuals/q/QSS/topics/QSS_introduction.html" target="_blank" rel="external noopener">simulate</a> and test your project thoroughly
+            before deploying the system. </p>
+        <p class="- topic/p p">Also, as you work with the project file, remember to save it every now and then to make
+            sure you don't accidentally lose any of the edits that you have already made. </p>
+        <section class="- topic/section section" id="industrial_reference_project__section_spw_zsh_3mb" data-ofbid="industrial_reference_project__section_spw_zsh_3mb"><h2 class="- topic/title title sectiontitle">1. Project File</h2>
+            
+            <p class="- topic/p p"><img class="- topic/image image" id="industrial_reference_project__image_i5n_sbj_smb" src="../images/step_project_file.png" width="567"/></p>
+            <p class="- topic/p p">The industry reference project uses default settings that work for common industrial use cases. If you are using the reference project as a template for your own project, you can <a class="- topic/xref xref" href="https://quuppa.com/product-documentation/manuals/q/QSP/topics/QSP_project_file_edit_project_defaults.html" target="_blank" rel="external noopener">edit these default settings</a> to better suit
+                your deployment environment. </p>
+            <p class="- topic/p p">For industrial deployments, use the following guidelines for defining the default
+                project settings:</p>
+            <div class="- topic/p p">
+                <table class="- topic/table table frame-all" id="industrial_reference_project__simpletable_rc5_nrm_3mb" data-ofbid="industrial_reference_project__simpletable_rc5_nrm_3mb" data-cols="3"><caption></caption><colgroup><col style="width:25%"/><col style="width:25%"/><col style="width:50%"/></colgroup><thead class="- topic/thead thead">
+                            <tr class="- topic/row rowsep-1">
+                                <th class="- topic/entry entry align-center colsep-1 rowsep-1" id="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__1"></th>
+                                <th class="- topic/entry entry align-center colsep-1 rowsep-1" id="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__2">Recommended
+                                    Selection</th>
+                                <th class="- topic/entry entry align-center colsep-0 rowsep-1" id="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__3">Explanation</th>
+                            </tr>
+                        </thead><tbody class="- topic/tbody tbody">
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry align-left colsep-0 rowsep-1" headers="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__1 industrial_reference_project__simpletable_rc5_nrm_3mb__entry__2 industrial_reference_project__simpletable_rc5_nrm_3mb__entry__3" colspan="3"><strong class="+ topic/ph hi-d/b ph b">PROJECT NAME:</strong></td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1" headers="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__1">Project Name</td>
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1" headers="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__2">Provide a descriptive name
+                                    for your project (e.g. QuuppaIndustrial)</td>
+                                <td class="- topic/entry entry align-left colsep-0 rowsep-1" headers="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__3">A descriptive name will
+                                    help you to identify the project from other projects later
+                                    on.</td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry align-left colsep-0 rowsep-1" headers="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__1 industrial_reference_project__simpletable_rc5_nrm_3mb__entry__2 industrial_reference_project__simpletable_rc5_nrm_3mb__entry__3" colspan="3"><strong class="+ topic/ph hi-d/b ph b">OPERATION MODE:</strong></td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1" headers="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__1">Operation Mode</td>
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1" headers="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__2">Proprietary</td>
+                                <td class="- topic/entry entry align-left colsep-0 rowsep-1" headers="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__3">The <strong class="+ topic/ph hi-d/b ph b">proprietary
+                                    mode</strong> The proprietary mode reduces the amount of potential interference from Bluetooth signals sent by other devices. However, other Bluetooth traffic is not typically an issue on industrial sites and the use of BLE mode can be suitable if required by the use case (e.g. smart tool tracking)</td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry align-left colsep-0 rowsep-1" headers="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__1 industrial_reference_project__simpletable_rc5_nrm_3mb__entry__2 industrial_reference_project__simpletable_rc5_nrm_3mb__entry__3" colspan="3"><strong class="+ topic/ph hi-d/b ph b">LOCATION DEFAULTS:</strong></td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1" headers="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__1">Installation height
+                                    (m)</td>
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1" headers="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__2">7.5m</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__3">The locator installation height can differ significantly
+                                    between different industrial sites. It is important to
+                                    understand your environment.</td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1" headers="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__1">Default Locator
+                                    type</td>
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1" headers="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__2">Q35</td>
+                                <td class="- topic/entry entry align-left colsep-0 rowsep-1" headers="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__3">For Industrial
+                                    environments , the recommended Locator type is <strong class="+ topic/ph hi-d/b ph b">Q35</strong>. </td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry align-left colsep-0 rowsep-1" headers="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__1 industrial_reference_project__simpletable_rc5_nrm_3mb__entry__2 industrial_reference_project__simpletable_rc5_nrm_3mb__entry__3" colspan="3"><strong class="+ topic/ph hi-d/b ph b">TRACKING AREA DEFAULTS:</strong></td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1" headers="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__1">Tracking area type</td>
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1" headers="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__2">Semi-confined</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__3">Industrial spaces are typically semi-confined spaces. </td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-0" headers="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__1">Tracking plane height </td>
+                                <td class="- topic/entry entry colsep-1 rowsep-0" headers="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__2">1.20m </td>
+                                <td class="- topic/entry entry colsep-0 rowsep-0" headers="industrial_reference_project__simpletable_rc5_nrm_3mb__entry__3">Industrial use cases may require several different types of
+                                    objects to be tracked: assets, people, vehicles etc. Define
+                                    different tracking planes for different tracked objects if their
+                                    tracking heigh differs more than 0.5 m. </td>
+                            </tr>
+                        </tbody></table>
+            </div>
+            <div class="- topic/p p">
+                <div class="- topic/note note note note_note" id="industrial_reference_project__note_tc4_trn_tzb" data-ofbid="industrial_reference_project__note_tc4_trn_tzb"><span class="note__title">Note:</span> If you are unsure about whether these settings apply for
+                    your deployment, please speak to Quuppa Support (support@quuppa.com) or your
+                    Quuppa Sales Engineer. We can help you to identify the optimal settings for your
+                    environment. </div>
+            </div>
+        </section>
+        <section class="- topic/section section" id="industrial_reference_project__section_r3j_cth_3mb" data-ofbid="industrial_reference_project__section_r3j_cth_3mb"><h2 class="- topic/title title sectiontitle">2.Background Image</h2>
+            
+            <p class="- topic/p p"><img class="- topic/image image" id="industrial_reference_project__image_rk3_1cj_smb" src="../images/step_background_image.png" width="567"/></p>
+            <p class="- topic/p p">A background image should be used, as it provides a good visual reference and helps
+                with the positioning of the Locators within the project. Even though the system does
+                not ‘read’ the background image (i.e. identify walls and other structures marked in
+                the map), it will help you build the required elements into your project file (e.g.
+                zones, smart zones and tracking area edges).</p>
+            <p class="- topic/p p">However, it is good to remember that the background image is only as good as it is
+                accurate. If the map is not up to date, it can be misleading. If it is not very good
+                quality, it can lead to inaccurate measurements that affect positioning accuracy.
+                Most importantly, if it is not scaled well, it will throw off any generated
+                positioning data, reducing the accuracy of the system. For these reasons, we
+                recommend that you use the most detailed and high quality background image that you
+                can find and scale it carefully before use.</p>
+            <p class="- topic/p p">When scaling a background image, it is a good idea to use known and fixed measuring
+                points within the space (e.g. primary walls or pillars) as these are more likely to
+                be reflected accurately in the floor plan. Additionally we recommend that you use
+                longer measurements for scaling where possible (e.g. the length of a corridor vs a
+                small room) as this will provide more accurate scaling measurements. This is because
+                any errors in distance measurements will multiply in the scaling process. We also
+                recommend taking a few additional reference measurements within the map to double
+                check that the scaling matches the real space.</p>
+            <div class="- topic/note note tip note_tip" id="industrial_reference_project__note_uc4_trn_tzb" data-ofbid="industrial_reference_project__note_uc4_trn_tzb"><span class="note__title">Tip:</span> Use the right tools to take accurate measurements
+                of your environment for the scaling. We recommend a high-end laser distance
+                measurement tool wherever possible. </div>
+            <div class="- topic/note note note note_note" id="industrial_reference_project__note_lht_1b4_tzb" data-ofbid="industrial_reference_project__note_lht_1b4_tzb"><span class="note__title">Note:</span> Make sure to take a few extra minutes to check that
+                everything is as it should be at this stage. It will be well worth it later.</div>
+            
+            <p class="- topic/p p"> If you are using the reference project as a template, you can delete the image that
+                comes with the reference project file and <a class="- topic/xref xref" href="https://quuppa.com/product-documentation/manuals/q/QSP/topics/QSP_background_images_add_background_image.html" target="_blank" rel="external noopener">add your own background image</a> instead.
+                Just remember to <a class="- topic/xref xref" href="https://quuppa.com/product-documentation/manuals/q/QSP/topics/QSP_background_images_scale_background_image.html" target="_blank" rel="external noopener">scale it</a> as accurately as you can. </p>
+        </section>
+        <section class="- topic/section section" id="industrial_reference_project__section_ubc_mkl_3mb" data-ofbid="industrial_reference_project__section_ubc_mkl_3mb"><h2 class="- topic/title title sectiontitle">3. Tracking Area Polygon</h2><p class="- topic/p p"><img class="- topic/image image" id="industrial_reference_project__image_ydk_bcj_smb" src="../images/step_tracking_area.png" width="567"/></p><p class="- topic/p p">In the reference project, you can see that the tracking area polygon has
+                been modified to fit the edge of the area that will be tracked (as opposed to the
+                edge of the background image, as is generated automatically by the QSP when using
+                the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">New Project Wizard</span>). This is important as this defines the
+                area that is tracked for the QPE. </p><p class="- topic/p p">As Industrial deployments are often indoor
+                deployments, the edge of the tracking area is typically set to follow the inner edge
+                of the building's main walls. This means that the QPE will only track tags moving
+                inside the building. As the tags cannot physically enter the wall, there is no
+                reason to include the wall in the tracking area for the project. </p><p class="- topic/p p"></p><img class="- topic/image image" id="industrial_reference_project__image_gwl_wt4_tzb" src="../images/industrial_ref_project_1.png" width="600"/><p class="- topic/p p">If you are using the reference project as a template, <a class="- topic/xref xref" href="https://quuppa.com/product-documentation/manuals/q/QSP/topics/QSP_tracking_areas_edit_polygon.html" target="_blank" rel="external noopener">modify the tracking area polygon</a> to fit
+                the desired tracking area for your deployment.</p><p class="- topic/p p"><img class="- topic/image image" id="industrial_reference_project__image_hgb_yt4_tzb" src="../images/industrial_ref_project_2.png" width="600"/></p></section>
+        <section class="- topic/section section" id="industrial_reference_project__section_zzt_5kl_3mb" data-ofbid="industrial_reference_project__section_zzt_5kl_3mb"><h2 class="- topic/title title sectiontitle">4. Locators, Coverage &amp; Sensitivity Settings</h2>
+            
+            <p class="- topic/p p"><img class="- topic/image image" id="industrial_reference_project__image_gmg_ccj_smb" src="../images/step_locator.png" width="567"/></p>
+            <p class="- topic/p p">In the reference project, you can see that Locators have been distributed relatively
+                evenly around each tracking area (with one tracking area per coordinate system).
+                This is the best way to get good and even coverage across the tracking area and
+                ensure the accurate positioning results even at the edges of the deployment. </p>
+            <p class="- topic/p p">The Locator sensitivity for the reference project has also been optimised for
+                industrial environments. This reduces unnecessary load for the server machine and
+                the Quuppa Positioning Engine (QPE) as now only the Locators near the tag will
+                ‘hear’ it. A level of about -12dB is typically a good starting point for industrial
+                deployments. However, as the optimal sensitivity level is always case-specific, it
+                is important to test and tweak the figure for different projects using the Render
+                noise option in the QSP's Coverage Estimate tool. </p>
+            <p class="- topic/p p">If you are using the reference project as a template for your own project, make sure
+                to:</p>
+            <ul class="- topic/ul ul" id="industrial_reference_project__ul_prp_3bv_gnb" data-ofbid="industrial_reference_project__ul_prp_3bv_gnb">
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Add Locators to the project file as needed.</strong> When adding Locators to a
+                    project file, we recommend that you use the <a class="- topic/xref xref" href="https://quuppa.com/product-documentation/manuals/q/QSP/topics/QSP_locators_locator_distributor_tool.html" target="_blank" rel="external noopener">Locator Distributor Tool</a> to make sure
+                    they are evenly distributed around the tracking area. If you need to add
+                    Locators one by one, we recommend that you start at the edges of the tracking
+                    area and work your way in to ensure even coverage.<p class="- topic/p p"><img class="- topic/image image" id="industrial_reference_project__image_qcd_b54_tzb" src="../images/industrial_ref_project_3.png" width="600"/></p></li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Use the <a class="- topic/xref xref" href="https://quuppa.com/product-documentation/manuals/q/QSP/topics/QSP_locators_render_estimate.html" target="_blank" rel="external noopener">coverage estimate</a> tool to check
+                        the project</strong> looks good from a coverage perspective. We recommend that
+                    you check the results for both the <strong class="+ topic/ph hi-d/b ph b">Render Coverage Estimate</strong> and the
+                        <strong class="+ topic/ph hi-d/b ph b">Render noise</strong> options to make sure that your project is well tuned.
+                    Good coverage is indicated with the colour green for both. If the coverage
+                    estimate rendering looks yellow, you might consider adding some more Locators to
+                    the project and if your noise rendering is very blue, you can tune the Locator
+                    sensitivity settings for your project to prevent unnecessary system load (to
+                    learn more about the sensitivity setting, please read <a class="- topic/xref xref" href="../../QSP/topics/QSP_locators_locator_sensitivity.html">Edit Locator
+                        Sensitivity</a>). In this Industrial reference project, higher accuracy
+                    is required in the two production areas, but accuray does not need to be so
+                    precise in, for example, in the Logistics and Rework areas.<div class="- topic/p p">
+                        <div class="- topic/note note tip note_tip" id="industrial_reference_project__note_wc4_trn_tzb" data-ofbid="industrial_reference_project__note_wc4_trn_tzb"><span class="note__title">Tip:</span> As you tune the coverage, remember
+                            that the system does not see the walls or other physical obstacles in
+                            your environment, so use the coverage estimate as a benchmark and then
+                            evaluate the need for Locators and their placement yourself based on the
+                            deployment environment. However, it is good to remember that the
+                            majority of walls in office spaces are typically thin and so radio
+                            signals can pass through them without problem and concrete walls also
+                            let radio signals pass quite well.</div>
+                        <div class="- topic/note note note note_note" id="industrial_reference_project__note_xc4_trn_tzb" data-ofbid="industrial_reference_project__note_xc4_trn_tzb"><span class="note__title">Note:</span> The area type (i.e. semi-confined or confined)
+                            selected also affects the coverage estimate and positioning calculations
+                            made by the positioning engine, so make sure to select the appropriate
+                            area type before evaluating the coverage estimate.</div>
+                    </div></li>
+            </ul>
+        </section>
+        <section class="- topic/section section" id="industrial_reference_project__section_us5_xkl_3mb" data-ofbid="industrial_reference_project__section_us5_xkl_3mb"><h2 class="- topic/title title sectiontitle">5. Zones, Smart Zones &amp; Zone Groups</h2>
+            
+            <p class="- topic/p p"><img class="- topic/image image" id="industrial_reference_project__image_mw2_dcj_smb" src="../images/step_zones.png" width="567"/></p>
+            <p class="- topic/p p">The industrial reference project uses a combination of <a class="- topic/xref xref" href="https://quuppa.com/product-documentation/manuals/q/QSP/topics/QSP_zones_add_zone.html" target="_blank" rel="external noopener">zones</a>, <a class="- topic/xref xref" href="https://quuppa.com/product-documentation/manuals/q/QSP/topics/QSP_zones_add_smart_zone.html" target="_blank" rel="external noopener">smart zones</a> and <a class="- topic/xref xref" href="https://quuppa.com/product-documentation/manuals/q/QSP/topics/QSP_zones_add_zone_groups.html" target="_blank" rel="external noopener">zone groups</a> to create geofencing areas
+                that are easy to manage. </p>
+            <p class="- topic/p p">The zones provide filtering for positioning data generated by the QPE (e.g. tag1 is
+                now in zone Production2) and the smart zones enable the defining of physically
+                separated areas within the tracking area for the QPE (e.g. walls or other physical
+                structures that tags cannot pass through).</p>
+            <p class="- topic/p p">There is no official limit to the number of zones that you can have in a project, but
+                it is also unnecessary to cover the tracking area with zones and smartzones, unless
+                you really need geofencing options everywhere. Remember that the system will provide
+                tracking for the whole tracking area, the zones are just there to trigger geofencing
+                possibilities.</p>
+            <p class="- topic/p p">If you are using the reference project as a template, you can duplicate the zones and
+                smart zones by copying and pasting them. You can also move them to the right place
+                for your deployment by dragging them across the map view with your mouse. To edit
+                their shape, select the object and click the Edit polygon button in the panel on the
+                right.</p>
+            <div class="- topic/p p">
+                <div class="- topic/note note note note_note" id="industrial_reference_project__note_yc4_trn_tzb" data-ofbid="industrial_reference_project__note_yc4_trn_tzb"><span class="note__title">Note:</span> When using smart zones, remember to add an opening to
+                    the zone edge to allow the tags to pass in and out of the space and use the
+                        <a class="- topic/xref xref" href="https://quuppa.com/product-documentation/manuals/q/QSP/topics/QSP_zones_fix_zones.html" target="_blank" rel="external noopener">Fix Zones</a> tool to make sure that any
+                    adjacent edges are aligned nicely so that tags can't get stuck between zones.
+                </div>
+            </div>
+            <p class="- topic/p p">We always recommend the use of zone groups for different types of zones as they give
+                you access to all of the zones features and enable you to adjust the settings for
+                all zones in that group just by changing the settings for the group. This will save
+                you time later, if you notice that you need to adjust the settings that you selected
+                when you first designed the project. </p>
+        </section>
+        <section class="- topic/section section" id="industrial_reference_project__section_ctj_mll_3mb" data-ofbid="industrial_reference_project__section_ctj_mll_3mb"><h2 class="- topic/title title sectiontitle">6. Tag Groups &amp; Tag Configurations</h2>
+            
+            <p class="- topic/p p"><img class="- topic/image image" id="industrial_reference_project__image_qzd_2cj_smb" src="../images/step_tags.png" width="567"/></p>
+            <p class="- topic/p p">The reference project uses two of the default tag configurations provided by the QSP:
+                ASSET_TAG for tracking shopping baskets and trolleys and ID_BADGE for tracking
+                employees. These default configurations are configured for optimal performance for
+                such use and so it is a good idea to use them whenever they are applicable. </p>
+            <div class="- topic/p p">
+                <div class="- topic/note note note note_note" id="industrial_reference_project__note_zc4_trn_tzb" data-ofbid="industrial_reference_project__note_zc4_trn_tzb"><span class="note__title">Note:</span> If you do need to create custom tag configurations,
+                    please contact Quuppa Support at support@quuppa.com first. This way we can help
+                    you get the best performance out of your custom configurations. </div>
+            </div>
+            <p class="- topic/p p">The tags in the reference project have also been assigned to <a class="- topic/xref xref" href="https://quuppa.com/product-documentation/manuals/q/QSP/topics/QSP_tags_manage_tag_groups.html?hl=tag%2Cgroups" target="_blank" rel="external noopener">tag groups</a> for easy management. This means
+                that any changes to their configurations can be made for the tag groups as a whole,
+                making it much easier to manage any later changes to tag configurations. </p>
+            <p class="- topic/p p">If you are using the reference project as a template, you can edit, add and remove
+                tag groups to suit the needs of your project. </p>
+        </section>
+        <section class="- topic/section section" id="industrial_reference_project__section_f3h_qll_3mb" data-ofbid="industrial_reference_project__section_f3h_qll_3mb"><h2 class="- topic/title title sectiontitle">7. Additional Coordinate Systems</h2><p class="- topic/p p"><img class="- topic/image image" id="industrial_reference_project__image_lcb_fcj_smb" src="../images/step_coordinate_systems.png" width="567"/></p>The reference project has four coordinate systems for three different areas:
+            Factory Floor, Mezzanine, Outdoors and Warehouse.<p class="- topic/p p"><img class="- topic/image image" id="industrial_reference_project__image_emq_f54_tzb" src="../images/industrial_ref_project_4.png" width="600"/></p><p class="- topic/p p">A separate coordinate system for different physical locations or floors is
+                very typical for Industrial projects, as the system can be deployed on more than one
+                floor and, possibly, separate buildings. This reference project contains the factory
+                floor, a mezzanine on a higher floor within the factory building, an outdoor area
+                and a separate warehouse. As individual coordinate systems should logically separate
+                physical spaces, this makes sense for industrial buildings where each floor can
+                often be a self-contained area.</p><p class="- topic/p p">Each coordinate system can then be customised
+                according to the needs of that coordinate system. For example, the Locator
+                distribution may be different due to structural differences and the zones may be
+                arranged differently due to differing geofencing needs.</p></section>
+        <section class="- topic/section section" id="industrial_reference_project__section_tp2_5r4_tzb" data-ofbid="industrial_reference_project__section_tp2_5r4_tzb"><h2 class="- topic/title title sectiontitle">8. Q-Lite</h2>
+            
+            <p class="- topic/p p">The Warehouse and Mezzanine coordinate systems use Q-Lite and require fewer Locators.
+                This reduced-accuracy tracking method can be used in situations where it is only
+                necessary to know if a tag is present within a specific area or not. i.e. is the tag
+                in the warehouse or not; its precise location is not required. </p>
+            <p class="- topic/p p"><img class="- topic/image image" id="industrial_reference_project__image_p1g_h54_tzb" src="../images/industrial_ref_project_5.png" width="600"/></p>
+        </section>
+        <section class="- topic/section section" id="industrial_reference_project__section_xvw_xr4_tzb" data-ofbid="industrial_reference_project__section_xvw_xr4_tzb"><h2 class="- topic/title title sectiontitle">Summary</h2>
+            
+            <p class="- topic/p p"></p>
+            <p class="- topic/p p">These are the key objects and settings included in our Industrial reference project.
+                Feel free to use the reference project file as needed. You can edit the file to test
+                different settings, or run a simulation using the <a class="- topic/xref xref" href="https://quuppa.com/product-documentation/manuals/q/QSS/topics/QSS_introduction.html" target="_blank" rel="external noopener">Quuppa System Simulator (QSS)</a> or use it as
+                a template for your own project.</p>
+            <p class="- topic/p p">For more detailed instructions on how to use the QSP features, please refer to our
+                    <a class="- topic/xref xref" href="https://quuppa.com/product-documentation/manuals/q/QSP/topics/QSP_introduction.html" target="_blank" rel="external noopener">Quuppa Site Planner User Manual</a> or other
+                documents available on our <a class="- topic/xref xref" href="https://quuppa.com/product-documentation/manuals/q/index.html" target="_blank" rel="external noopener">documentation site</a>. Also feel free to
+                contact us (support@quuppa.com) if you have any questions.</p>
+        </section>
+    </div>
+</article></main></div>
+
+                                
+                                
+                                
+
+                                
+
+                            </div>
+                            <!-- Topic TOC on right of page to cover sections in the topic. Removed in Jan 2022, but could be
+                            added for usability later.
+                            <whc:webhelp_topic_toc>
+                                <nav role="navigation"  id="wh_topic_toc" 
+                                    class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                                    <whc:component_content/>
+                                </nav>
+                            </whc:webhelp_topic_toc>
+                            -->
+                        </div>
+                    </div>
+
+
+                </div>       
+<!-- Navigation at the end of the topic -->          
+                <div class="container-fluid" id="wh_topic_container">
+                    <div class="row" style="color:white;margin-top:40px;">
+                        <nav class="wh_tools d-print-none navbar-expand-md">
+                            <div></div>
+                            
+<div class="wh_right_tools">
+                                <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  
+<span class="navprev"><a class="- topic/link link" href="../../reference_projects/topics/retail.html" title="Retail Reference Project" aria-label="Previous topic: Retail Reference Project" rel="prev"></a></span>  
+<span class="navnext"><a class="- topic/link link" href="../../megamap/topics/Software.html" title="Software" aria-label="Next topic: Software" rel="next"></a></span>  </span></div>
+<!--External resource link-->
+
+                            </div>
+
+                        </nav>
+                    </div>
+                    
+                </div>
+<!-- next section-->                       
+            </div>            
+            <footer id="footer">
+                <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container float-left ">
+    <image href="page-templates/images/QUUPPA_1row_white_LOW_pienennetty.png"></image>
+    
+    <bookrights>
+        <copyrfirst>
+        </copyrfirst>
+        <copyrlast>
+            <year>© 2020-2022 </year>
+        </copyrlast>
+        <bookowner>
+            <organization> Quuppa Oy. All Rights Reserved. </organization>
+        </bookowner>
+    </bookrights>
+    
+    
+
+   
+<!--     <whc:include_html href="${webhelp.fragment.footer}"/>
+-->  
+  
+  </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
+                Generation date: 14.12.2023</div>
+  
+  
+  <script type="text/javascript">
+    (function (d, t) {
+       var pp = d.createElement(t), s = d.getElementsByTagName(t)[0];
+       pp.src = '//app.pageproofer.com/embed/2202ff57-a1dd-522f-befe-078025b63fcb';
+       pp.type = 'text/javascript';
+       pp.async = true;
+       s.parentNode.insertBefore(pp, s);
+    })(document, 'script');
+    </script>
+                        
+    <script type="text/javascript">
+    (function (d, t) {
+       var pp = d.createElement(t), s = d.getElementsByTagName(t)[0];
+       pp.src = '//app.pageproofer.com/embed/50973457-0fde-5f26-a6d6-81e23e68a434';
+       pp.type = 'text/javascript';
+       pp.async = true;
+       s.parentNode.insertBefore(pp, s);
+    })(document, 'script');
+    </script>
+												
+  
+
+  
+</footer>
+                
+                <div id="go2top">
+                    <span class="oxy-icon oxy-icon-up"></span>
+                </div>
+                
+                <!-- The modal container for images -->
+                <div id="modal_img_large" class="modal">
+                    <span class="close oxy-icon oxy-icon-remove"></span>
+                    <!-- Modal Content (The Image) -->
+                    <div id="modal_img_container"></div>
+                    <!-- Modal Caption (Image Text) -->
+                    <div id="caption"></div>
+                </div>
+                
+                
+
+            </footer>
+        </div>
+    </body>
+</html>
