@@ -519,6 +519,8 @@
                path="QT3-1/topics/QT3_1_certifications.html"/>
    <appContext helpID="QT3-1_fcc_and_ic_regulatory_statments"
                path="QT3-1/topics/QT3-1_fcc_and_ic_regulatory_statments.html"/>
+   <appContext helpID="qt3_1_japan_regulatory"
+               path="QT3-1/topics/qt3_1_japan_regulatory.html"/>
    <appContext helpID="QT3-1_ce_regulatory"
                path="QT3-1/topics/QT3-1_ce_regulatory.html"/>
    <appContext helpID="hw_ig_copyright_and_other_notice"
