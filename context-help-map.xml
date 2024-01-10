@@ -170,6 +170,10 @@
                path="QSP/topics/QSP_locators_locator_sensitivity.html"/>
    <appContext helpID="QSP_air_interface_load_scan_mode"
                path="QSP/topics/QSP_locators_scan_mode.html"/>
+   <appContext helpID="q_lite" path="QSP/topics/q_lite.html"/>
+   <appContext helpID="q_lite_suitability" path="QSP/topics/q_lite_suitability.html"/>
+   <appContext helpID="planning_a_qlite_project"
+               path="QSP/topics/planning_a_qlite_project.html"/>
    <appContext helpID="QSP_tags_introduction" path="QSP/topics/QSP_tags.html"/>
    <appContext helpID="QSP_tag_configurations_tag_configuration_editor"
                path="QSP/topics/QSP_tags_tag_configuration_editor.html"/>
