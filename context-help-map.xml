@@ -12,7 +12,8 @@
                path="devkit_qsg/topics/DevkitQSG_included.html"/>
    <appContext helpID="devkitqsg_not_in_the_box"
                path="devkit_qsg/topics/DevkitQSG_not_included.html"/>
-   <appContext helpID="" path="devkit_qsg/topics/DevkitQSG_setup.html"/>
+   <appContext helpID="setting_up_the_development_kit"
+               path="devkit_qsg/topics/DevkitQSG_setup.html"/>
    <appContext helpID="devkitqsg_project_planning"
                path="devkit_qsg/topics/DevkitQSG_planning.html"/>
    <appContext helpID="devkitqsg_physical_installtion"
