@@ -316,7 +316,7 @@
    <appContext helpID="QPE_installing_application"
                path="QPE/topics/QPE_installing_application.html"/>
    <appContext helpID="QPE_installing_DHCP" path="QPE/topics/QPE_installing_DHCP.html"/>
-   <appContext helpID="network_config_terminology"
+   <appContext helpID="topic_rsx_glj_d1c"
                path="network/topics/startup_parameters.html"/>
    <appContext helpID="QPE_updating_application"
                path="QPE/topics/QPE_updating_application.html"/>
@@ -531,6 +531,8 @@
                path="Q17/topics/copyright_and_other_notices.html"/>
    <appContext helpID="qt3_1_tag_quick_start_guide"
                path="QT3-1/topics/QT3-1_quick_start_guide.html"/>
+   <appContext helpID="provisioning_quuppa_v3_tags"
+               path="QT3-1/topics/provisioning_quuppa_v3_tags.html"/>
    <appContext helpID="tag_design_principles"
                path="compatible_tags/topics/tag_design_principles.html"/>
    <appContext helpID="Hardware_declaration_of_conformity"
@@ -572,7 +574,7 @@
                path="network/topics/network_configurations.html"/>
    <appContext helpID="network_config_terminology"
                path="network/topics/troubleshooting.html"/>
-   <appContext helpID="network_config_terminology"
+   <appContext helpID="topic_rsx_glj_d1c"
                path="network/topics/startup_parameters.html"/>
    <appContext helpID="QSP_air_interface_load_features_introduction"
                path="QSP/topics/QSP_manage_air_interface_load.html"/>
