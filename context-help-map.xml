@@ -156,6 +156,7 @@
                path="QSP/topics/deploying_a_quuppa_system_with_q_link_locators.html"/>
    <appContext helpID="troubleshoot_q_link_locators"
                path="QSP/topics/troubleshoot_q_link_locators.html"/>
+   <appContext helpID="q_port_planning" path="QSP/topics/q_port_planning.html"/>
    <appContext helpID="qsp_locators_deploying_the_system"
                path="QSP/topics/QSP_locators_deploy_locators.html"/>
    <appContext helpID="untitled31" path="QSP/topics/QSP_locators_identification.html"/>
