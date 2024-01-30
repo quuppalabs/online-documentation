@@ -311,6 +311,8 @@
                path="QSS/topics/QSS_run_simulator.html"/>
    <appContext helpID="QSS_creating_a_simulator_project"
                path="QSS/topics/QSS_receive_simulator_data.html"/>
+   <appContext helpID="static_simulation_project_description"
+               path="QSS/topics/static_simulation_project_description.html"/>
    <appContext helpID="QPE_introduction" path="QPE/topics/QPE_introduction.html"/>
    <appContext helpID="QPE_getting_started" path="QPE/topics/QPE_getting_started.html"/>
    <appContext helpID="QPE_installing_application"

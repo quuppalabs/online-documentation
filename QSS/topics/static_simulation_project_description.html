@@ -1,0 +1,455 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="../../favicon.ico"/><link rel="icon" href="../../favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The Quuppa System Simulator (QSS) is a feature contained within the Quuppa Site Planner (QSP). It creates a virtual Quuppa system that sends a data stream of simulated positioning packets to the ..."/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="DC.relation" content="../../QSS/topics/QSS_introduction.html"/><meta name="DC.relation" content="../../QSS/topics/QSS_receive_simulator_data.html"/><meta name="DC.relation" content="../../QPE/topics/QPE_introduction.html"/><meta name="DC.creator" content="Julia"/><meta name="rights" content="© 2020 Quuppa Oy"/><meta name="DC.date.created" content="01.06.2020"/><meta name="DC.date.modified" content="12.07.2021"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="static_simulation_project_description"/><title>Static Simulation: Project Description</title><!--  Generated with Oxygen version 24.1, build number 2022030800.  --><meta name="wh-path2root" content="../../"/><meta name="wh-toc-id" content="static_simulation_project_description-d3693e3911"/><meta name="wh-source-relpath" content="QSS/topics/static_simulation_project_description.dita"/><meta name="wh-out-relpath" content="QSS/topics/static_simulation_project_description.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="../../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/app/topic-page.css?buildId=2022030800"/>
+    
+    
+    <script src="../../oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="../../oxygen-webhelp/app/topic-page.js" src="../../oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/template/Quuppa_skin.css?buildId=2022030800"/>
+
+    <!-- Google tag (gtag.js) -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L77KR66W6P"></script>
+    <script><!--
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-L77KR66W6P');
+    
+--></script>    
+
+<script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:2215474,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script></head>
+
+    <body id="static_simulation_project_description" class="wh_topic_page frmBody">
+        <div id="page-container">
+            <div id="content-wrap">
+                <a href="#wh_topic_body" class="sr-only sr-only-focusable">Jump to main content</a>
+                <!-- EXM-36950 - Expand the args.hdr parameter here -->
+                
+                
+                
+                <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <a href="https://quuppa.com/" class=" wh_logo d-none d-sm-block "><img src="https://www.quuppa.com/documentation/oxygen-webhelp/template/page-templates/images/QUUPPA_1row_black_LOW_small.png" alt="Product Documentation"/></a>
+                    <div class=" wh_publication_title "><a href="../../index.html"><span class="title">Product Documentation</span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+
+
+                
+                <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+
+
+<form id="searchForm" method="get" role="search" action="../../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+
+</div>
+<!-- Navigation at the top of the topic -->                
+                <div class="container-fluid" id="wh_topic_container">
+                    <div class="row">
+
+                        <nav class="wh_tools d-print-none navbar-expand-md">
+                            
+<div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="../../index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="quuppa_development_kit_quick_start_guide"><div class="title"><a href="../../megamap/topics/Software.html">Software</a></div></div></li><li><div class="topicref" data-id="QSS_introduction"><div class="title"><a href="../../QSS/topics/QSS_introduction.html">Quuppa System Simulator User Manual</a></div></div></li><li class="active"><div class="topicref" data-id="static_simulation_project_description"><div class="title"><a href="../../QSS/topics/static_simulation_project_description.html">Static Simulation: Project Description</a></div></div></li></ol></div>
+
+
+
+                            
+<div class="wh_right_tools">
+                                <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                                <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                                <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  
+<span class="navprev"><a class="- topic/link link" href="../../QSS/topics/QSS_receive_simulator_data.html" title="Receive Simulator Data" aria-label="Previous topic: Receive Simulator Data" rel="prev"></a></span>  
+<span class="navnext"><a class="- topic/link link" href="../../QPE/topics/QPE_introduction.html" title="Quuppa Positioning Engine User Manual" aria-label="Next topic: Quuppa Positioning Engine User Manual" rel="next"></a></span>  </span></div>
+<!--External resource link-->
+
+                                <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                                
+                                <!-- Expand/Collapse publishing TOC 
+                                     The menu button for mobile devices is copied in the output only when the publication TOC is available
+                                -->
+                                <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+
+                        </nav>
+                    </div>
+                    
+
+<div class="wh_content_area">
+                        <div class="row">
+                            
+
+
+                                <nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none">
+<div id="wh_publication_toc_content">
+
+
+                                    <div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="megamap_introduction-d3693e34" class="topicref" data-id="megamap_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action megamap_introduction-d3693e34-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/documentation_introduction.html" id="megamap_introduction-d3693e34-link">Introduction</a></div></div></li><li role="treeitem"><div data-tocid="compatibility-d3693e81" class="topicref" data-id="compatibility" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/compatibility.html" id="compatibility-d3693e81-link">Compatibility Guide</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="quuppa_development_kit_quick_start_guide-d3693e105" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action quuppa_development_kit_quick_start_guide-d3693e105-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Devkit.html" id="quuppa_development_kit_quick_start_guide-d3693e105-link">Getting Started</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="quuppa_development_kit_quick_start_guide-d3693e429" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action quuppa_development_kit_quick_start_guide-d3693e429-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Software.html" id="quuppa_development_kit_quick_start_guide-d3693e429-link">Software</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="QSP_introduction-d3693e452" class="topicref" data-id="QSP_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QSP_introduction-d3693e452-link" class="wh-expand-btn"></span><div class="title"><a href="../../QSP/topics/QSP_introduction.html" id="QSP_introduction-d3693e452-link">Quuppa Site Planner User Manual</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="QSS_introduction-d3693e3819" class="topicref" data-id="QSS_introduction" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action QSS_introduction-d3693e3819-link" class="wh-expand-btn"></span><div class="title"><a href="../../QSS/topics/QSS_introduction.html" id="QSS_introduction-d3693e3819-link">Quuppa System Simulator User Manual</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="QSS_creating_a_simulator_project-d3693e3842" class="topicref" data-id="QSS_creating_a_simulator_project" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../QSS/topics/QSS_simulator_paths.html" id="QSS_creating_a_simulator_project-d3693e3842-link">Create Simulator Paths</a></div></div></li><li role="treeitem"><div data-tocid="QSS_creating_a_simulator_project-d3693e3865" class="topicref" data-id="QSS_creating_a_simulator_project" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../QSS/topics/QSS_run_simulator.html" id="QSS_creating_a_simulator_project-d3693e3865-link">Run the Simulator</a></div></div></li><li role="treeitem"><div data-tocid="QSS_creating_a_simulator_project-d3693e3888" class="topicref" data-id="QSS_creating_a_simulator_project" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../QSS/topics/QSS_receive_simulator_data.html" id="QSS_creating_a_simulator_project-d3693e3888-link">Receive Simulator Data</a></div></div></li><li role="treeitem" class="active"><div data-tocid="static_simulation_project_description-d3693e3911" class="topicref" data-id="static_simulation_project_description" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../QSS/topics/static_simulation_project_description.html" id="static_simulation_project_description-d3693e3911-link">Static Simulation: Project Description</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="QPE_introduction-d3693e3934" class="topicref" data-id="QPE_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QPE_introduction-d3693e3934-link" class="wh-expand-btn"></span><div class="title"><a href="../../QPE/topics/QPE_introduction.html" id="QPE_introduction-d3693e3934-link">Quuppa Positioning Engine User Manual</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="QDP_introduction-d3693e4698" class="topicref" data-id="QDP_introduction" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action QDP_introduction-d3693e4698-link" class="wh-expand-btn"></span><div class="title"><a href="../../QDP/topics/QDP_introduction.html" id="QDP_introduction-d3693e4698-link">Quuppa Data Player User Manual</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="quuppa_development_kit_quick_start_guide-d3693e4883" class="topicref" data-id="quuppa_development_kit_quick_start_guide" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action quuppa_development_kit_quick_start_guide-d3693e4883-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Hardware.html" id="quuppa_development_kit_quick_start_guide-d3693e4883-link">Hardware</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="installation_resources-d3693e7239" class="topicref" data-id="installation_resources" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action installation_resources-d3693e7239-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/installation_resources.html" id="installation_resources-d3693e7239-link">Installation Resources</a></div></div></li><li role="treeitem"><div data-tocid="videos-d3693e7447" class="topicref" data-id="videos" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../resources/topics/videos.html" id="videos-d3693e7447-link">Video Gallery</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="whitepapers-d3693e7470" class="topicref" data-id="whitepapers" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action whitepapers-d3693e7470-link" class="wh-expand-btn"></span><div class="title"><a href="../../resources/topics/resources.html" id="whitepapers-d3693e7470-link">Other Resources</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="Translations-d3693e7909" class="topicref" data-id="Translations" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action Translations-d3693e7909-link" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/Translations.html" id="Translations-d3693e7909-link">Translations</a></div></div></li><li role="treeitem"><div data-tocid="megamap_revision_history-d3693e10944" class="topicref" data-id="megamap_revision_history" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../megamap/topics/revision_history.html" id="megamap_revision_history-d3693e10944-link">Revision History</a></div></div></li></ul></div>
+                                
+
+</div>
+</nav>
+                            
+
+
+                            <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+<button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true"><span class="close-toc-icon-container"><span class="close-toc-icon"></span></span></button>
+
+                                
+<div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Static Simulation: Project Description</h1>
+    <div class="- topic/body body">
+        <p class="- topic/p p">The Quuppa System Simulator (QSS) is a feature contained within the Quuppa Site Planner
+            (QSP). It creates a virtual Quuppa system that sends a data stream of simulated
+            positioning packets to the Quuppa Positioning Engine (QPE). This data is similar to that
+            which is sent from the Locators to the QPE in a real-life deployment. Simulated data can
+            be retrieved through Quuppa API, which allows seamless integration to the Quuppa system
+            before setting up any hardware. </p>
+        <p class="- topic/p p">Static Simulation is a pre-defined project by Quuppa which covers the most common use
+            cases. Static Simulation is running 24/7 at Quuppa providing a constant API stream for
+            your integration. </p>
+        <p class="- topic/p p">This document will walk through the details of the static simulation project such as
+            locators, subscription, zone and tag configuration. </p>
+        <p class="- topic/p p"></p>
+        <section class="- topic/section section" id="static_simulation_project_description__id_1" data-ofbid="static_simulation_project_description__id_1"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Map and Tracking Area</strong></h2>
+            
+            <p dir="ltr" class="- topic/p p">The map which is used for the static simulation project is an industrial
+                floor plan with shelves and workshop areas. The map file format is png. Origin point
+                is set at the left bottom corner of the floor plan. The map is scaled with x =
+                154.59m and y = 119.78m</p>
+            <p dir="ltr" class="- topic/p p"><img class="- topic/image image" id="static_simulation_project_description__image_egn_xmr_g1c" src="../images/QSS_map_and_tracking_areas.png" width="600"/></p>
+            <p dir="ltr" class="- topic/p p">Tracking area is drawn following the floor map and the environment is set
+                to be Semi-confined. Total area is 10575 m2.</p>
+            <p class="- topic/p p"></p>
+        </section>
+        <div class="- topic/bodydiv bodydiv">
+            <section class="- topic/section section" id="static_simulation_project_description__id_2" data-ofbid="static_simulation_project_description__id_2"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Smart Zones </strong></h2>
+                
+                <p dir="ltr" class="- topic/p p">Smart ZonesSmart edge functionality is applied in areas characterised
+                    by walls or barriers, thereby preventing the passage of tags. Openings are
+                    utilised to serve as indicators for doors or exits through which tags are
+                    permitted to pass. Openings are visualised with a distinctive green and white
+                    line marking. </p>
+                <p dir="ltr" class="- topic/p p">List of areas that have smart edges applied are: </p>
+                <ul class="- topic/ul ul" id="static_simulation_project_description__ul_l1g_bnr_g1c" data-ofbid="static_simulation_project_description__ul_l1g_bnr_g1c">
+                    <li dir="ltr" class="- topic/li li">
+                        <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Aisles and Shelves Areas</strong>: There are two main shelves
+                            areas in the project and they consist of 14 aisles in total. </p>
+                    </li>
+                    <li dir="ltr" class="- topic/li li">
+                        <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Workshop Areas</strong>: There are 3 workshop areas as shown in
+                            the map below. Each Workshop has multiple Openings. </p>
+                    </li>
+                    <li dir="ltr" class="- topic/li li">
+                        <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Incoming Area</strong></p>
+                    </li>
+                </ul>
+                <p dir="ltr" class="- topic/p p"><img class="- topic/image image" id="static_simulation_project_description__image_uxk_xnr_g1c" src="../images/QSS_smart_zones.png" width="600"/></p>
+                <p class="- topic/p p"></p>
+            </section>
+            <section class="- topic/section section" id="static_simulation_project_description__id_3" data-ofbid="static_simulation_project_description__id_3"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Hidden Zones</strong></h2>
+                
+                <p dir="ltr" class="- topic/p p">Hidden zones are defined also using the smart edge functionality.
+                    However, the system does not display the locations of tags within the hidden
+                    zones. Hidden zones also have Openings indicating where tags can pass
+                    through.</p>
+                <p dir="ltr" class="- topic/p p">Hidden zones is applied to following areas: </p>
+                <ul class="- topic/ul ul" id="static_simulation_project_description__ul_fdw_2nr_g1c" data-ofbid="static_simulation_project_description__ul_fdw_2nr_g1c">
+                    <li dir="ltr" class="- topic/li li">
+                        <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">WC</strong></p>
+                    </li>
+                    <li dir="ltr" class="- topic/li li">
+                        <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">ServerRoom </strong>
+                        </p>
+                    </li>
+                </ul>
+                <p dir="ltr" class="- topic/p p"><img class="- topic/image image" id="static_simulation_project_description__image_s5n_1wr_g1c" src="../images/QSS_hidden_zones.png" width="600"/></p>
+            </section>
+            <section class="- topic/section section" id="static_simulation_project_description__id_4" data-ofbid="static_simulation_project_description__id_4"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Tag Groups and Tag Configurations</strong></h2>
+                
+                <p dir="ltr" class="- topic/p p">The configuration of tags determines their transmit rate, which is
+                    influenced by the type of movement and velocity of the tracked objects. There
+                    are 3 main tag configurations used in the project: </p>
+                <ul class="- topic/ul ul" id="static_simulation_project_description__ul_nyq_14r_g1c" data-ofbid="static_simulation_project_description__ul_nyq_14r_g1c">
+                    <li dir="ltr" class="- topic/li li">
+                        <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">ASSET_TAG: </strong>Used for tracking assets, e.g. pallets or
+                            products, transmitting 3Hz when moving and 0,1 Hz when stationary. </p>
+                    </li>
+                    <li dir="ltr" class="- topic/li li">
+                        <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">DEMO_TAG: </strong>Used for tracking different vehicles, e.g. AGV
+                            or forklift, transmitting 9 Hz when moving and 0.2 Hz when
+                            stationary.</p>
+                    </li>
+                    <li dir="ltr" class="- topic/li li">
+                        <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Employee: </strong>Used for locating people, e.g. wearing
+                            wearable tags or card tags, transmitting 4 Hz when moving and 0.1 Hz
+                            when stationary.</p>
+                    </li>
+                </ul>
+                <p dir="ltr" class="- topic/p p">In QSP, tags can be categorised into various tag groups based on the
+                    objects to which they are linked, and each tag group can be set with the
+                    appropriate tag configuration. Simulated tags in the project are classified into
+                    5 different tag groups as listed below: </p>
+                <ul class="- topic/ul ul" id="static_simulation_project_description__ul_oyq_14r_g1c" data-ofbid="static_simulation_project_description__ul_oyq_14r_g1c">
+                    <li dir="ltr" class="- topic/li li">
+                        <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">AGV: </strong>AGV tag group has configuration of
+                            <strong class="+ topic/ph hi-d/b ph b">DEMO_TAG</strong></p>
+                    </li>
+                    <li dir="ltr" class="- topic/li li">
+                        <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Pallets: </strong>AGV tag group has configuration of
+                                <strong class="+ topic/ph hi-d/b ph b">ASSET_TAG</strong></p>
+                    </li>
+                    <li dir="ltr" class="- topic/li li">
+                        <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Creates: </strong>AGV tag group has configuration of
+                                <strong class="+ topic/ph hi-d/b ph b">ASSET_TAG</strong></p>
+                    </li>
+                    <li dir="ltr" class="- topic/li li">
+                        <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Employees: </strong>AGV tag group has configuration of
+                                <strong class="+ topic/ph hi-d/b ph b">Employee</strong></p>
+                    </li>
+                    <li dir="ltr" class="- topic/li li">
+                        <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Forklifts: </strong>AGV tag group has configuration of
+                                <strong class="+ topic/ph hi-d/b ph b">DEMO_TAG</strong></p>
+                        <p class="- topic/p p"></p>
+                    </li>
+                </ul>
+            </section>
+            <section class="- topic/section section" id="static_simulation_project_description__id_5" data-ofbid="static_simulation_project_description__id_5"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Stationary Assets Simulation </strong></h2>
+                
+                <p dir="ltr" class="- topic/p p">There are 4 simulation paths simulating a total of 19 stationary
+                    assets. All simulation paths<strong class="+ topic/ph hi-d/b ph b"> velocity is set to be 0 m/s</strong> and belong to
+                    the <strong class="+ topic/ph hi-d/b ph b">Crates</strong> and<strong class="+ topic/ph hi-d/b ph b"> Pallets</strong> tag group. Name of 4 simulation paths are: </p>
+                <ul class="- topic/ul ul" id="static_simulation_project_description__ul_kly_cwr_g1c" data-ofbid="static_simulation_project_description__ul_kly_cwr_g1c">
+                    <li dir="ltr" class="- topic/li li">
+                        <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Pallets</strong>: The path consists of 10 simulated tags which
+                            locate inside the <strong class="+ topic/ph hi-d/b ph b">PalletStorage</strong> area</p>
+                    </li>
+                    <li dir="ltr" class="- topic/li li">
+                        <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Assets1, Assets2</strong> and <strong class="+ topic/ph hi-d/b ph b">Assets3:</strong> Each path consists
+                            of 3 tags. All 9 simulated tags locate in the <strong class="+ topic/ph hi-d/b ph b">ShelvesArea1</strong></p>
+                        <p class="- topic/p p"><img class="- topic/image image" id="static_simulation_project_description__image_vpf_kwr_g1c" src="../images/QSS_stationary_assests_simulation.png" width="600"/></p>
+                    </li>
+                </ul>
+                <p dir="ltr" class="- topic/p p"></p>
+            </section>
+            <section class="- topic/section section" id="static_simulation_project_description__id_6" data-ofbid="static_simulation_project_description__id_6"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Movement simulation</strong></h2>
+                
+                <p dir="ltr" class="- topic/p p">There are 6 simulation paths simulating movement. These are:</p>
+                <ul class="- topic/ul ul" id="static_simulation_project_description__ul_mcz_rxr_g1c" data-ofbid="static_simulation_project_description__ul_mcz_rxr_g1c">
+                    <li dir="ltr" class="- topic/li li">
+                        <p dir="ltr" class="- topic/p p">ForkLift1 and ForkLift2: Tags belong to the<strong class="+ topic/ph hi-d/b ph b"> ForkLifts</strong>
+                            group. Velocity is set to be <strong class="+ topic/ph hi-d/b ph b">3 m/s</strong></p>
+                    </li>
+                    <li dir="ltr" class="- topic/li li">
+                        <p dir="ltr" class="- topic/p p">1 AGV: Tags belong to the<strong class="+ topic/ph hi-d/b ph b"> AGV</strong> group. Velocity is set to
+                            be <strong class="+ topic/ph hi-d/b ph b">2 m/s</strong></p>
+                    </li>
+                    <li dir="ltr" class="- topic/li li">
+                        <p dir="ltr" class="- topic/p p">AssetForkLift: 1 asset picked up by ForkLif2. Tag group is set
+                                to<strong class="+ topic/ph hi-d/b ph b"> Pallets</strong>. Velocity is set to be <strong class="+ topic/ph hi-d/b ph b">3 m/s</strong></p>
+                    </li>
+                    <li dir="ltr" class="- topic/li li">
+                        <p dir="ltr" class="- topic/p p">Employee1 and Employee2: Tag is set to belong to the<strong class="+ topic/ph hi-d/b ph b">
+                                Employee</strong> group. Velocity is set to be <strong class="+ topic/ph hi-d/b ph b">1 m/s. </strong>The
+                                <strong class="+ topic/ph hi-d/b ph b">Employee 2</strong> is simulated to go into the <strong class="+ topic/ph hi-d/b ph b">Hidden area (WC)
+                                for 120 seconds</strong> and then<strong class="+ topic/ph hi-d/b ph b"> leave the tracking area</strong> for a
+                            short work break<strong class="+ topic/ph hi-d/b ph b"> of 300 seconds.</strong></p>
+                    </li>
+                </ul>
+                <ul class="- topic/ul ul" id="static_simulation_project_description__ul_lly_cwr_g1c" data-ofbid="static_simulation_project_description__ul_lly_cwr_g1c">
+                    <li dir="ltr" class="- topic/li li">
+                        <p class="- topic/p p"><img class="- topic/image image" id="static_simulation_project_description__image_ygg_pwr_g1c" src="../images/QSS_movement_simulation.png" width="600"/></p>
+                    </li>
+                </ul>
+                <p dir="ltr" class="- topic/p p"></p>
+            </section>
+            <section class="- topic/section section" id="static_simulation_project_description__id_7" data-ofbid="static_simulation_project_description__id_7"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Data format</strong></h2>
+                
+                <p dir="ltr" class="- topic/p p">The Quuppa system provides the following standard output formats:</p>
+                <table class="- topic/table table" id="static_simulation_project_description__table_e3f_1yr_g1c" data-ofbid="static_simulation_project_description__table_e3f_1yr_g1c" data-cols="2"><caption></caption><colgroup><col style="width:190"/><col style="width:410"/></colgroup><tbody class="- topic/tbody tbody">
+                            <tr class="- topic/row">
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-0"><strong class="+ topic/ph hi-d/b ph b">Name</strong></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-0"><strong class="+ topic/ph hi-d/b ph b">Notes </strong></td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-0">defaultInfo</td>
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-0">Default format for Tag information</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-0">defaultLocation</td>
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-0">Default format for Tag location</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-0">defaultLocationAndInfo</td>
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-0">Default format for Tag location and
+                                    information</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-0">ALL_ITEMS</td>
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-0">Format containing all items.</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-0">MyDataFormat</td>
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-0">This format contains location in xy and lat lon
+                                    formats</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+        </div>
+    </div>
+</article></main></div>
+
+                                
+                                
+                                
+
+                                
+
+                            </div>
+                            <!-- Topic TOC on right of page to cover sections in the topic. Removed in Jan 2022, but could be
+                            added for usability later.
+                            <whc:webhelp_topic_toc>
+                                <nav role="navigation"  id="wh_topic_toc" 
+                                    class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                                    <whc:component_content/>
+                                </nav>
+                            </whc:webhelp_topic_toc>
+                            -->
+                        </div>
+                    </div>
+
+
+                </div>       
+<!-- Navigation at the end of the topic -->          
+                <div class="container-fluid" id="wh_topic_container">
+                    <div class="row" style="color:white;margin-top:40px;">
+                        <nav class="wh_tools d-print-none navbar-expand-md">
+                            <div></div>
+                            
+<div class="wh_right_tools">
+                                <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  
+<span class="navprev"><a class="- topic/link link" href="../../QSS/topics/QSS_receive_simulator_data.html" title="Receive Simulator Data" aria-label="Previous topic: Receive Simulator Data" rel="prev"></a></span>  
+<span class="navnext"><a class="- topic/link link" href="../../QPE/topics/QPE_introduction.html" title="Quuppa Positioning Engine User Manual" aria-label="Next topic: Quuppa Positioning Engine User Manual" rel="next"></a></span>  </span></div>
+<!--External resource link-->
+
+                            </div>
+
+                        </nav>
+                    </div>
+                    
+                </div>
+<!-- next section-->                       
+            </div>            
+            <footer id="footer">
+                <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container float-left ">
+    <image href="page-templates/images/QUUPPA_1row_white_LOW_pienennetty.png"></image>
+    
+    <bookrights>
+        <copyrfirst>
+        </copyrfirst>
+        <copyrlast>
+            <year>© 2020-2022 </year>
+        </copyrlast>
+        <bookowner>
+            <organization> Quuppa Oy. All Rights Reserved. </organization>
+        </bookowner>
+    </bookrights>
+    
+    
+
+   
+<!--     <whc:include_html href="${webhelp.fragment.footer}"/>
+-->  
+  
+  </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
+                Generation date: 30.01.2024</div>
+  
+  
+  <script type="text/javascript">
+    (function (d, t) {
+       var pp = d.createElement(t), s = d.getElementsByTagName(t)[0];
+       pp.src = '//app.pageproofer.com/embed/2202ff57-a1dd-522f-befe-078025b63fcb';
+       pp.type = 'text/javascript';
+       pp.async = true;
+       s.parentNode.insertBefore(pp, s);
+    })(document, 'script');
+    </script>
+                        
+    <script type="text/javascript">
+    (function (d, t) {
+       var pp = d.createElement(t), s = d.getElementsByTagName(t)[0];
+       pp.src = '//app.pageproofer.com/embed/50973457-0fde-5f26-a6d6-81e23e68a434';
+       pp.type = 'text/javascript';
+       pp.async = true;
+       s.parentNode.insertBefore(pp, s);
+    })(document, 'script');
+    </script>
+												
+  
+
+  
+</footer>
+                
+                <div id="go2top">
+                    <span class="oxy-icon oxy-icon-up"></span>
+                </div>
+                
+                <!-- The modal container for images -->
+                <div id="modal_img_large" class="modal">
+                    <span class="close oxy-icon oxy-icon-remove"></span>
+                    <!-- Modal Content (The Image) -->
+                    <div id="modal_img_container"></div>
+                    <!-- Modal Caption (Image Text) -->
+                    <div id="caption"></div>
+                </div>
+                
+                
+
+            </footer>
+        </div>
+    </body>
+</html>
