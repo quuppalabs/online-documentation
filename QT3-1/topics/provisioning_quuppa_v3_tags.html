@@ -147,7 +147,7 @@
             be introduced soon.</p>
         <section class="- topic/section section" id="provisioning_quuppa_v3_tags__id_1" data-ofbid="provisioning_quuppa_v3_tags__id_1"><h2 class="- topic/title title sectiontitle">Quuppa v3 Tag provisioning</h2>
             
-            <p dir="ltr" class="- topic/p p">From the IoT context, device provisioning refers to the process where a
+            <p dir="ltr" class="- topic/p p">From an IoT context, device provisioning refers to the process where a
                 device is configured to a state in which it can be handed off to an end-user, or
                 end-user team, for their specific use in a functional manner.</p>
             <p dir="ltr" class="- topic/p p">Likewise, for Quuppa tags, the tag provisioning refers to the process where
@@ -158,7 +158,6 @@
                 make the tag provisioning process as seamless and efficient as possible. The primary
                 goal is to minimize the manual work and to maximize the scalability of the Quuppa
                 RTLS system. </p>
-            <p class="- topic/p p"></p>
         </section>
         <section class="- topic/section section" id="provisioning_quuppa_v3_tags__id_2" data-ofbid="provisioning_quuppa_v3_tags__id_2"><h2 class="- topic/title title sectiontitle">Best practices</h2><p dir="ltr" class="- topic/p p">The most optimal Tag
                 provisioning process depends on the specifics of the RTLS project, e.g. what kind of
@@ -171,7 +170,8 @@
                 auto-configuration feature are:</p><div class="- topic/p p">
                 <ol class="- topic/ol ol" id="provisioning_quuppa_v3_tags__ol_mfs_3hl_21c" data-ofbid="provisioning_quuppa_v3_tags__ol_mfs_3hl_21c">
                     <li class="- topic/li li">The default Tag Group is defined and in use in your Quuppa project.<ul class="- topic/ul ul" id="provisioning_quuppa_v3_tags__ul_r4n_mhl_21c" data-ofbid="provisioning_quuppa_v3_tags__ul_r4n_mhl_21c">
-                            <li class="- topic/li li">See <strong class="+ topic/ph hi-d/b ph b">QT3-1 Quick Start Guide</strong> for instructions</li>
+                            <li class="- topic/li li">See <strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.quuppa.com/documentation/QT3-1/topics/QT3-1_quick_start_guide.html" target="_blank" rel="external noopener">QT3-1 Quick Start
+                                        Guide</a></strong> for instructions</li>
                         </ul></li>
                     <li class="- topic/li li">The tags can be activated within the range of Quuppa locators of the
                         project</li>
@@ -179,14 +179,18 @@
                 </ol>
             </div><p dir="ltr" class="- topic/p p">With this solution, even a large number of tags can be provisioned with
                 minimum effort, as all your Quuppa v3 tags are configured by the Quuppa system (QPE)
-                to the pre-selected configuration.</p><p class="- topic/p p"><img class="- topic/image image" id="provisioning_quuppa_v3_tags__image_t24_fdt_21c" src="../images/v3_auto_configuration_1.png" width="600"/></p><p dir="ltr" class="- topic/p p">Additionally, after the Quuppa v3 tags have been provisioned and
-                are visible in your QPE project (verified by using the QPE Tag table), you can
-                further manage the tags and configurations by using QPE API commands. This does not
-                require project file modifications with the QSP nor file synchronization in the QPE.
-                </p><p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">From planning to verification: best practices for Quuppa v3 Tag
-                    provisioning</strong></p><p dir="ltr" class="- topic/p p">It is recommended to plan the tag provisioning
-                process in advance to make sure all of your project specific requirements are taken
-                into account at the right time in the process. The main steps are:</p><p class="- topic/p p"></p><div class="- topic/p p">
+                to the pre-selected configuration.</p><div class="- topic/p p">
+                <div class="- topic/note note note note_note" id="provisioning_quuppa_v3_tags__note_ijg_gfr_31c" data-ofbid="provisioning_quuppa_v3_tags__note_ijg_gfr_31c"><span class="note__title">Note:</span> Automatic configuration of Quuppa v3 tags is only
+                    possible when the QPE is in Tracking mode.</div>
+            </div><p class="- topic/p p"><img class="- topic/image image" id="provisioning_quuppa_v3_tags__image_t24_fdt_21c" src="../images/v3_auto_configuration_1.png" width="600"/></p><p dir="ltr" class="- topic/p p">Additionally, after the Quuppa v3 tags
+                have been provisioned and are visible in your QPE project (verified by using the QPE
+                Tag table), you can further manage the tags and configurations by using QPE API
+                commands. This does not require project file modifications with the QSP nor file
+                synchronization in the QPE. </p><p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">From planning to verification: best
+                    practices for Quuppa v3 Tag provisioning</strong></p><p dir="ltr" class="- topic/p p">It is recommended
+                to plan the tag provisioning process in advance to make sure all of your project
+                specific requirements are taken into account at the right time in the process. The
+                main steps are:</p><p class="- topic/p p"></p><div class="- topic/p p">
                 <ol class="- topic/ol ol" id="provisioning_quuppa_v3_tags__ol_psm_crl_21c" data-ofbid="provisioning_quuppa_v3_tags__ol_psm_crl_21c">
                     <li class="- topic/li li">Planning</li>
                     <li class="- topic/li li">Provisioning</li>
@@ -204,12 +208,12 @@
                 <ol class="- topic/ol ol" id="provisioning_quuppa_v3_tags__ol_vsn_3rl_21c" data-ofbid="provisioning_quuppa_v3_tags__ol_vsn_3rl_21c">
                     <li class="- topic/li li">Is your project an online project? Yes/No</li>
                     <li class="- topic/li li">Are you provisioning Quuppa v3 tags for your own Quuppa project? Yes/No<p dir="ltr" class="- topic/p p">If both answers are Yes, go forward in the checklist.
-                            Otherwise, take a look at sections</p><div class="- topic/p p">
-                            <ul class="- topic/ul ul">
-                                <li dir="ltr" class="- topic/li li">Quuppa v3 tags in offline projects</li>
-                                <li dir="ltr" class="- topic/li li">Tag ownership - Association to the customer</li>
-                            </ul>
-                        </div><p class="- topic/p p"><u class="+ topic/ph hi-d/u ph u">Context of the tags</u></p></li>
+                            Otherwise, take a look at sections</p><div class="- topic/p p"><ul class="- topic/ul ul">
+                                <li dir="ltr" class="- topic/li li"><a class="- topic/xref xref" href="#provisioning_quuppa_v3_tags__id_3">Quuppa
+                                        v3 tags in offline projects</a></li>
+                                <li dir="ltr" class="- topic/li li"><a class="- topic/xref xref" href="#provisioning_quuppa_v3_tags__id_4">Tag
+                                        ownership - Association to the customer</a></li>
+                            </ul><u class="+ topic/ph hi-d/u ph u">Context of the tags</u></div></li>
                     <li dir="ltr" class="- topic/li li">
                         <p dir="ltr" class="- topic/p p">What are you planning to track? Are all the assets tracked in
                             the same way? Yes/No</p>
