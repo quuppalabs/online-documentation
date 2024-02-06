@@ -542,8 +542,12 @@
                path="megamap/topics/hardware_declaration_of_conformity.html"/>
    <appContext helpID="qc2_quuppa_controller_product_specification"
                path="QPE.next/topics/qc2_quuppa_controller_product_specification.html"/>
+   <appContext helpID="qc4_quuppa_controller_product_information"
+               path="QPE.next/topics/qc4_quuppa_controller_product_information.html"/>
    <appContext helpID="QC6_product_information"
                path="QPE.next/topics/QC6_product_information.html"/>
+   <appContext helpID="qc14_quuppa_controller_product_specification"
+               path="QPE.next/topics/qc14_quuppa_controller_product_specification.html"/>
    <appContext helpID="Q-Port_product_information"
                path="QPE.next/topics/Q-Port_product_information.html"/>
    <appContext helpID="installation_resources"
