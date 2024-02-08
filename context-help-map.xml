@@ -371,6 +371,8 @@
                path="QDP/topics/QDP_visualisation_and_analysis.html"/>
    <appContext helpID="QDP_using_the_quuppa_data_player_application"
                path="QDP/topics/QDP_application_settings.html"/>
+   <appContext helpID="software_integrations"
+               path="megamap/topics/software_integrations.html"/>
    <appContext helpID="quuppa_development_kit_quick_start_guide"
                path="megamap/topics/Hardware.html"/>
    <appContext helpID="q17_installation_guide_front_page"
