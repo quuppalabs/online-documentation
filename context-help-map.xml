@@ -540,6 +540,8 @@
                path="QT3-1/topics/provisioning_quuppa_v3_tags.html"/>
    <appContext helpID="tag_design_principles"
                path="compatible_tags/topics/tag_design_principles.html"/>
+   <appContext helpID="quuppa_tag_attachment_recommendations"
+               path="megamap/topics/quuppa_tag_attachment_recommendations.html"/>
    <appContext helpID="Hardware_declaration_of_conformity"
                path="megamap/topics/hardware_declaration_of_conformity.html"/>
    <appContext helpID="qc2_quuppa_controller_product_specification"
