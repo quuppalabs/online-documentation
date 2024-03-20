@@ -151,10 +151,8 @@
         <p class="- topic/p p"><img class="- topic/image image" id="tag_design_principles__image_og5_mlp_jnb" src="../../QT1-1/images/QT1-1.png" width="189"/></p>
         <section class="- topic/section section" id="tag_design_principles__section_ndt_nlp_jnb" data-ofbid="tag_design_principles__section_ndt_nlp_jnb"><h2 class="- topic/title title sectiontitle">Table of Contents</h2>
             
-            <p class="- topic/p p"><a class="- topic/xref xref" href="#tag_design_principles__section_hvc_1lp_jnb">1. How to Make
-                    Bluetooth Devices Quuppa Trackable?</a></p>
-            <p class="- topic/p p"><a class="- topic/xref xref" href="#tag_design_principles__section_mwl_1lp_jnb">2. Quuppa
-                    Native Tags vs Quuppa Emulation Tags</a></p>
+            <p class="- topic/p p"><a class="- topic/xref xref" href="#tag_design_principles__section_hvc_1lp_jnb">1. How to Make Bluetooth Devices Trackable in the Quuppa system</a></p>
+            <p class="- topic/p p"><a class="- topic/xref xref" href="#tag_design_principles__section_mwl_1lp_jnb">2. Quuppa Approved Tags vs Quuppa Tested Devices</a></p>
             <p class="- topic/p p"><a class="- topic/xref xref" href="#tag_design_principles__section_iwr_blp_jnb">3. Firmware
                     &amp; State Machine Logic</a></p>
             <p class="- topic/p p"><a class="- topic/xref xref" href="#tag_design_principles__section_djc_dlp_jnb">4.
@@ -166,66 +164,70 @@
             <p class="- topic/p p"><a class="- topic/xref xref" href="#tag_design_principles__section_rgr_flp_jnb">7. Mechanical
                     Design</a></p>
         </section>
-        <section class="- topic/section section" id="tag_design_principles__section_hvc_1lp_jnb" data-ofbid="tag_design_principles__section_hvc_1lp_jnb"><h2 class="- topic/title title sectiontitle">1. How to Make Bluetooth Devices Quuppa
-                Trackable?</h2><p class="- topic/p p">Any Bluetooth device from Bluetooth 4.0 onwards can be made
+        <section class="- topic/section section" id="tag_design_principles__section_hvc_1lp_jnb" data-ofbid="tag_design_principles__section_hvc_1lp_jnb"><h2 class="- topic/title title sectiontitle">1. How to Make Bluetooth Devices Trackable in the
+                Quuppa system</h2><p class="- topic/p p">Any Bluetooth device from Bluetooth 4.0 onwards can be made
                 Quuppa trackable by enabling the device to advertise Quuppa Profiles. There are
                 effectively specific advertisement payloads, or Direction Finding packets, that make
-                the device "visible" to the Quuppa Locators. </p><div class="- topic/p p">
+                the device 'visible' to the Quuppa Locators. </p><div class="- topic/p p">
                 <div class="- topic/note note note note_note"><span class="note__title">Note:</span> The Quuppa Profiles are just enablers for tracking, and do not affect the
                     tracking accuracy or general performance of the device itself.</div>
             </div><img class="- topic/image image" id="tag_design_principles__image_j15_bpp_jnb" src="../images/angular_measurements.jpg" width="378"/>
         </section>
-        <section class="- topic/section section" id="tag_design_principles__section_mwl_1lp_jnb" data-ofbid="tag_design_principles__section_mwl_1lp_jnb"><h2 class="- topic/title title sectiontitle">2. Quuppa Native Tags vs Quuppa Emulation Tags</h2>
-            
-            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Quuppa Native Firmware</strong></p>
-            <p class="- topic/p p">Quuppa licenses natively compatible Quuppa Firmware Libraries (currently available
-                for Nordic nRF52832/833/840) to its Tag Partners. These firmware libraries natively
-                support all of the features that work seamlessly together with Quuppa Locators,
-                Quuppa Site Planner (QSP), Quuppa Positioning Engine (QPE) and other proprietary
-                software tools. This firmware carries a perpetual license and is currently available
-                for Nordic Semiconductor's nRF52832, nRF52833, and nRF52840 models. </p>
-            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Emulation Specifications</strong></p>
-            <p dir="ltr" class="- topic/p p">To track devices equipped with radios other than those mentioned above,
-                Quuppa has created a Tag Emulation Specification. This specification enables device
-                manufacturers to program their devices to advertise Direction Finding packets
-                (uplink), send data packets (uplink), and use backchannel functionalities (downlink)
-                to command tag. In addition, Quuppa offers sample source code for a reference mobile
-                app, both for Android and iOS, to make them trackable.</p>
-            <p dir="ltr" class="- topic/p p">Typically, emulation is the only feasible option if the device has
-                additional radios (e.g. Wi-Fi, LoRa, etc) or if the Bluetooth radio is also used for
-                other purposes in addition to Quuppa tracking. While the Quuppa Firmware is
-                optimised for the Quuppa system, it is good to remember that well-designed emulation
-                tags can also provide good positioning performance. There are many factors that
-                affect the tracking performance of a tag (e.g. the antenna, state machine and
-                accelerometer), which will be explored in the next sections. </p>
-        </section>
+        <section class="- topic/section section" id="tag_design_principles__section_mwl_1lp_jnb" data-ofbid="tag_design_principles__section_mwl_1lp_jnb"><h2 class="- topic/title title sectiontitle">2. Quuppa Approved Tags vs Quuppa Tested
+                Devices</h2><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Quuppa Approved Tags</strong></p><p dir="ltr" class="- topic/p p"><em class="+ topic/ph hi-d/i ph i">Quuppa v3 protocol
+                    and firmware</em></p><p dir="ltr" class="- topic/p p">Quuppa v3 protocol is an enhanced version of
+                the wireless communication protocol between Quuppa Locators and Tags. Quuppa
+                provides Quuppa v3 firmware source code, tools and services to Quuppa partners
+                enabling them to design, develop and verify Quuppa v3 Approved tags. As the outcome
+                of the process, Quuppa partner tags can be qualified as Quuppa Approved tags
+                guaranteeing high quality and performance as parts of Quuppa RTLS solutions.
+                Additionally, Quuppa Approved tags support native Quuppa system features, and the
+                latest and upcoming system features are available primarily for the Quuppa v3 tags
+                with the latest firmware revision. </p><p dir="ltr" class="- topic/p p">Currently, Quuppa v3 source code
+                is available for Silicon Labs BG22 and Nordic Semiconductors nRF52832 radio
+                System-on-Chips (SoC). The porting of the source code for other radio SoCs is also
+                possible and a subject under evaluation and development with Quuppa partners. Quuppa
+                v3 tags are compatible with the Q generation locators, and Quuppa System Release 8.0
+                and newer.</p><p dir="ltr" class="- topic/p p">The previous generation of Quuppa Approved tags are based
+                on Quuppa Firmware Libraries (for Nordic nRF52832/833/840). These tags have the
+                native support of Quuppa System features together with Quuppa Locators, Quuppa Site
+                Planner (QSP), Quuppa Positioning Engine (QPE) and other proprietary software tools.
+                However, Quuppa Firmware Libraries are not anymore available for new designs and
+                naturally they don’t support the latest Quuppa v3 features. </p><p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Quuppa Tested Devices</strong></p><p dir="ltr" class="- topic/p p">Quuppa Tested Devices is a
+                certification category that is reserved for devices which are typically designed for
+                some other purposes than positioning. The category itself is not exclusive by nature
+                of the device. The key requirement for devices in this category is to have a radio
+                that can transmit Quuppa Direction Finding packets (as specified in Quuppa Emulation
+                Specification) at least on one of the Quuppa tracking channels.</p><p dir="ltr" class="- topic/p p">Quuppa Emulation Specification enables device manufacturers to program their
+                devices to advertise Direction Finding packets (uplink), send data packets (uplink),
+                and use backchannel functionalities (downlink) to command devices. In addition,
+                Quuppa offers sample source code for a reference mobile app, both for Android and
+                iOS, to make them trackable.</p>As mentioned, the transmission of Direction Finding
+            packets make a tag or device visible to the Quuppa System. However, there are many other
+            factors that affect the tracking performance of a tag (e.g. the antenna, state machine
+            and accelerometer), which will be explored in the next sections.<p class="- topic/p p">Quuppa licenses
+                natively compatible Quuppa Firmware Libraries (currently available for Nordic
+                nRF52832/833/840) to its Tag Partners. These firmware libraries natively support all
+                of the features that work seamlessly together with Quuppa Locators, Quuppa Site
+                Planner (QSP), Quuppa Positioning Engine (QPE) and other proprietary software tools.
+                This firmware carries a perpetual license and is currently available for Nordic
+                Semiconductor's nRF52832, nRF52833, and nRF52840 models.  </p></section>
         <section class="- topic/section section" id="tag_design_principles__section_iwr_blp_jnb" data-ofbid="tag_design_principles__section_iwr_blp_jnb"><h2 class="- topic/title title sectiontitle">3. Firmware &amp; State Machine Logic</h2>
             
             <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">State Machine Makes Systems Scalable</strong></p>
-            <p dir="ltr" class="- topic/p p">Quuppa's Tag Firmware (Library) implements State Machine Logic, i.e. the
-                tag's brain that controls how it operates. The state machine has several important
-                functions, but first and foremost it listens to the accelerometer data to control
-                tag's advertisement on one hand to save battery for that given tag, and on the other
-                hand to decrease unnecessary Bluetooth congestion in environments with tens of
-                thousands of tags (e.g. warehouse). </p>
-            <p dir="ltr" class="- topic/p p">Tags with Quuppa Firmware have a state machine built-in, but for the
-                emulation tags, the manufacturer has to develop their own firmware and state machine
-                logic. This state machine logic may well be either simpler or more complicated than
-                what has been implemented in the Quuppa Firmware. In asset tracking use cases with
-                high volumes of tags residing in the same environment, it's important that state
-                machines command static tags to lower their transmit intervals to minimize
-                unnecessary radio noise.</p>
-            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Emulation Pro Support from Silicon Vendors</strong></p>
-            <p dir="ltr" class="- topic/p p">In addition to the options presented above, there is a third option. Quuppa
-                is working with several Silicon Vendors who have implemented the Quuppa Emulation
-                Specification (including Direction Finding and data packets as well as backchannel
-                functionality) and support for proprietary channels (2403 MHz, 2481 MHz).
-                Furthermore, these selected vendors have also implemented the state machine, and
-                pre-defined tag profiles (asset tag, people tag, etc) to be leveraged by the
-                manufactures. The implementation is shared via the respective vendors' developer
-                portal (as is), and they typically come with some source code samples. To shorten
-                developers go-to-market times, some of the vendors share their tag reference designs
-                with the BOMs and related design files.</p>
+            <p dir="ltr" class="- topic/p p">Quuppa's tag firmware implements state machine logic that controls how it
+                operates. The state machine has several important functions, but first and foremost
+                it listens to the accelerometer data to control tag's advertisement on one hand to
+                save battery for that given tag, and on the other hand to decrease unnecessary
+                Bluetooth congestion in environments with tens of thousands of tags (e.g.
+                warehouse).</p>
+            <p class="- topic/p p">Quuppa Approved tags have a state machine built-in. For the Tested Devices
+                implementing the Emulation specification, the manufacturer has to develop their own
+                firmware and state machine logic. This state machine logic may well be either
+                simpler or more complicated than what has been implemented in the Quuppa v3
+                firmware. In asset tracking use cases with high volumes of tags residing in the same
+                environment, it's important that state machines command static tags to lower their
+                transmit intervals to minimise unnecessary radio noise.</p>
             <p class="- topic/p p"><img class="- topic/image image" id="tag_design_principles__image_dkq_hvp_jnb" src="../images/state_machine.png" width="378"/></p>
         </section>
         <section class="- topic/section section" id="tag_design_principles__section_djc_dlp_jnb" data-ofbid="tag_design_principles__section_djc_dlp_jnb"><h2 class="- topic/title title sectiontitle">4. Antenna</h2><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Positioning Accuracy and
@@ -254,66 +256,63 @@
                 tags can operate within the whole 2.4 GHz ISM band: from 2401 MHz up to 2481 MHz,
                 with 1 MHz spacing. The antenna and matching circuitry should be designed so that
                 the antenna performance is good throughout the band. We recommend using a 50 ohm
-                matching plane for easier measurement of the antenna matching. </p><p class="- topic/p p">While a Quuppa
-                tag benefits from good total efficiency of the antenna, it is secondary to antenna
-                radiation. The target for total efficiency (includes both the matching loss and the
-                radiation efficiency) for the whole frequency range is better than -5dB.</p><p dir="ltr" class="- topic/p p">As always, you also need to take the antenna placement into consideration
-                and make sure you design it properly, also taking into account keep-out areas on the
-                PCB, ground plate, enclosure etc.</p><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Simulate Before Production</strong></p><p dir="ltr" class="- topic/p p">It's highly recommended to model and simulate the antenna performance
-                before production. It is important for catching any design challenges early. It is
-                also equally important to simulate and measure the efficiency and radiation pattern
-                of the final antenna design inside the intended enclosure, instead of only in free
-                space, as the enclosure can also affect antenna performance.  The matching
-                (reflection coefficient) should be measured first, before any efficiency and
-                radiation pattern measurements are taken. </p><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Challenges With Non-Optimal
+                matching plane for easier measurement of the antenna matching.</p><p dir="ltr" class="- topic/p p">While
+                a Quuppa tag benefits from good total efficiency of the antenna, it is secondary to
+                antenna radiation. The target for total efficiency (includes both the matching loss
+                and the radiation efficiency) for the whole frequency range is better than
+                -5dB.</p><p class="- topic/p p">As always, you also need to take the antenna placement into
+                consideration and make sure you design it properly, also taking into account
+                keep-out areas on the PCB, ground plate, enclosure etc.</p><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Simulate Before
+                    Production</strong></p><p class="- topic/p p">It's highly recommended to model and simulate the antenna
+                performance before production. It is important for catching any design challenges
+                early. It is also equally important to simulate and measure the efficiency and
+                radiation pattern of the final antenna design inside the intended enclosure, instead
+                of only in free space, as the enclosure can also affect antenna performance. The
+                matching (reflection coefficient) should be measured first, before any efficiency
+                and radiation pattern measurements are taken. </p><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Challenges With Non-Optimal
                     Antenna Design</strong></p><p class="- topic/p p"><em class="+ topic/ph hi-d/i ph i"><u class="+ topic/ph hi-d/u ph u">Omni-directionality for Positioning Accuracy and
                         Confidence</u></em></p><p dir="ltr" class="- topic/p p">The tag is a small and simple radio
                 transmitting device. It's fairly easy to manufacture, and there are plenty of
                 reference designs available online. However, when creating a tag for an AoA
-                positioning system, antenna design is critical for the overall system performance.
-                </p><p dir="ltr" class="- topic/p p">In Quuppa's case, Locators are like cameras, in that they take
-                small radio images of radio signals that they see. From these images, the Locator
-                measures the azimuth and elevation angles and the QPE converts those into x-, y-,
-                and z-coordinates. If the strongest radio signals that Locators receive are not
-                coming directly from the tag (but from a reflection), it can cause a significant
-                reduction in the positioning performance of the system. This typically happens when
-                the antenna does not radiate to all directions with the same power, but the radiated
-                power is weaker to specific direction. The picture below shows the difference
-                between omnidirectional antenna-radiation patterns of the correctly positioned black
-                tag, and the green tag with a deep and wide null in radiation pattern towards the
-                Locator, resulting in its wrongly computed position visualised as a red dot in the
-                picture.</p><p class="- topic/p p"><img class="- topic/image image" id="tag_design_principles__image_pdr_wxq_jnb" src="../images/reflections.png" width="378"/></p></section>
-        <section class="- topic/section section" id="tag_design_principles__section_k1x_dlp_jnb" data-ofbid="tag_design_principles__section_k1x_dlp_jnb"><h2 class="- topic/title title sectiontitle">5. Accelerometer &amp; Other Components</h2>
-            
-            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">An Accelerometer is a Must</strong></p>
-            <p dir="ltr" class="- topic/p p">As mentioned above, the accelerometer has a crucial role not just from an
-                individual tags perspective but also from overall system performance perspective.
-                For Quuppa, having an accelerometer is a mandatory requirement.</p>
-            <p dir="ltr" class="- topic/p p">Beyond the system logic, an accelerometer also has a key role in several
-                use cases (e.g. man-down, impact detection, movement analysis). Tag manufacturers
-                have the freedom to choose the accelerometer that they want to use, they just have
-                to write the drivers for themselves. The Quuppa Firmware has readily written drivers
-                for ST LIS2DH.</p>
-            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Sensors as Use Case Enablers</strong></p>
-            <p dir="ltr" class="- topic/p p">Quuppa tags also typically have other sensors and actuators, such as a push
-                button and an LED indicator, to address and complement a variety of use cases.
-                Another interesting and new sensor to be highlighted here is a barometer / pressure
-                sensor. It captures the atmospheric pressure from a tag, allowing Quuppa to define
-                its relative height (z-axis). </p>
-            <p dir="ltr" class="- topic/p p">Different sensors and actuators consume different amounts of energy. Having
-                a vibrator motor or buzzer that can be commanded with the backchannel (downlink) via
-                the Locators enables fantastic use cases, but they also tend to be very power hungry
-                and hence require some smart design choices from the manufacturer's side.</p>
-        </section>
+                positioning system, antenna design is critical for the overall system
+                performance.</p>In Quuppa's case, Locators are like cameras, in that they take small
+            radio images of radio signals that they see. From these images, the Locator measures the
+            azimuth and elevation angles and the QPE converts those into x-, y-, and z-coordinates.
+            If the strongest radio signals that Locators receive are not coming directly from the
+            tag (but from a reflection), it can cause a significant reduction in the positioning
+            performance of the system. This typically happens when the antenna does not radiate to
+            all directions with the same power, but the radiated power is weaker to specific
+            direction. The picture below shows the difference between omnidirectional
+            antenna-radiation patterns of the correctly positioned black tag, and the green tag with
+            a deep and wide null in radiation pattern towards the Locator, resulting in its wrongly
+            computed position visualised as a red dot in the picture.<p class="- topic/p p"><img class="- topic/image image" id="tag_design_principles__image_pdr_wxq_jnb" src="../images/reflections.png" width="378"/></p></section>
+        <section class="- topic/section section" id="tag_design_principles__section_k1x_dlp_jnb" data-ofbid="tag_design_principles__section_k1x_dlp_jnb"><h2 class="- topic/title title sectiontitle">5. Accelerometer &amp; Other
+                    Components</h2><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">An Accelerometer is a Must</strong></p><p dir="ltr" class="- topic/p p">As
+                mentioned above, the accelerometer has a crucial role not just from an individual
+                tags perspective but also from overall system performance perspective. For Quuppa,
+                having an accelerometer is a mandatory requirement.</p>Beyond the system logic, an
+            accelerometer also has a key role in several use cases (e.g. man-down, impact detection,
+            movement analysis). Tag manufacturers have the freedom to choose the accelerometer that
+            they want to use, they just have to write the drivers for themselves. The Quuppa
+            Firmware has readily written drivers for ST LIS2DH and LIS2DW.<p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Sensors as Use Case
+                    Enablers</strong></p><p dir="ltr" class="- topic/p p">Quuppa tags also typically have other sensors and
+                actuators, such as a push button and an LED indicator, to address and complement a
+                variety of use cases. </p>Different sensors and actuators consume different amounts
+            of energy. Having a vibrator motor or buzzer that can be commanded with the backchannel
+            (downlink) via the Locators enables fantastic use cases, but they also tend to be very
+            power hungry and hence require some smart design choices from the manufacturer's
+            side.</section>
         <section class="- topic/section section" id="tag_design_principles__section_tqy_2lp_jnb" data-ofbid="tag_design_principles__section_tqy_2lp_jnb"><h2 class="- topic/title title sectiontitle">6. Quuppa Proprietary Channels</h2>
             
             <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Interference Tolerance on Non-Standard Channels</strong></p>
             <p dir="ltr" class="- topic/p p">The Quuppa System is able to track a tag on the standard Bluetooth
                 advertising channels, as well as at the edges of the 2.4GHz ISM band. Tags with
-                Quuppa Tag Firmware (and upcoming Emulation Pro) allow a proprietary operation mode
-                for tracking Quuppa Compatible Tags using the Quuppa proprietary channels (2401 MHz,
-                2403 MHz, 2481 MHz). The benefit of this is that these proprietary channels are free
-                from other standard wireless systems, including WiFi, and Bluetooth. </p>
+                Quuppa v3 firmware allow a proprietary operation mode for tracking Quuppa Compatible
+                Tags using the Quuppa proprietary channels (primary: 2481 MHz, and auxiliary
+                channels: 2401 MHz, 2403 MHz,). The benefit of this is that these proprietary
+                channels are free from other standard wireless systems, including WiFi, and
+                Bluetooth. Note that some of the Quuppa Tested Devices (e.g. the mobile handsets)
+                can only operate on standard Bluetooth advertising channels.</p>
             <p dir="ltr" class="- topic/p p">Using the proprietary channels becomes especially important in environments
                 where fast location update rates are required and/or Bluetooth channels are crowded,
                 such as sport stadiums and exhibitions (i.e. areas where large numbers of people
@@ -328,26 +327,22 @@
                 in and sold to.</p>
             <p class="- topic/p p"><img class="- topic/image image" id="tag_design_principles__image_cmn_tyq_jnb" src="../images/propritary_channels.png" width="378"/></p>
         </section>
-        <section class="- topic/section section" id="tag_design_principles__section_rgr_flp_jnb" data-ofbid="tag_design_principles__section_rgr_flp_jnb"><h2 class="- topic/title title sectiontitle">7. Mechanical Design</h2>
-            
-            <p dir="ltr" class="- topic/p p">The saying "form follows function" also holds true in asset tracking tags.
-                The sensors and actuators are defined by use cases that the tag is used for. In the
-                same manner, the type of the tracked entity (i.e. a person, pallet, vehicle, or
-                small asset) sets requirements for the tags size, shape, robustness and its suitable
-                mounting mechanisms. Most enclosure and mechanics design choices are fairly logical
-                and follow common sense. </p>
-            <p dir="ltr" class="- topic/p p">In the Quuppa Certification process, we test the mechanical functionalities
-                (e.g. buttons, plugs, locking systems, hinges etc) so that they work as specified by
-                the manufacturer. We also evaluate the materials and surface quality (i.e. visual
-                quality), shape of the product (e.g. no sharp edges, pinch points etc), wearing
-                endurance of the product and check that it should not make any unusual noises when
-                pressing or twisting. </p>
-            <p dir="ltr" class="- topic/p p">By no means the list is exhaustive, but the use case, usage environment,
-                the customer, or even related regulations and other requirements may impose
-                material, functional, size, or other qualities that a tag has to fulfill. These
-                requirements are at manufacturer's and/or user's responsibility.</p>
-            <p class="- topic/p p"><img class="- topic/image image" id="tag_design_principles__image_hgm_yyq_jnb" src="../images/tag_dimensions.png" width="378"/></p>
-        </section>
+        <section class="- topic/section section" id="tag_design_principles__section_rgr_flp_jnb" data-ofbid="tag_design_principles__section_rgr_flp_jnb"><h2 class="- topic/title title sectiontitle">7. Mechanical Design</h2><p dir="ltr" class="- topic/p p">The saying
+                "form follows function" also holds true in asset tracking tags. The sensors and
+                actuators are defined by use cases that the tag is used for. In the same manner, the
+                type of the tracked entity (i.e. a person, pallet, vehicle, or small asset) sets
+                requirements for the tags size, shape, robustness and its suitable mounting
+                mechanisms. Most enclosure and mechanics design choices are fairly logical and
+                follow common sense.</p><p dir="ltr" class="- topic/p p">In the Quuppa Certification process, we test
+                the mechanical functionalities (e.g. buttons, plugs, locking systems, hinges etc) so
+                that they work as specified by the manufacturer. We also evaluate the materials and
+                surface quality (i.e. visual quality), shape of the product (e.g. no sharp edges,
+                pinch points etc), wearing endurance of the product and check that it should not
+                make any unusual noises when pressing or twisting.</p>By no means the list is
+            exhaustive, but the use case, usage environment, the customer, or even related
+            regulations and other requirements may impose material, functional, size, or other
+            qualities that a tag has to fulfill. These requirements are at the manufacturer's and/or
+            user's responsibility.<p class="- topic/p p"><img class="- topic/image image" id="tag_design_principles__image_hgm_yyq_jnb" src="../images/tag_dimensions.png" width="378"/></p></section>
     </div>
 </article></main></div>
 
@@ -416,7 +411,7 @@
 -->  
   
   </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
-                Generation date: 12.03.2024</div>
+                Generation date: 20.03.2024</div>
   
   
   <script type="text/javascript">
