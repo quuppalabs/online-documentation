@@ -572,7 +572,6 @@
    <appContext helpID="locator_provisioning"
                path="megamap/topics/locator_provisioning.html"/>
    <appContext helpID="post_deployment" path="megamap/topics/post_deployment.html"/>
-   <appContext helpID="videos" path="resources/topics/videos.html"/>
    <appContext helpID="whitepapers" path="resources/topics/resources.html"/>
    <appContext helpID="introduction" path="network/topics/network_introduction.html"/>
    <appContext helpID="network_config_Quuppa_components"
@@ -605,6 +604,7 @@
                path="whitepapers/topics/third_party_connectivity.html"/>
    <appContext helpID="conclusion" path="whitepapers/topics/conclusion.html"/>
    <appContext helpID="enterprise" path="QPE.next/topics/enterprise.html"/>
+   <appContext helpID="videos" path="resources/topics/videos.html"/>
    <appContext helpID="Translations" path="megamap/topics/Translations.html"/>
    <appContext helpID="Translations_zh" path="megamap/topics/Translations_zh.html"/>
    <appContext helpID="devkit_qsg_introduction"
