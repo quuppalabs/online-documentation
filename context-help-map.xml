@@ -3,7 +3,6 @@
    <appContext helpID="megamap_introduction"
                path="megamap/topics/documentation_introduction.html"/>
    <appContext helpID="QSP_quuppa_terminology" path="QSP/topics/terminology.html"/>
-   <appContext helpID="compatibility" path="megamap/topics/compatibility.html"/>
    <appContext helpID="quuppa_development_kit_quick_start_guide"
                path="megamap/topics/Devkit.html"/>
    <appContext helpID="devkit_qsg_introduction"
@@ -32,6 +31,7 @@
                path="reference_projects/topics/industrial_reference_project.html"/>
    <appContext helpID="quuppa_development_kit_quick_start_guide"
                path="megamap/topics/Software.html"/>
+   <appContext helpID="compatibility" path="megamap/topics/compatibility.html"/>
    <appContext helpID="QSP_introduction" path="QSP/topics/QSP_introduction.html"/>
    <appContext helpID="QSP_overview_introduction"
                path="QSP/topics/QSP_getting_started.html"/>
@@ -375,6 +375,27 @@
                path="megamap/topics/software_integrations.html"/>
    <appContext helpID="quuppa_development_kit_quick_start_guide"
                path="megamap/topics/Hardware.html"/>
+   <appContext helpID="quuppa_hardware" path="megamap/topics/quuppa_hardware.html"/>
+   <appContext helpID="qc2_quuppa_controller_product_specification"
+               path="QPE.next/topics/qc2_quuppa_controller_product_specification.html"/>
+   <appContext helpID="qc4_quuppa_controller_product_information"
+               path="QPE.next/topics/qc4_quuppa_controller_product_information.html"/>
+   <appContext helpID="QC6_product_information"
+               path="QPE.next/topics/QC6_product_information.html"/>
+   <appContext helpID="qc14_quuppa_controller_product_specification"
+               path="QPE.next/topics/qc14_quuppa_controller_product_specification.html"/>
+   <appContext helpID="Q-Port_product_information"
+               path="QPE.next/topics/Q-Port_product_information.html"/>
+   <appContext helpID="locators" path="megamap/topics/locators.html"/>
+   <appContext helpID="generaionQ" path="Q17/topics/generationQ.html"/>
+   <appContext helpID="generation_q_fw_upgrade" path="Qxx_FW/topics/fw_upgrade.html"/>
+   <appContext helpID="creating_a_Q17_focusing_locator"
+               path="Q17/topics/Q17_creating_a_focusing_locator.html"/>
+   <appContext helpID="q17_ig_reset_to_factory_settings"
+               path="Q17/topics/q17_ig_reset_to_factory_settings.html"/>
+   <appContext helpID="locator_level_indicator" path="Q17/topics/level_indicator.html"/>
+   <appContext helpID="hardware_comparison"
+               path="megamap/topics/hardware_comparison.html"/>
    <appContext helpID="q17_installation_guide_front_page"
                path="Q17/topics/Q17_user_manual.html"/>
    <appContext helpID="q17_qsg_introduction"
@@ -457,15 +478,7 @@
                path="Q17/topics/copyright_and_other_notices.html"/>
    <appContext helpID="Q35_description" path="Q35/topics/Q35_description.html"/>
    <appContext helpID="Q35_specification" path="Q35/topics/Q35_specification.html"/>
-   <appContext helpID="generaionQ" path="Q17/topics/generationQ.html"/>
-   <appContext helpID="generation_q_fw_upgrade" path="Qxx_FW/topics/fw_upgrade.html"/>
-   <appContext helpID="creating_a_Q17_focusing_locator"
-               path="Q17/topics/Q17_creating_a_focusing_locator.html"/>
-   <appContext helpID="q17_ig_reset_to_factory_settings"
-               path="Q17/topics/q17_ig_reset_to_factory_settings.html"/>
-   <appContext helpID="locator_level_indicator" path="Q17/topics/level_indicator.html"/>
-   <appContext helpID="hardware_comparison"
-               path="megamap/topics/hardware_comparison.html"/>
+   <appContext helpID="tags" path="megamap/topics/tags.html"/>
    <appContext helpID="megamap_qt1_1_user_manual_front_page"
                path="QT1-1/topics/QT1-1_user_manual.html"/>
    <appContext helpID="QT1-1_user_guide" path="QT1-1/topics/QT1-1_user_guide.html"/>
@@ -544,16 +557,6 @@
                path="megamap/topics/quuppa_tag_attachment_recommendations.html"/>
    <appContext helpID="Hardware_declaration_of_conformity"
                path="megamap/topics/hardware_declaration_of_conformity.html"/>
-   <appContext helpID="qc2_quuppa_controller_product_specification"
-               path="QPE.next/topics/qc2_quuppa_controller_product_specification.html"/>
-   <appContext helpID="qc4_quuppa_controller_product_information"
-               path="QPE.next/topics/qc4_quuppa_controller_product_information.html"/>
-   <appContext helpID="QC6_product_information"
-               path="QPE.next/topics/QC6_product_information.html"/>
-   <appContext helpID="qc14_quuppa_controller_product_specification"
-               path="QPE.next/topics/qc14_quuppa_controller_product_specification.html"/>
-   <appContext helpID="Q-Port_product_information"
-               path="QPE.next/topics/Q-Port_product_information.html"/>
    <appContext helpID="installation_resources"
                path="megamap/topics/installation_resources.html"/>
    <appContext helpID="deploying_a_project"
