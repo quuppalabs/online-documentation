@@ -352,7 +352,6 @@
                path="QPE/topics/offline_module.html"/>
    <appContext helpID="offline_module_update"
                path="QPE/topics/offline_module_update.html"/>
-   <appContext helpID="QPE_deployment_mode" path="QPE/topics/QPE_deployment_mode.html"/>
    <appContext helpID="QPE_run_binary_logs" path="QPE/topics/QPE_run_binary_logs.html"/>
    <appContext helpID="QPE_troubleshooting" path="QPE/topics/QPE_troubleshooting.html"/>
    <appContext helpID="QPE_binary_logs" path="QPE/topics/QPE_binary_logs.html"/>
