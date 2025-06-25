@@ -152,37 +152,57 @@
             Console.</p>
         <section class="- topic/section section" id="QSP_udploggingapi_introduction__section_ppb_c24_rrb" data-ofbid="QSP_udploggingapi_introduction__section_ppb_c24_rrb"><h2 class="- topic/title title sectiontitle">Available API Data Formats</h2>
             
-            <p class="- topic/p p">The basic formats available for customisations include:</p>
+            <p class="- topic/p p">Formats available in JSON and CSV</p>
+            <p dir="ltr" class="- topic/p p">For Tags:</p>
+            <p dir="ltr" class="- topic/p p">Applicable for tag output targets or for API endpoint
+                /getTagData?format=&lt;name-of-your-format&gt;</p>
             <div class="- topic/p p">
                 <ul class="- topic/ul ul">
-                    <li class="- topic/li li"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">DefaultInfo</span> - This format provides all of the API
-                        commands for data related to tag information such as tag state, tag group,
-                        battery level, button state, acceleration data, TX power, developer specific
-                        data. Both JSON and CSV outputs are available. The format is for cases where
-                        you only require information about the tags in the project, e.g. an
-                        application for monitoring the battery levels and current states of the tags
-                        in a project. </li>
-                    <li class="- topic/li li"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">DefaultLocation</span> - This format provides all of the API
-                        commands for data related to the positioning information, such as location
-                        estimates, the coordinate systems, the tracking areas and zones. Both JSON
-                        and CSV outputs are available. The format is for cases where you want to
-                        show the positioning information related to the project, e.g. applications
-                        that visualise how tags move around a space on a map. </li>
-                    <li class="- topic/li li"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">DefaultLocationAndInfo</span> - This format provides a
-                        combination of tag information (e.g. tag states, tag groups, battery level,
-                        button state, acceleration data, TX power and developer specific data) and
-                        positioning information (e.g. location estimates, coordinate systems,
-                        tracking areas and zones). Both JSON and CSV outputs are available. This
-                        format is for cases that require both types of data, e.g. applications where
-                        tag movements are shown on a map and actions triggered by pressing the tag
-                        button are also visualised in the map view. </li>
-                    <li class="- topic/li li"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">ALL_ITEMS</span> - This format provides all of the available
-                        Quuppa API commands in the same format. Both JSON and CSV outputs are
-                        available. This format is not intended for use as is, but provides all of
-                        the possible options to enable format customisations according to the needs
-                        of your project. </li>
+                    <li class="- topic/li li"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">DefaultInfo</span> - Provides data points related to tag
+                        information such as tag state, tag group, battery level, button state,
+                        acceleration data, TX power, developer specific data. The format is for
+                        cases where you only require information about the tags in the project, e.g.
+                        an application for monitoring the battery levels and current states of the
+                        tags in a project. </li>
+                    <li class="- topic/li li"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">DefaultLocation</span> - Provides data points related to tag
+                        positioning information, such as location estimates, the coordinate systems,
+                        the tracking areas and zones. The format is for cases where you want to show
+                        the positioning information related to the project, e.g. applications that
+                        visualise how tags move around a space on a map.</li>
+                    <li class="- topic/li li"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">DefaultLocationAndInfo</span> - Provides a combination of tag
+                        information (e.g. tag states, tag groups, battery level, button state,
+                        acceleration data, TX power and developer specific data) and positioning
+                        information (e.g. location estimates, coordinate systems, tracking areas and
+                        zones). This format is for cases that require both types of data, e.g.
+                        applications where tag movements are shown on a map and actions triggered by
+                        pressing the tag button are also visualised in the map view. </li>
+                    <li class="- topic/li li"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">ALL_ITEMS</span> - Provides all available data points related
+                        to tag. This format is not intended for use as is, but provides all of the
+                        possible options to enable format customisations according to the needs of
+                        your project.</li>
                 </ul>
             </div>
+            <p dir="ltr" class="- topic/p p">For Locator Data:</p>
+            <p dir="ltr" class="- topic/p p">Applicable for locator output targets or for API endpoint
+                /getLocatorData?format=&lt;name-of-your-format&gt;</p>
+            <div class="- topic/p p">
+                <ul class="- topic/ul ul" id="QSP_udploggingapi_introduction__ul_hkp_bt2_qfc" data-ofbid="QSP_udploggingapi_introduction__ul_hkp_bt2_qfc">
+                    <li class="- topic/li li"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">defaultLocatorInfo</span>  - Provides all Locator related data
+                        points</li>
+                    <li class="- topic/li li"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">legacyLocatorInfo</span>  - Provides all Locator related data
+                        points in the same formatting as they are in the API response for
+                        /getLocatorInfo (legacy API for locators)</li>
+                </ul>
+            </div>
+            <p dir="ltr" class="- topic/p p">For Positioning Engine Data:</p>
+            <p dir="ltr" class="- topic/p p">Applicable for PE output targets or for API endpoint
+                /getPEData?format=&lt;name-of-your-format&gt;</p>
+            <ul class="- topic/ul ul" id="QSP_udploggingapi_introduction__ul_vxr_kt2_qfc" data-ofbid="QSP_udploggingapi_introduction__ul_vxr_kt2_qfc">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">defaultPEInfo</span>- Provides all Positioning Engine
+                        related data points</p>
+                </li>
+            </ul>
             <div class="- topic/p p">
                 <div class="- topic/note note note note_note"><span class="note__title">Note:</span> If you have <a class="- topic/xref xref" href="QSP_application_settings_legacy_output_formats.html">enabled Legacy Output Formats</a> from the QSP application settings, you
                     will also be able to see the following legacy formats: <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Location
@@ -245,7 +265,7 @@
                             button.<p class="- topic/p p"><img class="- topic/image image" id="QSP_udploggingapi_introduction__image_y1j_bpz_vnb" src="../images/QSP_UDPloggingAPI_add_target_button.png" width="378"/></p></li>
                 <li class="- topic/li li">In the window that opens, give the target a name and select the settings that
                     best match your requirements. For more information about the available options,
-                    please see the <a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__section_zrn_3xj_xnb">Target Settings</a> section below. <p class="- topic/p p"><img class="- topic/image image" id="QSP_udploggingapi_introduction__image_qht_wpz_vnb" src="../images/QSP_UDPloggingAPI_editor_add_target_window.png" width="302"/></p></li>
+                    please see the <a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__section_zrn_3xj_xnb">Target Settings</a> section below. <p class="- topic/p p"><img class="- topic/image image" id="QSP_udploggingapi_introduction__image_p3s_2v2_qfc" src="../images/QSP_UDPloggingAPI_editor_add_target_window2.png"/></p></li>
                 <li class="- topic/li li">Click the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">OK</span> button once done. The new target will be added
                     to the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">UDP/logging targets</span> list. You can edit or delete
                     targets as needed by using the buttons under the list. </li>
@@ -288,20 +308,69 @@
                                 <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">CVS</span></td>
                             </tr>
                             <tr class="- topic/row rowsep-1">
-                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__1" rowspan="3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Trigger
-                                    mode</span></td>
-                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__2" rowspan="3">Define when updates are
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__1" rowspan="7"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Trigger
+                                        mode</span></td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__2" rowspan="7">Define when updates are
                                     triggered.</td>
                                 <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Interval</span> (i.e. at
                                     predefined intervals, in seconds)</td>
                             </tr>
                             <tr class="- topic/row">
-                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Any data update</span>
-                                    (i.e. whenever new data is available)</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">LastSeenUpdate </span>
+                                    (any new packet is received from tag)</td>
                             </tr>
                             <tr class="- topic/row rowsep-1">
-                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Location update</span>
-                                    (i.e. when new location data is available)</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">LocationUpdate</span>
+                                    (new location is available)</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">RawPositionUpdate </span>
+                                    (new raw position is available for tag)</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">SmoothPositionUpdate
+                                    </span> (new smooth position is available for tag)</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">KalmanPositionUpdate</span> (new kalman
+                                    position is available for tag)</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">ButtonDownUpdate</span> (new button down
+                                    information is available for tag)</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__1"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">On Data
+                                    Change</span></td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__2">Optional, if set output is only
+                                    produced if the value of the field specified has changed since
+                                    previous output.</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3">
+                                    <p dir="ltr" class="- topic/p p">Uses the same $(field.attribute) annotation as
+                                        Output Formats. (See ‘Output Formats’ section or Quuppa API
+                                        Documentation for /getTagData)</p>
+                                    <p dir="ltr" class="- topic/p p">Example: $(location.ts) would mean that output is
+                                        only produced if the Location estimate's timestamp is
+                                        different that of previous output.</p>
+                                </td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__1"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Max batch
+                                    size</span></td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__2">
+                                    <p dir="ltr" class="- topic/p p">Optional, applicable for 'Interval' type target. </p>
+                                    <p dir="ltr" class="- topic/p p">Defines how many tags / locators are collected into
+                                        a single message when outputting data. </p>
+                                </td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__3">
+                                    <p dir="ltr" class="- topic/p p">Default value 1.</p>
+                                    <p dir="ltr" class="- topic/p p">Example: Value set to 1000 will collect at maximum
+                                        1000 tags / locators into a single message that is sent. If
+                                        the number of tags / locators is more, multiple messages of
+                                        max 1000 tags each will be sent on the specified interval.
+                                        Note that large message size with UDP may cause the end of
+                                        the message being cut away.</p>
+                                </td>
                             </tr>
                             <tr class="- topic/row rowsep-1">
                                 <td class="- topic/entry entry colsep-1 rowsep-1" headers="QSP_udploggingapi_introduction__section_zrn_3xj_xnb__entry__1" rowspan="3"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Target</span></td>
@@ -442,7 +511,7 @@
 -->  
   
   </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
-                Generation date: 29.05.2024</div>
+                Generation date: 25.06.2025</div>
   
   
   <script type="text/javascript">
