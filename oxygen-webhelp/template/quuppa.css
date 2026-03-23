@@ -247,3 +247,8 @@ span.wintitle {
 .footer-container.mx-auto {
     margin-left: 0 !important;
 }
+
+/* Make space for note class icon */
+*[class~="topic/note"]:not([class~="hazard-d/hazardstatement"]) {
+    padding-left: 30px;
+}
