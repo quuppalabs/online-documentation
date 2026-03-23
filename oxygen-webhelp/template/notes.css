@@ -1,0 +1,97 @@
+/*
+ * Quuppa branded note styles
+ * Uses Quuppa colour palette for note backgrounds
+ */
+
+/* Base note styling */
+*[class~="topic/note"]:not([class~="hazard-d/hazardstatement"]) {
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    color: #3c3c3c;
+    font-weight: normal;
+    font-family: Arial, Arial Unicode MS, "Malgun Gothic", Batang;
+    font-size: 13.3333px;
+    padding: 15px;
+    line-height: 140%;
+    background-repeat: no-repeat;
+    background-size: 22px;
+}
+
+/* Note title on its own line */
+span.note__title {
+    display: block;
+}
+
+/* Note (default) - Quuppa Green tint */
+*[class~="topic/note"]:not([class~="hazard-d/hazardstatement"]) {
+    background-color: rgba(20, 172, 176, 0.08);
+    background-image: url('resources/images/icon_note.png');
+}
+
+/* Tip - Quuppa Blue tint */
+*[class~="topic/note"].note_tip {
+    background-color: rgba(0, 133, 202, 0.08);
+    background-image: url('resources/images/icon_tip.png');
+}
+
+/* Remember - Quuppa Yellow tint */
+*[class~="topic/note"].note_remember {
+    background-color: rgba(252, 220, 106, 0.2);
+    background-image: url('resources/images/icon_remember.png');
+}
+
+/* Important - Quuppa Yellow tint */
+*[class~="topic/note"].note_important {
+    background-color: rgba(252, 220, 106, 0.2);
+    background-image: url('resources/images/icon_important.png');
+}
+
+/* Warning - Quuppa Red tint */
+*[class~="topic/note"].note_warning {
+    background-color: rgba(255, 94, 78, 0.08);
+    background-image: url('resources/images/icon_warning.png');
+}
+
+/* Attention - Quuppa Red tint */
+*[class~="topic/note"].note_attention {
+    background-color: rgba(255, 94, 78, 0.08);
+    background-image: url('resources/images/icon_others.png');
+}
+
+/* Caution - Quuppa Yellow tint */
+*[class~="topic/note"].note_caution {
+    background-color: rgba(252, 220, 106, 0.2);
+    background-image: url('resources/images/icon_others.png');
+}
+
+/* Danger - Quuppa Red tint */
+*[class~="topic/note"].note_danger {
+    background-color: rgba(255, 94, 78, 0.08);
+    background-image: url('resources/images/icon_others.png');
+}
+
+/* Restriction - Quuppa Red tint */
+*[class~="topic/note"].note_restriction {
+    background-color: rgba(255, 94, 78, 0.08);
+    background-image: url('resources/images/icon_others.png');
+}
+
+/* Trouble / Troubleshooting - Quuppa Blue tint */
+*[class~="topic/note"].note_trouble {
+    background-color: rgba(0, 133, 202, 0.08);
+    background-image: url('resources/images/icon_troubleshooting.png');
+}
+
+/* Fastpath - Quuppa Blue tint */
+*[class~="topic/note"].note_fastpath {
+    background-color: rgba(0, 133, 202, 0.08);
+    background-image: url('resources/images/icon_others.png');
+}
+
+/* Notice - Quuppa Blue tint */
+*[class~="topic/note"].note_notice {
+    background-color: rgba(0, 133, 202, 0.08);
+    background-image: url('resources/images/icon_others.png');
+}

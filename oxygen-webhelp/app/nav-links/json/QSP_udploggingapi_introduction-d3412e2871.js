@@ -1,0 +1,1 @@
+oxy_webhelp_navlinks = {"QSP_udploggingapi_introduction-d3412e2871":{"topics":[{"title":"Location Data Filtering","href":"QSP\/topics\/QSP_udp_logging_api_filtering.html","attributes":{"data-id":"QSP_udp_logging_api_filtering"},"menu":{"hasChildren":false},"tocID":"QSP_udp_logging_api_filtering-d3412e2894","topics":[]}]}};

@@ -1,0 +1,249 @@
+/*
+ * ==============================================
+ * Quuppa-specific customizations for Webhelp v28.
+ * Ported from legacy Quuppa_skin.css.
+ * ==============================================
+ */
+
+/* Quuppa Colours Reference:
+   Purple  #958BFF
+   Blue    #0085CA
+   Green   #13ACAF
+   Yellow  #FBDC6A
+   Red     #FF5E4E
+   Light Grey #EFEFEF
+   Mid Grey   #EEEEEE
+   "Black"    #3c3c3c
+*/
+
+/* ----- CROSS-REFERENCES ---- */
+a.xref {
+    color: #3c3c3c;
+    font-weight: bold;
+    font-family: Arial, Arial Unicode MS, "Malgun Gothic", Batang;
+    font-size: 13.3333px;
+    text-decoration: underline;
+}
+a.xref:visited {
+    color: #3c3c3c;
+    font-weight: bold;
+    text-decoration: underline;
+}
+a.xref:hover {
+    color: #958BFF;
+    font-weight: bold;
+    text-decoration: underline;
+}
+a.xref:active {
+    color: #958BFF;
+    font-weight: bold;
+}
+
+/* ----- TOPIC ELEMENTS ---- */
+.shortdesc {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 13.3333px;
+    color: rgb(49, 49, 49);
+    font-weight: 100;
+    font-family: Arial, Arial Unicode MS, "Malgun Gothic", Batang;
+    font-style: italic;
+}
+
+.context {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-size: 13.3333px;
+    color: #3c3c3c;
+    font-weight: 400;
+    font-family: Arial, Arial Unicode MS, "Malgun Gothic", Batang;
+}
+
+.p {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-size: 13.3333px;
+    color: #3c3c3c;
+    font-weight: 400;
+    font-family: Arial, Arial Unicode MS, "Malgun Gothic", Batang;
+    line-height: 140%;
+}
+
+.text {
+    font-weight: 400;
+    font-family: Arial, Arial Unicode MS, "Malgun Gothic", Batang;
+    line-height: 140%;
+}
+
+.example {
+    background-color: rgba(150, 140, 255, 0.08);
+    color: #3c3c3c;
+    font-weight: normal;
+    font-family: Arial, Arial Unicode MS, "Malgun Gothic", Batang;
+    font-size: 13.3333px;
+    padding: 15px;
+    line-height: 140%;
+    border-radius: 10px;
+}
+
+/* Lists */
+.ul li, .ol li {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #3c3c3c;
+    font-size: 13.3333px;
+    font-weight: 400;
+    font-family: Arial, Arial Unicode MS, "Malgun Gothic", Batang;
+    line-height: 140%;
+}
+
+/* Definition lists */
+.dl {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    color: #3c3c3c;
+    font-size: 13.3333px;
+    font-weight: 400;
+    font-family: Arial, Arial Unicode MS, "Malgun Gothic", Batang;
+    line-height: 140%;
+}
+.dt {
+    color: #3c3c3c;
+    font-weight: 700;
+    font-family: Arial, Arial Unicode MS, "Malgun Gothic", Batang;
+    font-size: 13.3333px;
+    line-height: 140%;
+}
+.dd {
+    color: #3c3c3c;
+    font-weight: 400;
+    font-family: Arial, Arial Unicode MS, "Malgun Gothic", Batang;
+    font-size: 13.3333px;
+    line-height: 140%;
+}
+
+/* Images */
+:not(p) > .image {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* Code */
+.codeph {
+    background-color: rgb(238, 238, 238);
+    font-weight: normal;
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+.code {
+    color: black;
+}
+
+/* Tables */
+.simpletable td, .simpletable {
+    color: #3c3c3c;
+    font-family: Arial, Arial Unicode MS, "Malgun Gothic", Batang;
+    font-size: 13.3333px;
+}
+
+.tablecap {
+    color: #3c3c3c;
+    font-weight: bold;
+    font-family: Arial, Arial Unicode MS, "Malgun Gothic", Batang;
+    font-size: 13.3333px;
+    text-align: left;
+    line-height: 140%;
+}
+
+th.entry {
+    background-color: rgb(241, 241, 241);
+}
+
+/* UI controls */
+span.uicontrol {
+    color: rgb(50, 50, 50);
+    font-weight: 700;
+    font-family: Arial, Arial Unicode MS, "Malgun Gothic", Batang;
+    font-size: 13.3333px;
+    line-height: 140%;
+}
+span.wintitle {
+    color: rgb(50, 50, 50);
+    font-weight: 600;
+    font-family: Arial, Arial Unicode MS, "Malgun Gothic", Batang;
+    font-size: 13.3333px;
+    line-height: 140%;
+}
+
+/* ----- NAVIGATION BUTTONS ---- */
+#topic_navigation_links {
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.webhelp_expand_collapse_sections {
+    font-size: 13.3333px;
+    color: rgb(123, 122, 122);
+    margin-top: 5px;
+}
+.wh_print_link button {
+    font-size: 13.3333px;
+    color: rgb(123, 122, 122);
+    margin-top: 5px;
+}
+
+/* Previous/Next navigation buttons - Quuppa purple pill style */
+.glyphicon-arrow-left:before, .oxy-icon-arrow-left:before {
+    content: "? Previous";
+    font-family: Arial, Arial Unicode MS, "Malgun Gothic", Batang;
+    font-size: 13.3333px;
+    padding: 5px 10px;
+    background-color: #958BFF;
+    border-radius: 50px;
+    color: white;
+}
+
+.glyphicon-arrow-right:before, .oxy-icon-arrow-right:before {
+    content: "Next ?";
+    font-family: Arial, Arial Unicode MS, "Malgun Gothic", Batang;
+    font-size: 13.3333px;
+    padding: 5px 10px;
+    background-color: #958BFF;
+    border-radius: 50px;
+    color: white;
+}
+
+.webhelp_expand_collapse_sections[data-next-state='collapsed']:after {
+    color: rgb(123, 122, 122);
+}
+
+.webhelp_expand_collapse_sections[data-next-state='expanded']:after {
+    color: rgb(123, 122, 122);
+}
+
+/* ----- TOPIC TITLE 2 (subtopics) ---- */
+.title.topictitle2 {
+    background-color: rgb(241, 241, 241);
+    font-weight: 700;
+    padding: 6px 6px 6px 10px;
+    font-size: 15px;
+    color: rgb(51, 51, 51);
+    font-family: Arial, Arial Unicode MS, "Malgun Gothic", Batang;
+    line-height: 1em;
+}
+
+/* Page container for sticky footer */
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 8rem;
+}
+
+.footer-container.mx-auto {
+    margin-left: 0 !important;
+}
