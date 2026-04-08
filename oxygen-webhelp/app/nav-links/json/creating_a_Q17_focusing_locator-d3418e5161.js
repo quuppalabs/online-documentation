@@ -1,0 +1,1 @@
+oxy_webhelp_navlinks = {"creating_a_Q17_focusing_locator-d3418e5161":{"topics":[{"title":"Reset to Factory Settings","href":"Q17\/topics\/q17_ig_reset_to_factory_settings.html","attributes":{"data-id":"q17_ig_reset_to_factory_settings"},"menu":{"hasChildren":false},"tocID":"q17_ig_reset_to_factory_settings-d3418e5184","topics":[]}]}};

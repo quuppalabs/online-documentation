@@ -230,6 +230,8 @@
                path="QSP/topics/QSP_tags_manage_tag_IDs.html"/>
    <appContext helpID="QSP_udploggingapi_introduction"
                path="QSP/topics/QSP_udp_logging_api.html"/>
+   <appContext helpID="QSP_udp_logging_api_createoutputtargets"
+               path="QSP/topics/QSP_udp_logging_api_createoutputtargets.html"/>
    <appContext helpID="QSP_udp_logging_api_filtering"
                path="QSP/topics/QSP_udp_logging_api_filtering.html"/>
    <appContext helpID="QSP_issues" path="QSP/topics/QSP_issues.html"/>
