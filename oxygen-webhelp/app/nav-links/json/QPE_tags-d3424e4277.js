@@ -1,0 +1,1 @@
+oxy_webhelp_navlinks = {"QPE_tags-d3424e4277":{"topics":[{"title":"Tags Details Table Definitions","href":"QPE\/topics\/QPE_tags_definitions.html","attributes":{"data-id":"QPE_tags_definitions"},"menu":{"hasChildren":false},"tocID":"QPE_tags_definitions-d3424e4300","topics":[]}]}};
