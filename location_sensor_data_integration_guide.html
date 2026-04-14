@@ -1,0 +1,663 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="28.0">
+    <head><link rel="shortcut icon" href="favicon.ico?buildId=20260410144844"/><link rel="icon" href="favicon.ico?buildId=20260410144844"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Integrating with the Quuppa system allows for the transfer of real-time location and sensor data to your application. This guide describes the standard methods for establishing data pipelines from the ..."/><meta name="DC.rights.owner" content="(C) Copyright 2026"/><meta name="copyright" content="(C) Copyright 2026"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="location_sensor_data_integration_guide"/><title>Location &amp; Sensor Data Integration Guide</title><!--  Generated with Oxygen version 28.0, build number 2026013010.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content=""/><meta name="wh-source-relpath" content="location_sensor_data_integration_guide.dita"/><meta name="wh-out-relpath" content="location_sensor_data_integration_guide.html"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/bootstrap.css?buildId=2026013010"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/jquery-ui.css?buildId=2026013010"/>
+        
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic.css?buildId=2026013010"/>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen-theme.css?buildId=20260410144844"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen.css?buildId=20260410144844"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=20260410144844"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/quuppa.css?buildId=20260410144844"/>
+    <script src="./oxygen-webhelp/app/options/properties.js?buildId=20260410144844"></script>
+    <script src="./oxygen-webhelp/app/themes.js?buildId=20260410144844"></script>
+    <script src="./oxygen-webhelp/app/localization/strings.js?buildId=2026013010"></script>
+    <script src="./oxygen-webhelp/app/search/index/keywords.js?buildId=20260410144844"></script>
+    
+    <script defer="defer" src="./oxygen-webhelp/app/jquery.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/jquery-ui.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/jquery-bootpag.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/jquery-highlight.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/popperjs-core.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/bootstrap.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/dompurify.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/image-map.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/maphilight.js?buildId=2026013010"></script>
+
+    <script defer="defer" src="./oxygen-webhelp/app/topic.js?buildId=2026013010"></script>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L77KR66W6P"></script>
+    <script><!--
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-L77KR66W6P');
+    
+--></script>    
+
+</head>
+
+    <body id="location_sensor_data_integration_guide" class="wh_topic_page frmBody">
+        <a class="visually-hidden-focusable" id="wh_jump_to_content" href="#wh_topic_body">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid navbar-expand-md">
+        <div class="wh_header_flex_container navbar-nav navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="https://quuppa.com/" class=" wh_logo d-none d-sm-block "><img src="https://www.quuppa.com/documentation/oxygen-webhelp/template/resources/images/QUUPPA_1row_black_LOW_small.png?buildId=20260410144844" alt=""/></a>
+                    <div class=" wh_publication_title "></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid navbar-expand-md" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_full_width_link" data-next-state="expanded" aria-label="Maximize to full width" title="Maximize to full width"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-xxl-10 col-lg-10 col-md-10 col-sm-10 col-xs-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article class="- topic/topic topic" role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Location &amp; Sensor Data Integration Guide</h1>
+    <div class="- topic/body body">
+        <p dir="ltr" class="- topic/p p">Integrating with the Quuppa system allows for the transfer of real-time
+            location and sensor data to your application. This guide describes the standard methods
+            for establishing data pipelines from the <strong class="+ topic/ph hi-d/b ph b">Quuppa Positioning Engine (QPE)</strong>.</p>
+        <section class="- topic/section section" id="location_sensor_data_integration_guide__section_ugv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__section_ugv_rbm_w3c"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">1. Start by simulating</strong></h2>
+            
+            <p dir="ltr" class="- topic/p p">When beginning your integration, use the <strong class="+ topic/ph hi-d/b ph b">Quuppa Software Suite</strong> to
+                model your environment and data flow.</p>
+            <div dir="ltr" class="- topic/p p">
+                <div class="- topic/note note important note_important" id="location_sensor_data_integration_guide__note_b2w_dcm_w3c" data-ofbid="location_sensor_data_integration_guide__note_b2w_dcm_w3c"><span class="note__title">Important:</span> <div class="note__body">Always simulate your expected use cases
+                    before starting the technical implementation to ensure your data pipeline meets
+                    your operational requirements.</div></div>
+            </div>
+            <p dir="ltr" class="- topic/p p">The <strong class="+ topic/ph hi-d/b ph b">Quuppa Site Planner (QSP)</strong> tool allows you to create simulation
+                paths that mimic the expected behaviour of <strong class="+ topic/ph hi-d/b ph b">tags</strong> on-site. You can run these
+                paths on the <strong class="+ topic/ph hi-d/b ph b">Quuppa Positioning Engine</strong> to: </p>
+            <ul class="- topic/ul ul" id="location_sensor_data_integration_guide__ul_vgv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__ul_vgv_rbm_w3c">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Validate your application logic</strong> by testing your software
+                        with deterministic data.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Optimise your application logic</strong> to refine how your software
+                        processes location data.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Optimise your data traffic</strong> and delivery pipeline
+                        performance.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Perform load testing</strong> on your Positioning Engine server, data
+                        pipeline and other infrastructure related to data delivery.</p>
+                </li>
+            </ul>
+            <p dir="ltr" class="- topic/p p">You can run the simulation on top of an existing site plan to get a
+                realistic experience, or you can create a sandbox environment to assist the
+                development process.</p>
+        </section>
+        <section class="- topic/section section" id="location_sensor_data_integration_guide__section_wgv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__section_wgv_rbm_w3c"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">2. Push data to your application or data platform</strong></h2>
+            
+            <p dir="ltr" class="- topic/p p">The recommended integration approach for location and sensor data is to
+                push it to your application or data platform. This method provides several
+                advantages over polling:</p>
+            <ul class="- topic/ul ul" id="location_sensor_data_integration_guide__ul_xgv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__ul_xgv_rbm_w3c">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Efficient data delivery: data is delivered only when meaningful
+                        changes occur.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Stream filtering: you can pre-filter the stream using specific
+                        criteria.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Predictable delivery: you can deliver data at defined intervals and
+                        batch sizes.</p>
+                </li>
+            </ul>
+        </section>
+        <section class="- topic/section section" id="location_sensor_data_integration_guide__section_ygv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__section_ygv_rbm_w3c"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">3. Setting up your data stream (Output Target)</strong></h2>
+            
+            <p dir="ltr" class="- topic/p p">To deliver data from the Quuppa Positioning Engine (QPE) to your
+                application, you must configure an <strong class="+ topic/ph hi-d/b ph b">Output Target</strong>. The Output Target defines
+                the destination, the format, and the specific conditions that trigger a data
+                transmission. By optimising these settings, you ensure that your application
+                receives only the necessary data, which reduces network load and processing
+                requirements. </p>
+            <p dir="ltr" class="- topic/p p">You can define your data flow by following a three-step process to build
+                your integration pipeline:</p>
+            <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Step 1</strong>: <a class="- topic/xref xref" href="#location_sensor_data_integration_guide__create_data_template">Create a data template
+                    (Output Format)</a>.</p>
+            <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Step 2</strong>: <a class="- topic/xref xref" href="#location_sensor_data_integration_guide__define_logic_rules">Define the logic rules
+                    for data collection (Output Target)</a>.</p>
+            <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Step 3</strong>: <a class="- topic/xref xref" href="#location_sensor_data_integration_guide__establish_delivery_pipe">Establish the
+                    delivery pipe for the data stream (Destination and Frequency)</a>.</p>
+        </section>
+        <section class="- topic/section section" id="location_sensor_data_integration_guide__create_data_template" data-ofbid="location_sensor_data_integration_guide__create_data_template"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">3.1 Define what RTLS information you want to receive in your use cases</strong></h2>
+            
+            <p dir="ltr" class="- topic/p p">The first step is to create an <strong class="+ topic/ph hi-d/b ph b">Output Format</strong>, which acts as the
+                template for the data your application will receive. To identify these requirements,
+                consider the following question:</p>
+            <p dir="ltr" class="- topic/p p"><em class="+ topic/ph hi-d/i ph i">What information do you need for your application?</em></p>
+            <ul class="- topic/ul ul" id="location_sensor_data_integration_guide__ul_ahv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__ul_ahv_rbm_w3c">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Typical message types</strong> (see <strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="#location_sensor_data_integration_guide__examples_creating_output_streams">Examples</a></strong>
+                        section for detailed instructions):</p>
+                    <ul class="- topic/ul ul" id="location_sensor_data_integration_guide__ul_bhv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__ul_bhv_rbm_w3c">
+                        <li dir="ltr" class="- topic/li li">
+                            <p dir="ltr" class="- topic/p p">Location Update Event</p>
+                        </li>
+                        <li dir="ltr" class="- topic/li li">
+                            <p dir="ltr" class="- topic/p p">Zone Change Event</p>
+                        </li>
+                        <li dir="ltr" class="- topic/li li">
+                            <p dir="ltr" class="- topic/p p">Button Event</p>
+                        </li>
+                        <li dir="ltr" class="- topic/li li">
+                            <p dir="ltr" class="- topic/p p">Movement Event</p>
+                        </li>
+                    </ul>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Apply transformations</strong> if needed for your own
+                        application:</p>
+                    <ul class="- topic/ul ul" id="location_sensor_data_integration_guide__ul_chv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__ul_chv_rbm_w3c">
+                        <li dir="ltr" class="- topic/li li">
+                            <p dir="ltr" class="- topic/p p">Date format: Unix or ISO Date</p>
+                        </li>
+                        <li dir="ltr" class="- topic/li li">
+                            <p dir="ltr" class="- topic/p p">Measurement rounding: number of decimals</p>
+                        </li>
+                        <li dir="ltr" class="- topic/li li">
+                            <p dir="ltr" class="- topic/p p">Coordinate types: local or georeferenced</p>
+                        </li>
+                        <li dir="ltr" class="- topic/li li">
+                            <p dir="ltr" class="- topic/p p">Custom keys: map JSON object keys to your own
+                                terminology</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <p dir="ltr" class="- topic/p p">(Create<strong class="+ topic/ph hi-d/b ph b"> Output Format</strong> and set<strong class="+ topic/ph hi-d/b ph b"> Transformations</strong> if
+                needed)[Link
+                to online documentation section for these]</p>
+        </section>
+        <section class="- topic/section section" id="location_sensor_data_integration_guide__define_logic_rules" data-ofbid="location_sensor_data_integration_guide__define_logic_rules"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">3.2 Define in which cases you want the data to be collected </strong></h2>
+            
+            <p dir="ltr" class="- topic/p p">Next, configure an <strong class="+ topic/ph hi-d/b ph b">Output Target</strong> to establish the specific logic
+                rules and filters for your data stream. Frame your requirements by answering this
+                question:</p>
+            <p dir="ltr" class="- topic/p p"><em class="+ topic/ph hi-d/i ph i">In what kinds of situations do you want to collect/receive this
+                    data?</em></p>
+            <ul class="- topic/ul ul" id="location_sensor_data_integration_guide__ul_ehv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__ul_ehv_rbm_w3c">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Typical stream types (pre-configured examples):</strong></p>
+                    <ul class="- topic/ul ul" id="location_sensor_data_integration_guide__ul_fhv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__ul_fhv_rbm_w3c">
+                        <li dir="ltr" class="- topic/li li">
+                            <p dir="ltr" class="- topic/p p">Location update event</p>
+                        </li>
+                        <li dir="ltr" class="- topic/li li">
+                            <p dir="ltr" class="- topic/p p">Zone change events</p>
+                        </li>
+                        <li dir="ltr" class="- topic/li li">
+                            <p dir="ltr" class="- topic/p p">Button press/release events</p>
+                        </li>
+                        <li dir="ltr" class="- topic/li li">
+                            <p dir="ltr" class="- topic/p p">Movement start/stop events</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <p dir="ltr" class="- topic/p p">(Create <strong class="+ topic/ph hi-d/b ph b">Output Target</strong>, set<strong class="+ topic/ph hi-d/b ph b"> Trigger Mode</strong>,<strong class="+ topic/ph hi-d/b ph b"> On Data Change
+                    </strong>and<strong class="+ topic/ph hi-d/b ph b"> Filter</strong>
+                parameters)[Link
+                to online documentation section for these]</p>
+        </section>
+        <section class="- topic/section section" id="location_sensor_data_integration_guide__establish_delivery_pipe" data-ofbid="location_sensor_data_integration_guide__establish_delivery_pipe"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">3.3 Define how often and where you expect to receive the data </strong></h2>
+            
+            <p dir="ltr" class="- topic/p p">Finally, define the delivery parameters to determine where and how often
+                the <strong class="+ topic/ph hi-d/b ph b">Positioning Engine</strong> pushes the data. To decide on the best approach,
+                consider the following question:</p>
+            <p dir="ltr" class="- topic/p p"><em class="+ topic/ph hi-d/i ph i">Do you want to consume the data immediately or store it for later
+                    use?</em></p>
+            <p dir="ltr" class="- topic/p p">Typically, there are two options:</p>
+            <ul class="- topic/ul ul" id="location_sensor_data_integration_guide__ul_hhv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__ul_hhv_rbm_w3c">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Receive immediately</strong>: low-latency interaction for
+                        event-driven applications or map views updating in real-time.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Collect data and receive later</strong>: collecting for later use in
+                        analytics applications, reporting tools, or data lakes.</p>
+                </li>
+            </ul>
+            <p dir="ltr" class="- topic/p p">Choose the destination and the method, such as <strong class="+ topic/ph hi-d/b ph b">MQTT</strong> or <strong class="+ topic/ph hi-d/b ph b">UDP</strong>,
+                to push the data. For testing purposes, you can also push the stream to a local
+                    <strong class="+ topic/ph hi-d/b ph b">File</strong> to easily verify what content it produces. </p>
+            <p dir="ltr" class="- topic/p p">[Link
+                to online documentation section for these]</p>
+            <p dir="ltr" class="- topic/p p">(Set<strong class="+ topic/ph hi-d/b ph b"> Max Batch Size</strong> and<strong class="+ topic/ph hi-d/b ph b"> Send Interval</strong> parameters for your
+                output target)
+                [Link
+                to online documentation section for these]</p>
+        </section>
+        <section class="- topic/section section" id="location_sensor_data_integration_guide__examples_creating_output_streams" data-ofbid="location_sensor_data_integration_guide__examples_creating_output_streams"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">4. Examples for creating different types of output streams</strong></h2>
+            
+            <p dir="ltr" class="- topic/p p">The following examples demonstrate how to configure typical location or
+                sensor-based event streams.</p>
+        </section>
+        <section class="- topic/section section" id="location_sensor_data_integration_guide__section_jhv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__section_jhv_rbm_w3c"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">4.1 Location Update Events</strong></h2>
+            
+            <p dir="ltr" class="- topic/p p">In this example, we configure a message format and a stream that:</p>
+            <ul class="- topic/ul ul" id="location_sensor_data_integration_guide__ul_khv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__ul_khv_rbm_w3c">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Collects an event on a 1-second interval.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Triggers only IF the coordinate of a tag changes.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Passes collected events to the stream either immediately (Option 1)
+                        or in batches (Option 2).</p>
+                </li>
+            </ul>
+        </section>
+        <section class="- topic/section section" id="location_sensor_data_integration_guide__section_lhv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__section_lhv_rbm_w3c"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Step 1: Create Output Format for Location Update Event (The Template)</strong></h2>
+            
+            <p dir="ltr" class="- topic/p p">Name the format <strong class="+ topic/ph hi-d/b ph b">LocationUpdateMessage</strong> and choose the relevant fields
+                using the <strong class="+ topic/ph hi-d/b ph b">Quuppa Output Format Syntax</strong>:</p>
+            <ul class="- topic/ul ul" id="location_sensor_data_integration_guide__ul_mhv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__ul_mhv_rbm_w3c">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">$(version.1)</code>: API format version (every format
+                        must start with version information).</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">$(location.ts.iso)</code>: timestamp of the coordinate
+                        change.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">$(tag.id)</code>: ID of the tag.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">$(tag.name)</code>: name of the tag.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">$(coordinateSystem.id)</code>: ID of the coordinate
+                        system (Building or Floor).</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">$(coordinateSystem.name):</code> name of the coordinate
+                        system (Building or Floor).</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">$(location.;.2)</code>: new location coordinate for the
+                        tag, as an [x;y;z] list, where the separator character is a semicolon (;)
+                        and results are provided with two decimals.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">$(output.ts.iso):</code> timestamp of when the message
+                        was collected.</p>
+                </li>
+            </ul>
+            <div dir="ltr" class="- topic/p p">
+                <div class="- topic/note note note note_note"><span class="note__title">Note:</span> <div class="note__body">In this example, we apply an <var class="+ topic/keyword sw-d/varname keyword varname">.iso</var> transformation for all
+                    timestamps to provide them in ISO 8601 format (e.g.,
+                        <samp class="+ topic/ph sw-d/systemoutput ph systemoutput sysout">2025-12-09T12:22:26.459Z</samp>) instead of Unix
+                    format (<samp class="+ topic/ph sw-d/systemoutput ph systemoutput sysout">1765282754376</samp>)</div></div>
+            </div>
+            <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Example of full format definition:</strong></p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>$(version.1),$(location.ts),$(tag.id),$(tag.name),$(coordinateSystem.id),$(coordinateSystem.name),$(location.;.2),$(output.ts)</code></pre>
+            <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Message outputted to stream in JSON format:</strong></p>
+            <pre class="+ topic/pre sw-d/msgblock pre msgblock">{
+ "locationTS": "2025-12-09T12:22:26.459Z",
+ "tagId": "012345678901",
+ "tagName": "TestName",
+ "coordinateSystemName": "CoordSysName",
+ "coordinateSystemId": "CoordSys001",
+ "location": "location": [ 0.50, 2.50, 1.20],
+ "outputTS": "2025-12-09T12:22:26.554Z"
+}</pre>
+        </section>
+        <section class="- topic/section section" id="location_sensor_data_integration_guide__section_nhv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__section_nhv_rbm_w3c"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Step 2: Create Output Target for Location Update Event (The Logic Rules)</strong></h2>
+            
+            <p dir="ltr" class="- topic/p p">Name the target <strong class="+ topic/ph hi-d/b ph b">LocationUpdateEvent</strong>. In the <strong class="+ topic/ph hi-d/b ph b">Notes</strong> section,
+                you can describe the behaviour of the target. Select <strong class="+ topic/ph hi-d/b ph b">LocationUpdateMessage</strong> as
+                the format for the target and set the type to <strong class="+ topic/ph hi-d/b ph b">JSON</strong>.</p>
+            <ul class="- topic/ul ul" id="location_sensor_data_integration_guide__ul_ohv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__ul_ohv_rbm_w3c">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Trigger Mode:</strong> defines the frequency with which the data
+                        stream is checked for changes. Choose <strong class="+ topic/ph hi-d/b ph b">Interval</strong> and set the rate to<strong class="+ topic/ph hi-d/b ph b">
+                            1 second</strong>. The system checks the stream every 1 second.</p>
+                </li>
+            </ul>
+            <ul class="- topic/ul ul" id="location_sensor_data_integration_guide__ul_phv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__ul_phv_rbm_w3c">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">On Data Change:</strong> defines which specific changes are
+                        monitored. Set <strong class="+ topic/ph hi-d/b ph b">$(location)</strong> as the value so the system checks if the
+                        location coordinate has changed since the previous 1-second interval
+                        check.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Filter by:</strong> choose <strong class="+ topic/ph hi-d/b ph b">RadiusBelow2m</strong>. The system will
+                        filter out any location updates where the accuracy radius is bigger than 2
+                        metres.</p>
+                </li>
+            </ul>
+        </section>
+        <section class="- topic/section section" id="location_sensor_data_integration_guide__section_qhv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__section_qhv_rbm_w3c"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Step 3: Define the delivery parameters (The Pipe) </strong></h2>
+            
+            <p dir="ltr" class="- topic/p p">Configure the receiving parameters for the target based on your application
+                needs:</p>
+            <ul class="- topic/ul ul" id="location_sensor_data_integration_guide__ul_rhv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__ul_rhv_rbm_w3c">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Option 1 (Receive Immediately): </strong>set <strong class="+ topic/ph hi-d/b ph b">Max Batch Size</strong> to
+                            <strong class="+ topic/ph hi-d/b ph b">1 </strong>(default) and <strong class="+ topic/ph hi-d/b ph b">Send Interval </strong>to <strong class="+ topic/ph hi-d/b ph b">-1 </strong>(default). The
+                        system will produce a separate message to the stream for each tag. The
+                        message is sent immediately when the event occurs.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Option 2 (Collect and receive later)</strong>: Set <strong class="+ topic/ph hi-d/b ph b">Max Batch
+                            Size</strong> to <strong class="+ topic/ph hi-d/b ph b">100</strong> and <strong class="+ topic/ph hi-d/b ph b">Max Send Interval </strong>to <strong class="+ topic/ph hi-d/b ph b">60
+                        </strong>seconds. The system will collect up to 100 events to be sent to the
+                        stream in a single message. The batched message is sent when the message
+                        size reaches 100 events OR when 60 seconds have elapsed since the previous
+                        send.</p>
+                </li>
+            </ul>
+            <p dir="ltr" class="- topic/p p">Select <strong class="+ topic/ph hi-d/b ph b">File</strong> as the target destination and save. You can test this
+                stream by running a simulation or using a live deployment. The stream will write
+                results to a File in the defined folder.</p>
+            <p dir="ltr" class="- topic/p p">Summary of the created target:</p>
+            <ul class="- topic/ul ul" id="location_sensor_data_integration_guide__ul_shv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__ul_shv_rbm_w3c">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Collects location coordinate changes on a 1-second granularity.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Filters out results where the accuracy is not below a 2m
+                        radius.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Sends the results into a stream immediately (Option 1) or in
+                        batches of 100 events every 60 seconds (Option 2).</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Stores the stream in a file.</p>
+                </li>
+            </ul>
+        </section>
+        <section class="- topic/section section" id="location_sensor_data_integration_guide__section_thv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__section_thv_rbm_w3c"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">4.2 Zone Change Events</strong></h2>
+            
+            <p dir="ltr" class="- topic/p p">In this example, we configure a message format and a stream that collects
+                an event whenever a tag moves from one zone to another.</p>
+            <p dir="ltr" class="- topic/p p">This configuration:</p>
+            <ul class="- topic/ul ul" id="location_sensor_data_integration_guide__ul_uhv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__ul_uhv_rbm_w3c">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Collects an event on any new location update.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Triggers only IF the zone of a tag changes (tag enters or exits a
+                        zone or geofence).</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Passes collected events to the stream either immediately (Option 1)
+                        or in batches (Option 2).</p>
+                </li>
+            </ul>
+        </section>
+        <section class="- topic/section section" id="location_sensor_data_integration_guide__section_vhv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__section_vhv_rbm_w3c"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Step 1: Create the Output Format for Zone Change Event (The Template)</strong></h2>
+            
+            <p dir="ltr" class="- topic/p p">Name the format <strong class="+ topic/ph hi-d/b ph b">ZoneChangeMessage</strong>. Use the following syntax to
+                capture zone transition data:</p>
+            <p dir="ltr" class="- topic/p p">Choose the relevant fields for the use case, using the Quuppa Output Format
+                Syntax:</p>
+            <ul class="- topic/ul ul" id="location_sensor_data_integration_guide__ul_whv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__ul_whv_rbm_w3c">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">$(version.1)</code>: API format version (every format
+                        must start with version information).</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">$(lastPosition.zonePreviousTransitionTS)</code>:
+                        timestamp of the zone change.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">$(tag.id)</code>: ID of the tag.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">$(tag.name)</code>: name of the tag.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">$(lastPosition.zoneIds.;)</code>: new (current) zone ID
+                        for the tag.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">$(lastPosition.zoneNames.;)</code>: new (current) zone
+                        name for the tag.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">$(lastPosition.zonePreviousTransitionFromIds)</code>:
+                        previous zone ID for the tag.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">$(lastPosition.zonePreviousTransitionFromNames)</code>:
+                        previous zone names for the tag.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">$(lastPosition.zonePreviousStateDuration)</code>:
+                        duration spent in previous zone.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">$(coordinateSystem.id)</code>: ID of the coordinate
+                        system (Building or Floor).</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">$(coordinateSystem.name)</code>: name of the coordinate
+                        system (Building or Floor).</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">$(output.ts)</code>: timestamp of when the message was
+                        collected to stream.</p>
+                </li>
+            </ul>
+            <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Example of full format definition:</strong></p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>$(version.1)$(lastPosition.zonePreviousTransitionTS),$(tag.id),$(tag.name),$(lastPosition.zoneIds.;),$(lastPosition.zoneNames.;),$(lastPosition.zonePreviousTransitionFromNames),$(lastPosition.zonePreviousTransitionFromIds),$(lastPosition.zonePreviousStateDuration),$(coordinateSystem.id),$(coordinateSystem.name),$(output.ts)</code></pre>
+            <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Message output to stream in JSON format:</strong></p>
+            <pre class="+ topic/pre sw-d/msgblock pre msgblock">{
+ "lastPositionZonePreviousTransitionTS": null,
+ "tagId": "012345678901",
+ "tagName": "TestName",
+ "lastPositionZoneIds": null,
+ "lastPositionZoneNames": null,
+ "lastPositionZonePreviousTransitionFromIds": null,
+ "lastPositionZonePreviousTransitionFromNames": null,
+ "lastPositionZonePreviousStateDuration": null,
+ "coordinateSystemId": "CoordSys001",
+ "coordinateSystemName": "CoordSysName",
+ "outputTS": 1765281491569
+}</pre>
+        </section>
+        <section class="- topic/section section" id="location_sensor_data_integration_guide__section_xhv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__section_xhv_rbm_w3c"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Step 2: Create the Output Target for Zone Change Event (The Logic Rules)</strong></h2>
+            
+            <p dir="ltr" class="- topic/p p">Name the target <strong class="+ topic/ph hi-d/b ph b">Zone Change Event</strong>. In the <strong class="+ topic/ph hi-d/b ph b">Notes</strong> section, you
+                can describe the behaviour of the target. Select <strong class="+ topic/ph hi-d/b ph b">ZoneChangeMessage</strong> as the
+                format for the target and set the type as <strong class="+ topic/ph hi-d/b ph b">JSON</strong>.</p>
+            <ul class="- topic/ul ul" id="location_sensor_data_integration_guide__ul_yhv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__ul_yhv_rbm_w3c">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Trigger Mode:</strong>defines the frequency with which the data
+                        stream is checked for new changes. Choose <strong class="+ topic/ph hi-d/b ph b">LocationUpdate</strong>. The system
+                        will now check the raw stream every time a new location is calculated.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">On Data Change:</strong>defines what changes are being listened to
+                        from the raw stream. Set <strong class="+ topic/ph hi-d/b ph b"><code class="+ topic/ph pr-d/codeph ph codeph">$(location.zoneNames)</code></strong>as the
+                        value. The system will now check if the zone has changed since the previous
+                        check.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Filter by:</strong>selection is not needed for this use case.</p>
+                </li>
+            </ul>
+        </section>
+        <section class="- topic/section section" id="location_sensor_data_integration_guide__section_zhv_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__section_zhv_rbm_w3c"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Step 3: Configure the receiving parameters for the target</strong></h2>
+            
+            <p dir="ltr" class="- topic/p p">Configure the delivery method for your zone change data based on your
+                application needs:</p>
+            <ul class="- topic/ul ul" id="location_sensor_data_integration_guide__ul_a3v_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__ul_a3v_rbm_w3c">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Option 1</strong> (Receive Immediately): set <strong class="+ topic/ph hi-d/b ph b">Max Batch Size</strong> to
+                            <strong class="+ topic/ph hi-d/b ph b">1 </strong>(default) and <strong class="+ topic/ph hi-d/b ph b">Send Interval </strong>to <strong class="+ topic/ph hi-d/b ph b">-1 </strong>(default). The
+                        system will produce a separate message to the stream for each tag, which is
+                        sent immediately when the event occurs.</p>
+                </li>
+            </ul>
+            <ul class="- topic/ul ul" id="location_sensor_data_integration_guide__ul_b3v_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__ul_b3v_rbm_w3c">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Option 2</strong> (Collect and Receive Later): set <strong class="+ topic/ph hi-d/b ph b">Max Batch
+                            Size</strong> to <strong class="+ topic/ph hi-d/b ph b">100 </strong>and <strong class="+ topic/ph hi-d/b ph b">Send Interval </strong>to <strong class="+ topic/ph hi-d/b ph b">60 </strong>seconds.
+                        The system will collect up to 100 events to be sent in a single message when
+                        the size limit OR the 60-second time limit is reached.</p>
+                </li>
+            </ul>
+            <p dir="ltr" class="- topic/p p">Select <strong class="+ topic/ph hi-d/b ph b">File</strong> as the target destination and save. You can test the
+                stream by running a simulation or using it on a live deployment. The stream will
+                write results to a File in the defined folder.</p>
+            <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Summary of the created target:</strong></p>
+            <ul class="- topic/ul ul" id="location_sensor_data_integration_guide__ul_c3v_rbm_w3c" data-ofbid="location_sensor_data_integration_guide__ul_c3v_rbm_w3c">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Data collection:</strong> monitors for zone transitions whenever a
+                        new location is calculated.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Trigger logic:</strong> only records an event when the tag enters or
+                        exits a zone.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Immediate delivery (Option 1):</strong> sends a separate message for
+                        each tag as soon as the event occurs.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Batched delivery (Option 2): </strong>sends up to 100 events in a
+                        single message OR every 60 seconds.</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Storage:</strong> the output is saved directly to a file.</p>
+                </li>
+            </ul>
+        </section>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-xxl-2 col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+              	                <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+		                            <span class="close-toc-icon-container">
+		                                <span class="close-toc-icon"></span>     
+		                            </span>
+		                        </button>
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="section-item"><div class="section-title"><a href="#location_sensor_data_integration_guide__section_ugv_rbm_w3c" data-tocid="location_sensor_data_integration_guide__section_ugv_rbm_w3c"><strong class="+ topic/ph hi-d/b ph b">1. Start by simulating</strong></a></div></li><li class="section-item"><div class="section-title"><a href="#location_sensor_data_integration_guide__section_wgv_rbm_w3c" data-tocid="location_sensor_data_integration_guide__section_wgv_rbm_w3c"><strong class="+ topic/ph hi-d/b ph b">2. Push data to your application or data platform</strong></a></div></li><li class="section-item"><div class="section-title"><a href="#location_sensor_data_integration_guide__section_ygv_rbm_w3c" data-tocid="location_sensor_data_integration_guide__section_ygv_rbm_w3c"><strong class="+ topic/ph hi-d/b ph b">3. Setting up your data stream (Output Target)</strong></a></div></li><li class="section-item"><div class="section-title"><a href="#location_sensor_data_integration_guide__create_data_template" data-tocid="location_sensor_data_integration_guide__create_data_template"><strong class="+ topic/ph hi-d/b ph b">3.1 Define what RTLS information you want to receive in your use cases</strong></a></div></li><li class="section-item"><div class="section-title"><a href="#location_sensor_data_integration_guide__define_logic_rules" data-tocid="location_sensor_data_integration_guide__define_logic_rules"><strong class="+ topic/ph hi-d/b ph b">3.2 Define in which cases you want the data to be collected </strong></a></div></li><li class="section-item"><div class="section-title"><a href="#location_sensor_data_integration_guide__establish_delivery_pipe" data-tocid="location_sensor_data_integration_guide__establish_delivery_pipe"><strong class="+ topic/ph hi-d/b ph b">3.3 Define how often and where you expect to receive the data </strong></a></div></li><li class="section-item"><div class="section-title"><a href="#location_sensor_data_integration_guide__examples_creating_output_streams" data-tocid="location_sensor_data_integration_guide__examples_creating_output_streams"><strong class="+ topic/ph hi-d/b ph b">4. Examples for creating different types of output streams</strong></a></div></li><li class="section-item"><div class="section-title"><a href="#location_sensor_data_integration_guide__section_jhv_rbm_w3c" data-tocid="location_sensor_data_integration_guide__section_jhv_rbm_w3c"><strong class="+ topic/ph hi-d/b ph b">4.1 Location Update Events</strong></a></div></li><li class="section-item"><div class="section-title"><a href="#location_sensor_data_integration_guide__section_lhv_rbm_w3c" data-tocid="location_sensor_data_integration_guide__section_lhv_rbm_w3c"><strong class="+ topic/ph hi-d/b ph b">Step 1: Create Output Format for Location Update Event (The Template)</strong></a></div></li><li class="section-item"><div class="section-title"><a href="#location_sensor_data_integration_guide__section_nhv_rbm_w3c" data-tocid="location_sensor_data_integration_guide__section_nhv_rbm_w3c"><strong class="+ topic/ph hi-d/b ph b">Step 2: Create Output Target for Location Update Event (The Logic Rules)</strong></a></div></li><li class="section-item"><div class="section-title"><a href="#location_sensor_data_integration_guide__section_qhv_rbm_w3c" data-tocid="location_sensor_data_integration_guide__section_qhv_rbm_w3c"><strong class="+ topic/ph hi-d/b ph b">Step 3: Define the delivery parameters (The Pipe) </strong></a></div></li><li class="section-item"><div class="section-title"><a href="#location_sensor_data_integration_guide__section_thv_rbm_w3c" data-tocid="location_sensor_data_integration_guide__section_thv_rbm_w3c"><strong class="+ topic/ph hi-d/b ph b">4.2 Zone Change Events</strong></a></div></li><li class="section-item"><div class="section-title"><a href="#location_sensor_data_integration_guide__section_vhv_rbm_w3c" data-tocid="location_sensor_data_integration_guide__section_vhv_rbm_w3c"><strong class="+ topic/ph hi-d/b ph b">Step 1: Create the Output Format for Zone Change Event (The Template)</strong></a></div></li><li class="section-item"><div class="section-title"><a href="#location_sensor_data_integration_guide__section_xhv_rbm_w3c" data-tocid="location_sensor_data_integration_guide__section_xhv_rbm_w3c"><strong class="+ topic/ph hi-d/b ph b">Step 2: Create the Output Target for Zone Change Event (The Logic Rules)</strong></a></div></li><li class="section-item"><div class="section-title"><a href="#location_sensor_data_integration_guide__section_zhv_rbm_w3c" data-tocid="location_sensor_data_integration_guide__section_zhv_rbm_w3c"><strong class="+ topic/ph hi-d/b ph b">Step 3: Configure the receiving parameters for the target</strong></a></div></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="quuppa-footer">
+    <div style="text-align: center; padding: 0.5em 0;">
+        <div style="color: white; font-size: 0.85em;">
+            © 2020-2026 Quuppa Oy. All Rights Reserved.
+        </div>
+    </div>
+</div>
+  </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
+                Generation date: 10.04.2026</div>
+</footer>
+        
+        <button id="go2top" class="d-print-none" title="Go to top">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </button>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>
