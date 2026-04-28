@@ -853,6 +853,4 @@
                path="Q35_ru/topics/Q35_ul_certification.html"/>
    <appContext helpID="hw_ig_copyright_and_other_notice"
                path="Q35_ru/topics/copyright_and_other_notices.html"/>
-   <appContext helpID="megamap_revision_history"
-               path="megamap/topics/revision_history.html"/>
 </map>
