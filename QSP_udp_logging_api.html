@@ -1,0 +1,432 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="28.0">
+    <head><link rel="shortcut icon" href="favicon.ico?buildId=20260522143923"/><link rel="icon" href="favicon.ico?buildId=20260522143923"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The API Data Formats &amp; Output Targets editor allows you to define the data exposed via the Quuppa API. This page describes the different default API data formats and how to customise them for your ..."/><meta name="DC.rights.owner" content="(C) Copyright 2026"/><meta name="copyright" content="(C) Copyright 2026"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="QSP_udploggingapi_introduction"/><title>API Data Formats &amp; Output Targets</title><!--  Generated with Oxygen version 28.0, build number 2026013010.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content=""/><meta name="wh-source-relpath" content="QSP_udp_logging_api.dita"/><meta name="wh-out-relpath" content="QSP_udp_logging_api.html"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/bootstrap.css?buildId=2026013010"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/jquery-ui.css?buildId=2026013010"/>
+        
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic.css?buildId=2026013010"/>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen-theme.css?buildId=20260522143923"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen.css?buildId=20260522143923"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=20260522143923"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/quuppa.css?buildId=20260522143923"/>
+    <script src="./oxygen-webhelp/app/options/properties.js?buildId=20260522143923"></script>
+    <script src="./oxygen-webhelp/app/themes.js?buildId=20260522143923"></script>
+    <script src="./oxygen-webhelp/app/localization/strings.js?buildId=2026013010"></script>
+    <script src="./oxygen-webhelp/app/search/index/keywords.js?buildId=20260522143923"></script>
+    
+    <script defer="defer" src="./oxygen-webhelp/app/jquery.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/jquery-ui.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/jquery-bootpag.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/jquery-highlight.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/popperjs-core.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/bootstrap.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/dompurify.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/image-map.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/maphilight.js?buildId=2026013010"></script>
+
+    <script defer="defer" src="./oxygen-webhelp/app/topic.js?buildId=2026013010"></script>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L77KR66W6P"></script>
+    <script><!--
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-L77KR66W6P');
+    
+--></script>    
+
+</head>
+
+    <body id="QSP_udploggingapi_introduction" class="wh_topic_page frmBody">
+        <a class="visually-hidden-focusable" id="wh_jump_to_content" href="#wh_topic_body">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid navbar-expand-md">
+        <div class="wh_header_flex_container navbar-nav navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="https://quuppa.com/" class=" wh_logo d-none d-sm-block "><img src="https://www.quuppa.com/documentation/oxygen-webhelp/template/resources/images/QUUPPA_1row_black_LOW_small.png?buildId=20260522143923" alt=""/></a>
+                    <div class=" wh_publication_title "></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid navbar-expand-md" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_full_width_link" data-next-state="expanded" aria-label="Maximize to full width" title="Maximize to full width"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-xxl-10 col-lg-10 col-md-10 col-sm-10 col-xs-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article class="- topic/topic topic" role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">API Data Formats &amp; Output Targets</h1>
+    <div class="- topic/body body">
+        <p class="- topic/p p">The <span class="+ topic/keyword ui-d/wintitle keyword wintitle">API Data Formats &amp; Output Targets</span> editor allows you to
+            define the data exposed via the Quuppa API. This page describes the different <a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__output_formats"><strong class="+ topic/ph hi-d/b ph b">default API data formats</strong></a> and how to customise
+            them for your project. </p>
+        <p class="- topic/p p">For instructions on sending this data to external systems, see <a class="- topic/xref xref" href="QSP_udp_logging_api_createoutputtargets.html">Create Output Targets</a>. To
+            refine the data before it is sent, see <a class="- topic/xref xref" href="QSP_udp_logging_api_filtering.html#QSP_udp_logging_api_filtering__title_location_data_filtering"><strong class="+ topic/ph hi-d/b ph b">Location Data Filtering</strong></a>.</p>
+        <p class="- topic/p p">For detailed information about using the Quuppa API, please refer to our <a class="- topic/xref xref" href="https://quuppa.com/product-documentation/manuals/q/QPE/topics/QPE_introduction.html" target="_blank" rel="external noopener">Quuppa Positioning Engine User Manual</a> or the
+                <strong class="+ topic/ph hi-d/b ph b">Quuppa API documentation</strong> available in the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Quuppa Positioning Engine
+                (QPE)</span> web console.</p>
+        <section class="- topic/section section" id="QSP_udploggingapi_introduction__output_formats" data-ofbid="QSP_udploggingapi_introduction__output_formats"><h2 class="- topic/title title sectiontitle">Available default output formats</h2>
+            
+            <p class="- topic/p p">The default and custom formats are available in <strong class="+ topic/ph hi-d/b ph b">JSON</strong> and <strong class="+ topic/ph hi-d/b ph b">CSV</strong>.</p>
+            <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b" id="QSP_udploggingapi_introduction__label_for_tags">For Tags:</strong></p>
+            <p dir="ltr" class="- topic/p p">These formats apply to tag output targets or the API endpoint
+                    <code class="+ topic/ph pr-d/codeph ph codeph">/getTagData?format=&lt;name-of-your-format&gt;</code></p>
+            <div class="- topic/p p">
+                <ul class="- topic/ul ul">
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b"><span class="+ topic/ph ui-d/uicontrol ph uicontrol" id="QSP_udploggingapi_introduction__opt_defaultinfo">DefaultInfo</span></strong>: Provides
+                        data points related to tag information, such as state, group, battery level,
+                        button state, acceleration data, TX power, and developer-specific data. Use
+                        this format to monitor the status and health of <strong class="+ topic/ph hi-d/b ph b">tags</strong> within a
+                        project. </li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b"><span class="+ topic/ph ui-d/uicontrol ph uicontrol" id="QSP_udploggingapi_introduction__opt_defaultlocation">DefaultLocation:
+                        </span></strong>Provides data points related to tag positioning information,
+                        such as location estimates, coordinate systems, tracking areas, and zones.
+                        Use this format to visualise on a map how tags move within a project
+                        space.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b"><span class="+ topic/ph ui-d/uicontrol ph uicontrol" id="QSP_udploggingapi_introduction__opt_defaultlocationandinfo">DefaultLocationAndInfo:
+                            </span></strong>Provides a combination of tag information and
+                        positioning information. This includes all status data (e.g. battery,
+                        button) and location data (e.g. estimates, zones). Use this format when you
+                        require both movement tracking on a map and event-based actions visualised
+                        in the map view. </li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b"><span class="+ topic/ph ui-d/uicontrol ph uicontrol" id="QSP_udploggingapi_introduction__opt_all_items">ALL_ITEMS</span></strong>: Provides all
+                        available data points for a tag. This format is a template for creating
+                        customisations based on specific project requirements and is not intended
+                        for direct use.</li>
+                </ul>
+            </div>
+            <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b" id="QSP_udploggingapi_introduction__label_for_locator_data">For Locator Data:</strong></p>
+            <p dir="ltr" class="- topic/p p">These formats apply to <strong class="+ topic/ph hi-d/b ph b">Locator </strong>output targets or the API endpoint
+                /getLocatorData?format=&lt;name-of-your-format&gt;</p>
+            <div class="- topic/p p">
+                <ul class="- topic/ul ul" id="QSP_udploggingapi_introduction__ul_hkp_bt2_qfc" data-ofbid="QSP_udploggingapi_introduction__ul_hkp_bt2_qfc">
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b"><span class="+ topic/ph ui-d/uicontrol ph uicontrol" id="QSP_udploggingapi_introduction__opt_defaultlocatorinfo">defaultLocatorInfo</span></strong>: Provides all <strong class="+ topic/ph hi-d/b ph b">Locator</strong>-related
+                        data points. Use this format to monitor the hardware status and
+                        configuration details of the <strong class="+ topic/ph hi-d/b ph b">Locators </strong>in your project.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b"><span class="+ topic/ph ui-d/uicontrol ph uicontrol" id="QSP_udploggingapi_introduction__opt_legacylocatorinfo">legacyLocatorInfo</span></strong>:
+                        Provides all <strong class="+ topic/ph hi-d/b ph b">Locator</strong>-related data points in the legacy formatting
+                        from the /getLocatorInfo API response.</li>
+                </ul>
+            </div>
+            <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b" id="QSP_udploggingapi_introduction__label_for_positioning_engine_data">For Positioning Engine
+                Data:</strong></p>
+            <p dir="ltr" class="- topic/p p">This format applies to <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Quuppa Positioning Engine (QPE)</span>
+                output targets or the API endpoint
+                    <span class="+ topic/keyword pr-d/apiname keyword apiname">/getPEData?format=&lt;name-of-your-format&gt;</span></p>
+            <ul class="- topic/ul ul" id="QSP_udploggingapi_introduction__ul_vxr_kt2_qfc" data-ofbid="QSP_udploggingapi_introduction__ul_vxr_kt2_qfc">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b"><span class="+ topic/ph ui-d/uicontrol ph uicontrol" id="QSP_udploggingapi_introduction__opt_defaultPEinfo">defaultPEInfo</span></strong>:
+                        Provides all data points related to <strong class="+ topic/ph hi-d/b ph b">Positioning Engine</strong>. Use this
+                        format to monitor the performance and operational state of the
+                        <strong class="+ topic/ph hi-d/b ph b">QPE</strong>.</p>
+                </li>
+            </ul>
+            <div class="- topic/p p">
+                <div class="- topic/note note note note_note"><span class="note__title">Note:</span> <div class="note__body">If you have <a class="- topic/xref xref" href="QSP_application_settings_legacy_output_formats.html">enabled Legacy Output Formats</a> in the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Quuppa Site Planner
+                        (QSP)</span> application settings, you will also see the legacy formats
+                    such as Location JSON, Location CSV, Tag info JSON, Tag info CSV, and Processed
+                    location CSV. These legacy formats are deprecated; please use the default
+                    formats listed above instead. </div></div>
+            </div>
+        </section>
+        <section class="- topic/section section" id="QSP_udploggingapi_introduction__section_h2m_qd4_rrb" data-ofbid="QSP_udploggingapi_introduction__section_h2m_qd4_rrb"><h2 class="- topic/title title sectiontitle">Edit API Data Formats</h2>
+            
+            <p class="- topic/p p">The types of data that you want to expose via the <strong class="+ topic/ph hi-d/b ph b">Quuppa API</strong> depend on the
+                specific requirements of your project. The <span class="+ topic/keyword ui-d/wintitle keyword wintitle">API Data Formats &amp; Output
+                    Targets</span> editor allows you to use default API format definitions
+                        (<strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__opt_defaultinfo">DefaultInfo</a></strong>, <strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__opt_defaultlocation">DefaultLocation</a></strong>, <strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__opt_defaultlocationandinfo">DefaultLocationAndInfo </a></strong> and
+                        <strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__opt_all_items">ALL_ITEMS</a></strong>) as templates to
+                customise for your project. <strong class="+ topic/ph hi-d/b ph b">JSON</strong> and <strong class="+ topic/ph hi-d/b ph b">CSV</strong> outputs are available for all
+                output formats. </p>
+            <p class="- topic/p p">The syntax for creating custom formats uses $(object.field) notation, which is
+                documented for all available fields in <strong class="+ topic/ph hi-d/b ph b">Quuppa API documentation</strong>. All
+                available fields are also included in the <strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__opt_all_items">ALL_ITEMS</a></strong> format, which can be used as a starting point for your
+                custom target.</p>
+            <p dir="ltr" class="- topic/p p">All formats must start with the $(version.1) specifier to define the
+                    <strong class="+ topic/ph hi-d/b ph b">API</strong> version and the data type. Available options include:</p>
+            <ul class="- topic/ul ul">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">$(version.1.tag)</code>: for tag outputs</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">$(version.1.locator)</code>: for <strong class="+ topic/ph hi-d/b ph b">Locator</strong>
+                        outputs</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">$(version.1.pe)</code>: for <strong class="+ topic/ph hi-d/b ph b">Positioning Engine</strong>
+                        outputs</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">$(version.1)</code>: defaults to tag output</p>
+                </li>
+            </ul>
+            <p class="- topic/p p" id="QSP_udploggingapi_introduction__label_to_edit_the_format_definitions" data-ofbid="QSP_udploggingapi_introduction__label_to_edit_the_format_definitions"><strong class="+ topic/ph hi-d/b ph b">To edit the format definitions</strong></p>
+            <ol class="- topic/ol ol" id="QSP_udploggingapi_introduction__ol_oll_kg4_rrb" data-ofbid="QSP_udploggingapi_introduction__ol_oll_kg4_rrb">
+                <li class="- topic/li li">Open the project in the <strong class="+ topic/ph hi-d/b ph b">Quuppa Site Planner (QSP)</strong>.</li>
+                <li class="- topic/li li">In the menu bar at the top, select <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Project</span>
+                    <strong class="+ topic/ph hi-d/b ph b">&gt;</strong>
+                    <span class="+ topic/keyword ui-d/wintitle keyword wintitle">API Data Formats</span>. (Alternatively, access the editor via the
+                    object tree on the left by clicking <span class="+ topic/keyword ui-d/wintitle keyword wintitle">API Data Formats</span>. This
+                    opens the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">API Data Formats &amp; Output Targets</span> editor to
+                    the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">API Data Formats</span> tab. </li>
+                <li class="- topic/li li">In the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">UDP/logging/API format definitions</span> table, select the
+                    default definition you want to edit. For more information about the available
+                    options, see the <a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__output_formats"><strong class="+ topic/ph hi-d/b ph b">Available default output
+                            formats section</strong></a> above.<p class="- topic/p p"><img class="- topic/image image" id="QSP_udploggingapi_introduction__image_g3l_kwy_vnb" src="oxy_ex-1/images/QSP_UDPloggingAPI_editor_definitions.png" width="378"/></p></li>
+                <li class="- topic/li li">Copy the default format by clicking <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Clone format</span> button
+                    under the definitions table. This opens a new format editor window. <p class="- topic/p p"><img class="- topic/image image" id="QSP_udploggingapi_introduction__image_chh_qwy_vnb" src="oxy_ex-1/images/QSP_UDPloggingAPI_editor_clone_button.png" width="378"/></p><div class="- topic/p p">
+                        <div class="- topic/note note tip note_tip"><span class="note__title">Tip:</span> <div class="note__body">We recommend cloning the format that you intend to use,
+                            even if you do not plan to edit the format string. Because <strong class="+ topic/ph hi-d/b ph b">Quuppa
+                                API</strong> is constantly being improved, default formats may change
+                            with future software releases. Cloning ensures your specific format
+                            remains consistent even after a software update.</div></div>
+                    </div></li>
+                <li class="- topic/li li">Enter a name for the new format and edit the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">format string</span>
+                    as needed. The window displays sample output strings in both <strong class="+ topic/ph hi-d/b ph b">JSON</strong> and
+                        <strong class="+ topic/ph hi-d/b ph b">CSV</strong>, so you can check the output.<p class="- topic/p p"><img class="- topic/image image" id="QSP_udploggingapi_introduction__image_jqr_2xy_vnb" src="oxy_ex-1/images/QSP_UDPloggingAPI_editor_edit_format.png" width="378"/></p></li>
+                <li class="- topic/li li">Click <span class="+ topic/keyword ui-d/wintitle keyword wintitle">OK</span> at the bottom of the window to save the
+                    edits.</li>
+            </ol>
+        </section>
+        <section class="- topic/section section" id="QSP_udploggingapi_introduction__transformations_for_data" data-ofbid="QSP_udploggingapi_introduction__transformations_for_data"><h2 class="- topic/title title sectiontitle">Available Transformations for data</h2>
+            
+            <p class="- topic/p p">You can apply certain transformations to the output data to modify its format. The
+                following operators are available:</p>
+            <div class="- topic/p p">
+                <div class="table-container"><table class="- topic/table table frame-all" data-cols="5"><caption></caption><colgroup><col style="width:20%"/><col style="width:20%"/><col style="width:20%"/><col style="width:20%"/><col style="width:20%"/></colgroup><thead class="- topic/thead thead">
+                            <tr class="- topic/row rowsep-1">
+                                <th class="- topic/entry entry colsep-1 rowsep-1" id="QSP_udploggingapi_introduction__transformations_for_data__entry__1">Operator</th>
+                                <th class="- topic/entry entry colsep-1 rowsep-1" id="QSP_udploggingapi_introduction__transformations_for_data__entry__2">Example usage</th>
+                                <th class="- topic/entry entry colsep-1 rowsep-1" id="QSP_udploggingapi_introduction__transformations_for_data__entry__3">Example output</th>
+                                <th class="- topic/entry entry colsep-1 rowsep-1" id="QSP_udploggingapi_introduction__transformations_for_data__entry__4">Data types</th>
+                                <th class="- topic/entry entry colsep-0 rowsep-1" id="QSP_udploggingapi_introduction__transformations_for_data__entry__5">Description</th>
+                            </tr>
+                        </thead><tbody class="- topic/tbody tbody">
+                            <tr class="- topic/row">
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><var class="+ topic/keyword sw-d/varname keyword varname">.A</var></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><code class="+ topic/ph pr-d/codeph ph codeph">$(location.,)</code></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><samp class="+ topic/ph sw-d/systemoutput ph systemoutput sysout">[10.0,20.0,1.00]</samp></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1">lists</td>
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-1">Delimiter for lists, mainly in CSV or custom
+                                    formats (non-number character).</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><var class="+ topic/keyword sw-d/varname keyword varname">.abs</var></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><code class="+ topic/ph pr-d/codeph ph codeph">$(location.z.abs)</code></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"> </td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1">z coordinate</td>
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-1">Gives z coordinate as absolute value (in reference
+                                    to the ground level) instead of the default relative value (in
+                                    reference to the coordinate system floor).</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><var class="+ topic/keyword sw-d/varname keyword varname">.as.xxx</var></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><code class="+ topic/ph pr-d/codeph ph codeph">$(tag.name.as.tagname)</code></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"> </td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1">any</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1">
+                                    <p dir="ltr" class="- topic/p p">Changes the key in JSON.</p>
+                                    <p dir="ltr" class="- topic/p p">In CSV or Custom formats can be used both as key
+                                        and separator.</p>
+                                    <p dir="ltr" class="- topic/p p">For example,
+                                            <u class="+ topic/ph hi-d/u ph u"><code class="+ topic/ph pr-d/codeph ph codeph">$(tag.name.as.Name</code></u>) outputs
+                                            <samp class="+ topic/ph sw-d/systemoutput ph systemoutput sysout">"Name": "MyTagName"</samp></p>
+                                </td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><var class="+ topic/keyword sw-d/varname keyword varname">.decBytes</var></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><code class="+ topic/ph pr-d/codeph ph codeph">$(developerSpecificData.decBytes)</code></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><samp class="+ topic/ph sw-d/systemoutput ph systemoutput sysout">0 16 256</samp></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1">byte array</td>
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-1">Shows the bytes as 0 16 256.</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><var class="+ topic/keyword sw-d/varname keyword varname">.hex</var></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><code class="+ topic/ph pr-d/codeph ph codeph">$(developerSpecificData.hex)</code></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><samp class="+ topic/ph sw-d/systemoutput ph systemoutput sysout">0x000fff</samp></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1">byte array</td>
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-1">Shows the bytes as 0x000fff.</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><var class="+ topic/keyword sw-d/varname keyword varname">.hexBytes</var></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><code class="+ topic/ph pr-d/codeph ph codeph">$(developerSpecificData.hexBytes)</code></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><samp class="+ topic/ph sw-d/systemoutput ph systemoutput sysout">0x00 0x0f 0xff</samp></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1">byte array</td>
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-1">Shows the bytes as 0x00 0x0f 0xff.</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><var class="+ topic/keyword sw-d/varname keyword varname">.id</var></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><code class="+ topic/ph pr-d/codeph ph codeph">$(developerSpecificData.id)</code></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><samp class="+ topic/ph sw-d/systemoutput ph systemoutput sysout">000fff</samp></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1">byte array</td>
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-1">Shows the bytes as 000fff.</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><var class="+ topic/keyword sw-d/varname keyword varname">.iso</var></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><code class="+ topic/ph pr-d/codeph ph codeph">$(location.ts.iso)</code></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><samp class="+ topic/ph sw-d/systemoutput ph systemoutput sysout">2025-09-29T09:17:10.864+03:00[Europe/Kiev]</samp></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1">Date</td>
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-1">Converts unix timestamp to ISO Date format, current
+                                    time zone.</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><var class="+ topic/keyword sw-d/varname keyword varname">.isoutc</var></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><code class="+ topic/ph pr-d/codeph ph codeph">$(location.ts.isoutc)</code></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><samp class="+ topic/ph sw-d/systemoutput ph systemoutput sysout">2025-09-29T06:17:53.775Z</samp></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1">Date</td>
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-1">Converts unix timestamp to ISO Date format,
+                                    UTC.</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><var class="+ topic/keyword sw-d/varname keyword varname">.N</var></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><code class="+ topic/ph pr-d/codeph ph codeph">$(location.2)</code></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1"><samp class="+ topic/ph sw-d/systemoutput ph systemoutput sysout">[10.0;20.0;1.00]</samp></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-1">float</td>
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-1">Specifies number of decimals for a float.</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-0"><var class="+ topic/keyword sw-d/varname keyword varname">.timestamp</var></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-0"><code class="+ topic/ph pr-d/codeph ph codeph">$(location.ts.timestamp)</code></td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-0"> </td>
+                                <td dir="ltr" class="- topic/entry entry colsep-1 rowsep-0">Date</td>
+                                <td dir="ltr" class="- topic/entry entry colsep-0 rowsep-0">Timestamp as long, default for type Date.</td>
+                            </tr>
+                        </tbody></table></div>
+            </div>
+        </section>
+        <section class="- topic/section section"><h2 class="- topic/title title sectiontitle">Customising the message using Custom (CSV / Custom) formatting for data</h2>
+            
+            <p class="- topic/p p">The <strong class="+ topic/ph hi-d/b ph b">CSV / Custom </strong>format type allows you to fully define the separator
+                characters or static parts for your message. The dynamic parts are injected into the
+                message using the <var class="+ topic/keyword sw-d/varname keyword varname">$(object.field)</var> notation.</p>
+            <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Example:</strong></p>
+            <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Format definition:</strong>
+            </p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>$(version.1.tag){
+“Message” : ”Hello $(tag.name)!”
+}</code></pre>
+            <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Output with type CSV / Custom:</strong></p>
+            <pre class="+ topic/pre sw-d/msgblock pre msgblock">{
+“Message”: ”Hello TestName!”
+}</pre>
+        </section>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-xxl-2 col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+              	                <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+		                            <span class="close-toc-icon-container">
+		                                <span class="close-toc-icon"></span>     
+		                            </span>
+		                        </button>
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="section-item"><div class="section-title"><a href="#QSP_udploggingapi_introduction__output_formats" data-tocid="QSP_udploggingapi_introduction__output_formats">Available default output formats</a></div></li><li class="section-item"><div class="section-title"><a href="#QSP_udploggingapi_introduction__section_h2m_qd4_rrb" data-tocid="QSP_udploggingapi_introduction__section_h2m_qd4_rrb">Edit API Data Formats</a></div></li><li class="section-item"><div class="section-title"><a href="#QSP_udploggingapi_introduction__transformations_for_data" data-tocid="QSP_udploggingapi_introduction__transformations_for_data">Available Transformations for data</a></div></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="quuppa-footer">
+    <div style="text-align: center; padding: 0.5em 0;">
+        <div style="color: white; font-size: 0.85em;">
+            © 2020-2026 Quuppa Oy. All Rights Reserved.
+        </div>
+    </div>
+</div>
+  </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
+                Generation date: 22.05.2026</div>
+</footer>
+        
+        <button id="go2top" class="d-print-none" title="Go to top">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </button>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

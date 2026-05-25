@@ -1,0 +1,252 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="28.0">
+    <head><link rel="shortcut icon" href="favicon.ico?buildId=20260522143923"/><link rel="icon" href="favicon.ico?buildId=20260522143923"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The Quuppa system generates raw location estimates that can be filtered in various ways to improve the quality of the dot-on-the-map visualisations for Quuppa projects. For most applications, we ..."/><meta name="DC.rights.owner" content="(C) Copyright 2026"/><meta name="copyright" content="(C) Copyright 2026"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="QSP_udp_logging_api_filtering"/><title>Location Data Filtering</title><!--  Generated with Oxygen version 28.0, build number 2026013010.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content=""/><meta name="wh-source-relpath" content="QSP_udp_logging_api_filtering.dita"/><meta name="wh-out-relpath" content="QSP_udp_logging_api_filtering.html"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/bootstrap.css?buildId=2026013010"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/jquery-ui.css?buildId=2026013010"/>
+        
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic.css?buildId=2026013010"/>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen-theme.css?buildId=20260522143923"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen.css?buildId=20260522143923"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=20260522143923"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/quuppa.css?buildId=20260522143923"/>
+    <script src="./oxygen-webhelp/app/options/properties.js?buildId=20260522143923"></script>
+    <script src="./oxygen-webhelp/app/themes.js?buildId=20260522143923"></script>
+    <script src="./oxygen-webhelp/app/localization/strings.js?buildId=2026013010"></script>
+    <script src="./oxygen-webhelp/app/search/index/keywords.js?buildId=20260522143923"></script>
+    
+    <script defer="defer" src="./oxygen-webhelp/app/jquery.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/jquery-ui.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/jquery-bootpag.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/jquery-highlight.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/popperjs-core.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/bootstrap.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/dompurify.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/image-map.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/maphilight.js?buildId=2026013010"></script>
+
+    <script defer="defer" src="./oxygen-webhelp/app/topic.js?buildId=2026013010"></script>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L77KR66W6P"></script>
+    <script><!--
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-L77KR66W6P');
+    
+--></script>    
+
+</head>
+
+    <body id="QSP_udp_logging_api_filtering" class="wh_topic_page frmBody">
+        <a class="visually-hidden-focusable" id="wh_jump_to_content" href="#wh_topic_body">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid navbar-expand-md">
+        <div class="wh_header_flex_container navbar-nav navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="https://quuppa.com/" class=" wh_logo d-none d-sm-block "><img src="https://www.quuppa.com/documentation/oxygen-webhelp/template/resources/images/QUUPPA_1row_black_LOW_small.png?buildId=20260522143923" alt=""/></a>
+                    <div class=" wh_publication_title "></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid navbar-expand-md" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_full_width_link" data-next-state="expanded" aria-label="Maximize to full width" title="Maximize to full width"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-xxl-10 col-lg-10 col-md-10 col-sm-10 col-xs-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article class="- topic/topic topic" role="article" aria-labelledby="QSP_udp_logging_api_filtering__title_location_data_filtering">
+    <h1 class="- topic/title title topictitle1" id="QSP_udp_logging_api_filtering__title_location_data_filtering">Location Data Filtering</h1>
+    <div class="- topic/body body">
+        <p class="- topic/p p">The Quuppa system generates raw location estimates that can be filtered in various ways
+            to improve the quality of the dot-on-the-map visualisations for Quuppa projects. For
+            most applications, we <strong class="+ topic/ph hi-d/b ph b">recommend using the smooth position</strong> filter. </p>
+        <p class="- topic/p p">This section aims to explain the difference between the raw position generated by the
+                <strong class="+ topic/ph hi-d/b ph b">Quuppa Positioning Engine (QPE)</strong> and the output available when using different
+            filters. This information helps you select the correct filtering for your specific use
+            case. </p>
+        <p class="- topic/p p">Two simple shapes, a square and a circle, serve as example tag paths to demonstrate the
+            distinct characteristics of each filter when handling movement patterns such as sharp
+            corners and continuous curves.</p>
+        <p class="- topic/p p"><img class="- topic/image image" id="QSP_udp_logging_api_filtering__image_hpc_3lk_snb" src="oxy_ex-2/QPE/images/QPE_filters_ground_truth.png" width="378"/></p>
+        <section class="- topic/section section" id="QSP_udp_logging_api_filtering__section_cqb_qph_snb" data-ofbid="QSP_udp_logging_api_filtering__section_cqb_qph_snb"><h2 class="- topic/title title sectiontitle">Raw Position</h2>
+            
+            <p class="- topic/p p">The <strong class="+ topic/ph hi-d/b ph b">raw position</strong> output is the unfiltered positioning estimate (x, y and z
+                coordinates for the tag) calculated by the <strong class="+ topic/ph hi-d/b ph b">QPE</strong>. This real-time data output
+                serves as the baseline onto which any of the chosen filters can be applied.</p>
+            <p class="- topic/p p">While the raw position provides the real-time position of the tag as calculated by
+                the <strong class="+ topic/ph hi-d/b ph b">QPE</strong>, we do not recommend it for visualisations of how the dot moves
+                around the map. Without filtering, the position appears to “jump” on the screen.
+                This occurs because the <strong class="+ topic/ph hi-d/b ph b">QPE</strong> outputs positioning data points exactly as they
+                are calculated. Because tags transmit at predefined intervals and environmental
+                factors can cause packet loss, the raw position consists of these individual,
+                discrete data points. The degree of tag jumping depends on various project settings,
+                including tag configurations, air interface load management and the deployment
+                environment. </p>
+            <p class="- topic/p p">In the image below, the green dots represent the individual data points provided by
+                the <strong class="+ topic/ph hi-d/b ph b">QPE</strong>.</p>
+            <p class="- topic/p p"><img class="- topic/image image" id="QSP_udp_logging_api_filtering__image_inn_zjh_snb" src="oxy_ex-2/QPE/images/QPE_filters_raw_position.png" width="378"/></p>
+        </section>
+        <section class="- topic/section section" id="QSP_udp_logging_api_filtering__section_z25_pth_snb" data-ofbid="QSP_udp_logging_api_filtering__section_z25_pth_snb"><h2 class="- topic/title title sectiontitle">Smooth Position</h2>
+            
+            <p class="- topic/p p">When you apply the <strong class="+ topic/ph hi-d/b ph b">smooth position</strong> filter to raw position data, the <strong class="+ topic/ph hi-d/b ph b">QPE</strong>
+                uses historical data regarding how the tag has moved around the tracking area to
+                calculate averages. These averages are used to smooth out the jumps in the
+                visualisation and provide an even path for the tag. </p>
+            <p class="- topic/p p">The filtering creates a slight lag in the positioning results, but since the delay is
+                minimal, it does not significantly impact most applications or use cases. We
+                recommend the smooth position filter for the majority of applications based on the
+                Quuppa system because it improves the user experience by providing a more even tag
+                trajectory and a smoother dot on the map. </p>
+            <p class="- topic/p p">In the image below, the red line represents the smoothed tag trajectory provided
+                after applying the smooth position filter to the raw position data points. </p>
+            <p class="- topic/p p"><img class="- topic/image image" id="QSP_udp_logging_api_filtering__image_tqq_1kh_snb" src="oxy_ex-2/QPE/images/QPE_filters_smooth_position.png" width="378"/></p>
+        </section>
+        <section class="- topic/section section" id="QSP_udp_logging_api_filtering__section_z5j_jvh_snb" data-ofbid="QSP_udp_logging_api_filtering__section_z5j_jvh_snb"><h2 class="- topic/title title sectiontitle">Kalman Position</h2><p class="- topic/p p">The <strong class="+ topic/ph hi-d/b ph b">Kalman
+                    position</strong> is a predictive filter that you can apply to the raw position
+                estimate. The filter uses the tag direction and speed to predict the most likely
+                location in a future moment, such as one minute later. The calculation assumes the
+                tag continues at the same pace along the same trajectory.</p><p class="- topic/p p">The Kalman position
+                provides a smooth tag trajectory in real time because it uses predicted data points
+                rather than historical data. It performs well when the tag trajectory is stable,
+                such as in the circle example below. However, it is limited if the tag trajectory is
+                unpredictable or changes direction or speed suddenly. For example, a sharp 90-degree
+                corner (see image below) is challenging because the prediction assumes the tag
+                continues on the current trajectory. </p><img class="- topic/image image" id="QSP_udp_logging_api_filtering__image_gjl_hbk_snb" src="oxy_ex-2/QPE/images/QPE_filters_kalman_filter.png" width="378"/><p class="- topic/p p">For more about Kalman filtering in statistics, click
+                    <a class="- topic/xref xref" href="https://en.wikipedia.org/wiki/Kalman_filter" target="_blank" rel="external noopener">here</a>. </p></section>
+        <section class="- topic/section section" id="QSP_udp_logging_api_filtering__section_wrk_s13_snb" data-ofbid="QSP_udp_logging_api_filtering__section_wrk_s13_snb"><h2 class="- topic/title title sectiontitle">Processed Position</h2>
+            
+            <p class="- topic/p p">A <strong class="+ topic/ph hi-d/b ph b">processed position</strong> filter is also available for the raw position data
+                generated by the QPE. This filter uses a combination of historical data (like the
+                smooth position) and predictive data (like the Kalman position) to extrapolate where
+                the tag has moved across the map. Because the processed position requires both
+                historical and predictive data to be filtered, it is rarely used for real-time
+                applications.</p>
+            <p class="- topic/p p">The filter is typically applied later to recorded data, such as the data recorded by
+                the <strong class="+ topic/ph hi-d/b ph b">QPE</strong> and viewed in the <a class="- topic/xref xref" href="oxy_ex-2/QDP/topics/QDP_introduction.html">Quuppa Data Player QDP</a>. It is particularly useful for applications that
+                overlay the tag trajectory onto, for example, video footage.</p>
+            <p class="- topic/p p">As shown in the image below, the processed position provides a very accurate
+                positioning result that follows the determined path, the square or circle, very
+                closely. </p>
+            <p class="- topic/p p"><img class="- topic/image image" id="QSP_udp_logging_api_filtering__image_uvb_kbk_snb" src="oxy_ex-2/QPE/images/QPE_filters_processed_position.png" width="378"/></p>
+            <p class="- topic/p p"> </p>
+        </section>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-xxl-2 col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+              	                <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+		                            <span class="close-toc-icon-container">
+		                                <span class="close-toc-icon"></span>     
+		                            </span>
+		                        </button>
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="section-item"><div class="section-title"><a href="#QSP_udp_logging_api_filtering__section_cqb_qph_snb" data-tocid="QSP_udp_logging_api_filtering__section_cqb_qph_snb">Raw Position</a></div></li><li class="section-item"><div class="section-title"><a href="#QSP_udp_logging_api_filtering__section_z25_pth_snb" data-tocid="QSP_udp_logging_api_filtering__section_z25_pth_snb">Smooth Position</a></div></li><li class="section-item"><div class="section-title"><a href="#QSP_udp_logging_api_filtering__section_z5j_jvh_snb" data-tocid="QSP_udp_logging_api_filtering__section_z5j_jvh_snb">Kalman Position</a></div></li><li class="section-item"><div class="section-title"><a href="#QSP_udp_logging_api_filtering__section_wrk_s13_snb" data-tocid="QSP_udp_logging_api_filtering__section_wrk_s13_snb">Processed Position</a></div></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="quuppa-footer">
+    <div style="text-align: center; padding: 0.5em 0;">
+        <div style="color: white; font-size: 0.85em;">
+            © 2020-2026 Quuppa Oy. All Rights Reserved.
+        </div>
+    </div>
+</div>
+  </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
+                Generation date: 22.05.2026</div>
+</footer>
+        
+        <button id="go2top" class="d-print-none" title="Go to top">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </button>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="28.0">
+    <head><link rel="shortcut icon" href="../../../favicon.ico?buildId=20260525112541"/><link rel="icon" href="../../../favicon.ico?buildId=20260525112541"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Setting Java Virtual Machine Startup Parameters Starting Quuppa Positioning Engine (QPE) correctly requires some Java Virtual Machine (JVM) startup parameters to be set. Quuppa highly recommends using ..."/><meta name="DC.rights.owner" content="(C) Copyright 2026"/><meta name="copyright" content="(C) Copyright 2026"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="topic_rsx_glj_d1c"/><title>Java Virtual Machine Startup Parameters</title><!--  Generated with Oxygen version 28.0, build number 2026013010.  --><meta name="wh-path2root" content="../../../"/><meta name="wh-toc-id" content=""/><meta name="wh-source-relpath" content="oxy_ex-2/network/topics/startup_parameters.dita"/><meta name="wh-out-relpath" content="oxy_ex-2/network/topics/startup_parameters.html"/>
+    <link rel="stylesheet" type="text/css" href="../../../oxygen-webhelp/app/bootstrap.css?buildId=2026013010"/>
+    <link rel="stylesheet" type="text/css" href="../../../oxygen-webhelp/app/jquery-ui.css?buildId=2026013010"/>
+        
+    <link rel="stylesheet" type="text/css" href="../../../oxygen-webhelp/app/topic.css?buildId=2026013010"/>
+<link rel="stylesheet" type="text/css" href="../../../oxygen-webhelp/template/oxygen-theme.css?buildId=20260525112541"/><link rel="stylesheet" type="text/css" href="../../../oxygen-webhelp/template/oxygen.css?buildId=20260525112541"/><link rel="stylesheet" type="text/css" href="../../../oxygen-webhelp/template/notes.css?buildId=20260525112541"/><link rel="stylesheet" type="text/css" href="../../../oxygen-webhelp/template/quuppa.css?buildId=20260525112541"/>
+    <script src="../../../oxygen-webhelp/app/options/properties.js?buildId=20260525112541"></script>
+    <script src="../../../oxygen-webhelp/app/themes.js?buildId=20260525112541"></script>
+    <script src="../../../oxygen-webhelp/app/localization/strings.js?buildId=2026013010"></script>
+    <script src="../../../oxygen-webhelp/app/search/index/keywords.js?buildId=20260525112541"></script>
+    
+    <script defer="defer" src="../../../oxygen-webhelp/app/jquery.js?buildId=2026013010"></script>
+    <script defer="defer" src="../../../oxygen-webhelp/app/jquery-ui.js?buildId=2026013010"></script>
+    <script defer="defer" src="../../../oxygen-webhelp/app/jquery-bootpag.js?buildId=2026013010"></script>
+    <script defer="defer" src="../../../oxygen-webhelp/app/jquery-highlight.js?buildId=2026013010"></script>
+    <script defer="defer" src="../../../oxygen-webhelp/app/popperjs-core.js?buildId=2026013010"></script>
+    <script defer="defer" src="../../../oxygen-webhelp/app/bootstrap.js?buildId=2026013010"></script>
+    <script defer="defer" src="../../../oxygen-webhelp/app/dompurify.js?buildId=2026013010"></script>
+    <script defer="defer" src="../../../oxygen-webhelp/app/image-map.js?buildId=2026013010"></script>
+    <script defer="defer" src="../../../oxygen-webhelp/app/maphilight.js?buildId=2026013010"></script>
+
+    <script defer="defer" src="../../../oxygen-webhelp/app/topic.js?buildId=2026013010"></script>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L77KR66W6P"></script>
+    <script><!--
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-L77KR66W6P');
+    
+--></script>    
+
+</head>
+
+    <body id="topic_rsx_glj_d1c" class="wh_topic_page frmBody">
+        <a class="visually-hidden-focusable" id="wh_jump_to_content" href="#wh_topic_body">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid navbar-expand-md">
+        <div class="wh_header_flex_container navbar-nav navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="https://quuppa.com/" class=" wh_logo d-none d-sm-block "><img src="https://www.quuppa.com/documentation/oxygen-webhelp/template/resources/images/QUUPPA_1row_black_LOW_small.png?buildId=20260525112541" alt=""/></a>
+                    <div class=" wh_publication_title "></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="../../../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid navbar-expand-md" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_full_width_link" data-next-state="expanded" aria-label="Maximize to full width" title="Maximize to full width"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article class="- topic/topic topic" role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Java Virtual Machine Startup Parameters</h1>
+    <div class="- topic/body body">
+        <section class="- topic/section section" id="topic_rsx_glj_d1c__section_ssx_glj_d1c" data-ofbid="topic_rsx_glj_d1c__section_ssx_glj_d1c"><h2 class="- topic/title title sectiontitle">Setting Java Virtual Machine Startup
+                Parameters</h2><p class="- topic/p p">Starting Quuppa Positioning Engine (QPE) correctly requires
+                some Java Virtual Machine (JVM) startup parameters to be set. Quuppa highly
+                recommends using the latest Java versions to run the system optimally. As a system
+                dealing with real-time data, QPE is sensitive to any process interruptions, e.g.
+                "stop-the-world" execution cycle of the JVM garbage collector. Quuppa currently
+                recommends running all systems at least with <strong class="+ topic/ph hi-d/b ph b">Java JRE version 17</strong> or above
+                with its production ready <strong class="+ topic/ph hi-d/b ph b">ZGC garbage collector</strong> that is specifically designed
+                for real-time application in mind and for efficiently handling gigabytes of
+                memory.</p><p class="- topic/p p">In Ubuntu system using Tomcat 9 as application container, JVM
+                parameters are typically set in file /usr/share/tomcat9/bin/setenv.sh. Create one if
+                this configuration file doesn't exist yet. For more information, see the <a class="- topic/xref xref" href="../../../QPE_installing_application.html">QPE Installation
+                    instructions.</a>
+            </p><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Java 21 (recommended)</strong></p><p class="- topic/p p">Java version 21 introduced several features
+                that QPE can benefit from. Java 21 includes a production ready Generational ZGC
+                garbage collector which can significantly reduce memory footprint and latencies, and
+                in general improves system performance and efficiency. Java 21 also supports virtual
+                threads that QPE will use for improved performance.</p><p class="- topic/p p">When using Java 21,
+                add/modify the line export CATALINA_OPTS=".." in the file to specify the required
+                parameters, for example:</p>
+            <code class="+ topic/ph pr-d/codeph ph codeph">export CATALINA_OPTS="-XX:+UseZGC -XX:+ZGenerational -XX:MaxRAMPercentage=70
+                -XX:-ZUncommit -Djava.awt.headless=true
+                    -Dproject.folder=/opt/quuppa/PE"</code><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Java 17 (minimum
+                recommended)</strong></p><p class="- topic/p p">When using Java 17 or above, add/modify the line export
+                CATALINA_OPTS=".." in the file to specify the required parameters, for example:</p><div class="- topic/p p">
+                <pre class="+ topic/pre pr-d/codeblock pre codeblock" id="topic_rsx_glj_d1c__codeblock_tsx_glj_d1c" data-ofbid="topic_rsx_glj_d1c__codeblock_tsx_glj_d1c"><code>export CATALINA_OPTS="-XX:+UseZGC -XX:MaxRAMPercentage=70 -XX:-ZUncommit -Djava.awt.headless=true -Dproject.folder=/opt/quuppa/PE"</code></pre>
+            </div><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Java 16 and below (deprecated)</strong></p>Different options are supported in
+            different versions of JVM. Refer to the table below for recommended options with ZGC and
+            to ZGC documentation for other supported options.</section>
+        <div class="- topic/p p">
+            <div class="table-container"><table class="- topic/table table frame-all" id="topic_rsx_glj_d1c__table_usx_glj_d1c" data-ofbid="topic_rsx_glj_d1c__table_usx_glj_d1c" data-cols="3"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label">Table<span class="table--title-label-number"> 1</span><span class="table--title-label-punctuation">. </span></span><span class="table--title">Available JVM Startup Parameters</span></caption><colgroup><col style="width:33.33333333333333%"/><col style="width:33.33333333333333%"/><col style="width:33.33333333333333%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-1 rowsep-1" id="topic_rsx_glj_d1c__table_usx_glj_d1c__entry__1">Parameter Name</th>
+                            <th class="- topic/entry entry colsep-1 rowsep-1" id="topic_rsx_glj_d1c__table_usx_glj_d1c__entry__2">Example</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-1" id="topic_rsx_glj_d1c__table_usx_glj_d1c__entry__3">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-XX:+UseZGC</td>
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-XX:+UseZGC</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-1"><strong class="+ topic/ph hi-d/b ph b">Optional</strong>. Tells JVM to use ZGC as the garbage collector.
+                                ZGC requires at least Java version 15.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-XX:+ZGenerational</td>
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-XX:+ZGenerational</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-1"><strong class="+ topic/ph hi-d/b ph b">Optional</strong>. Enables Generational ZGC. Requires -XX:+UseZGC
+                                to be defined also. Requires Java version 21.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-XX:+UseG1GC</td>
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-XX:+UseG1GC</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-1"><strong class="+ topic/ph hi-d/b ph b">Optional</strong>. Tells JVM to use G1 garbage collector. Use if
+                                Java 15 is not available.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-XX:MaxRAMPercentage</td>
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-XX:MaxRAMPercentage=70</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-1">
+                                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Optional.</strong> Requires at least Java 10. Sets the maximum RAM
+                                    usage (in percentage of what's available in the system) for the
+                                    JVM process. If you use this relative setting, 70 is Quuppa's
+                                    current default recommendation. Do not set it too high as it may
+                                    lead to a system crash, especially in a busy system when the
+                                    available memory becomes fragmented and the OS is not anymore
+                                    able to allocate a new memory JRE requests.</p>
+                            </td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-Xmx</td>
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-Xmx4g</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-1"><strong class="+ topic/ph hi-d/b ph b">Optional</strong>. Maximum amount of memory that JVM can allocate
+                                for QPE, example allocates 4 GB which is enough for moderate sized
+                                projects. Only specify this or the relative maximum with
+                                    <em class="+ topic/ph hi-d/i ph i">MaxRAMPercentage</em> but not both.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-XX:-ZUncommit</td>
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-XX:-ZUncommit</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-1"><strong class="+ topic/ph hi-d/b ph b">Optional</strong>. Requires at least Java 13. Means that JRE will
+                                not give memory back to the OS even when it doesn't need it. It will
+                                show up as continuously high memory usage but in a dedicated system
+                                that doesn't matter and it will help reduce memory fragmentation as
+                                the JRE is in the charge of managing memory for its needs.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-Djava.awt.headless=true</td>
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-Djava.awt.headless=true</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-1"><strong class="+ topic/ph hi-d/b ph b">Required</strong>.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-Dproject.folder</td>
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-Dproject.folder=/opt/quuppa/PE</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-1"><strong class="+ topic/ph hi-d/b ph b">Required</strong>. Tells QPE in which folder project files are
+                                stored. Do not store any additional files in this folder as the
+                                system will wipe this folder clean when communicating with the
+                                Quuppa Customer Portal. Also you do not need to manually add any
+                                files to the folder, QPE does that automatically when communicating
+                                with QCP.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-DallowLocatorsFromAnySubnet</td>
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-DallowLocatorsFromAnySubnet</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-1"><strong class="+ topic/ph hi-d/b ph b">Obsolete</strong>. This parameter is no longer needed when using
+                                DHCP options or having Locators in multiple subnets. By default, QPE
+                                will allow Locators to connect from any subnet or IP
+                                address.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-DlocatorNetworkInterface</td>
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-DlocatorNetworkInterface=192.168.123.124</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-1"><strong class="+ topic/ph hi-d/b ph b">Optional</strong>.Enables QPE to monitor the status of the right
+                                network interface(s) in case Locators are not in the same subnet
+                                with the QPE, i.e. when using DHCP options, or when multiple local
+                                subnets are used. -DlocatorNetworkInterface contains the local IP
+                                address(es) of the network interface(s) that are used to connect to
+                                the Locators. When defining multiple network interfaces, IP
+                                addresses are separated by commas.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-DuseMovedLocators</td>
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-DuseMovedLocators</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-1"><strong class="+ topic/ph hi-d/b ph b">Optional</strong>. If this parameter is set, moved Locators are
+                                used in positioning. Otherwise they are commanded to deployment
+                                mode.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-DuseThreadPool</td>
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-DuseThreadPool=-2</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-1"><strong class="+ topic/ph hi-d/b ph b">Obsolete</strong>. This parameter is no longer needed as QPE
+                                handles threads automatically and dynamically.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-DsimulatorMode</td>
+                            <td class="- topic/entry entry colsep-1 rowsep-1">-DsimulatorMode</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-1"><strong class="+ topic/ph hi-d/b ph b">Optional</strong>. Starts QPE in simulator mode, ready to receive
+                                simulated data from QSP. Project file is transmitted from
+                                QSP.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-0">-DdoNotConnectToQCP</td>
+                            <td class="- topic/entry entry colsep-1 rowsep-0">-DdoNotConnectToQCP</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0"><strong class="+ topic/ph hi-d/b ph b">Optional</strong>. When set, QPE does not try to connect
+                                automatically to QCP for sending status updates and performing
+                                project file and subscription sync. Use only with offline project
+                                with a subscription that has offline module enabled.</td>
+                        </tr>
+                    </tbody></table></div>
+        </div>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="quuppa-footer">
+    <div style="text-align: center; padding: 0.5em 0;">
+        <div style="color: white; font-size: 0.85em;">
+            © 2020-2026 Quuppa Oy. All Rights Reserved.
+        </div>
+    </div>
+</div>
+  </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
+                Generation date: 25.05.2026</div>
+</footer>
+        
+        <button id="go2top" class="d-print-none" title="Go to top">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </button>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

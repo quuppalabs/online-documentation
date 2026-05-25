@@ -1,0 +1,346 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="28.0">
+    <head><link rel="shortcut icon" href="favicon.ico?buildId=20260522143923"/><link rel="icon" href="favicon.ico?buildId=20260522143923"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="See Online Documentation section Software Integration for an overview and concrete examples for using output targets. Targets define the data collection (collection frequency and result filtering), ..."/><meta name="DC.rights.owner" content="(C) Copyright 2026"/><meta name="copyright" content="(C) Copyright 2026"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="QSP_udp_logging_api_createoutputtargets"/><title>Create Output Targets</title><!--  Generated with Oxygen version 28.0, build number 2026013010.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content=""/><meta name="wh-source-relpath" content="QSP_udp_logging_api_createoutputtargets.dita"/><meta name="wh-out-relpath" content="QSP_udp_logging_api_createoutputtargets.html"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/bootstrap.css?buildId=2026013010"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/jquery-ui.css?buildId=2026013010"/>
+        
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic.css?buildId=2026013010"/>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen-theme.css?buildId=20260522143923"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen.css?buildId=20260522143923"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=20260522143923"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/quuppa.css?buildId=20260522143923"/>
+    <script src="./oxygen-webhelp/app/options/properties.js?buildId=20260522143923"></script>
+    <script src="./oxygen-webhelp/app/themes.js?buildId=20260522143923"></script>
+    <script src="./oxygen-webhelp/app/localization/strings.js?buildId=2026013010"></script>
+    <script src="./oxygen-webhelp/app/search/index/keywords.js?buildId=20260522143923"></script>
+    
+    <script defer="defer" src="./oxygen-webhelp/app/jquery.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/jquery-ui.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/jquery-bootpag.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/jquery-highlight.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/popperjs-core.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/bootstrap.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/dompurify.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/image-map.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/maphilight.js?buildId=2026013010"></script>
+
+    <script defer="defer" src="./oxygen-webhelp/app/topic.js?buildId=2026013010"></script>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L77KR66W6P"></script>
+    <script><!--
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-L77KR66W6P');
+    
+--></script>    
+
+</head>
+
+    <body id="QSP_udp_logging_api_createoutputtargets" class="wh_topic_page frmBody">
+        <a class="visually-hidden-focusable" id="wh_jump_to_content" href="#wh_topic_body">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid navbar-expand-md">
+        <div class="wh_header_flex_container navbar-nav navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="https://quuppa.com/" class=" wh_logo d-none d-sm-block "><img src="https://www.quuppa.com/documentation/oxygen-webhelp/template/resources/images/QUUPPA_1row_black_LOW_small.png?buildId=20260522143923" alt=""/></a>
+                    <div class=" wh_publication_title "></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid navbar-expand-md" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_full_width_link" data-next-state="expanded" aria-label="Maximize to full width" title="Maximize to full width"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article class="- topic/topic topic" role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Create Output Targets</h1>
+    <div class="- topic/body body">
+        <section class="- topic/section section" id="QSP_udp_logging_api_createoutputtargets__section_adq_rd4_rrb" data-ofbid="QSP_udp_logging_api_createoutputtargets__section_adq_rd4_rrb">
+            <p class="- topic/p p">See Online Documentation section <strong class="+ topic/ph hi-d/b ph b">Software Integration</strong> for an overview and
+                concrete examples for using output targets. Targets define the data collection
+                (collection frequency and result filtering), data sending (message size and sending
+                frequency) and the destination &amp; delivery protocol for the stream.</p>
+            <p class="- topic/p p" id="QSP_udp_logging_api_createoutputtargets__label_to_define_targets_for_your_project" data-ofbid="QSP_udp_logging_api_createoutputtargets__label_to_define_targets_for_your_project"><strong class="+ topic/ph hi-d/b ph b">To define targets for your
+                    project</strong></p>
+            <ol class="- topic/ol ol" id="QSP_udp_logging_api_createoutputtargets__ol_qfs_gh4_rrb" data-ofbid="QSP_udp_logging_api_createoutputtargets__ol_qfs_gh4_rrb">
+                <li class="- topic/li li">Open the project in the <strong class="+ topic/ph hi-d/b ph b">Quuppa Site Planner (QSP)</strong>.</li>
+                <li class="- topic/li li">In the menu bar at the top, open the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Project</span> menu and
+                    select <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Output Targets</span>. Alternatively, access the editor via
+                    the object tree on the left by clicking <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Output Targets</span>.
+                    This will open the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">API Data Formats &amp; Output Targets</span>
+                    editor to the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Output Targets</span> tab. </li>
+                <li class="- topic/li li">In the editor, click on the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Add output target</span>
+                            button.<p class="- topic/p p"><img class="- topic/image image" id="QSP_udp_logging_api_createoutputtargets__image_y1j_bpz_vnb" src="oxy_ex-1/images/QSP_UDPloggingAPI_add_target_button.png" width="378"/></p></li>
+                <li class="- topic/li li">Enter a clear and concise <strong class="+ topic/ph hi-d/b ph b">Name</strong> for your target. Use the Notes section to
+                    describe the target's behaviour.</li>
+                <li class="- topic/li li">Select the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Output Format</span> and the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Type</span>
+                        (<strong class="+ topic/ph hi-d/b ph b">JSON</strong> or <strong class="+ topic/ph hi-d/b ph b">CSV</strong>).<p class="- topic/p p"><img class="- topic/image image" src="oxy_ex-1/images/QSP_UDPloggingAPI_editor_add_target_window_step5.png"/></p><div class="- topic/p p">
+                        <div class="- topic/note note note note_note"><span class="note__title">Note:</span> <div class="note__body">See the Output formats section for more details on creating or editing
+                                <a class="- topic/xref xref" href="QSP_application_settings_legacy_output_formats.html">enabled Legacy Output Formats</a> in the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Quuppa Site
+                                Planner (QSP)</span> application settings, you will also see the
+                            legacy formats such as Location JSON, Location CSV, Tag info JSON, Tag
+                            info CSV, and Processed location CSV. These legacy formats are
+                            deprecated; please use the default formats listed above instead. </div></div>
+                    </div></li>
+                <li class="- topic/li li" id="QSP_udp_logging_api_createoutputtargets__define_targets_step_trigger_mode" data-ofbid="QSP_udp_logging_api_createoutputtargets__define_targets_step_trigger_mode">Define your data collection settings:<ul class="- topic/ul ul">
+                        <li class="- topic/li li"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Trigger mode</span>: Frequency of the check.</li>
+                        <li class="- topic/li li"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">On data change</span>: Change criteria (optional).</li>
+                        <li class="- topic/li li"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Filter by</span>: Filter criteria (optional).<p class="- topic/p p"><img class="- topic/image image" src="oxy_ex-1/images/QSP_UDPloggingAPI_editor_add_target_window_step6.png" alt="Quuppa Site Planner API editor view 6"/></p></li>
+                    </ul></li>
+                <li class="- topic/li li" id="QSP_udp_logging_api_createoutputtargets__define_targets_step_max_batch" data-ofbid="QSP_udp_logging_api_createoutputtargets__define_targets_step_max_batch">Define the data sending settings:<ul class="- topic/ul ul">
+                        <li class="- topic/li li"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Max batch size</span>: Maximum number of events per
+                            message.</li>
+                        <li class="- topic/li li"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Send interval</span>: Maximum time for data
+                                    collection.<p class="- topic/p p"><img class="- topic/image image" src="oxy_ex-1/images/QSP_UDPloggingAPI_editor_add_target_window_step7.png" alt="Quuppa Site Planner API editor step 7"/></p></li>
+                    </ul></li>
+                <li class="- topic/li li">Select the protocol for the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Target</span> and configure the
+                            destination:<p class="- topic/p p"><img class="- topic/image image" src="oxy_ex-1/images/QSP_UDPloggingAPI_editor_add_target_window_step8.png" alt="Quuppa Site Planner API editor step 8"/></p></li>
+            </ol>
+        </section>
+        <section class="- topic/section section" id="QSP_udp_logging_api_createoutputtargets__target_settings" data-ofbid="QSP_udp_logging_api_createoutputtargets__target_settings"><h2 class="- topic/title title sectiontitle">Target Settings </h2>
+            
+            <div class="- topic/p p">
+                <div class="table-container"><table class="- topic/table table frame-all" data-cols="3"><caption></caption><colgroup><col style="width:33.33333333333333%"/><col style="width:33.33333333333333%"/><col style="width:33.33333333333333%"/></colgroup><thead class="- topic/thead thead">
+                            <tr class="- topic/row rowsep-1">
+                                <th class="- topic/entry entry colsep-1 rowsep-1" id="QSP_udp_logging_api_createoutputtargets__target_settings__entry__1">Setting</th>
+                                <th class="- topic/entry entry colsep-1 rowsep-1" id="QSP_udp_logging_api_createoutputtargets__target_settings__entry__2">Description</th>
+                                <th class="- topic/entry entry colsep-0 rowsep-1" id="QSP_udp_logging_api_createoutputtargets__target_settings__entry__3">Options</th>
+                            </tr>
+                        </thead><tbody class="- topic/tbody tbody">
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry colsep-1 rowsep-1"><strong class="+ topic/ph hi-d/b ph b">Format</strong></td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1">Select the <a class="- topic/xref xref" href="QSP_udp_logging_api.html">output format</a> for the
+                                    target.</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">DefaultInfo</span>,
+                                        <span class="+ topic/keyword ui-d/wintitle keyword wintitle">DefaultLocation</span>,
+                                        <span class="+ topic/keyword ui-d/wintitle keyword wintitle">DefaultLocationAndInfo</span> or a <a class="- topic/xref xref" href="QSP_udp_logging_api.html">custom output
+                                        format </a></td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry colsep-1 rowsep-1"><strong class="+ topic/ph hi-d/b ph b">Type</strong></td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1">Select the output format: JSON or
+                                    CSV.</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">JSON</span>,
+                                        <span class="+ topic/keyword ui-d/wintitle keyword wintitle">CSV</span></td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry colsep-1 rowsep-1"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Trigger
+                                    mode</span></td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1">Define the event that triggers a data
+                                    update.</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Interval</span> (at
+                                    predefined intervals, in seconds);<p class="- topic/p p"></p><span class="+ topic/keyword ui-d/wintitle keyword wintitle">LastSeenUpdate
+                                    </span> (a new packet is received from the
+                                        tag);<p class="- topic/p p"></p><span class="+ topic/keyword ui-d/wintitle keyword wintitle">LocationUpdate</span> (a location is
+                                        available);<p class="- topic/p p"></p><span class="+ topic/keyword ui-d/wintitle keyword wintitle">RawPositionUpdate </span> (a
+                                    new raw position is available for the
+                                        tag);<p class="- topic/p p"></p><span class="+ topic/keyword ui-d/wintitle keyword wintitle">SmoothPositionUpdate </span> (a new
+                                    smooth position is available for the
+                                        tag);<p class="- topic/p p"></p><span class="+ topic/keyword ui-d/wintitle keyword wintitle">KalmanPositionUpdate</span> (a new
+                                    Kalman position is available for the
+                                        tag);<p class="- topic/p p"></p><span class="+ topic/keyword ui-d/wintitle keyword wintitle">ButtonDownUpdate</span> (new button
+                                    down information is available for the tag).</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">On Data
+                                    Change</span></td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1">Optional. Produce output only if the
+                                    value of the field has changed since the previous output. Uses
+                                    the same <code class="+ topic/ph pr-d/codeph ph codeph">$(field.attribute)</code> annotation as
+                                        <strong class="+ topic/ph hi-d/b ph b">Output Formats</strong>.</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1">
+                                    <p dir="ltr" class="- topic/p p">Example: $(location.ts) ensures output is only
+                                        produced if the timestamp of the location estimate differs
+                                        from the previous output.</p>
+                                </td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Max batch
+                                    size</span></td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1">
+                                    <p dir="ltr" class="- topic/p p">Optional. Applicable for <strong class="+ topic/ph hi-d/b ph b">Interval</strong> type
+                                        targets. Defines the number of <strong class="+ topic/ph hi-d/b ph b">tags</strong> / <strong class="+ topic/ph hi-d/b ph b">Locators</strong>
+                                        collected into a single message when outputting data. </p>
+                                </td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1">
+                                    <p dir="ltr" class="- topic/p p">The default value is 1.</p>
+                                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Example</strong>: A value set to 1000 collects a
+                                        maximum of 1000 tags / Locators per message that is sent. </p>
+                                    <p dir="ltr" class="- topic/p p">If the count exceeds 1000, the system sends
+                                        multiple messages of up to 1000 tags each at the specified
+                                        interval. </p>
+                                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Note</strong>: Large <strong class="+ topic/ph hi-d/b ph b">UDP</strong> messages may be
+                                        truncated (cut away).</p>
+                                </td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry colsep-1 rowsep-1"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Target</span></td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1"> Select whether data is sent over
+                                        <strong class="+ topic/ph hi-d/b ph b">UDP</strong>, <strong class="+ topic/ph hi-d/b ph b">MQTT</strong>, <strong class="+ topic/ph hi-d/b ph b">HTTP POST</strong> or written to a
+                                    local <strong class="+ topic/ph hi-d/b ph b">File</strong>.</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1"><strong class="+ topic/ph hi-d/b ph b"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">UDP</span></strong>:<div class="- topic/p p">
+                                        <ul class="- topic/ul ul" id="QSP_udp_logging_api_createoutputtargets__ul_i2w_rwj_xnb" data-ofbid="QSP_udp_logging_api_createoutputtargets__ul_i2w_rwj_xnb">
+                                            <li class="- topic/li li">Set the target <strong class="+ topic/ph hi-d/b ph b">IP address</strong> for the data
+                                                destination.</li>
+                                            <li class="- topic/li li">Set the target <strong class="+ topic/ph hi-d/b ph b">Port</strong> number for the data
+                                                destination.</li>
+                                        </ul>
+                                    </div><p class="- topic/p p"></p><strong class="+ topic/ph hi-d/b ph b"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">MQTT</span></strong>:<ul class="- topic/ul ul" id="QSP_udp_logging_api_createoutputtargets__ul_tvj_dnj_d1c" data-ofbid="QSP_udp_logging_api_createoutputtargets__ul_tvj_dnj_d1c">
+                                        <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Required</strong>: Set the <strong class="+ topic/ph hi-d/b ph b">hostname or IP address</strong>
+                                            of your <strong class="+ topic/ph hi-d/b ph b">MQTT</strong> server.</li>
+                                        <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Required</strong>: Set the communication <strong class="+ topic/ph hi-d/b ph b">port</strong>.</li>
+                                        <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Required</strong>: Set the communication <strong class="+ topic/ph hi-d/b ph b">Scheme</strong>
+                                            (e.g. tcp, ssl, we, or wss).</li>
+                                        <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Optional</strong>. Define a <strong class="+ topic/ph hi-d/b ph b">Client ID</strong> for your
+                                                <strong class="+ topic/ph hi-d/b ph b">MQTT</strong> publisher client. If left empty, the
+                                            target <strong class="+ topic/ph hi-d/b ph b">name</strong> is used as the <strong class="+ topic/ph hi-d/b ph b">Client ID</strong>.</li>
+                                        <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Optional</strong>. Set the <strong class="+ topic/ph hi-d/b ph b">Username</strong> for
+                                            authenticating the publisher client.</li>
+                                        <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Optional</strong>. Set the <strong class="+ topic/ph hi-d/b ph b">Password</strong> for
+                                            authenticating the publisher client.</li>
+                                    </ul><p class="- topic/p p"></p><div class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">HTTP POST</span></strong>:<ul class="- topic/ul ul" id="QSP_udp_logging_api_createoutputtargets__ul_wfn_chm_3jc" data-ofbid="QSP_udp_logging_api_createoutputtargets__ul_wfn_chm_3jc">
+                                            <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Required</strong>: Set the target URL for the data
+                                                destination.</li>
+                                            <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Optional</strong>: Define the Headers for the request
+                                                as key-value pairs.</li>
+                                        </ul></div><p class="- topic/p p"></p><strong class="+ topic/ph hi-d/b ph b"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">File</span></strong>:<div class="- topic/p p">
+                                        <ul class="- topic/ul ul" id="QSP_udp_logging_api_createoutputtargets__ul_j2w_rwj_xnb" data-ofbid="QSP_udp_logging_api_createoutputtargets__ul_j2w_rwj_xnb">
+                                            <li class="- topic/li li">Set the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Folder</span> where the system
+                                                writes the data file.</li>
+                                            <li class="- topic/li li">Define the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Filename prefix</span> for
+                                                the generated file.</li>
+                                            <li class="- topic/li li">Define the number of <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Entries per
+                                                  file</span> that can be logged in the file. </li>
+                                            <li class="- topic/li li">Select whether to <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Include header as first
+                                                  line of the file</span>.</li>
+                                        </ul>
+                                    </div></td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry colsep-1 rowsep-1"><strong class="+ topic/ph hi-d/b ph b">Start at system start</strong></td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1">Allows you to select whether data is
+                                    sent automatically from the moment the system is started. This
+                                    ensures data flow continues after system restarts caused by
+                                    issues such as power failures. </td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Selected</span>,
+                                        <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Not selected</span></td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry colsep-1 rowsep-0"><strong class="+ topic/ph hi-d/b ph b">Tag groups</strong></td>
+                                <td class="- topic/entry entry colsep-1 rowsep-0">Select whether the target is defined
+                                    for all tags, or for specific tag groups.</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-0"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">All tags</span>,
+                                        <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Custom</span>.</td>
+                            </tr>
+                        </tbody></table></div>
+            </div>
+        </section>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="quuppa-footer">
+    <div style="text-align: center; padding: 0.5em 0;">
+        <div style="color: white; font-size: 0.85em;">
+            © 2020-2026 Quuppa Oy. All Rights Reserved.
+        </div>
+    </div>
+</div>
+  </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
+                Generation date: 22.05.2026</div>
+</footer>
+        
+        <button id="go2top" class="d-print-none" title="Go to top">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </button>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>
