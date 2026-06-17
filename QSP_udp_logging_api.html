@@ -1,14 +1,14 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="28.0">
-    <head><link rel="shortcut icon" href="favicon.ico?buildId=20260522143923"/><link rel="icon" href="favicon.ico?buildId=20260522143923"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The API Data Formats &amp; Output Targets editor allows you to define the data exposed via the Quuppa API. This page describes the different default API data formats and how to customise them for your ..."/><meta name="DC.rights.owner" content="(C) Copyright 2026"/><meta name="copyright" content="(C) Copyright 2026"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="QSP_udploggingapi_introduction"/><title>API Data Formats &amp; Output Targets</title><!--  Generated with Oxygen version 28.0, build number 2026013010.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content=""/><meta name="wh-source-relpath" content="QSP_udp_logging_api.dita"/><meta name="wh-out-relpath" content="QSP_udp_logging_api.html"/>
+    <head><link rel="shortcut icon" href="favicon.ico?buildId=20260604140240"/><link rel="icon" href="favicon.ico?buildId=20260604140240"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The API Data Formats &amp; Output Targets editor allows you to define the data exposed via the Quuppa API. This page describes the different default API data formats and how to customise them for your ..."/><meta name="DC.rights.owner" content="(C) Copyright 2026"/><meta name="copyright" content="(C) Copyright 2026"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="QSP_udploggingapi_introduction"/><title>API Data Formats &amp; Output Targets</title><!--  Generated with Oxygen version 28.0, build number 2026013010.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content=""/><meta name="wh-source-relpath" content="QSP_udp_logging_api.dita"/><meta name="wh-out-relpath" content="QSP_udp_logging_api.html"/>
     <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/bootstrap.css?buildId=2026013010"/>
     <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/jquery-ui.css?buildId=2026013010"/>
         
     <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic.css?buildId=2026013010"/>
-<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen-theme.css?buildId=20260522143923"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen.css?buildId=20260522143923"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=20260522143923"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/quuppa.css?buildId=20260522143923"/>
-    <script src="./oxygen-webhelp/app/options/properties.js?buildId=20260522143923"></script>
-    <script src="./oxygen-webhelp/app/themes.js?buildId=20260522143923"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen-theme.css?buildId=20260604140240"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen.css?buildId=20260604140240"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=20260604140240"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/quuppa.css?buildId=20260604140240"/>
+    <script src="./oxygen-webhelp/app/options/properties.js?buildId=20260604140240"></script>
+    <script src="./oxygen-webhelp/app/themes.js?buildId=20260604140240"></script>
     <script src="./oxygen-webhelp/app/localization/strings.js?buildId=2026013010"></script>
-    <script src="./oxygen-webhelp/app/search/index/keywords.js?buildId=20260522143923"></script>
+    <script src="./oxygen-webhelp/app/search/index/keywords.js?buildId=20260604140240"></script>
     
     <script defer="defer" src="./oxygen-webhelp/app/jquery.js?buildId=2026013010"></script>
     <script defer="defer" src="./oxygen-webhelp/app/jquery-ui.js?buildId=2026013010"></script>
@@ -51,7 +51,7 @@
             <div class="wh_logo_and_publication_title_container">
                 <div class="wh_logo_and_publication_title">
                     
-                    <a href="https://quuppa.com/" class=" wh_logo d-none d-sm-block "><img src="https://www.quuppa.com/documentation/oxygen-webhelp/template/resources/images/QUUPPA_1row_black_LOW_small.png?buildId=20260522143923" alt=""/></a>
+                    <a href="https://quuppa.com/" class=" wh_logo d-none d-sm-block "><img src="https://www.quuppa.com/documentation/oxygen-webhelp/template/resources/images/QUUPPA_1row_black_LOW_small.png?buildId=20260604140240" alt=""/></a>
                     <div class=" wh_publication_title "></div>
                     
                 </div>
@@ -134,52 +134,51 @@
             <p class="- topic/p p">The default and custom formats are available in <strong class="+ topic/ph hi-d/b ph b">JSON</strong> and <strong class="+ topic/ph hi-d/b ph b">CSV</strong>.</p>
             <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b" id="QSP_udploggingapi_introduction__label_for_tags">For Tags:</strong></p>
             <p dir="ltr" class="- topic/p p">These formats apply to tag output targets or the API endpoint
-                    <code class="+ topic/ph pr-d/codeph ph codeph">/getTagData?format=&lt;name-of-your-format&gt;</code></p>
+                        <code class="+ topic/ph pr-d/codeph ph codeph">/getTagData?format=&lt;<var class="+ topic/keyword sw-d/varname keyword varname">name-of-your-format</var>&gt;</code></p>
             <div class="- topic/p p">
                 <ul class="- topic/ul ul">
-                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b"><span class="+ topic/ph ui-d/uicontrol ph uicontrol" id="QSP_udploggingapi_introduction__opt_defaultinfo">DefaultInfo</span></strong>: Provides
-                        data points related to tag information, such as state, group, battery level,
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b"><code class="+ topic/ph pr-d/codeph ph codeph" id="QSP_udploggingapi_introduction__opt_defaultinfo">DefaultInfo</code></strong>: Provides data
+                        points related to tag information, such as state, group, battery level,
                         button state, acceleration data, TX power, and developer-specific data. Use
                         this format to monitor the status and health of <strong class="+ topic/ph hi-d/b ph b">tags</strong> within a
                         project. </li>
-                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b"><span class="+ topic/ph ui-d/uicontrol ph uicontrol" id="QSP_udploggingapi_introduction__opt_defaultlocation">DefaultLocation:
-                        </span></strong>Provides data points related to tag positioning information,
-                        such as location estimates, coordinate systems, tracking areas, and zones.
-                        Use this format to visualise on a map how tags move within a project
-                        space.</li>
-                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b"><span class="+ topic/ph ui-d/uicontrol ph uicontrol" id="QSP_udploggingapi_introduction__opt_defaultlocationandinfo">DefaultLocationAndInfo:
-                            </span></strong>Provides a combination of tag information and
-                        positioning information. This includes all status data (e.g. battery,
-                        button) and location data (e.g. estimates, zones). Use this format when you
-                        require both movement tracking on a map and event-based actions visualised
-                        in the map view. </li>
-                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b"><span class="+ topic/ph ui-d/uicontrol ph uicontrol" id="QSP_udploggingapi_introduction__opt_all_items">ALL_ITEMS</span></strong>: Provides all
-                        available data points for a tag. This format is a template for creating
-                        customisations based on specific project requirements and is not intended
-                        for direct use.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b"><code class="+ topic/ph pr-d/codeph ph codeph" id="QSP_udploggingapi_introduction__opt_defaultlocation">DefaultLocation</code></strong>: Provides
+                        data points related to tag positioning information, such as location
+                        estimates, coordinate systems, tracking areas, and zones. Use this format to
+                        visualise on a map how tags move within a project space.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b"><code class="+ topic/ph pr-d/codeph ph codeph" id="QSP_udploggingapi_introduction__opt_defaultlocationandinfo">DefaultLocationAndInfo</code></strong>: Provides a combination of tag
+                        information and positioning information. This includes all status data (e.g.
+                        battery, button) and location data (e.g. estimates, zones). Use this format
+                        when you require both movement tracking on a map and event-based actions
+                        visualised in the map view. </li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b"><code class="+ topic/ph pr-d/codeph ph codeph" id="QSP_udploggingapi_introduction__opt_all_items">ALL_ITEMS</code></strong>: Provides all available
+                        data points for a tag. This format is a template for creating customisations
+                        based on specific project requirements and is not intended for direct
+                        use.</li>
                 </ul>
             </div>
             <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b" id="QSP_udploggingapi_introduction__label_for_locator_data">For Locator Data:</strong></p>
             <p dir="ltr" class="- topic/p p">These formats apply to <strong class="+ topic/ph hi-d/b ph b">Locator </strong>output targets or the API endpoint
-                /getLocatorData?format=&lt;name-of-your-format&gt;</p>
+                        <code class="+ topic/ph pr-d/codeph ph codeph">/getLocatorData?format=&lt;<var class="+ topic/keyword sw-d/varname keyword varname">name-of-your-format</var>&gt;</code></p>
             <div class="- topic/p p">
                 <ul class="- topic/ul ul" id="QSP_udploggingapi_introduction__ul_hkp_bt2_qfc" data-ofbid="QSP_udploggingapi_introduction__ul_hkp_bt2_qfc">
-                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b"><span class="+ topic/ph ui-d/uicontrol ph uicontrol" id="QSP_udploggingapi_introduction__opt_defaultlocatorinfo">defaultLocatorInfo</span></strong>: Provides all <strong class="+ topic/ph hi-d/b ph b">Locator</strong>-related
-                        data points. Use this format to monitor the hardware status and
-                        configuration details of the <strong class="+ topic/ph hi-d/b ph b">Locators </strong>in your project.</li>
-                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b"><span class="+ topic/ph ui-d/uicontrol ph uicontrol" id="QSP_udploggingapi_introduction__opt_legacylocatorinfo">legacyLocatorInfo</span></strong>:
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b"><code class="+ topic/ph pr-d/codeph ph codeph" id="QSP_udploggingapi_introduction__opt_defaultlocatorinfo">defaultLocatorInfo</code></strong>:
+                        Provides all <strong class="+ topic/ph hi-d/b ph b">Locator</strong>-related data points. Use this format to monitor
+                        the hardware status and configuration details of the <strong class="+ topic/ph hi-d/b ph b">Locators </strong>in your
+                        project.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b"><code class="+ topic/ph pr-d/codeph ph codeph" id="QSP_udploggingapi_introduction__opt_legacylocatorinfo">legacyLocatorInfo</code></strong>:
                         Provides all <strong class="+ topic/ph hi-d/b ph b">Locator</strong>-related data points in the legacy formatting
-                        from the /getLocatorInfo API response.</li>
+                        from the <code class="+ topic/ph pr-d/codeph ph codeph">/getLocatorInfo</code> API response.</li>
                 </ul>
             </div>
             <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b" id="QSP_udploggingapi_introduction__label_for_positioning_engine_data">For Positioning Engine
                 Data:</strong></p>
             <p dir="ltr" class="- topic/p p">This format applies to <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Quuppa Positioning Engine (QPE)</span>
                 output targets or the API endpoint
-                    <span class="+ topic/keyword pr-d/apiname keyword apiname">/getPEData?format=&lt;name-of-your-format&gt;</span></p>
+                        <code class="+ topic/ph pr-d/codeph ph codeph">/getPEData?format=&lt;<var class="+ topic/keyword sw-d/varname keyword varname">name-of-your-format</var>&gt;</code></p>
             <ul class="- topic/ul ul" id="QSP_udploggingapi_introduction__ul_vxr_kt2_qfc" data-ofbid="QSP_udploggingapi_introduction__ul_vxr_kt2_qfc">
                 <li dir="ltr" class="- topic/li li">
-                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b"><span class="+ topic/ph ui-d/uicontrol ph uicontrol" id="QSP_udploggingapi_introduction__opt_defaultPEinfo">defaultPEInfo</span></strong>:
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b"><code class="+ topic/ph pr-d/codeph ph codeph" id="QSP_udploggingapi_introduction__opt_defaultpeinfo">defaultPEInfo</code></strong>:
                         Provides all data points related to <strong class="+ topic/ph hi-d/b ph b">Positioning Engine</strong>. Use this
                         format to monitor the performance and operational state of the
                         <strong class="+ topic/ph hi-d/b ph b">QPE</strong>.</p>
@@ -198,14 +197,14 @@
             <p class="- topic/p p">The types of data that you want to expose via the <strong class="+ topic/ph hi-d/b ph b">Quuppa API</strong> depend on the
                 specific requirements of your project. The <span class="+ topic/keyword ui-d/wintitle keyword wintitle">API Data Formats &amp; Output
                     Targets</span> editor allows you to use default API format definitions
-                        (<strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__opt_defaultinfo">DefaultInfo</a></strong>, <strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__opt_defaultlocation">DefaultLocation</a></strong>, <strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__opt_defaultlocationandinfo">DefaultLocationAndInfo </a></strong> and
-                        <strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__opt_all_items">ALL_ITEMS</a></strong>) as templates to
-                customise for your project. <strong class="+ topic/ph hi-d/b ph b">JSON</strong> and <strong class="+ topic/ph hi-d/b ph b">CSV</strong> outputs are available for all
-                output formats. </p>
+                        (<strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="QSP_udp_logging_api.html#QSP_udploggingapi_introduction__opt_defaultinfo"><code class="+ topic/ph pr-d/codeph ph codeph">DefaultInfo</code></a></strong>, <strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__opt_defaultlocation"><code class="+ topic/ph pr-d/codeph ph codeph">DefaultLocation</code></a></strong>,
+                        <strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__opt_defaultlocationandinfo"><code class="+ topic/ph pr-d/codeph ph codeph">DefaultLocationAndInfo</code>
+                    </a></strong> and <strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__opt_all_items"><code class="+ topic/ph pr-d/codeph ph codeph">ALL_ITEMS</code></a></strong>) as templates to customise for your
+                project. <strong class="+ topic/ph hi-d/b ph b">JSON</strong> and <strong class="+ topic/ph hi-d/b ph b">CSV</strong> outputs are available for all output formats. </p>
             <p class="- topic/p p">The syntax for creating custom formats uses $(object.field) notation, which is
                 documented for all available fields in <strong class="+ topic/ph hi-d/b ph b">Quuppa API documentation</strong>. All
-                available fields are also included in the <strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__opt_all_items">ALL_ITEMS</a></strong> format, which can be used as a starting point for your
-                custom target.</p>
+                available fields are also included in the <strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="#QSP_udploggingapi_introduction__opt_all_items"><code class="+ topic/ph pr-d/codeph ph codeph">ALL_ITEMS</code></a></strong> format, which can be used as a
+                starting point for your custom target.</p>
             <p dir="ltr" class="- topic/p p">All formats must start with the $(version.1) specifier to define the
                     <strong class="+ topic/ph hi-d/b ph b">API</strong> version and the data type. Available options include:</p>
             <ul class="- topic/ul ul">
@@ -413,7 +412,7 @@
     </div>
 </div>
   </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
-                Generation date: 22.05.2026</div>
+                Generation date: 04.06.2026</div>
 </footer>
         
         <button id="go2top" class="d-print-none" title="Go to top">

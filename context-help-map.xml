@@ -350,7 +350,7 @@
    <appContext helpID="generation_q_fw_upgrade" path="Qxx_FW/topics/fw_upgrade.html"/>
    <appContext helpID="QPE_advanced_features"
                path="QPE/topics/QPE_advanced_features.html"/>
-   <appContext helpID="QPE_generation_Q_offline_module"
+   <appContext helpID="QPE_generation_Q_offline_module_topic"
                path="QPE/topics/offline_module.html"/>
    <appContext helpID="offline_module_update"
                path="QPE/topics/offline_module_update.html"/>

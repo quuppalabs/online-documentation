@@ -1,0 +1,329 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="28.0">
+    <head><link rel="shortcut icon" href="favicon.ico?buildId=20260616145243"/><link rel="icon" href="favicon.ico?buildId=20260616145243"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The Offline Module is an optional software feature for Quuppa subscriptions, which allows the Quuppa Positioning Engine (QPE) to run a project completely offline. The feature has been developed for ..."/><meta name="DC.rights.owner" content="(C) Copyright 2026"/><meta name="copyright" content="(C) Copyright 2026"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="QPE_generation_Q_offline_module_topic"/><title>Using the Offline Module</title><!--  Generated with Oxygen version 28.0, build number 2026013010.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content=""/><meta name="wh-source-relpath" content="offline_module.dita"/><meta name="wh-out-relpath" content="offline_module.html"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/bootstrap.css?buildId=2026013010"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/jquery-ui.css?buildId=2026013010"/>
+        
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic.css?buildId=2026013010"/>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen-theme.css?buildId=20260616145243"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen.css?buildId=20260616145243"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=20260616145243"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/quuppa.css?buildId=20260616145243"/>
+    <script src="./oxygen-webhelp/app/options/properties.js?buildId=20260616145243"></script>
+    <script src="./oxygen-webhelp/app/themes.js?buildId=20260616145243"></script>
+    <script src="./oxygen-webhelp/app/localization/strings.js?buildId=2026013010"></script>
+    <script src="./oxygen-webhelp/app/search/index/keywords.js?buildId=20260616145243"></script>
+    
+    <script defer="defer" src="./oxygen-webhelp/app/jquery.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/jquery-ui.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/jquery-bootpag.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/jquery-highlight.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/popperjs-core.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/bootstrap.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/dompurify.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/image-map.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/maphilight.js?buildId=2026013010"></script>
+
+    <script defer="defer" src="./oxygen-webhelp/app/topic.js?buildId=2026013010"></script>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L77KR66W6P"></script>
+    <script><!--
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-L77KR66W6P');
+    
+--></script>    
+
+</head>
+
+    <body id="QPE_generation_Q_offline_module_topic" class="wh_topic_page frmBody">
+        <a class="visually-hidden-focusable" id="wh_jump_to_content" href="#wh_topic_body">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid navbar-expand-md">
+        <div class="wh_header_flex_container navbar-nav navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="https://quuppa.com/" class=" wh_logo d-none d-sm-block "><img src="https://www.quuppa.com/documentation/oxygen-webhelp/template/resources/images/QUUPPA_1row_black_LOW_small.png?buildId=20260616145243" alt=""/></a>
+                    <div class=" wh_publication_title "></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid navbar-expand-md" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_full_width_link" data-next-state="expanded" aria-label="Maximize to full width" title="Maximize to full width"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-xxl-10 col-lg-10 col-md-10 col-sm-10 col-xs-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article class="- topic/topic topic" role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Using the Offline Module</h1>
+    <div class="- topic/body body">
+        <p dir="ltr" class="- topic/p p">The Offline Module is an optional <strong class="+ topic/ph hi-d/b ph b">software feature</strong> for Quuppa
+            subscriptions, which allows the <strong class="+ topic/ph hi-d/b ph b">Quuppa Positioning Engine (QPE)</strong> to run a
+            project completely offline. The feature has been developed for situations where the
+            Quuppa system cannot be connected to a network (e.g., for security reasons or due to
+            unstable on-site internet connections). <em class="+ topic/ph hi-d/i ph i">Please note that in this documentation,
+                "online" indicates that the Locators are powered and successfully communicating
+                with the local on-site QPE, not connected to the public internet.</em></p>
+        <div class="- topic/p p">
+            <div class="- topic/note note note note_note"><span class="note__title">Note:</span> <div class="note__body">The Offline Module is an <strong class="+ topic/ph hi-d/b ph b">optional module</strong> and must be purchased and
+                activated in advance. Without this feature enabled in advance, the QPE is
+                programmed to stop tracking after 48 hours of being offline, as it must
+                periodically verify license details via the <strong class="+ topic/ph hi-d/b ph b">Quuppa Customer Portal (QCP)</strong>. </div></div>
+        </div>
+        <p class="- topic/p p">When the Offline Module is enabled, the 48-hour connectivity requirement is removed.
+            However, please note that licenses remain valid only for the duration of your
+            subscription term; you must manually update your license files before they expire to
+            maintain system functionality. Note that storing project files locally without
+            submitting them to the <strong class="+ topic/ph hi-d/b ph b">Quuppa Customer Portal (QCP)</strong> will limit Quuppa's
+            ability to provide remote troubleshooting support in the future.</p>
+        
+        <section class="- topic/section section" id="QPE_generation_Q_offline_module_topic__prerequisites" data-ofbid="QPE_generation_Q_offline_module_topic__prerequisites"><h2 class="- topic/title title sectiontitle">Prerequisites</h2>
+            
+            <p class="- topic/p p">Before you can start implementing your offline project, you must have the following
+                system installation and deployment steps completed:</p>
+            <ul class="- topic/ul ul">
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Physical deployment</strong>: All Locators are physically installed and
+                    cabled, and are receiving power and data connectivity, either through
+                    network switches, Quuppa Q-Ports or Q-Link.</li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">System components</strong>: The <strong class="+ topic/ph hi-d/b ph b">Quuppa Positioning Engine (QPE)</strong> and the
+                    controller are installed and running on-site.</li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Project Key</strong>: A <strong class="+ topic/ph hi-d/b ph b">Project Key</strong> has been generated in the <strong class="+ topic/ph hi-d/b ph b">Quuppa
+                        Customer Portal (QCP).</strong></li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Locator activation</strong>: All Locators must be online and successfully
+                    communicating with the QPE to be included in the resulting <strong class="+ topic/ph hi-d/b ph b">Quuppa
+                        Authentication Message file (<span class="+ topic/ph sw-d/filepath ph filepath">quuppa.qam</span> file)</strong>.
+                    <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">System Configuration</strong></p>
+                    <p class="- topic/p p">For more information about deploying your Quuppa system, please see our 
+                        <a class="- topic/xref xref" href="https://quuppa.com/product-documentation/manuals/q/devkit_qsg/topics/DevkitQSG_introduction.html" target="_blank" rel="external noopener">
+                            <strong class="+ topic/ph hi-d/b ph b">Quuppa Development Kit Quick Start Guide</strong>
+                        </a>.</p>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="- topic/section section" id="QPE_generation_Q_offline_module_topic__system_configuration" data-ofbid="QPE_generation_Q_offline_module_topic__system_configuration"><h2 class="- topic/title title sectiontitle">System Configuration</h2>
+            
+            <p class="- topic/p p">Start configuring your offline project by following the steps below:</p>
+            <ol class="- topic/ol ol">
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Stop Tomcat.</strong></li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Start-up parameters</strong>: Add <code class="+ topic/ph pr-d/codeph ph codeph">-DdoNotConnectToQCP</code> parameter to your Java start-up parameters. Please refer to the <a class="- topic/xref xref" href="https://www.quuppa.com/documentation/network/topics/startup_parameters.html" target="_blank" rel="external noopener"><strong class="+ topic/ph hi-d/b ph b">Java Virtual Machine Startup Parameters</strong></a> section for more about the available optional start-up parameters.</li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Project override folder</strong>: In the QPE's project folder (defined in the QPE
+                    startup configuration as <code class="+ topic/ph pr-d/codeph ph codeph">-Dproject.folder</code>), create a
+                        <span class="+ topic/ph sw-d/filepath ph filepath">quuppaprojectoverride</span> folder, for example,
+                        <span class="+ topic/ph sw-d/filepath ph filepath">/opt/quuppa/PE/quuppaprojectoverride</span>. <p class="- topic/p p">Ensure the
+                        owner and access rights of the new subfolder match the parent QPE project
+                        folder.</p></li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Copy QSP project file</strong>: Copy your QSP project file
+                        (<span class="+ topic/ph sw-d/filepath ph filepath">.quuppaproject</span>) from your local computer into the
+                    newly created <span class="+ topic/ph sw-d/filepath ph filepath">quuppaprojectoverride</span> subfolder. The QSP
+                    project file includes the IDs of all the Locators physically installed at the
+                        site.<p class="- topic/p p">Ensure the owner and access rights of the QSP project file also
+                        match the parent QPE project folder.</p></li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Start Tomcat.</strong></li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Set Project Key</strong>: Open the <strong class="+ topic/ph hi-d/b ph b">QPE Web console</strong>, enter a Project Key and
+                        submit.<br/><img class="- topic/image image" id="QPE_generation_Q_offline_module_topic__image_ohv_1t4_ljc" src="oxy_ex-1/images/1_QPE_Set_Key.png" alt="QPE Set Key"/><br/><div class="- topic/p p">
+                        <div class="- topic/note note note note_note"><span class="note__title">Note:</span> <div class="note__body">If you already associated the <strong class="+ topic/ph hi-d/b ph b">Project Key</strong> with the project file
+                            in the <strong class="+ topic/ph hi-d/b ph b">Quuppa Site Planner</strong>, the QPE detects and applies it
+                            automatically at start-up. Manual entry is not required.</div></div>
+                    </div></li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Start QPE.</strong></li>
+            </ol>
+        </section>
+        
+        <section class="- topic/section section" id="QPE_generation_Q_offline_module_topic__qam_generation" data-ofbid="QPE_generation_Q_offline_module_topic__qam_generation"><h2 class="- topic/title title sectiontitle">Quuppa Authentication Message (.qam) Generation</h2>
+            
+            <p class="- topic/p p">The QPE creates a Quuppa Authentication Message (<span class="+ topic/ph sw-d/filepath ph filepath">quuppa.qam</span>) file in the QPE project folder. This file contains the Locator authentication data that you must upload to the Quuppa Customer Portal (QCP) to obtain Locator licences for offline use.</p>
+            <ol class="- topic/ol ol">
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Locator count validation</strong>: Before copying the <span class="+ topic/ph sw-d/filepath ph filepath">quuppa.qam</span> file, wait at least one minute after all Locators are physically connected to allow the QPE to process and include their IDs in the authentication file.
+                    <p class="- topic/p p">Open the QPE Locator details table and verify that every physical Locator shows the following values:</p>
+                    <ul class="- topic/ul ul">
+                        <li class="- topic/li li">The <strong class="+ topic/ph hi-d/b ph b">Connection</strong> column shows <code class="+ topic/ph pr-d/codeph ph codeph">ok</code> (indicating the Locator is online and connected to QPE).</li>
+                        <li class="- topic/li li">The <strong class="+ topic/ph hi-d/b ph b">Local subscription status</strong> column shows <code class="+ topic/ph pr-d/codeph ph codeph">QAM written to file</code>.</li>
+                    </ul>
+                    <br/><img class="- topic/image image" id="QPE_generation_Q_offline_module_topic__image_ctl_ht4_ljc" src="oxy_ex-1/images/2_Offline_module_QPE_Locator_details_table_file.png" alt="QPE Locator details table file"/><br/>
+                    <p class="- topic/p p">All Locators must show as online to be included in the authentication file. Do not copy the file until every Locator displays these statuses. These combined values confirm that the system has successfully recorded all required authentication data in the file.</p>
+                </li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">File retrieval and transfer</strong>: Copy the <span class="+ topic/ph sw-d/filepath ph filepath">quuppa.qam</span> file to a USB memory stick or external drive for later uploading to the Quuppa Customer Portal.
+                    <div class="- topic/note note important note_important"><span class="note__title">Important:</span> <div class="note__body">Any Locator not yet registered when the file is copied will not be authenticated by the portal and will not function. Always cross-check the Locator count in the QPE against your physical installation before moving the file to your USB stick to ensure it is complete.</div></div>
+                </li>
+            </ol>
+        </section>
+        
+        <section class="- topic/section section" id="QPE_generation_Q_offline_module_topic__portal_upload_finalisation" data-ofbid="QPE_generation_Q_offline_module_topic__portal_upload_finalisation"><h2 class="- topic/title title sectiontitle">Portal Upload and Finalisation</h2>
+            
+            <ol class="- topic/ol ol">
+                <li class="- topic/li li">In the Quuppa Customer Portal (QCP) main <strong class="+ topic/ph hi-d/b ph b">Dashboard</strong>, open the <strong class="+ topic/ph hi-d/b ph b">Subscriptions</strong> list.</li>
+                <li class="- topic/li li">Select the relevant subscription by clicking on the subscription ID. This will open the <strong class="+ topic/ph hi-d/b ph b">Subscription Details</strong> page.</li>
+                <li class="- topic/li li">Check that the <strong class="+ topic/ph hi-d/b ph b">Offline Module</strong> has been enabled.
+                    <br/><img class="- topic/image image" id="QPE_generation_Q_offline_module_topic__image_cdh_5t4_ljc" src="oxy_ex-1/images/3_Offline_module_Sub_details_Offline_module_enabled.png" alt="Subscription details Offline module enabled"/><br/>
+                    <div class="- topic/note note note note_note"><span class="note__title">Note:</span> <div class="note__body">Locators under different subscriptions can be used together in the same offline project, as long as all subscriptions have the Offline Module enabled. Please check the Subscription details page for each subscription that you want to use in this project.</div></div>
+                </li>
+                <li class="- topic/li li">Navigate to the <strong class="+ topic/ph hi-d/b ph b">Project Key Details</strong> page of your project. Check that the
+                    Project Key is linked to the correct subscription with the <strong class="+ topic/ph hi-d/b ph b">Offline Module</strong>
+                    enabled. If the Project Key is not linked, link it now. Any new Locators in your
+                        <span class="+ topic/ph sw-d/filepath ph filepath">.qam</span> file will be added to this specific subscription.
+                        <br/><img class="- topic/image image" id="QPE_generation_Q_offline_module_topic__image_hvb_p54_ljc" height="530" width="982" src="oxy_ex-1/images/4_Project_Key_Details_Offline_module_enabled.png" alt="Project Key Details Offline Module enabled"/><br/>
+                </li>
+                <li class="- topic/li li">Click the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Upload locator authentication info</span> link </li>
+                <li class="- topic/li li">Click <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Choose File</span> and select the
+                        <span class="+ topic/ph sw-d/filepath ph filepath">quuppa.qam</span> file that you copied from the QPE project
+                    folder earlier. Click <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Upload</span> to upload the file. <br/><img class="- topic/image image" id="QPE_generation_Q_offline_module_topic__image_zr4_w54_ljc" src="oxy_ex-1/images/6_Offline_module_Upload_the_qam_file.png" width="622" alt="Offline Module Upload the qam file"/><br/>
+                    <div class="- topic/note note attention note_attention"><span class="note__title">Attention:</span> <div class="note__body">You have to upload the <span class="+ topic/ph sw-d/filepath ph filepath">.qam</span> file to
+                        the QCP every time you add new Locators to the project and connect them to
+                        the QPE.</div></div>
+                </li>
+                <li class="- topic/li li"> You can now see authenticated Locators added to the Project Key.
+                    <br/><img class="- topic/image image" id="QPE_generation_Q_offline_module_topic__image_lxq_1v4_ljc" height="530" width="892" src="oxy_ex-1/images/7_Offline_module_Authenticated_Locators_added_to_Project_Key.png" alt="Locators added to the Project Key"/><br/>
+                    <div class="- topic/note note note note_note"><span class="note__title">Note:</span> <div class="note__body">If the Locators have not previously been associated with a subscription in the QCP, adding them to the Project Key will automatically associate them with the subscription linked to this Project Key.</div></div>
+                </li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Download files from QCP</strong>: Once the Locators are added to the Project Key
+                    and the subscription is activated, click the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Download files for QPE
+                        v8.5+</span> button on the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Project Key Details</span> page
+                    to download the licence file, licence signature and the sync file from QCP. If
+                    you have submitted the project file to the QCP, the downloaded files will also
+                    include the project file and the project signature.</li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Stop Tomcat.</strong></li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Transfer files</strong>: Unzip the downloaded files and transfer them to the
+                    offline QPE's project folder, which is defined in the QPE configuration as
+                        <code class="+ topic/ph pr-d/codeph ph codeph">-Dproject.folder</code>. Use a storage devise, such as a USB stick
+                    to move the data. Verify that the owner and access rights of the transferred
+                    files match the QPE project folder.</li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Start Tomcat.</strong></li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Working Directory validation</strong>: Open the QPE Web Console and verify that
+                    the <strong class="+ topic/ph hi-d/b ph b">Working Directory</strong> row confirms the system is using the project
+                    override folder. <br/><img class="- topic/image image" id="QPE_generation_Q_offline_module_topic__image_y3n_2v4_ljc" src="oxy_ex-1/images/8_Offline_module_Working_Directory_row_System_is_using_project_override_folder.png" width="622" alt="QPE Working Directory row"/><br/>
+                    <div class="- topic/note note important note_important"><span class="note__title">Important:</span> <div class="note__body">Only one <span class="+ topic/ph sw-d/filepath ph filepath">.quuppaproject</span> file can be
+                        stored in the override folder at a time.</div></div>
+                    <div class="- topic/note note warning note_warning"><span class="note__title">Warning:</span> <div class="note__body">You are responsible for backing up the project files and
+                        ensuring that you are always using the latest version of the file.</div></div>
+                </li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Tracking validation</strong>: Verify that the QPE is runs in tracking mode and
+                    that the <strong class="+ topic/ph hi-d/b ph b">Project Sync Status</strong> is <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Disabled</span>. <br/><img class="- topic/image image" id="QPE_generation_Q_offline_module_topic__image_ppk_3v4_ljc" src="oxy_ex-1/images/9_Offline_module_Project_Sync_Status_Disabled.png" width="622" alt="QPE Project sync status disabled"/><br/>
+                </li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Connectivity check</strong>: Wait at least one minute for all Locators to connect.
+                    Verify that the local subscription status has updated and displays the validity
+                    period matching your subscription term. <br/><img class="- topic/image image" id="QPE_generation_Q_offline_module_topic__image_ilw_sv4_ljc" src="oxy_ex-1/images/10_Offline_module_Project_running_offline_confirmation.png" width="622" alt="Project running offline confirmation"/><br/>
+                    <p class="- topic/p p">Your project is now running completely offline.</p>
+                </li>
+            </ol>
+        </section>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-xxl-2 col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+              	                <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+		                            <span class="close-toc-icon-container">
+		                                <span class="close-toc-icon"></span>     
+		                            </span>
+		                        </button>
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="section-item"><div class="section-title"><a href="#QPE_generation_Q_offline_module_topic__prerequisites" data-tocid="QPE_generation_Q_offline_module_topic__prerequisites">Prerequisites</a></div></li><li class="section-item"><div class="section-title"><a href="#QPE_generation_Q_offline_module_topic__system_configuration" data-tocid="QPE_generation_Q_offline_module_topic__system_configuration">System Configuration</a></div></li><li class="section-item"><div class="section-title"><a href="#QPE_generation_Q_offline_module_topic__qam_generation" data-tocid="QPE_generation_Q_offline_module_topic__qam_generation">Quuppa Authentication Message (.qam) Generation</a></div></li><li class="section-item"><div class="section-title"><a href="#QPE_generation_Q_offline_module_topic__portal_upload_finalisation" data-tocid="QPE_generation_Q_offline_module_topic__portal_upload_finalisation">Portal Upload and Finalisation</a></div></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="quuppa-footer">
+    <div style="text-align: center; padding: 0.5em 0;">
+        <div style="color: white; font-size: 0.85em;">
+            © 2020-2026 Quuppa Oy. All Rights Reserved.
+        </div>
+    </div>
+</div>
+  </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
+                Generation date: 16.06.2026</div>
+</footer>
+        
+        <button id="go2top" class="d-print-none" title="Go to top">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </button>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

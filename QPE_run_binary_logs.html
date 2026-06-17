@@ -1,0 +1,282 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="28.0">
+    <head><link rel="shortcut icon" href="favicon.ico?buildId=20260602140613"/><link rel="icon" href="favicon.ico?buildId=20260602140613"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The Quuppa binary data is useful for analysing, optimising and troubleshooting Quuppa systems. One method of accessing this data is through the QPE. This section will walk you through how to set up ..."/><meta name="DC.rights.owner" content="(C) Copyright 2026"/><meta name="copyright" content="(C) Copyright 2026"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="QPE_run_binary_logs"/><title>Run Binary Logs on a QPE</title><!--  Generated with Oxygen version 28.0, build number 2026013010.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content=""/><meta name="wh-source-relpath" content="QPE_run_binary_logs.dita"/><meta name="wh-out-relpath" content="QPE_run_binary_logs.html"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/bootstrap.css?buildId=2026013010"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/jquery-ui.css?buildId=2026013010"/>
+        
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic.css?buildId=2026013010"/>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen-theme.css?buildId=20260602140613"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen.css?buildId=20260602140613"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=20260602140613"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/quuppa.css?buildId=20260602140613"/>
+    <script src="./oxygen-webhelp/app/options/properties.js?buildId=20260602140613"></script>
+    <script src="./oxygen-webhelp/app/themes.js?buildId=20260602140613"></script>
+    <script src="./oxygen-webhelp/app/localization/strings.js?buildId=2026013010"></script>
+    <script src="./oxygen-webhelp/app/search/index/keywords.js?buildId=20260602140613"></script>
+    
+    <script defer="defer" src="./oxygen-webhelp/app/jquery.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/jquery-ui.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/jquery-bootpag.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/jquery-highlight.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/popperjs-core.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/bootstrap.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/dompurify.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/image-map.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/maphilight.js?buildId=2026013010"></script>
+
+    <script defer="defer" src="./oxygen-webhelp/app/topic.js?buildId=2026013010"></script>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L77KR66W6P"></script>
+    <script><!--
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-L77KR66W6P');
+    
+--></script>    
+
+</head>
+
+    <body id="QPE_run_binary_logs" class="wh_topic_page frmBody">
+        <a class="visually-hidden-focusable" id="wh_jump_to_content" href="#wh_topic_body">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid navbar-expand-md">
+        <div class="wh_header_flex_container navbar-nav navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="https://quuppa.com/" class=" wh_logo d-none d-sm-block "><img src="https://www.quuppa.com/documentation/oxygen-webhelp/template/resources/images/QUUPPA_1row_black_LOW_small.png?buildId=20260602140613" alt=""/></a>
+                    <div class=" wh_publication_title "></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid navbar-expand-md" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_full_width_link" data-next-state="expanded" aria-label="Maximize to full width" title="Maximize to full width"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-xxl-10 col-lg-10 col-md-10 col-sm-10 col-xs-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article class="- topic/topic topic" role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Run Binary Logs on a QPE</h1>
+    <div class="- topic/body body">
+        <p class="- topic/p p">The Quuppa binary data is useful for analysing, optimising and troubleshooting Quuppa
+            systems. One method of accessing this data is through the QPE. This section will walk
+            you through how to set up the QPE to listen for binary data from the Quuppa Site Planner
+            (QSP) and run those logs so that you can access them. </p>
+        <section class="- topic/section section" id="QPE_run_binary_logs__section_a4q_4fv_3qb" data-ofbid="QPE_run_binary_logs__section_a4q_4fv_3qb"><h2 class="- topic/title title sectiontitle">Run Binary Logs on a QPE</h2>
+            
+            <div class="- topic/p p">
+                <ol class="- topic/ol ol" id="QPE_run_binary_logs__ol_ewz_vrm_trb" data-ofbid="QPE_run_binary_logs__ol_ewz_vrm_trb">
+                    <li class="- topic/li li">Set the <code class="+ topic/ph pr-d/codeph ph codeph">-DbinaryLogMode</code> java startup parameter for the
+                            QPE.<p class="- topic/p p">For Ubuntu systems:</p><ol class="- topic/ol ol" type="a" id="QPE_run_binary_logs__ol_ogb_fsm_trb" data-ofbid="QPE_run_binary_logs__ol_ogb_fsm_trb">
+                            <li class="- topic/li li">Using the <strong class="+ topic/ph hi-d/b ph b">terminal</strong> window, open the file that defines the
+                                Java startup parameters, e.g. with the following command if you are
+                                using the typical Quuppa setup:<div class="- topic/p p">
+                                    <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sudo nano /usr/share/tomcat9/bin/setenv.sh</code></pre>
+                                </div></li>
+                            <li class="- topic/li li">Add the <code class="+ topic/ph pr-d/codeph ph codeph">-DbinaryLogMode</code> parameter to the file by
+                                editing the <strong class="+ topic/ph hi-d/b ph b">JAVA_OPTS=”” line</strong>:<div class="- topic/p p">
+                                    <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>export JAVA_OPTS=”-DbinaryLogMode -XX:+UseZGC -XX:MaxRAMPercentage=70 -XX:-ZUncommit -Djava.awt.headless=true -Dproject.folder=/opt/quuppa/PE”</code></pre>
+                                </div></li>
+                            <li class="- topic/li li">Save and exit the file.</li>
+                            <li class="- topic/li li">Start the QPE.</li>
+                        </ol></li>
+                    <li class="- topic/li li">
+                        <p dir="ltr" class="- topic/p p">For versions 8.5 and above, check that the working directory
+                            for the QPE contains the following files:</p>
+                        <ul class="- topic/ul ul" id="QPE_run_binary_logs__ul_dyq_gsl_s1c" data-ofbid="QPE_run_binary_logs__ul_dyq_gsl_s1c">
+                            <li dir="ltr" class="- topic/li li">
+                                <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">.quuppaproject</code></p>
+                            </li>
+                            <li dir="ltr" class="- topic/li li">
+                                <p dir="ltr" class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">.qlicense</code></p>
+                            </li>
+                        </ul>
+                        <p dir="ltr" class="- topic/p p">For older versions, check that the working directory for the
+                            QPE contains the following files:</p>
+                        <div class="- topic/p p">
+                            <ul class="- topic/ul ul">
+                                <li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">.quuppaproject</code></li>
+                                <li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">.quuppalicense</code></li>
+                                <li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">.quuppalicensesignature</code></li>
+                            </ul>
+                        </div>
+                        <p dir="ltr" class="- topic/p p">You can find these files in the same folder where binary logs
+                            are located. </p>
+                    </li>
+                    <li class="- topic/li li">Edit the project file as needed using the QSP.</li>
+                    <li class="- topic/li li">Open the terminal window and navigate to the folder where the QSP file is
+                        located.</li>
+                    <li class="- topic/li li">Edit the following command according to your setup (see the table below for
+                            <a class="- topic/xref xref" href="#QPE_run_binary_logs__section_xdl_mrm_trb">Additional Parameter Definitions</a>):<div class="- topic/p p">
+                            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>java -Dfile=<strong class="+ topic/ph hi-d/b ph b">&lt;path to your binarylogfile&gt;</strong> -DbinaryLogReader -Dip=<strong class="+ topic/ph hi-d/b ph b">&lt;your target QPE IP address&gt;</strong> -Dspeed=<strong class="+ topic/ph hi-d/b ph b">&lt;desired speed&gt;</strong> -Dloop -XX:+UseZGC -XX:MaxRAMPercentage=70 -jar <strong class="+ topic/ph hi-d/b ph b">&lt;name of your QSP tool file&gt;</strong></code></pre>
+                        </div><p dir="ltr" class="- topic/p p">Please see our <a class="- topic/xref xref" href="https://quuppa.com/product-documentation/manuals/q/network/topics/startup_parameters.html" target="_blank" rel="external noopener"><u class="+ topic/ph hi-d/u ph u">Java Virtual Machine Startup
+                                    Parameters</u></a> document for more information about the
+                            startup parameters.</p></li>
+                    <li class="- topic/li li">Run the modified command to start feeding the data from the QSP to the QPE,
+                        for example:<div class="- topic/p p">
+                            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>java -Dfile=/home/demouser/Downloads/RetailBinTest -DbinaryLogReader -Dip=127.0.0.1 -Dspeed=1.0 -Dloop -XX:+UseZGC -XX:MaxRAMPercentage=70 -jar QuuppaSitePlanner-7.2.3.jar</code></pre>
+                        </div></li>
+                    <li class="- topic/li li">Go to the QPE Web Console of your target QPE to check that the data is
+                        coming through. The recorded data should now be visible in the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Map
+                            view</span>.<div class="- topic/p p">
+                            <div class="- topic/note note note note_note" id="QPE_run_binary_logs__note_s2n_yyl_1tb" data-ofbid="QPE_run_binary_logs__note_s2n_yyl_1tb"><span class="note__title">Note:</span> <div class="note__body">Locator and tag log files generated while
+                                the QPE is running using the <code class="+ topic/ph pr-d/codeph ph codeph">-DbinaryLogMode</code>
+                                parameter are stored in a folder marked with the
+                                    <code class="+ topic/ph pr-d/codeph ph codeph">_fromBinaryLog</code> suffix. </div></div>
+                        </div></li>
+                </ol>
+            </div>
+        </section>
+        <section class="- topic/section section" id="QPE_run_binary_logs__section_xdl_mrm_trb" data-ofbid="QPE_run_binary_logs__section_xdl_mrm_trb"><h2 class="- topic/title title sectiontitle">Additional Parameter Definitions</h2>
+            
+            <div class="- topic/p p">
+                <div class="table-container"><table class="- topic/table table frame-all" id="QPE_run_binary_logs__table_ur5_nrm_trb" data-ofbid="QPE_run_binary_logs__table_ur5_nrm_trb" data-cols="2"><caption></caption><colgroup><col style="width:27.624309392265197%"/><col style="width:72.37569060773481%"/></colgroup><thead class="- topic/thead thead">
+                            <tr class="- topic/row">
+                                <th class="- topic/entry entry colsep-1 rowsep-1" id="QPE_run_binary_logs__table_ur5_nrm_trb__entry__1">Parameter</th>
+                                <th class="- topic/entry entry colsep-0 rowsep-1" id="QPE_run_binary_logs__table_ur5_nrm_trb__entry__2">Definition</th>
+                            </tr>
+                        </thead><tbody class="- topic/tbody tbody">
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1">-Dfile</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1">The folder where your binary log files are located</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1">-DbinaryLogReader</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1">Sets the QSP into the reading mode</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1">-Dip</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1">The target IP address for the QPE (127.0.01 being
+                                    localhost)</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1">-Dspeed</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1">The speed of the replay (0.1-5.0), where 1 is normal speed
+                                    and 2 is double speed</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-0">-Dloop</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-0">(optional) Loops the replay</td>
+                            </tr>
+                        </tbody></table></div>
+            </div>
+        </section>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-xxl-2 col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+              	                <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+		                            <span class="close-toc-icon-container">
+		                                <span class="close-toc-icon"></span>     
+		                            </span>
+		                        </button>
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="section-item"><div class="section-title"><a href="#QPE_run_binary_logs__section_a4q_4fv_3qb" data-tocid="QPE_run_binary_logs__section_a4q_4fv_3qb">Run Binary Logs on a QPE</a></div></li><li class="section-item"><div class="section-title"><a href="#QPE_run_binary_logs__section_xdl_mrm_trb" data-tocid="QPE_run_binary_logs__section_xdl_mrm_trb">Additional Parameter Definitions</a></div></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="quuppa-footer">
+    <div style="text-align: center; padding: 0.5em 0;">
+        <div style="color: white; font-size: 0.85em;">
+            © 2020-2026 Quuppa Oy. All Rights Reserved.
+        </div>
+    </div>
+</div>
+  </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
+                Generation date: 02.06.2026</div>
+</footer>
+        
+        <button id="go2top" class="d-print-none" title="Go to top">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </button>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

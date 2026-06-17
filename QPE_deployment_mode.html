@@ -1,0 +1,320 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="28.0">
+    <head><link rel="shortcut icon" href="favicon.ico?buildId=20260602140613"/><link rel="icon" href="favicon.ico?buildId=20260602140613"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The QPE's deployment mode is used to deploy (identify and focus) Locators into the Quuppa system. This document will walk you though how to start the QPE in the deployment mode. Prerequisites In order ..."/><meta name="DC.rights.owner" content="(C) Copyright 2026"/><meta name="copyright" content="(C) Copyright 2026"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="QPE_deployment_mode"/><title>Run the QPE in Deployment Mode</title><!--  Generated with Oxygen version 28.0, build number 2026013010.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content=""/><meta name="wh-source-relpath" content="QPE_deployment_mode.dita"/><meta name="wh-out-relpath" content="QPE_deployment_mode.html"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/bootstrap.css?buildId=2026013010"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/jquery-ui.css?buildId=2026013010"/>
+        
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic.css?buildId=2026013010"/>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen-theme.css?buildId=20260602140613"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen.css?buildId=20260602140613"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=20260602140613"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/quuppa.css?buildId=20260602140613"/>
+    <script src="./oxygen-webhelp/app/options/properties.js?buildId=20260602140613"></script>
+    <script src="./oxygen-webhelp/app/themes.js?buildId=20260602140613"></script>
+    <script src="./oxygen-webhelp/app/localization/strings.js?buildId=2026013010"></script>
+    <script src="./oxygen-webhelp/app/search/index/keywords.js?buildId=20260602140613"></script>
+    
+    <script defer="defer" src="./oxygen-webhelp/app/jquery.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/jquery-ui.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/jquery-bootpag.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/jquery-highlight.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/popperjs-core.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/bootstrap.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/dompurify.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/image-map.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/maphilight.js?buildId=2026013010"></script>
+
+    <script defer="defer" src="./oxygen-webhelp/app/topic.js?buildId=2026013010"></script>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L77KR66W6P"></script>
+    <script><!--
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-L77KR66W6P');
+    
+--></script>    
+
+</head>
+
+    <body id="QPE_deployment_mode" class="wh_topic_page frmBody">
+        <a class="visually-hidden-focusable" id="wh_jump_to_content" href="#wh_topic_body">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid navbar-expand-md">
+        <div class="wh_header_flex_container navbar-nav navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="https://quuppa.com/" class=" wh_logo d-none d-sm-block "><img src="https://www.quuppa.com/documentation/oxygen-webhelp/template/resources/images/QUUPPA_1row_black_LOW_small.png?buildId=20260602140613" alt=""/></a>
+                    <div class=" wh_publication_title "></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid navbar-expand-md" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_full_width_link" data-next-state="expanded" aria-label="Maximize to full width" title="Maximize to full width"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-xxl-10 col-lg-10 col-md-10 col-sm-10 col-xs-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article class="- topic/topic topic" role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Run the QPE in Deployment Mode</h1>
+    <div class="- topic/body body">
+        <p dir="ltr" class="- topic/p p">The QPE's <strong class="+ topic/ph hi-d/b ph b">deployment mode</strong> is used to deploy (identify and focus)
+            Locators into the Quuppa system. This document will walk you though how to start the QPE
+            in the deployment mode.</p>
+        <section class="- topic/section section" id="QPE_deployment_mode__section_a4q_4fv_3qb" data-ofbid="QPE_deployment_mode__section_a4q_4fv_3qb"><h2 class="- topic/title title sectiontitle">Prerequisites</h2>
+            
+            <p dir="ltr" class="- topic/p p">In order to start deploying and commissioning the Locators into your
+                system, will need the following Quuppa software:</p>
+            <ul class="- topic/ul ul" id="QPE_deployment_mode__ul_ij1_sfv_3qb" data-ofbid="QPE_deployment_mode__ul_ij1_sfv_3qb">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">The latest version of the QPE installed onto a server. For
+                        instructions, see the <a class="- topic/xref xref" href="QPE_installing_application.html">Install
+                            the QPE Software</a> section. </p>
+                </li>
+            </ul>
+            <ul class="- topic/ul ul" id="QPE_deployment_mode__ul_jj1_sfv_3qb" data-ofbid="QPE_deployment_mode__ul_jj1_sfv_3qb">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">The latest version of the Quuppa Site Planner (QSP) software
+                        installed onto a laptop. The latest version can be downloaded from our
+                        Quuppa Customer Portal <a class="- topic/xref xref" href="http://here" target="_blank" rel="external noopener"><u class="+ topic/ph hi-d/u ph u">here</u></a>.</p>
+                    <div class="- topic/p p">
+                        <div class="- topic/note note tip note_tip"><span class="note__title">Tip:</span> <div class="note__body">We recommend that you purchase the<strong class="+ topic/ph hi-d/b ph b"> Quuppa Software
+                                Maintenance</strong> package for your Locator subscriptions so that you
+                            always have access to the latest software and firmware versions,
+                            including the newest updates, fixes and features. Run any available
+                            updates before deploying the Quuppa system. </div></div>
+                    </div>
+                </li>
+            </ul>
+            <p dir="ltr" class="- topic/p p">It’s also a good idea to get familiar with deployment steps by reviewing
+                the instructions <a class="- topic/xref xref" href="https://quuppa.com/product-documentation/manuals/q/devkit_qsg/topics/DevkitQSG_deployment.html" target="_blank" rel="external noopener"><u class="+ topic/ph hi-d/u ph u">here</u></a> before you get started. </p>
+        </section>
+        <section class="- topic/section section" id="QPE_deployment_mode__section_zrj_cgv_3qb" data-ofbid="QPE_deployment_mode__section_zrj_cgv_3qb"><h2 class="- topic/title title sectiontitle">Deployment Mode for Online Systems - QPE 6.2.1 and Above</h2>
+            
+            <p class="- topic/p p">From software release 6.2.1 onwards, activate the QPE deployment mode by following
+                these steps:</p>
+            <ol class="- topic/ol ol" id="QPE_deployment_mode__ol_zxg_xhv_3qb" data-ofbid="QPE_deployment_mode__ol_zxg_xhv_3qb">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Open the <strong class="+ topic/ph hi-d/b ph b">QPE Web Console</strong></p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Click on the <strong class="+ topic/ph hi-d/b ph b">Start in Deployment Mode </strong>in the <strong class="+ topic/ph hi-d/b ph b">QPE Mode</strong>
+                        row on the main page</p>
+                </li>
+            </ol>
+            <p dir="ltr" class="- topic/p p">The QPE should start in deployment mode after this and you can begin
+                deploying your Locators.</p>
+        </section>
+        <section class="- topic/section section" id="QPE_deployment_mode__section_tnc_p3v_3qb" data-ofbid="QPE_deployment_mode__section_tnc_p3v_3qb"><h2 class="- topic/title title sectiontitle">Deployment Mode for Online Systems - Earlier QPE
+                Versions</h2>For software releases before 6.2.1, the project key will also be
+            needed to start the QPE in deployment mode. To activate the deployment mode in these
+            cases, follow these steps:<ol class="- topic/ol ol" id="QPE_deployment_mode__ol_oy2_yhv_3qb" data-ofbid="QPE_deployment_mode__ol_oy2_yhv_3qb">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Submit your project file</strong> to the Quuppa Customer Portal </p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Log in to the Quuppa Customer Portal and<strong class="+ topic/ph hi-d/b ph b"> copy the project
+                            key</strong> for the project</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Open the <strong class="+ topic/ph hi-d/b ph b">QPE Web Console</strong></p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Click on the <strong class="+ topic/ph hi-d/b ph b">Set Key</strong> button in the <strong class="+ topic/ph hi-d/b ph b">Current Key</strong>
+                        row</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Enter the project key that you copied in step 2 and click the
+                            <strong class="+ topic/ph hi-d/b ph b">Submit </strong>button</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Click on the <strong class="+ topic/ph hi-d/b ph b">Start in Deployment Mode </strong>in the <strong class="+ topic/ph hi-d/b ph b">QPE Mode</strong>
+                        row on the main page</p>
+                    <div class="- topic/p p">
+                        <div class="- topic/note note note note_note"><span class="note__title">Note:</span> <div class="note__body">Only use these steps if upgrading the software version is not
+                            possible. The latest version provides access to the latest features,
+                            updates and fixes and so we always recommended updating to the latest
+                            available version if possible. To get access to the newest version,
+                            please purchase the Quuppa software maintenance package. </div></div>
+                    </div>
+                </li>
+            </ol></section>
+        <section class="- topic/section section" id="QPE_deployment_mode__section_zqt_dgv_3qb" data-ofbid="QPE_deployment_mode__section_zqt_dgv_3qb"><h2 class="- topic/title title sectiontitle">Deployment Mode for Offline Systems - QPE 6.2.1 and Above</h2>
+            
+            <p dir="ltr" class="- topic/p p">From software release 6.2.1 onwards, activate the QPE deployment mode by
+                following these steps:</p>
+            <ol class="- topic/ol ol" id="QPE_deployment_mode__ol_r5v_13v_3qb" data-ofbid="QPE_deployment_mode__ol_r5v_13v_3qb">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Open the <strong class="+ topic/ph hi-d/b ph b">QPE Web Console</strong></p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Click on the <strong class="+ topic/ph hi-d/b ph b">Start in Deployment Mode </strong>in the <strong class="+ topic/ph hi-d/b ph b">QPE Mode</strong>
+                        row on the main page</p>
+                </li>
+            </ol>
+            <div class="- topic/note note note note_note"><span class="note__title">Note:</span> <div class="note__body">From software release 6.2.1 onwards, the deployment mode doesn’t require an
+                internet connection to synchronize with the Quuppa Customer Portal. </div></div>
+            <p dir="ltr" class="- topic/p p">Once the system has been commissioned, you will need to download the
+                project file from the Quuppa Customer Portal. The simplest way to do this is to
+                enable a temporary internet connection for the QPE server for the duration of the
+                download. After this, the<strong class="+ topic/ph hi-d/b ph b"> Start in tracking mode</strong> button should become
+                available. </p>
+            <div class="- topic/p p">
+                <div class="- topic/note note note note_note"><span class="note__title">Note:</span> <div class="note__body">By default, the QPE can run offline for up to 48 hours. If you need the system
+                    to run completely offline, you will need to purchase the Quuppa offline module
+                    separately. This will allow the QPE to continue running offline after the first
+                    48 hours. </div></div>
+            </div>
+        </section>
+        <section class="- topic/section section" id="QPE_deployment_mode__section_un1_s3v_3qb" data-ofbid="QPE_deployment_mode__section_un1_s3v_3qb"><h2 class="- topic/title title sectiontitle">Deployment Mode for Offline Systems - Earlier QPE
+                Versions</h2>In order to commission a Quuppa system offline for software releases
+            before 6.2.1, the Quuppa Offline module will need to be purchased separately and
+            enabled. Please contact your Quuppa Sales representative or designated Quuppa Sales
+            Engineer for more details about the offline module. <p dir="ltr" class="- topic/p p">To activate the
+                deployment mode in these cases, follow these steps:</p><ol class="- topic/ol ol" id="QPE_deployment_mode__ol_wly_d3v_3qb" data-ofbid="QPE_deployment_mode__ol_wly_d3v_3qb">
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Submit your project file</strong> to the Quuppa Customer Portal </p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Log in to the Quuppa Customer Portal, go the Project Key Details
+                        page and click on the <strong class="+ topic/ph hi-d/b ph b">Download project file</strong> link</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Save the downloaded file in to the QPE server’s QPE folder</p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Open the <strong class="+ topic/ph hi-d/b ph b">QPE Web Console</strong></p>
+                </li>
+                <li dir="ltr" class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p">Click on the <strong class="+ topic/ph hi-d/b ph b">Start in Deployment Mode </strong>in the <strong class="+ topic/ph hi-d/b ph b">QPE Mode</strong>
+                        row on the main page</p>
+                </li>
+            </ol><p dir="ltr" class="- topic/p p">Steps 2-3 will need to be repeated every time you make an update to
+                the project using the QSP. </p><div class="- topic/p p">
+                <div class="- topic/note note note note_note"><span class="note__title">Note:</span> <div class="note__body">Only use these steps if upgrading the software version is not possible. The
+                    latest version provides access to the latest features, updates and fixes and so
+                    we always recommended updating to the latest available version if possible. To
+                    get access to the newest version, please purchase the Quuppa software
+                    maintenance package. </div></div>
+            </div></section>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-xxl-2 col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+              	                <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+		                            <span class="close-toc-icon-container">
+		                                <span class="close-toc-icon"></span>     
+		                            </span>
+		                        </button>
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="section-item"><div class="section-title"><a href="#QPE_deployment_mode__section_a4q_4fv_3qb" data-tocid="QPE_deployment_mode__section_a4q_4fv_3qb">Prerequisites</a></div></li><li class="section-item"><div class="section-title"><a href="#QPE_deployment_mode__section_zrj_cgv_3qb" data-tocid="QPE_deployment_mode__section_zrj_cgv_3qb">Deployment Mode for Online Systems - QPE 6.2.1 and Above</a></div></li><li class="section-item"><div class="section-title"><a href="#QPE_deployment_mode__section_tnc_p3v_3qb" data-tocid="QPE_deployment_mode__section_tnc_p3v_3qb">Deployment Mode for Online Systems - Earlier QPE
+                Versions</a></div></li><li class="section-item"><div class="section-title"><a href="#QPE_deployment_mode__section_zqt_dgv_3qb" data-tocid="QPE_deployment_mode__section_zqt_dgv_3qb">Deployment Mode for Offline Systems - QPE 6.2.1 and Above</a></div></li><li class="section-item"><div class="section-title"><a href="#QPE_deployment_mode__section_un1_s3v_3qb" data-tocid="QPE_deployment_mode__section_un1_s3v_3qb">Deployment Mode for Offline Systems - Earlier QPE
+                Versions</a></div></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="quuppa-footer">
+    <div style="text-align: center; padding: 0.5em 0;">
+        <div style="color: white; font-size: 0.85em;">
+            © 2020-2026 Quuppa Oy. All Rights Reserved.
+        </div>
+    </div>
+</div>
+  </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
+                Generation date: 02.06.2026</div>
+</footer>
+        
+        <button id="go2top" class="d-print-none" title="Go to top">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </button>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>
