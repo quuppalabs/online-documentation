@@ -374,6 +374,8 @@
                path="QDP/topics/QDP_application_settings.html"/>
    <appContext helpID="software_integrations"
                path="megamap/topics/software_integrations.html"/>
+   <appContext helpID="output_target_protocols_usage_and_configuration"
+               path="megamap/topics/output_target_protocols_usage_and_configuration.html"/>
    <appContext helpID="location_sensor_data_integration_guide"
                path="megamap/topics/location_sensor_data_integration_guide.html"/>
    <appContext helpID="quuppa_development_kit_quick_start_guide"

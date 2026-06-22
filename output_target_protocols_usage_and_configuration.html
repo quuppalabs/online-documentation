@@ -1,0 +1,681 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="28.0">
+    <head><link rel="shortcut icon" href="favicon.ico?buildId=20260618181139"/><link rel="icon" href="favicon.ico?buildId=20260618181139"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Quuppa output targets support four different delivery protocols for pushing data to external systems or local storage. The receiving application does not need to request (poll) data from the server, ..."/><meta name="DC.rights.owner" content="(C) Copyright 2026"/><meta name="copyright" content="(C) Copyright 2026"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="output_target_protocols_usage_and_configuration"/><title>Output target protocols usage and configuration</title><!--  Generated with Oxygen version 28.0, build number 2026013010.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content=""/><meta name="wh-source-relpath" content="output_target_protocols_usage_and_configuration.dita"/><meta name="wh-out-relpath" content="output_target_protocols_usage_and_configuration.html"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/bootstrap.css?buildId=2026013010"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/jquery-ui.css?buildId=2026013010"/>
+        
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic.css?buildId=2026013010"/>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen-theme.css?buildId=20260618181139"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen.css?buildId=20260618181139"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=20260618181139"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/quuppa.css?buildId=20260618181139"/>
+    <script src="./oxygen-webhelp/app/options/properties.js?buildId=20260618181139"></script>
+    <script src="./oxygen-webhelp/app/themes.js?buildId=20260618181139"></script>
+    <script src="./oxygen-webhelp/app/localization/strings.js?buildId=2026013010"></script>
+    <script src="./oxygen-webhelp/app/search/index/keywords.js?buildId=20260618181139"></script>
+    
+    <script defer="defer" src="./oxygen-webhelp/app/jquery.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/jquery-ui.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/jquery-bootpag.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/jquery-highlight.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/popperjs-core.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/bootstrap.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/dompurify.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/image-map.js?buildId=2026013010"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/maphilight.js?buildId=2026013010"></script>
+
+    <script defer="defer" src="./oxygen-webhelp/app/topic.js?buildId=2026013010"></script>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L77KR66W6P"></script>
+    <script><!--
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-L77KR66W6P');
+    
+--></script>    
+
+</head>
+
+    <body id="output_target_protocols_usage_and_configuration" class="wh_topic_page frmBody">
+        <a class="visually-hidden-focusable" id="wh_jump_to_content" href="#wh_topic_body">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid navbar-expand-md">
+        <div class="wh_header_flex_container navbar-nav navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="https://quuppa.com/" class=" wh_logo d-none d-sm-block "><img src="https://www.quuppa.com/documentation/oxygen-webhelp/template/resources/images/QUUPPA_1row_black_LOW_small.png?buildId=20260618181139" alt=""/></a>
+                    <div class=" wh_publication_title "></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid navbar-expand-md" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_full_width_link" data-next-state="expanded" aria-label="Maximize to full width" title="Maximize to full width"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-xxl-10 col-lg-10 col-md-10 col-sm-10 col-xs-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article class="- topic/topic topic" role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Output target protocols usage and configuration</h1>
+    <div class="- topic/body body">
+        <p class="- topic/p p">Quuppa output targets support four different delivery protocols for pushing data to external systems or local storage. The receiving application does not need to request (poll) data from the server, as the application only receives new data when it is available. Refer to this technical reference when evaluating your network environment, data frequency and application requirements to select the correct protocol(s) for your deployment.</p>
+        
+        <section class="- topic/section section" id="output_target_protocols_usage_and_configuration__protocol_comparison_table" data-ofbid="output_target_protocols_usage_and_configuration__protocol_comparison_table"><h2 class="- topic/title title sectiontitle">Protocol comparison and usage guidance</h2>
+            
+            <p class="- topic/p p">Choosing the correct protocol is essential for system stability and performance.
+                Select the protocol based on your use case and network environment:</p>
+            <ul class="- topic/ul ul">
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">UDP</strong>: Use for applications located inside the local network to ensure
+                    minimal latency.</li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">MQTT</strong>: Use for applications located outside the local network to ensure
+                    secure and reliable delivery. For many use cases, this is the recommended
+                    option.</li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">HTTP POST</strong>: Designed for simple integrations with third-party APIs,
+                    webhooks and other integrations that do not require high throughput, especially
+                    where corporate firewalls block custom <strong class="+ topic/ph hi-d/b ph b">UDP</strong> or <strong class="+ topic/ph hi-d/b ph b">MQTT</strong> ports but allow
+                    outbound <strong class="+ topic/ph hi-d/b ph b">HTTP/HTTPS</strong>. Note that <strong class="+ topic/ph hi-d/b ph b">MQTT</strong> can also use WebSockets as the
+                    transport protocol.</li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">File</strong>: Use for local diagnostics or offline data analysis.</li>
+            </ul>
+            <div class="table-container"><table class="- topic/table table frame-all" data-cols="5"><caption></caption><colgroup><col style="width:50pt"/><col style="width:25%"/><col style="width:25%"/><col style="width:25%"/><col style="width:25%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row rowsep-1">
+                            <th class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle" id="output_target_protocols_usage_and_configuration__protocol_comparison_table__entry__1">Protocol</th>
+                            <th class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle" id="output_target_protocols_usage_and_configuration__protocol_comparison_table__entry__2">Best
+                                for</th>
+                            <th class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle" id="output_target_protocols_usage_and_configuration__protocol_comparison_table__entry__3">Data
+                                throughput</th>
+                            <th class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle" id="output_target_protocols_usage_and_configuration__protocol_comparison_table__entry__4">Configuration
+                                fields</th>
+                            <th class="- topic/entry entry align-left colsep-0 rowsep-1 valign-middle" id="output_target_protocols_usage_and_configuration__protocol_comparison_table__entry__5">Encryption</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row rowsep-1">
+                            <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle"><strong class="+ topic/ph hi-d/b ph b">UDP</strong></td>
+                            <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">High-speed, real-time
+                                streaming to local servers.</td>
+                            <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">High throughput.</td>
+                            <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">Destination IP address or
+                                hostname, and port.</td>
+                            <td class="- topic/entry entry align-left colsep-0 rowsep-1 valign-middle">Unencrypted.</td>
+                        </tr>
+                        <tr class="- topic/row rowsep-1">
+                            <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle"><strong class="+ topic/ph hi-d/b ph b">MQTT</strong></td>
+                            <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">IoT-standard messaging;
+                                reliable delivery.</td>
+                            <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">High or medium
+                                throughput.</td>
+                            <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">Host, port, scheme,
+                                authentication.</td>
+                            <td class="- topic/entry entry align-left colsep-0 rowsep-1 valign-middle">Encryption
+                                supported.</td>
+                        </tr>
+                        <tr class="- topic/row rowsep-1">
+                            <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle"><strong class="+ topic/ph hi-d/b ph b">HTTP POST</strong></td>
+                            <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">Integration with
+                                third-party APIs, telemetry, and alerting systems. Specifically for
+                                sending events.</td>
+                            <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">Infrequent or low
+                                throughput use only; recommended batching and event-based triggering
+                                (e.g. <code class="+ topic/ph pr-d/codeph ph codeph">onDataChange</code>).</td>
+                            <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">Endpoint URL and request
+                                headers.</td>
+                            <td class="- topic/entry entry align-left colsep-0 rowsep-1 valign-middle">Encryption
+                                supported.</td>
+                        </tr>
+                        <tr class="- topic/row rowsep-1">
+                            <td class="- topic/entry entry align-left colsep-1 rowsep-0 valign-middle"><strong class="+ topic/ph hi-d/b ph b">File</strong></td>
+                            <td class="- topic/entry entry align-left colsep-1 rowsep-0 valign-middle">Local logging for offline
+                                analysis.</td>
+                            <td class="- topic/entry entry align-left colsep-1 rowsep-0 valign-middle">High throughput (local
+                                storage only).</td>
+                            <td class="- topic/entry entry align-left colsep-1 rowsep-0 valign-middle">Folder path, filename,
+                                entry count.</td>
+                            <td class="- topic/entry entry align-left colsep-0 rowsep-0 valign-middle">Unencrypted.</td>
+                        </tr>
+                    </tbody></table></div>
+        </section>
+        <p class="- topic/p p"></p>
+        
+        <section class="- topic/section section" id="output_target_protocols_usage_and_configuration__UDP" data-ofbid="output_target_protocols_usage_and_configuration__UDP"><h2 class="- topic/title title sectiontitle">1 UDP (User Datagram Protocol)</h2>
+            
+            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">UDP</strong> is a fast, connectionless protocol used for high-throughput data
+                streaming, prioritising minimal latency over guaranteed data delivery. Use it in a
+                local network when high-throughput and low latency are more important than
+                guaranteed delivery.</p>
+            <div class="- topic/sectiondiv sectiondiv">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Example use cases</strong></p>
+                <ul class="- topic/ul ul" id="output_target_protocols_usage_and_configuration__ul_nyg_4rb_qjc" data-ofbid="output_target_protocols_usage_and_configuration__ul_nyg_4rb_qjc">
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Real-time video augmentation</strong>: Synchronising low-latency visual
+                        overlays with moving objects.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Interactive visitor tracking</strong>: Triggering location-based media or
+                        exhibits in venues such as museums.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Access control systems</strong>: Managing automated entry gates and security
+                        zoning using positioning data.</li>
+                </ul>
+            </div>
+            <div class="- topic/sectiondiv sectiondiv">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Configuration requirements</strong></p>
+                <ul class="- topic/ul ul" id="output_target_protocols_usage_and_configuration__ul_s1q_srb_qjc" data-ofbid="output_target_protocols_usage_and_configuration__ul_s1q_srb_qjc">
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">IP address</strong>: The destination IP address.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Port</strong>: The communication port used by the destination
+                        application.</li>
+                </ul>
+            </div>
+            <div class="- topic/sectiondiv sectiondiv">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Technical considerations</strong>:</p>
+                <ul class="- topic/ul ul" id="output_target_protocols_usage_and_configuration__ul_qbc_trb_qjc" data-ofbid="output_target_protocols_usage_and_configuration__ul_qbc_trb_qjc">
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Data size limitation</strong>: Large UDP messages will fail to transmit if the
+                        payload size exceeds the network Maximum Transmission Unit (MTU) limits or
+                        maximum UDP packet boundaries. This can occur when combining extensive
+                        message batching with highly detailed JSON formats.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Unreliable transport</strong>: UDP is a connectionless protocol that does not
+                        guarantee delivery. Packets can be dropped on congested networks without
+                        triggering a retransmission.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Security and encryption</strong>: The UDP stream is unencrypted. Quuppa does
+                        not support encryption for UDP output targets, including application-level
+                        encryption or Datagram Transport Layer Security (DTLS). This is a primary
+                        reason to use this protocol only within a local network.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="- topic/section section" id="output_target_protocols_usage_and_configuration__MQTT" data-ofbid="output_target_protocols_usage_and_configuration__MQTT"><h2 class="- topic/title title sectiontitle">2 MQTT (Message Queuing Telemetry Transport)</h2>
+            
+            <p class="- topic/p p">MQTT is a lightweight, publish-subscribe protocol for machine-to-machine messaging,
+                ideal for secure and reliable data delivery in IoT environments. MQTT establishes a
+                reliable TCP connection to an MQTT broker. MQTT supports TLS/SSL encryption and can
+                also be configured to run over WebSockets (WS/WSS), a setting useful for bypassing
+                firewalls that restrict custom TCP ports but permit outbound HTTP/HTTPS traffic. The
+                Quuppa MQTT publisher implementation is based on an MQTT v5 client.</p>
+            <div class="- topic/sectiondiv sectiondiv">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Example use cases</strong></p>
+                <p class="- topic/p p">MQTT is an industry-standard protocol for IoT integrations, suitable for various
+                    network conditions. This is the Quuppa-recommended integration method for most
+                    use cases across different sectors and industries.</p>
+                <ul class="- topic/ul ul" id="output_target_protocols_usage_and_configuration__ul_rgb_wrb_qjc" data-ofbid="output_target_protocols_usage_and_configuration__ul_rgb_wrb_qjc">
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Manufacturing and Industry 4.0</strong>: Tracking components, vehicles, and
+                        work-in-progress (WIP) in real-time across complex assembly environments,
+                        such as automotive, aerospace or specialised vehicle production plants.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Logistics and warehouse digitisation</strong>: Managing high-volume parcel
+                        sorting, yard operations, and maintaining active digital shadows of
+                        inventory.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Cross-sector asset tracking and safety</strong>: Monitoring the real-time
+                        location of personnel and high-value equipment in diverse settings,
+                        including healthcare, smart buildings, heavy engineering facilities and deep
+                        underground mining operations.</li>
+                </ul>
+            </div>
+            <div class="- topic/sectiondiv sectiondiv">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Configuration requirements</strong></p>
+                <ul class="- topic/ul ul" id="output_target_protocols_usage_and_configuration__ul_cgm_xrb_qjc" data-ofbid="output_target_protocols_usage_and_configuration__ul_cgm_xrb_qjc">
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Hostname or IP address (required)</strong>: Enter the hostname or IP address
+                        of your MQTT server.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Communication port (required)</strong>: Enter the communication port.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Scheme (tcp, ssl, ws, or wss) (required)</strong>: Select the communication
+                        Scheme (tcp, ssl, ws, or wss).</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Client ID (defaults to target name) (optional)</strong>: Enter a Client ID for
+                        your MQTT publisher client. If left empty, the system uses the target name
+                        as the Client ID.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Topic prefix (optional)</strong>: Enter a Custom topic prefix to add custom
+                        levels before the predefined Quuppa topic structure.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Retain flag (optional)</strong>: Select the Retain last message to retain the
+                        last message sent.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Username (optional)</strong>: Enter the Username to authenticate the publisher
+                        client.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Password for authentication (optional)</strong>: Enter the Password to
+                        authenticate the publisher client.</li>
+                </ul>
+            </div>
+            <div class="- topic/sectiondiv sectiondiv">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Technical considerations</strong></p>
+                <p class="- topic/p p">The Quuppa MQTT publisher organises telemetry data using a semi-predefined topic
+                    hierarchy based on the data stream type and configured trigger modes.</p>
+                <ul class="- topic/ul ul" id="output_target_protocols_usage_and_configuration__ul_qtk_yrb_qjc" data-ofbid="output_target_protocols_usage_and_configuration__ul_qtk_yrb_qjc">
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Quality of Service (QoS) levels</strong>: The Quuppa MQTT publisher
+                        implementation transmits all messages using <strong class="+ topic/ph hi-d/b ph b">QoS 0</strong>. This setting is
+                        fixed and cannot be changed. Quuppa outputs high-volume, real-time transient
+                        data, does not cache or persist unsent messages, and does not manage
+                        subscribing endpoints. Higher QoS levels are unsupported, as they require
+                        message persistence and acknowledgement tracking. If the receiving end
+                        becomes unavailable, queued messages would be serialised to disk, which
+                        could potentially exhaust local system resources.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Certificate management</strong>: For secure SSL or WSS connections, the
+                            <strong class="+ topic/ph hi-d/b ph b">Quuppa Positioning Engine (QPE)</strong> relies on the host operating
+                        system's trust store to verify the MQTT broker's identity. The <strong class="+ topic/ph hi-d/b ph b">Quuppa
+                            Site Planner (QSP)</strong> and <strong class="+ topic/ph hi-d/b ph b">Quuppa Positioning Engine (QPE)</strong> do not
+                        feature a graphical interface for certificate uploads. Mutual TLS (mTLS)
+                        authentication is supported exclusively in the Quuppa Enterprise
+                        edition.</li>
+                    <li class="- topic/li li">
+                        <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Tag data topics</strong>: For individual asset tag tracking, the Quuppa
+                            MQTT publisher uses a predefined topic structure in the following
+                            format:
+                                <code class="+ topic/ph pr-d/codeph ph codeph">quuppa/apidata/&lt;project-key&gt;/&lt;payload|location|taginfo&gt;/&lt;format-name&gt;/&lt;tag-id&gt;</code>.
+                            You can add a custom <strong class="+ topic/ph hi-d/b ph b">prefix</strong> to this topic structure.</p>
+                        <p class="- topic/p p">The <code class="+ topic/ph pr-d/codeph ph codeph">&lt;payload|location|taginfo&gt;</code> variable depends on
+                            the trigger mode configured in the target. The following specific
+                            configurations must be used: <code class="+ topic/ph pr-d/codeph ph codeph">payload</code> for interval
+                            trigger mode, <code class="+ topic/ph pr-d/codeph ph codeph">location</code> for location-related triggers,
+                            and <code class="+ topic/ph pr-d/codeph ph codeph">taginfo</code> for the <code class="+ topic/ph pr-d/codeph ph codeph">lastSeenUpdate</code>
+                            trigger.</p>
+                    </li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Positioning Engine (PE) format topics</strong>: For system-level positioning
+                        engine data, the predefined topic structure is:
+                            <code class="+ topic/ph pr-d/codeph ph codeph">quuppa/apidata/&lt;project-key&gt;/&lt;peInterval&gt;/&lt;format-name&gt;</code>.
+                        You can add a custom <strong class="+ topic/ph hi-d/b ph b">prefix</strong> to this topic structure.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Locator format topics</strong>: For locator-level data, the predefined topic
+                        structure is:
+                            <code class="+ topic/ph pr-d/codeph ph codeph">quuppa/apidata/&lt;project-key&gt;/&lt;locatorInterval&gt;/&lt;format-name&gt;</code>.
+                        You can add a custom <strong class="+ topic/ph hi-d/b ph b">prefix</strong> to this topic structure.</li>
+                </ul>
+            </div>
+            <div class="- topic/note note note note_note" id="output_target_protocols_usage_and_configuration__note_djw_sy1_qjc" data-ofbid="output_target_protocols_usage_and_configuration__note_djw_sy1_qjc"><span class="note__title">Note:</span> <div class="note__body">For more information about default output formats, please
+                refer to the <a class="- topic/xref xref" href="https://www.quuppa.com/documentation/QSP/topics/QSP_udp_logging_api.html?hl=format%2Cname#QSP_udploggingapi_introduction__output_formats" target="_blank" rel="external noopener"><strong class="+ topic/ph hi-d/b ph b">Quuppa Site Planner User
+                        Manual</strong></a>.</div></div>
+        </section>
+        
+        <section class="- topic/section section" id="output_target_protocols_usage_and_configuration__HTTP_POST" data-ofbid="output_target_protocols_usage_and_configuration__HTTP_POST"><h2 class="- topic/title title sectiontitle">3 HTTP POST</h2>
+            
+            <p class="- topic/p p">HTTP (Hypertext Transfer Protocol) is the foundational application-layer protocol for
+                data communication on the Web, operating on a client-server model. The <strong class="+ topic/ph hi-d/b ph b">HTTP
+                    POST</strong> output target allows the <strong class="+ topic/ph hi-d/b ph b">Quuppa Positioning Engine (QPE)</strong> to send
+                data payloads directly to an external endpoint, such as a customer’s API or a
+                third-party monitoring system. This way, data is sent as standard HTTP POST
+                requests, making it compatible with a wide range of web-based, event-driven
+                platforms. It is ideal for telemetry data and event-based API integrations.</p>
+            <div class="- topic/sectiondiv sectiondiv">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Example use cases</strong></p>
+                <ul class="- topic/ul ul" id="output_target_protocols_usage_and_configuration__ul_gsj_3db_qjc" data-ofbid="output_target_protocols_usage_and_configuration__ul_gsj_3db_qjc">
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Sepioo/PDi digital display control</strong>: Allows sending digital display
+                        control messages (e.g., page change or update) directly to Sepioo Cloud
+                        based on location events.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Telemetry data</strong>: Delivering low-frequency telemetry, such as Locator
+                        information and Quuppa Positioning Engine (QPE) information to external
+                        monitoring systems.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Event-driven integration</strong>: Integrating with third-party applications
+                        and alerting systems, or other custom event-driven platforms.</li>
+                </ul>
+            </div>
+            <div class="- topic/sectiondiv sectiondiv">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">System availability and UI restrictions</strong></p>
+                <ul class="- topic/ul ul" id="output_target_protocols_usage_and_configuration__ul_hsj_3db_qjc" data-ofbid="output_target_protocols_usage_and_configuration__ul_hsj_3db_qjc">
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Quuppa Site Planner (QSP) and API</strong>: You can configure the HTTP
+                        protocol for both Classic and Enterprise projects when you use the QSP
+                        application or the Quuppa API.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Web console user interface</strong>: You can create or manage HTTP POST
+                        targets via the web browser interface for Enterprise (QSM) projects only.
+                        This option is not available in the Classic web user interface.</li>
+                </ul>
+            </div>
+            <div class="- topic/sectiondiv sectiondiv">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Technical considerations</strong></p>
+                <ul class="- topic/ul ul" id="output_target_protocols_usage_and_configuration__ul_isj_3db_qjc" data-ofbid="output_target_protocols_usage_and_configuration__ul_isj_3db_qjc">
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Infrequent use only</strong>: HTTP POST is a high-overhead transport protocol
+                        intended strictly for sending data infrequently. Do not use this protocol
+                        for continuous, high-throughput data transmission. An overloaded HTTP
+                        request stream can "clog" both the QPE and the receiving side, leading to
+                        system failures.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Denial of Service (DoS) risk</strong>: If you configure a tag output target to
+                        send data on every position update, the system can generate hundreds or
+                        thousands of requests per second. This action can cause a <strong class="+ topic/ph hi-d/b ph b">DoS</strong>
+                        condition on the receiving application server. Use caution when using this
+                        method for sending tag data.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Request frequency management</strong>: Message batching (for example, 1000
+                        location events in a single message) or strict triggering and filtering
+                        rules should be applied to ensure manageable request frequency. For further
+                        details on configuring batching, filtering, and logic rules, see the
+                                <strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.quuppa.com/documentation/megamap/topics/location_sensor_data_integration_guide.html#location_sensor_data_integration_guide__section_nhv_rbm_w3c" target="_blank" rel="external noopener">Create Output Target for Location
+                                Update Event (The Logic Rules)</a></strong>.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Encryption and authentication</strong>: When using the secure HTTPS protocol,
+                        QPE is required to verify the identity of the receiving server. The server
+                        certificate must have a valid certification path to a root certificate
+                        authority (CA) in the Java Virtual Machine (JVM) trust store. If using a
+                        self-signed certificate, you must manually add the root CA to the trust
+                        store. You can include additional authentication details, such as basic
+                        authentication credentials or a bearer token, in the request headers or the
+                        request body.</li>
+                </ul>
+            </div>
+            <div class="- topic/sectiondiv sectiondiv">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Configuration requirements</strong></p>
+                <ul class="- topic/ul ul" id="output_target_protocols_usage_and_configuration__ul_u4b_ly1_qjc" data-ofbid="output_target_protocols_usage_and_configuration__ul_u4b_ly1_qjc">
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">URL</strong>: Specify the endpoint URL for the data.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Request headers</strong>: You can define submitted request headers as
+                        key-value pairs based on the requirements of the receiving application. The
+                        Quuppa system does not automatically determine or populate these parameters,
+                        but if left blank, the HTTP library will add certain headers
+                        automatically.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Request body</strong>: The request body contains the actual data payload. The
+                        payload content is determined by the output format (for example,
+                            <code class="+ topic/ph pr-d/codeph ph codeph">DefaultPEInfo</code>) and format type (JSON, CSV or custom
+                        format type). The defined output format is written directly into the body of
+                        the HTTP POST request.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="- topic/section section" id="output_target_protocols_usage_and_configuration__HTTP_POST_example" data-ofbid="output_target_protocols_usage_and_configuration__HTTP_POST_example"><h2 class="- topic/title title sectiontitle">HTTP POST example</h2>
+            
+            <p class="- topic/p p">This example illustrates how to create an HTTP POST output target for sending Quuppa
+                Positioning Engine telemetry data, and the actual HTTP POST request content sent to
+                an example server.</p>
+            <div class="- topic/sectiondiv sectiondiv">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Create an HTTP POST output target</strong></p>
+                <p class="- topic/p p">The target uses a custom <code class="+ topic/ph pr-d/codeph ph codeph">peinfo</code> output format, JSON format type,
+                    an interval trigger mode with a 10 s interval, and a maximum batch size of 1.
+                    The URL and request headers are defined as follows:</p>
+                <p class="- topic/p p">URL: <span class="+ topic/ph sw-d/filepath ph filepath">https://example.server.com/quuppa/peinfo</span></p>
+                <p class="- topic/p p">Headers: <code class="+ topic/ph pr-d/codeph ph codeph">“Content-Type”=”application/json; charset=utf-8”</code>,
+                        <code class="+ topic/ph pr-d/codeph ph codeph">“Cache-Control”=”no-cache, no-store”</code>,
+                        <code class="+ topic/ph pr-d/codeph ph codeph">“Authorization”=” Bearer
+                        2054ee7c1833ea82ecdfcf12a3a3b9d9d38a43cefe2038a7d0e1191f983042a”</code></p>
+            </div>
+            <div class="- topic/sectiondiv sectiondiv">
+                <p class="- topic/p p">The HTTP POST target is created below via the <code class="+ topic/ph pr-d/codeph ph codeph">createOutputTarget</code>
+                    API. The same target could also be created in the Quuppa Site Planner.</p>
+                <pre class="+ topic/pre pr-d/codeblock pre codeblock" id="output_target_protocols_usage_and_configuration__codeblock_ksj_3db_qjc" data-ofbid="output_target_protocols_usage_and_configuration__codeblock_ksj_3db_qjc"><code>http://localhost:8080/qpe/createOutputTarget?name=peinfo-http-post&amp;format=peinfo&amp;type=json&amp;target=httppost&amp;type=json&amp;triggerMode=interval&amp;interval=10&amp;maxBatchSize=1&amp;url=https%3A%2F%2Fexample.server.com%2Fp%2Fquuppa%2Fpeinfo&amp;headers=%22Content-Type%22%3D%22application%2Fjson%3B%20charset%3Dutf-8%22%2C%20%22Cache-Control%22%3D%22no-cache%2C%20no-store%22%2C%20%22Authorization%22%3D%22Bearer%2054ee7c1833ea82ecdfcf12a3a3b9d9d38a43cefe2038a7d0e1191f983042a%22</code></pre>
+            </div>
+            <p class="- topic/p p">After the target has been started, QPE will post data to the defined URL every 10
+                seconds.</p>
+            <p class="- topic/p p"></p>
+            <div class="- topic/sectiondiv sectiondiv">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Posts</strong></p>
+                <div class="table-container"><table class="- topic/table table frame-all" id="output_target_protocols_usage_and_configuration__table_lsj_3db_qjc" data-ofbid="output_target_protocols_usage_and_configuration__table_lsj_3db_qjc" data-cols="5"><caption></caption><colgroup><col/><col/><col/><col/><col/></colgroup><thead class="- topic/thead thead">
+                            <tr class="- topic/row rowsep-1 valign-middle">
+                                <th class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle" id="output_target_protocols_usage_and_configuration__table_lsj_3db_qjc__entry__1">ID</th>
+                                <th class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle" id="output_target_protocols_usage_and_configuration__table_lsj_3db_qjc__entry__2">Timestamp</th>
+                                <th class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle" id="output_target_protocols_usage_and_configuration__table_lsj_3db_qjc__entry__3">Method</th>
+                                <th class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle" id="output_target_protocols_usage_and_configuration__table_lsj_3db_qjc__entry__4">Headers</th>
+                                <th class="- topic/entry entry align-left colsep-0 rowsep-1 valign-middle" id="output_target_protocols_usage_and_configuration__table_lsj_3db_qjc__entry__5">Body
+                                    Length</th>
+                            </tr>
+                        </thead><tbody class="- topic/tbody tbody">
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">3074</td>
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle"><samp class="+ topic/ph sw-d/systemoutput ph systemoutput sysout">04/06/2026, 10:48:03</samp></td>
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">POST</td>
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">9</td>
+                                <td class="- topic/entry entry align-left colsep-0 rowsep-1 valign-middle">2695</td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">3073</td>
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle"><samp class="+ topic/ph sw-d/systemoutput ph systemoutput sysout">04/06/2026, 10:47:53</samp></td>
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">POST</td>
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">9</td>
+                                <td class="- topic/entry entry align-left colsep-0 rowsep-1 valign-middle">2695</td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">3072</td>
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle"><samp class="+ topic/ph sw-d/systemoutput ph systemoutput sysout">04/06/2026, 10:47:43</samp></td>
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">POST</td>
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">9</td>
+                                <td class="- topic/entry entry align-left colsep-0 rowsep-1 valign-middle">2695</td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1">
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-0 valign-middle">3071</td>
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-0 valign-middle"><samp class="+ topic/ph sw-d/systemoutput ph systemoutput sysout">04/06/2026, 10:47:33</samp></td>
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-0 valign-middle">POST</td>
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-0 valign-middle">9</td>
+                                <td class="- topic/entry entry align-left colsep-0 rowsep-0 valign-middle">2695</td>
+                            </tr>
+                        </tbody></table></div>
+            </div>
+            <div class="- topic/sectiondiv sectiondiv">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Sent request headers</strong></p>
+                <div class="table-container"><table class="- topic/table table frame-all" id="output_target_protocols_usage_and_configuration__table_msj_3db_qjc" data-ofbid="output_target_protocols_usage_and_configuration__table_msj_3db_qjc" data-cols="2"><caption></caption><colgroup><col/><col/></colgroup><thead class="- topic/thead thead">
+                            <tr class="- topic/row rowsep-1 valign-middle">
+                                <th class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle" id="output_target_protocols_usage_and_configuration__table_msj_3db_qjc__entry__1">Header</th>
+                                <th class="- topic/entry entry align-left colsep-0 rowsep-1 valign-middle" id="output_target_protocols_usage_and_configuration__table_msj_3db_qjc__entry__2">Value</th>
+                            </tr>
+                        </thead><tbody class="- topic/tbody tbody">
+                            <tr class="- topic/row rowsep-1 valign-middle">
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">accept</td>
+                                <td class="- topic/entry entry align-left colsep-0 rowsep-1 valign-middle">*/*</td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1 valign-middle">
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">accept-encoding</td>
+                                <td class="- topic/entry entry align-left colsep-0 rowsep-1 valign-middle">gzip,
+                                    br</td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1 valign-middle">
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">authorization</td>
+                                <td class="- topic/entry entry align-left colsep-0 rowsep-1 valign-middle">Bearer
+                                    54ee7c1833ea82ecdfcf12a3a3b9d9d38a43cefe2038a7d0e1191f983042a</td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1 valign-middle">
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">cache-control</td>
+                                <td class="- topic/entry entry align-left colsep-0 rowsep-1 valign-middle">no-cache,
+                                    no-store</td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1 valign-middle">
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">connection</td>
+                                <td class="- topic/entry entry align-left colsep-0 rowsep-1 valign-middle">Keep-Alive</td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1 valign-middle">
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">content-length</td>
+                                <td class="- topic/entry entry align-left colsep-0 rowsep-1 valign-middle">447</td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1 valign-middle">
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">content-type</td>
+                                <td class="- topic/entry entry align-left colsep-0 rowsep-1 valign-middle">application/json; charset=utf-8</td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1 valign-middle">
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-1 valign-middle">host</td>
+                                <td class="- topic/entry entry align-left colsep-0 rowsep-1 valign-middle">example.server.com/p/quuppa/peinfo</td>
+                            </tr>
+                            <tr class="- topic/row rowsep-1 valign-middle">
+                                <td class="- topic/entry entry align-left colsep-1 rowsep-0 valign-middle">user-agent</td>
+                                <td class="- topic/entry entry align-left colsep-0 rowsep-0 valign-middle">Java/25</td>
+                            </tr>
+                        </tbody></table></div>
+            </div>
+            <div class="- topic/sectiondiv sectiondiv">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Sent request body</strong></p>
+                <pre class="+ topic/pre pr-d/codeblock pre codeblock json" id="output_target_protocols_usage_and_configuration__codeblock_nsj_3db_qjc" data-ofbid="output_target_protocols_usage_and_configuration__codeblock_nsj_3db_qjc"><code>
+                {
+                <span class="hl-json_key">"qpeVersion"</span>: <span class="hl-string">"9.6.0-8ee58047"</span>,
+                <span class="hl-json_key">"diskFree"</span>: <span class="hl-number">149590773760</span>,
+                <span class="hl-json_key">"running"</span>: true,
+                <span class="hl-json_key">"mode"</span>: <span class="hl-string">"Normal"</span>,
+                <span class="hl-json_key">"startTS"</span>: <span class="hl-number">1780556770390</span>,
+                <span class="hl-json_key">"projectVersion"</span>: <span class="hl-string">"261"</span>,
+                <span class="hl-json_key">"packetsPerSecond"</span>: <span class="hl-number">252.0</span>,
+                <span class="hl-json_key">"udpRX"</span>: <span class="hl-number">0.4</span>,
+                <span class="hl-json_key">"udpTX"</span>: <span class="hl-number">0</span>,
+                <span class="hl-json_key">"dfPacketsPerSecond"</span>: <span class="hl-number">241.4</span>,
+                <span class="hl-json_key">"dataPacketsPerSecond"</span>: <span class="hl-number">10.6</span>,
+                <span class="hl-json_key">"tcpRX"</span>: <span class="hl-number">0</span>,
+                <span class="hl-json_key">"tcpTX"</span>: <span class="hl-number">0</span>,
+                <span class="hl-json_key">"qpeLossRate"</span>: <span class="hl-number">0</span>,
+                <span class="hl-json_key">"networkLossRate"</span>: <span class="hl-number">0</span>,
+                <span class="hl-json_key">"tagsOnline"</span>: <span class="hl-number">605</span>,
+                <span class="hl-json_key">"tagIssues"</span>: null,
+                <span class="hl-json_key">"memoryAllocated"</span>: <span class="hl-number">1124073472</span>,
+                <span class="hl-json_key">"memoryFree"</span>: <span class="hl-number">629145600</span>,
+                <span class="hl-json_key">"memoryUsed"</span>: <span class="hl-number">494927872</span>,
+                <span class="hl-json_key">"memoryMax"</span>: <span class="hl-number">12469665792</span>,
+                <span class="hl-json_key">"portalClockDelta"</span>: <span class="hl-number">157</span>,
+                <span class="hl-json_key">"systemTS"</span>: <span class="hl-number">1780557730686</span>,
+                <span class="hl-json_key">"fileSyncStatus"</span>: <span class="hl-string">"Ok"</span>,
+                <span class="hl-json_key">"fileSyncError"</span>: <span class="hl-string">""</span>,
+                <span class="hl-json_key">"networkInterfaceStatus"</span>: [
+                {
+                <span class="hl-json_key">"status"</span>: <span class="hl-string">"Up"</span>,
+                <span class="hl-json_key">"error"</span>: null,
+                <span class="hl-json_key">"ip"</span>: <span class="hl-string">"192.168.10.1"</span>,
+                <span class="hl-json_key">"mask"</span>: <span class="hl-string">"255.255.255.0"</span>
+                }
+                ],
+                <span class="hl-json_key">"issues"</span>: [],
+                <span class="hl-json_key">"cpuLoad"</span>: <span class="hl-number">0.48</span>,
+                <span class="hl-json_key">"warnings"</span>: [],
+                }
+            </code></pre>
+            </div>
+        </section>
+        
+        <section class="- topic/section section" id="output_target_protocols_usage_and_configuration__File" data-ofbid="output_target_protocols_usage_and_configuration__File"><h2 class="- topic/title title sectiontitle">4 File</h2>
+            
+            <p class="- topic/p p">The File output target writes data directly to the local file system for storage and
+                later retrieval, bypassing the network entirely.</p>
+            <div class="- topic/sectiondiv sectiondiv">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Example use cases</strong></p>
+                <ul class="- topic/ul ul" id="output_target_protocols_usage_and_configuration__ul_k52_qsb_qjc" data-ofbid="output_target_protocols_usage_and_configuration__ul_k52_qsb_qjc">
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Process analysis and optimisation</strong>: Retaining long-term tracking
+                        telemetry to analyse and optimise industrial, logistics, or operational
+                        workflows.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Retail store customer flow analysis</strong>: Accumulating historical location
+                        data to evaluate foot traffic patterns, dwell times, and shopper behaviour
+                        over extended periods.</li>
+                </ul>
+            </div>
+            <div class="- topic/sectiondiv sectiondiv">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Configuration requirements</strong></p>
+                <ul class="- topic/ul ul" id="output_target_protocols_usage_and_configuration__ul_dxm_qsb_qjc" data-ofbid="output_target_protocols_usage_and_configuration__ul_dxm_qsb_qjc">
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Folder</strong>: The local directory path where the data files will be
+                        stored.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Filename prefix</strong>: The string prefixed to the beginning of all
+                        generated file names.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Entries per file</strong>: Defines the maximum number of log entries written
+                        to a single file before the system closes it and creates a new one.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Include header</strong>: A toggle to include a column header as the first line
+                        of the file. Although the output data can be written in both CSV and JSON
+                        format, the header is always written exclusively in CSV format.</li>
+                </ul>
+            </div>
+            <div class="- topic/sectiondiv sectiondiv">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Technical considerations</strong></p>
+                <ul class="- topic/ul ul" id="output_target_protocols_usage_and_configuration__ul_hw1_rsb_qjc" data-ofbid="output_target_protocols_usage_and_configuration__ul_hw1_rsb_qjc">
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Disk space management</strong>: The system features no automated storage
+                        management. The QPE writes data continuously while active; therefore, the
+                        user must monitor host storage levels and implement external retention or
+                        rotation mechanisms. Local disk space exhaustion will prevent data
+                        allocation and can cause the host operating system to terminate processes,
+                        resulting in a QPE crash and broader system instability.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Data and header formatting</strong>: Output data payloads support both CSV and
+                        JSON format types. If the "Include header" option is enabled, the header
+                        block, which contains output format definitions, PE version numbers, and
+                        metadata, is written exclusively in CSV format, regardless of the payload
+                        configuration. Downstream automated parsing applications must be programmed
+                        to process this initial CSV line when consuming JSON file targets.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-xxl-2 col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+              	                <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+		                            <span class="close-toc-icon-container">
+		                                <span class="close-toc-icon"></span>     
+		                            </span>
+		                        </button>
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="section-item"><div class="section-title"><a href="#output_target_protocols_usage_and_configuration__protocol_comparison_table" data-tocid="output_target_protocols_usage_and_configuration__protocol_comparison_table">Protocol comparison and usage guidance</a></div></li><li class="section-item"><div class="section-title"><a href="#output_target_protocols_usage_and_configuration__UDP" data-tocid="output_target_protocols_usage_and_configuration__UDP">1 UDP (User Datagram Protocol)</a></div></li><li class="section-item"><div class="section-title"><a href="#output_target_protocols_usage_and_configuration__MQTT" data-tocid="output_target_protocols_usage_and_configuration__MQTT">2 MQTT (Message Queuing Telemetry Transport)</a></div></li><li class="section-item"><div class="section-title"><a href="#output_target_protocols_usage_and_configuration__HTTP_POST" data-tocid="output_target_protocols_usage_and_configuration__HTTP_POST">3 HTTP POST</a></div></li><li class="section-item"><div class="section-title"><a href="#output_target_protocols_usage_and_configuration__HTTP_POST_example" data-tocid="output_target_protocols_usage_and_configuration__HTTP_POST_example">HTTP POST example</a></div></li><li class="section-item"><div class="section-title"><a href="#output_target_protocols_usage_and_configuration__File" data-tocid="output_target_protocols_usage_and_configuration__File">4 File</a></div></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="quuppa-footer">
+    <div style="text-align: center; padding: 0.5em 0;">
+        <div style="color: white; font-size: 0.85em;">
+            © 2020-2026 Quuppa Oy. All Rights Reserved.
+        </div>
+    </div>
+</div>
+  </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
+                Generation date: 18.06.2026</div>
+</footer>
+        
+        <button id="go2top" class="d-print-none" title="Go to top">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </button>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>
