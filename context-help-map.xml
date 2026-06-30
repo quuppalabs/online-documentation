@@ -344,8 +344,6 @@
    <appContext helpID="QPE_features" path="QPE/topics/QPE_API.html"/>
    <appContext helpID="QPE_API_intro" path="QPE/topics/QPE_API_methods.html"/>
    <appContext helpID="QPE_API_requests" path="QPE/topics/QPE_API_requests.html"/>
-   <appContext helpID="QSP_tag_configurations_tag_configuration_editor"
-               path="QPE/topics/QPE_API_remote_configuration.html"/>
    <appContext helpID="QPE_API_logs" path="QPE/topics/QPE_API_logs.html"/>
    <appContext helpID="generation_q_fw_upgrade" path="Qxx_FW/topics/fw_upgrade.html"/>
    <appContext helpID="QPE_advanced_features"

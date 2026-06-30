@@ -1,0 +1,1 @@
+oxy_webhelp_navlinks = {"QPE_locators-d341e292":{"topics":[{"title":"Locator Details Table Definitions","href":"QPE\/topics\/QPE_locators_definitions.html","attributes":{"data-id":"QPE_locators_definitions"},"menu":{"hasChildren":false},"tocID":"QPE_locators_definitions-d341e315","topics":[]}]}};
