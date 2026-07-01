@@ -1,14 +1,14 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="28.0">
-    <head><link rel="shortcut icon" href="favicon.ico?buildId=20260630170242"/><link rel="icon" href="favicon.ico?buildId=20260630170242"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The Outputs part of the Positioning Engine Web Console's status panel allows you to record QPE data, for example if you wanted to play data back using the Quuppa Data Player . By default, the QPE does ..."/><meta name="DC.rights.owner" content="(C) Copyright 2026"/><meta name="copyright" content="(C) Copyright 2026"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="QPE_outputs"/><title>Outputs</title><!--  Generated with Oxygen version 28.0, build number 2026013010.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content=""/><meta name="wh-source-relpath" content="QPE_outputs.dita"/><meta name="wh-out-relpath" content="QPE_outputs.html"/>
+    <head><link rel="shortcut icon" href="favicon.ico?buildId=20260701141418"/><link rel="icon" href="favicon.ico?buildId=20260701141418"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The Outputs section of the Quuppa Positioning Engine Web Console (QPE Web Console) status panel displays the configuration for data destinations and system logs. By default, the QPE does not record or ..."/><meta name="DC.rights.owner" content="(C) Copyright 2026"/><meta name="copyright" content="(C) Copyright 2026"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="QPE_outputs"/><title>Outputs</title><!--  Generated with Oxygen version 28.0, build number 2026013010.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content=""/><meta name="wh-source-relpath" content="QPE_outputs.dita"/><meta name="wh-out-relpath" content="QPE_outputs.html"/>
     <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/bootstrap.css?buildId=2026013010"/>
     <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/jquery-ui.css?buildId=2026013010"/>
         
     <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic.css?buildId=2026013010"/>
-<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen-theme.css?buildId=20260630170242"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen.css?buildId=20260630170242"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=20260630170242"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/quuppa.css?buildId=20260630170242"/>
-    <script src="./oxygen-webhelp/app/options/properties.js?buildId=20260630170242"></script>
-    <script src="./oxygen-webhelp/app/themes.js?buildId=20260630170242"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen-theme.css?buildId=20260701141418"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen.css?buildId=20260701141418"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=20260701141418"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/quuppa.css?buildId=20260701141418"/>
+    <script src="./oxygen-webhelp/app/options/properties.js?buildId=20260701141418"></script>
+    <script src="./oxygen-webhelp/app/themes.js?buildId=20260701141418"></script>
     <script src="./oxygen-webhelp/app/localization/strings.js?buildId=2026013010"></script>
-    <script src="./oxygen-webhelp/app/search/index/keywords.js?buildId=20260630170242"></script>
+    <script src="./oxygen-webhelp/app/search/index/keywords.js?buildId=20260701141418"></script>
     
     <script defer="defer" src="./oxygen-webhelp/app/jquery.js?buildId=2026013010"></script>
     <script defer="defer" src="./oxygen-webhelp/app/jquery-ui.js?buildId=2026013010"></script>
@@ -51,7 +51,7 @@
             <div class="wh_logo_and_publication_title_container">
                 <div class="wh_logo_and_publication_title">
                     
-                    <a href="https://quuppa.com/" class=" wh_logo d-none d-sm-block "><img src="https://www.quuppa.com/documentation/oxygen-webhelp/template/resources/images/QUUPPA_1row_black_LOW_small.png?buildId=20260630170242" alt=""/></a>
+                    <a href="https://quuppa.com/" class=" wh_logo d-none d-sm-block "><img src="https://www.quuppa.com/documentation/oxygen-webhelp/template/resources/images/QUUPPA_1row_black_LOW_small.png?buildId=20260701141418" alt=""/></a>
                     <div class=" wh_publication_title "></div>
                     
                 </div>
@@ -121,112 +121,148 @@
                         <div class=" wh_topic_content body "><main role="main"><article class="- topic/topic topic" role="article" aria-labelledby="ariaid-title1">
     <h1 class="- topic/title title topictitle1" id="ariaid-title1">Outputs</h1>
     <div class="- topic/body body">
-        <p class="- topic/p p">The <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Outputs</span> part of the Positioning Engine Web Console's status
-            panel allows you to record QPE data, for example if you wanted to play data back using
-            the <a class="- topic/xref xref" href="https://quuppa.com/product-documentation/manuals/q/QDP/topics/QDP_introduction.html" target="_blank" rel="external noopener">Quuppa Data Player</a>. By default, the QPE does
-            not store or record any data, so it is important to use these recording features (or
-            equivalent Quuppa APIs) if your use case requires recorded data. </p>
-        <p class="- topic/p p">This part of the Web Console also includes an option to start recording binary logs for
-            the QPE. These binary logs can be used for troubleshooting any problems in your
-            deployment. The QPE does not record binary logs by default but you can set it to record
-            them as needed. </p>
-        <p class="- topic/p p">This section will go through the different output rows and how to use the action buttons
-            associated with them (if applicable). </p>
+        <p class="- topic/p p">The <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Outputs</span> section of the Quuppa Positioning Engine Web Console
+            (QPE Web Console) status panel displays the configuration for data destinations and
+            system logs. By default, the QPE does not record or store tracking data. You can create
+            and control output targets in the QPE Web Console or via corresponding Quuppa APIs.</p>
+        <div class="- topic/note note note note_note" id="QPE_outputs__note_gxz_ztq_tjc" data-ofbid="QPE_outputs__note_gxz_ztq_tjc"><span class="note__title">Note:</span> <div class="note__body">Output targets can be created either in the Quuppa Site Planner
+            (QSP) application or directly within the QPE Web Console. However, output targets
+            created via the QPE Web Console are temporary and are not persisted when the QPE is
+            restarted.</div></div>
+        <p class="- topic/p p">This panel also includes options to record binary logs for the QPE. You can use these
+            binary logs to troubleshoot deployment and configuration issues. The QPE does not record
+            binary logs by default, but you can configure the system to record them as needed.</p>
         <section class="- topic/section section" id="QPE_outputs__section_sbp_n3x_q4b" data-ofbid="QPE_outputs__section_sbp_n3x_q4b"><h2 class="- topic/title title sectiontitle">Data Player Recording</h2>
             
-            <p class="- topic/p p">In order to view QPE data using the Quuppa Data Player application, you will need to
-                set the QPE to record data. This row shows the status of that recording, the path to
-                the directory where the recording will be saved and the prefix that will be used for
-                the file name (the file name will be made up of the prefix and the time stamp of the
-                recording). It also has a button for starting and stopping the recording. </p>
+            <p class="- topic/p p">To view QPE data within the Quuppa Data Player application, you must configure the
+                QPE to record data. This row displays the current recording status, the storage
+                directory path, and the filename prefix. The system automatically generates the
+                filename by combining the specified prefix and the recording timestamp.</p>
+            <p class="- topic/p p">Manage the recording using the following interface actions:</p>
             <div class="- topic/p p">
                 <ul class="- topic/ul ul" id="QPE_outputs__ul_isr_vw5_r4b" data-ofbid="QPE_outputs__ul_isr_vw5_r4b">
-                    <li class="- topic/li li">To start the recording, click on the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Start</span> button.
-                                <p class="- topic/p p"><img class="- topic/image image" id="QPE_outputs__image_jnk_nv5_r4b" src="oxy_ex-1/images/QPE_console_QDP_recording.png" width="567"/></p></li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">To start the recording</strong>: Click <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Start</span>. <p class="- topic/p p"><img class="- topic/image image" id="QPE_outputs__image_jnk_nv5_r4b" src="oxy_ex-1/images/QPE_console_QDP_recording.png" width="567"/></p></li>
                 </ul>
                 <ul class="- topic/ul ul" id="QPE_outputs__ul_yph_ww5_r4b" data-ofbid="QPE_outputs__ul_yph_ww5_r4b">
-                    <li class="- topic/li li">To change the settings (i.e. target prefix) for the recording, click on the
-                            <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Settings</span> button. This will open a window where you
-                        can enter the desired settings. <p class="- topic/p p"><img class="- topic/image image" id="QPE_outputs__image_mt1_vw5_r4b" src="oxy_ex-1/images/QPE_console_QDP_settings.png" width="189"/></p></li>
-                    <li class="- topic/li li">To stop the recording, click the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Stop button.</span><p class="- topic/p p"><img class="- topic/image image" id="QPE_outputs__image_y1w_4y5_r4b" src="oxy_ex-1/images/QPE_console_QDP_stop.png" width="567"/></p></li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">To change the recording settings (i.e. target prefix)</strong>: Click
+                            <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Settings</span>. <p class="- topic/p p"><img class="- topic/image image" id="QPE_outputs__image_mt1_vw5_r4b" src="oxy_ex-1/images/QPE_console_QDP_settings.png" width="189"/></p></li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">To stop the recording</strong>: Click <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Stop</span>.<p class="- topic/p p"><img class="- topic/image image" id="QPE_outputs__image_y1w_4y5_r4b" src="oxy_ex-1/images/QPE_console_QDP_stop.png" width="567"/></p></li>
                 </ul>
             </div>
-            <p class="- topic/p p">This section uses the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Create output target</span> and <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Control
-                    output target (start/stop)</span> API methods.</p>
+            <p class="- topic/p p">This section executes the <code class="+ topic/ph pr-d/codeph ph codeph">Create output target</code> and <code class="+ topic/ph pr-d/codeph ph codeph">Control
+                    output target (start/stop)</code> API methods.</p>
         </section>
         <section class="- topic/section section" id="QPE_outputs__section_vjd_43x_q4b" data-ofbid="QPE_outputs__section_vjd_43x_q4b"><h2 class="- topic/title title sectiontitle">Data Player Live View</h2>
             
-            
-            <p class="- topic/p p">The Quuppa Data Player application also has a Live View option,
-                that works much the same way as with previously recorded data. This row shows the
-                status of the recording and the IP address for where the live view can be accessed.
-                It also has a button for starting and stopping the recording.</p>
+            <p class="- topic/p p">The Quuppa Data Player application includes a Live View option. This row displays the
+                status of the Live View and the target IP address where the data is sent.</p>
+            <p class="- topic/p p">Manage the Live View using the following interface actions:</p>
             <ul class="- topic/ul ul" id="QPE_outputs__ul_nkx_lcv_r4b" data-ofbid="QPE_outputs__ul_nkx_lcv_r4b">
-                <li class="- topic/li li">To start the Live View recording, click on the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Start</span>
-                    button. <p class="- topic/p p"><img class="- topic/image image" id="QPE_outputs__image_awc_zcv_r4b" src="oxy_ex-1/images/QPE_console_QDP_live.png" width="567"/></p></li>
-                <li class="- topic/li li">To change the settings (i.e. the target IP address), click on the
-                        <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Settings</span> button. This will open a window where you can
-                    enter the desired settings. Use 127.0.0.1 for the local machine. <p class="- topic/p p"><img class="- topic/image image" id="QPE_outputs__image_wct_vcv_r4b" src="oxy_ex-1/images/QPE_console_QDP_live_settings.png" width="189"/></p></li>
-                <li class="- topic/li li">To stop using the feature, click on the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Stop</span> button.
-                            <p class="- topic/p p"><img class="- topic/image image" id="QPE_outputs__image_krw_2dv_r4b" src="oxy_ex-1/images/QPE_console_QDP_live_stop.png" width="567"/></p></li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">To start the Live View</strong>: Click <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Start</span>. <p class="- topic/p p"><img class="- topic/image image" id="QPE_outputs__image_awc_zcv_r4b" src="oxy_ex-1/images/QPE_console_QDP_live.png" width="567"/></p></li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">To change the Live View parameters (i.e. the target IP address):</strong> Click
+                        <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Settings</span>. Use 127.0.0.1 for the local machine.
+                            <p class="- topic/p p"><img class="- topic/image image" id="QPE_outputs__image_wct_vcv_r4b" src="oxy_ex-1/images/QPE_console_QDP_live_settings.png" width="189"/></p></li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">To stop using the feature</strong>: Click <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Stop</span>. <p class="- topic/p p"><img class="- topic/image image" id="QPE_outputs__image_krw_2dv_r4b" src="oxy_ex-1/images/QPE_console_QDP_live_stop.png" width="567"/></p></li>
             </ul>
-            <p class="- topic/p p">This section uses the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Create output target</span> and <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Control
-                    output target (start/stop)</span> API methods.</p>
+            <p class="- topic/p p">This section executes the <code class="+ topic/ph pr-d/codeph ph codeph">Create output target</code> and <code class="+ topic/ph pr-d/codeph ph codeph">Control
+                    output target (start/stop)</code> API methods.</p>
         </section>
         <section class="- topic/section section" id="QPE_outputs__section_gxx_43x_q4b" data-ofbid="QPE_outputs__section_gxx_43x_q4b"><h2 class="- topic/title title sectiontitle">File Logging</h2>
             
-            <p class="- topic/p p">The <span class="+ topic/keyword ui-d/wintitle keyword wintitle">File Logging</span> row shows the current logging configurations. </p>
+            <p class="- topic/p p">The <span class="+ topic/keyword ui-d/wintitle keyword wintitle">File Logging</span> row displays the current logging configurations
+                for the project file.</p>
             <p class="- topic/p p"><img class="- topic/image image" id="QPE_outputs__image_pmq_32v_r4b" src="oxy_ex-1/images/QPE_console_logging.png" width="567"/></p>
-            <p class="- topic/p p">The logging configurations for the project file are set using the Quuppa Site Planner
-                application, but you can also edit them here if needed by clicking on the add/edit
-                configuration icon (the little green plus icon next to the row heading). This will
-                open a new window where you can edit the configurations as needed.</p>
+            <p class="- topic/p p">You can use this interface to create or edit local configuration targets as
+                needed.</p>
+            <p class="- topic/p p">Manage the logging configurations using the following interface actions:</p>
+            <ul class="- topic/ul ul" id="QPE_outputs__ul_j42_2wq_tjc" data-ofbid="QPE_outputs__ul_j42_2wq_tjc">
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">To add or edit configuration</strong>: Click the <strong class="+ topic/ph hi-d/b ph b">add/edit configuration (+)
+                    </strong>icon next to the row heading to open the configuration window.</li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">To start a newly created target</strong>: Click <strong class="+ topic/ph hi-d/b ph b">Start</strong>. New targets do not
+                    start automatically upon creation.</li>
+            </ul>
             <p class="- topic/p p"><img class="- topic/image image" id="QPE_outputs__image_ktz_p2v_r4b" src="oxy_ex-1/images/QPE_console_logging_new_config.png" width="189"/></p>
-            <p class="- topic/p p">A newly created target will not start automatically, but you can use the
-                    <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Start</span> button that appears once the target has been created
-                to start it. </p>
-            <p class="- topic/p p">This section uses the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Create output target</span> and <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Control
-                    output target (start/stop)</span> API methods.</p>
+            <p class="- topic/p p">This section uses the <code class="+ topic/ph pr-d/codeph ph codeph">Create output target</code> and <code class="+ topic/ph pr-d/codeph ph codeph">Control
+                    output target (start/stop)</code> API methods.</p>
         </section>
         <section class="- topic/section section" id="QPE_outputs__section_nln_p3x_q4b" data-ofbid="QPE_outputs__section_nln_p3x_q4b"><h2 class="- topic/title title sectiontitle">UDP Push</h2>
             
-            <p class="- topic/p p">The <span class="+ topic/keyword ui-d/wintitle keyword wintitle">UDP Push</span> row shows the current UDP Push configurations</p>
+            <p class="- topic/p p">The <span class="+ topic/keyword ui-d/wintitle keyword wintitle">UDP Push</span> row  displays the current UDP Push
+                configuration.</p>
             <p class="- topic/p p"><img class="- topic/image image" id="QPE_outputs__image_ebb_y2v_r4b" src="oxy_ex-1/images/QPE_console_UDP_push.png" width="567"/></p>
-            <p class="- topic/p p">The logging configurations for the project file are set using the Quuppa Site Planner
-                application, but you can also edit them here if needed by clicking on the add/edit
-                configuration icon (the little green plus icon next to the row heading). This will
-                open a new window where you can edit the configurations as needed. </p>
+            <p class="- topic/p p">You can use this interface to create or edit local targets as needed.</p>
+            <p class="- topic/p p">Configure the data destinations using the following interface action:</p>
+            <ul class="- topic/ul ul" id="QPE_outputs__ul_syx_lwq_tjc" data-ofbid="QPE_outputs__ul_syx_lwq_tjc">
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">To add or edit UDP push target</strong>: Click the <strong class="+ topic/ph hi-d/b ph b">add/edit configuration</strong>
+                    (+) icon next to the row heading to open the configuration window.</li>
+            </ul>
             <p class="- topic/p p"><img class="- topic/image image" id="QPE_outputs__image_t2v_y2v_r4b" src="oxy_ex-1/images/QPE_console_UDP_push_new_config.png" width="189"/></p>
-            <p class="- topic/p p">This section uses the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Create output target</span> and <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Control
-                    output target (start/stop)</span> API methods.</p>
+            <p class="- topic/p p">This section uses the <code class="+ topic/ph pr-d/codeph ph codeph">Create output target</code> and <code class="+ topic/ph pr-d/codeph ph codeph">Control
+                    output target (start/stop)</code> API methods.</p>
         </section>
         <section class="- topic/section section" id="QPE_outputs__section_kvy_1nl_vyb" data-ofbid="QPE_outputs__section_kvy_1nl_vyb"><h2 class="- topic/title title sectiontitle">MQTT Publisher</h2>
             
-            <p class="- topic/p p">The MQTT Publisher row shows current MQTT publisher configurations.</p>
-            <p class="- topic/p p">An alternative to plain UDP, you can also publish position data via MQTT. MQTT allows
-                to create a reliable TCP-based connection to MQTT broker. You can also create MQTT
-                over a websocket, for example if your QPE system is inside a firewall and only HTTP
-                traffic outside is allowed.</p>
-            <p class="- topic/p p">For MQTT, Quuppa uses a v5 MQTT client and a predefined topic in the following
-                format:
-                    <code class="+ topic/ph pr-d/codeph ph codeph">quuppa/apidata/&lt;project-key&gt;/&lt;payload|location|taginfo&gt;/&lt;format-name&gt;/&lt;tag-id&gt;</code></p>
+            <p class="- topic/p p">The MQTT Publisher row displays current MQTT publisher configurations.</p>
+            <p class="- topic/p p">As an alternative to plain UDP, you can also publish position data via MQTT. MQTT
+                establishes a reliable, TCP-based connection to an MQTT broker. You can also deploy
+                MQTT over a WebSocket connection. This is useful, for example, if the QPE system
+                operates behind a firewall that only permits outbound HTTP traffic.</p>
+            <p class="- topic/p p">The Quuppa MQTT publisher implementation is based on an MQTT v5 client.</p>
+            <p class="- topic/p p">The system requires specific topic structures depending on the data type:</p>
+            <ul class="- topic/ul ul" id="QPE_outputs__ul_hjc_twq_tjc" data-ofbid="QPE_outputs__ul_hjc_twq_tjc">
+                <li class="- topic/li li">
+                    <p dir="ltr" class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Tag data topics</strong>: For tag data, the Quuppa MQTT publisher
+                        uses a predefined topic structure in the following format:
+                            <code class="+ topic/ph pr-d/codeph ph codeph">quuppa/apidata/&lt;project-key&gt;/payload|location|taginfo/&lt;format-name&gt;/&lt;tag-id</code></p>
+                    <p dir="ltr" class="- topic/p p">The <code class="+ topic/ph pr-d/codeph ph codeph">payload|location|taginfo</code> variable depends on
+                        the trigger mode configured in the target. Use the following specific
+                        configurations:</p>
+                </li>
+                <li class="- topic/li li">
+                    <ul class="- topic/ul ul" id="QPE_outputs__ul_z5j_kxq_tjc" data-ofbid="QPE_outputs__ul_z5j_kxq_tjc">
+                        <li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">payload</code> for interval trigger mode.</li>
+                        <li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">location</code> for location-related triggers.</li>
+                        <li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">taginfo</code> for the <code class="+ topic/ph pr-d/codeph ph codeph">lastSeenUpdate</code>
+                            trigger.</li>
+                    </ul>
+                </li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Positioning Engine (PE) format topics</strong>: For positioning engine data, use
+                    the predefined topic structure
+                        <code class="+ topic/ph pr-d/codeph ph codeph">quuppa/apidata/&lt;project-key&gt;/peInterval/&lt;format-name&gt;</code>.
+                    You can add a custom prefix to this topic structure.</li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Locator format topics</strong>: For Locator data, use the predefined topic
+                    structure
+                        <code class="+ topic/ph pr-d/codeph ph codeph">quuppa/apidata/&lt;project-key&gt;/locatorInterval/&lt;format-name&gt;</code>.
+                    You can add a custom <strong class="+ topic/ph hi-d/b ph b">prefix</strong> to this topic structure.</li>
+            </ul>
             <p class="- topic/p p"><img class="- topic/image image" id="QPE_outputs__image_ebc_tnl_vyb" src="oxy_ex-1/images/outputs-mqtt-2.png" width="600"/></p>
-            <p class="- topic/p p">Similar to UDP Push configuration, you can either create persistent MQTT output in
-                the Site Planner or create them through the QPE user interface. The green plus icon
-                next to the row heading opens a new window where you can edit the publisher
-                configurations as needed.</p>
+            <p class="- topic/p p">Similar to UDP Push configurations, you can either create a persistent MQTT output in
+                the Quuppa Site Planner or create outputs directly through the QPE Web Console
+                interface.</p>
+            <p class="- topic/p p">Configure the publisher settings using the following interface action:</p>
+            <ul class="- topic/ul ul" id="QPE_outputs__ul_ols_lyq_tjc" data-ofbid="QPE_outputs__ul_ols_lyq_tjc">
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">To add or edit a publisher configuration</strong>: Click the <strong class="+ topic/ph hi-d/b ph b">add/edit
+                        configuration (+)</strong> icon next to the row heading to open the configuration
+                    window and edit the publisher settings.</li>
+            </ul>
             <p class="- topic/p p"><img class="- topic/image image" id="QPE_outputs__image_dxn_wnl_vyb" src="oxy_ex-1/images/outputs-mqtt-editor.png" height="400" width="186"/></p>
-            <p class="- topic/p p">This section uses the Create output target and Control output target (start/stop) API
-                methods. For more details on creating and controlling targets over the API, see
-                Quuppa API documentation.</p>
+            <p class="- topic/p p">This section uses the <code class="+ topic/ph pr-d/codeph ph codeph">Create output target</code> and <code class="+ topic/ph pr-d/codeph ph codeph">Control
+                    output target (start/stop)</code> API methods. For more details on creating
+                and controlling targets over the API, see the Quuppa API documentation.</p>
         </section>
-        <section class="- topic/section section" id="QPE_outputs__section_mlk_q3x_q4b" data-ofbid="QPE_outputs__section_mlk_q3x_q4b"><h2 class="- topic/title title sectiontitle">Binary Logging</h2><p class="- topic/p p">The binary logging tool is
-                used to log all system data for debugging purposes.</p><img class="- topic/image image" id="QPE_outputs__image_lxv_qfv_r4b" src="oxy_ex-1/images/QPE_console_binary_log.png" width="567"/><p class="- topic/p p">To start recording binary logs, press the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Start</span> button.
-                The QPE will continue to record binary logs until you click the
-                    <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Stop</span> button. Depending on the project, this may result in a
-                large file, so please check that you have enough disk space available before
-                starting the recording. Once the recording has ended, the QPE will also show the
-                path for where the log has been saved. </p><p class="- topic/p p"><img class="- topic/image image" id="QPE_outputs__image_kvp_yfv_r4b" src="oxy_ex-1/images/QPE_console_binary_log_path.png" width="567"/></p><p class="- topic/p p">If you need help troubleshooting your deployment,
+        <section class="- topic/section section" id="QPE_outputs__section_mlk_q3x_q4b" data-ofbid="QPE_outputs__section_mlk_q3x_q4b"><h2 class="- topic/title title sectiontitle">Binary Logging</h2><p class="- topic/p p">The binary logging tool
+                records all system data for diagnostic and debugging purposes.</p><img class="- topic/image image" id="QPE_outputs__image_lxv_qfv_r4b" src="oxy_ex-1/images/QPE_console_binary_log.png" width="567"/><p class="- topic/p p">Manage binary logging operations using the following interface actions:</p><ul class="- topic/ul ul" id="QPE_outputs__ul_x2v_vyq_tjc" data-ofbid="QPE_outputs__ul_x2v_vyq_tjc">
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">To start recording binary logs</strong>: Click <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Start</span>. Ensure
+                    that sufficient storage space is available on the local drive before initiating
+                    a recording, as log files can become large.</li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">To stop recording binary logs</strong>: Click <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Stop</span>. The
+                    interface displays the directory path where the log file is saved once the
+                    recording ends.</li>
+                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">To send logs to support</strong>: Compress the directory containing the binary
+                    logs into a ZIP file and send it to Quuppa support for remote analysis. For more
+                    details, see the <a class="- topic/xref xref" href="https://www.quuppa.com/documentation/QPE/topics/QPE_binary_logs.html" target="_blank" rel="external noopener"><strong class="+ topic/ph hi-d/b ph b"><u class="+ topic/ph hi-d/u ph u">Record Binary Data for Quuppa
+                                Support</u></strong></a> section.</li>
+            </ul><p class="- topic/p p"> This section uses the <code class="+ topic/ph pr-d/codeph ph codeph">Log Binary Data</code> API method.</p><p class="- topic/p p"><img class="- topic/image image" id="QPE_outputs__image_kvp_yfv_r4b" src="oxy_ex-1/images/QPE_console_binary_log_path.png" width="567"/></p><p class="- topic/p p">If you need help troubleshooting your deployment,
                 the binary log data can be sent to Quuppa Support for analysis after recording. To
                 do so, make a zip file of the directory containing the binary logs (i.e. the path
                 shown by the web console) and send it to Quuppa. For more details, see the <a class="- topic/xref xref" href="QPE_binary_logs.html">Record Binary Data for Quuppa Support</a>
@@ -234,13 +270,16 @@
                 section uses the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Log Binary Data</span> API method. </p></section>
         <section class="- topic/section section" id="QPE_outputs__section_rlp_1yv_3qb" data-ofbid="QPE_outputs__section_rlp_1yv_3qb"><h2 class="- topic/title title sectiontitle">Binary Push</h2>
             
-            <p class="- topic/p p">The binary push feature enables you to push raw data from this system to another QPE
-                using UDP packets. This is useful for testing purposes, as you can use the real data
-                from the production QPE on a test server with a different QPE, e.g. if you want to
-                validate that a new QPE release is suitable for deployment in your live environment. </p>
+            <p class="- topic/p p">The binary push feature transmits raw data from the local system to another Quuppa
+                Positioning Engine (QPE) using user datagram protocol (UDP) packets.</p>
+            <p class="- topic/p p">This feature is used for testing and process validation. For example, deployment
+                teams can mirror real tracking data from a live production QPE onto a separate test
+                server. This allows you to safely validate that a new software release is fully
+                stable and suitable for your specific environment before executing a live
+                deployment.</p>
             <p class="- topic/p p"><img class="- topic/image image" id="QPE_outputs__image_bkx_kpl_1rb" src="oxy_ex-1/images/QPE_console_binary_push.png" width="567"/></p>
-            <p class="- topic/p p">For more details on using this feature, please refer to the <a class="- topic/xref xref" href="QPE_API_logs.html#QPE_API_logs__section_mh1_blh_wqb">Push Binary Data
-                </a>section of this guide. </p>
+            <p class="- topic/p p">For more details on using this feature, see <a class="- topic/xref xref" href="QPE_API_logs.html#QPE_API_logs__section_mh1_blh_wqb">Push Binary Data
+                </a>section of this guide.</p>
         </section>
     </div>
 </article></main></div>
@@ -281,7 +320,7 @@
     </div>
 </div>
   </div><div xmlns="" xmlns:oxyf="http://www.oxygenxml.com/functions" class="generation_time">
-                Generation date: 30.06.2026</div>
+                Generation date: 01.07.2026</div>
 </footer>
         
         <button id="go2top" class="d-print-none" title="Go to top">
